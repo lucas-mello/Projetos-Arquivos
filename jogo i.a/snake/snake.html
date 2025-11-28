@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- validação transistional,w3c -->
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<!-- validação transistional,w3c -->
+  	<html>
+  	<!-- abrir html -->
+  	<html lang="en">
+  	<!-- linguagem -->
+  		<head>
+  			<!-- abrir cabeçalho -->
+    	<title>jogo da cobra</title>
+    	<!-- inserir titulo -->
+        
+        <!-- abrir meta -->
+        <!-- meta, insere caracteristicas a página web-->
+    	<!-- abrir 1* tag meta -->
+        <meta charset="utf-8"/>
+        <!-- fechar 1* tag meta -->
+
+        <!-- abrir 2* tag meta -->
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<!-- fechar 2* tag meta -->
+
+    	<!-- abrir 3* tag meta -->
+  		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+  		<!-- fechar 3* tag meta -->
+
+  		<!-- abrir 4* tag meta -->
+		<meta name="GENERATOR" content="Microsoft SharePoint" />
+		<!-- fechar 4* tag meta -->
+
+		<!-- abrir 5* tag meta -->
+		<meta name="progid" content="SharePoint.WebPartPage.Document" />
+		<!-- fechar 5* tag meta -->
+
+		<!-- abrir 6* tag meta -->
+		<meta http-equiv="Expires" content="0" />
+		<!-- fechar 6* tag meta -->
+
+		<!-- abrir 7* tag meta -->
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<!-- fechar 7* tag meta -->
+
+		<!-- abrir 8* tag meta -->
+		<meta http-equiv="Page-Enter" content="blendTrans(Duration=1.10)">
+		<!-- fechar 8* tag meta -->
+
+		<!-- abrir 9* tag meta -->
+		<meta http-equiv="Page-Exit" content="blendTrans(Duration=1.10)">
+		<!-- fechar 9* tag meta -->
+
+		<!-- abrir 10* tag meta -->
+		<meta name="viewport" content="width=800px,initial-scale=1">
+		<!-- fechar 10* tag meta -->
+
+		<!-- abrir 11* tag meta -->
+		<meta name="keywords" content=" texto"/>
+		<!-- digite um texto em content -->
+		<!-- fechar 11* tag meta -->
+
+		<!-- abrir 12* tag meta -->
+		<meta name="description" content="texto "/>
+        <!-- digite um texto em content--> 
+        <!-- fechar 12* tag meta -->
+
+        <!-- abrir 13* tag meta -->           
+		<meta name="robots" content="index, follow"/>
+        <!-- digite um texto em content-->
+        <!-- fechar 13* tag meta -->
+
+        <!-- abrir 14* tag meta -->            
+		<meta name="HandheldFriendly" content="True"/>
+        <!-- digite um texto em content-->
+        <!-- fechar 14* tag meta -->
+
+        <!-- abrir 15* tag meta -->           
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0"/>
+		<!-- fechar 15* tag meta -->
+
+		<!-- abrir 16* tag meta -->
+		<meta property="og:title" content="calculadora"/>
+        <!-- digite um texto em content-->
+        <!-- fechar 16* tag meta -->
+
+        <!-- abrir 17* tag meta -->
+		<meta property="og:description" content="calculadora "/>
+		<!-- digite um texto em content-->
+		<!-- fechar 17* tag meta -->
+
+		<!-- abrir 18* tag meta -->
+		<meta property="og:url" content="calculadora"/>
+		<!-- digite um texto em content-->
+		<!-- fechar 18* tag meta -->
+
+		<!-- abrir 19* tag meta -->
+		<meta property="og:site_name" content="calculadora"/>
+		<!-- digite um texto em content-->
+		<!-- fechar 19* tag meta -->
+
+		<!-- abrir 20* tag meta -->
+		<meta property="fb:app_id" content="1573751922880959"/>
+		<!-- digite um texto em content-->
+		<!-- fechar 20* tag meta -->
+
+		<!-- abrir 21* tag meta -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!-- digite um texto em content-->
+		<!-- fechar 21* tag meta -->
+         
+         <!-- fechar meta -->
+        <style type="text/css">
+			canvas{
+		       background-color:#00fd00;
+		       border-radius: 10px;
+		       -moz-border-radius: 10px;
+		       -webkit-border-radius: 10px;
+		       border:6px solid #000;
+			}
+		</style>
+        <!-- abrir chamando bootstrap -->
+   		<link rel="stylesheet" href="https://v40.pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css" media="screen"> 
+      	<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+      	<!-- fechar chamando bootstrap -->
+<body>
+	
+      	<canvas id="canvas" width="1200" height="600"></canvas>
+<nav class="navbar navbar-expand-md bg-primary navbar-dark h-50">
+    <div class="container-fluid">
+   
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+<script>
+    window.onload = function(){
+        canvas = document.getElementById("canvas");
+        ctx = canvas.getContext("2d");
+
+        document.addEventListener("keydown", function(e){
+            console.log(e.keyCode);
+            switch(e.keyCode){
+                case 37:
+                    velX = -1;
+                    velY = 0;
+                    break;
+                case 38:
+                    velY = -1;
+                    velX = 0;
+                    break;
+                case 39:
+                    velX = 1;
+                    velY =0;
+                    break;
+                case 40:
+                    velY = 1;
+                    velX = 0
+                    break;
+            }
+        });
+
+        setInterval(jogo, 90);
+    }
+
+    positionX = 20;
+    positionY = 20;
+    foodX = 15;
+    foodY = 15;
+    velX = 0;
+    velY = 0;
+    grid = 20;
+    snake = [];
+    tam = 45;
+
+    function jogo(){
+        positionX += velX;
+        positionY +=velY;
+
+        console.log(positionX);
+        if(positionX < 0){
+            positionX = grid;
+        }
+        if(positionX > grid){
+            positionX = 0; 
+        }
+        if(positionY < 0){
+            positionY = grid;
+        }
+        if(positionY > grid){
+            positionY = 0; 
+        }
+        
+
+        ctx.fillStyle = "#0015FF";
+        ctx.fillRect(0,0, canvas.width, canvas.height);
+
+        
+        
+        ctx.fillStyle = "green";
+        for(var i=0; i < snake.length; i ++){
+            ctx.fillRect(snake[i].x * grid, snake[i].y * grid, grid - 1 , grid - 1);
+            if(snake[i].x == positionX && snake[i].y == positionY){
+                tam = 5;
+            }
+        }  
+
+        snake.push({x: positionX, y: positionY});
+        while(snake.length > tam){
+            snake.shift();
+        }
+
+        ctx.fillStyle = "black";
+        ctx.fillRect(foodX* grid, foodY * grid, grid - 1, grid - 1);
+
+        if(positionX == foodX && positionY == foodY){
+            tam++;
+            foodX = Math.floor(Math.random() * grid);
+            foodY = Math.floor(Math.random() * grid);
+        }
+        
+    }
+
+    
+</script>
+</body>
