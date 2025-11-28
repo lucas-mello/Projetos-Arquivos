@@ -1,0 +1,908 @@
+charset 'utf-8';
+
+* {
+     margin:0;
+     padding:0;
+     border:0;
+      /* CSS RESET - zera estilo para começar novo css*/
+     text-decoration:none;
+     list-style:none;
+     vertical-align:baseline;
+     z-index:0;
+
+}
+
+body {
+	
+	background-color:rgba(150,200,150,0.3);
+
+}
+h1{
+text-align:center;
+}
+p{
+text-align:center;
+font:20px arial;
+font-style:italic;
+
+}
+
+
+form{
+     
+	font-size: 15px;
+	font-weight: bolder;
+	font-style: italic;
+	font-family: Haettenschweiler;
+    transition:all, 0.2s;
+    -moz-transition:all, 0.2s;
+     -webkit-transition:all, 0.2s;
+     transition: 0.3s;/*rodar no google chrome , site cross browser, abre em qualquer navegador*/  
+    -moz-transition: 0.3s;/*rodar no mozila firefox , site cross browser, abre em qualquer navegador*/  
+    webkit-transition: 0.3s;/*rodar no Internet Explorer, site cross browser, abre em qualquer navegador*/  
+    z-index:2;
+    
+
+}
+
+label{
+  color:#000;
+  background-color: rgba(127,255,212,0.3);
+	font-size: 35px;
+	font-weight: bolder;
+	font-style: italic;
+	font-family: arial;
+    transition:all, 0.2s;
+    -moz-transition:all, 0.2s;
+     -webkit-transition:all, 0.2s;
+     transition: 0.3s;/*rodar no google chrome , site cross browser, abre em qualquer navegador*/  
+    -moz-transition: 0.3s;/*rodar no mozila firefox , site cross browser, abre em qualquer navegador*/  
+    webkit-transition: 0.3s;/*rodar no Internet Explorer, site cross browser, abre em qualquer navegador*/  
+    z-index:2;
+     
+
+}
+
+
+input[type="text"]{
+
+    border: 13px solid #000;
+	font-size: 31px;
+	font-weight: bolder;
+	font-style: italic;
+	font-family: arial;
+	 border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+
+  
+     
+
+
+}
+
+
+input[type="text"]:link{
+        border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+
+	
+}
+
+
+input[type="text"]:hover{
+
+	    border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+  
+
+}
+
+
+input[type="text"]:visited{
+
+	     border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+
+}
+
+
+input[type="text"]:active{
+    border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+ 
+
+}
+
+
+input[type="email"]{
+
+       border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+
+
+}
+
+
+input[type="email"]:link{
+    
+	    border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    
+
+	
+}
+
+
+input[type="email"]:hover{
+
+	
+    border: 13px solid #000;    border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+  
+
+}
+
+
+input[type="email"]:visited{
+    border: 13px solid #000;
+	
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    
+
+}
+
+
+input[type="email"]:active{
+
+    border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+
+}
+
+
+input[type="password"]{
+
+    
+    border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+     
+
+
+}
+
+
+input[type="password"]:link{
+    
+	    border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    
+
+	
+}
+
+
+input[type="password"]:hover{
+
+    border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+  
+
+}
+
+
+input[type="password"]:visited{
+
+	     border: 13px solid #000;
+	
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+
+}
+
+
+input[type="password"]:active{
+
+	
+    border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+ 
+
+}
+
+
+input[type="number"]{
+
+        border: 13px solid #000;
+
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+     
+
+
+}
+
+
+input[type="number"]:link{
+    
+    border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+
+	
+}
+
+
+input[type="number"]:hover{
+
+    border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+
+}
+
+
+input[type="number"]:visited{
+
+	 
+	    border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+
+}
+
+
+input[type="number"]:active{
+
+	
+	    border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+
+}
+
+
+input[type="submit"]{
+
+  
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+     
+
+
+}
+
+
+input[type="submit"]:link{
+    
+
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    
+
+	
+}
+
+
+input[type="submit"]:hover{
+
+	
+
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+  
+
+}
+
+
+input[type="submit"]:visited{
+
+	 
+
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    
+
+}
+
+
+input[type="submit"]:active{
+
+	
+	
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+ 
+
+}
+
+
+input[type="reset"]{
+
+    
+	
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+     
+
+
+}
+
+
+input[type="reset"]:link{
+    
+	
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+	
+}
+
+
+input[type="reset"]:hover{
+
+	
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+
+}
+
+
+input[type="reset"]:visited{
+
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+}
+
+
+input[type="reset"]:active{
+
+	
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+ 
+
+}
+input[type="date"]{
+
+        border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+     
+
+
+}
+
+
+input[type="date"]:link{
+    
+	    border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    
+
+	
+}
+
+
+input[type="date"]:hover{
+
+	    border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+  
+
+}
+
+
+input[type="date"]:visited{
+
+	     border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+
+}
+
+
+input[type="date"]:active{
+        border: 13px solid #000;
+  font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+
+}
+
+input[type="tel"]{
+    border: 13px solid #000;
+    
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+
+  
+     
+
+
+}
+
+
+input[type="tel"]:link{
+        border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+
+    
+}
+
+
+input[type="tel"]:hover{
+
+        border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+  
+
+}
+
+
+input[type="tel"]:visited{
+
+         border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+
+}
+
+
+input[type="tel"]:active{
+    border: 13px solid #000;
+    font-size: 31px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: arial;
+     border-radius:20px;  /* Chrome */
+    -moz-border-radius:20px;   /*Firefox*/
+   -wekbit-border-radius:20px; /* Internet explorer */
+    box-shadow: 5px;/* sombreamento  */
+    -moz-box-shadow:10px; /* Firefox */
+    -webkit-box-shadow:10px; /* Internet explorer */
+     text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -moz- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+    -webkit- text-shadow:5px 5px 8px rgba(10, 10, 10, 0.8);
+ 
+
+}
