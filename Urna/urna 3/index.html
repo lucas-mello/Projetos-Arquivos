@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- validação transistional,w3c -->
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<!-- validação transistional,w3c -->
+  	<html>
+  	<!-- abrir html -->
+  	<html lang="pt-br">
+  	<!-- linguagem -->
+<head>
+	   <!-- abrir meta -->
+        <!-- meta, insere caracteristicas a página web-->
+    	<!-- abrir 1* tag meta -->
+        <meta charset="utf-8"/>
+        <!-- fechar 1* tag meta -->
+
+        <!-- abrir 2* tag meta -->
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<!-- fechar 2* tag meta -->
+
+    	<!-- abrir 3* tag meta -->
+  		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+  		<!-- fechar 3* tag meta -->
+
+  		<!-- abrir 4* tag meta -->
+		<meta name="GENERATOR" content="Microsoft SharePoint" />
+		<!-- fechar 4* tag meta -->
+
+		<!-- abrir 5* tag meta -->
+		<meta name="progid" content="SharePoint.WebPartPage.Document" />
+		<!-- fechar 5* tag meta -->
+
+		<!-- abrir 6* tag meta -->
+		<meta http-equiv="Expires" content="0" />
+		<!-- fechar 6* tag meta -->
+
+		<!-- abrir 7* tag meta -->
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<!-- fechar 7* tag meta -->
+
+		<!-- abrir 8* tag meta -->
+		<meta http-equiv="Page-Enter" content="blendTrans(Duration=1.10)">
+		<!-- fechar 8* tag meta -->
+
+		<!-- abrir 9* tag meta -->
+		<meta http-equiv="Page-Exit" content="blendTrans(Duration=1.10)">
+		<!-- fechar 9* tag meta -->
+
+		<!-- abrir 10* tag meta -->
+		<meta name="viewport" content="width=800px,initial-scale=1">
+		<!-- fechar 10* tag meta -->
+
+		<!-- abrir 11* tag meta -->
+		<meta name="keywords" content=" texto"/>
+		<!-- digite um texto em content -->
+		<!-- fechar 11* tag meta -->
+
+		<!-- abrir 12* tag meta -->
+		<meta name="description" content="texto "/>
+        <!-- digite um texto em content--> 
+        <!-- fechar 12* tag meta -->
+
+        <!-- abrir 13* tag meta -->           
+		<meta name="robots" content="index, follow"/>
+        <!-- digite um texto em content-->
+        <!-- fechar 13* tag meta -->
+
+        <!-- abrir 14* tag meta -->            
+		<meta name="HandheldFriendly" content="True"/>
+        <!-- digite um texto em content-->
+        <!-- fechar 14* tag meta -->
+
+        <!-- abrir 15* tag meta -->           
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0"/>
+		<!-- fechar 15* tag meta -->
+
+		<!-- abrir 16* tag meta -->
+		<meta property="og:title" content="senador 2018"/>
+        <!-- digite um texto em content-->
+        <!-- fechar 16* tag meta -->
+
+        <!-- abrir 17* tag meta -->
+		<meta property="og:description" content="senador 2018"/>
+		<!-- digite um texto em content-->
+		<!-- fechar 17* tag meta -->
+
+		<!-- abrir 18* tag meta -->
+		<meta property="og:url" content="senador 2018"/>
+		<!-- digite um texto em content-->
+		<!-- fechar 18* tag meta -->
+
+		<!-- abrir 19* tag meta -->
+		<meta property="og:site_name" content="senador 2018"/>
+		<!-- digite um texto em content-->
+		<!-- fechar 19* tag meta -->
+
+		<!-- abrir 20* tag meta -->
+		<meta property="fb:app_id" content="1573751922880959"/>
+		<!-- digite um texto em content-->
+		<!-- fechar 20* tag meta -->
+
+		<!-- abrir 21* tag meta -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!-- digite um texto em content-->
+		<!-- fechar 21* tag meta -->
+         
+         <!-- fechar meta -->
+         <!-- Abrir Bootstrap -->
+        <link rel="stylesheet" href="https://v40.pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css" media="screen"> 
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+        <!-- Fechar Bootstrap -->
+	<title>Votação</title>
+<style type="text/css">
+	td{
+		background-color: #885512;
+		border-radius:10px;
+	}
+	</style>
+    <!-- jQuery and jQueryUI -->
+    <script type="text/javascript" src="./js/jquery/jquery.min.js"></script>
+		
+    <!-- Codebot -->
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	 <nav class="navbar navbar-expand-md bg-primary navbar-dark h-50">
+    <div class="container-fluid">
+   
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+
+      
+	<div id="wrapper">
+		<header><h1>Escolha seu candidato:</h1></header>
+		<div id="content">
+			<div id="picture">
+				<img id="picture-party" src="" width="156" height="350" style="border-radius: 10px;border:6.2px solid #000;" />
+				
+					  <p>Nome: <span id="nome"></span></p>
+				      <p>Chapa: <span id="chapa"></span></p>
+			
+				<hr/>
+				<p>Tecle VERDE para confirmar.</p>
+				<p>Tecle LARANJA para corrigir.</p>
+			</div>
+			
+			<div id="keyboard">
+				<table cellspacing="20" cellpadding="5" width="100%" style="text-align: center;border-radius: 10px;" id="tabela">
+					
+					<tr>
+						<td data-num="ppl">540</td>
+						<td data-num="dem">250</td>
+						<td data-num="sd">777</td>
+					</tr>
+					<tr>
+						<td data-num="rede">180</td>
+						<td data-num="phs">310</td>
+						<td data-num="pt">133</td>
+					</tr>
+					<tr>
+						<td data-num="psol">500</td>
+						<td data-num="pcb">210</td>
+						<td data-num="novo">300</td>
+					</tr>
+					<tr>
+						<td data-num="pstu">161</td>
+						<td data-num="avante">700</td>
+						<td data-num="pco">290</td>
+						
+					</tr>
+					<tr>
+						<td data-num="pdt">123</td>
+						
+						
+					</tr>
+						
+		               
+					<tr>
+						<!-- <td style="border: none;"></td> -->
+						<!-- <td data-num="0">0</td> -->
+						<!-- <td style="border: none;"></td> -->
+					</tr>
+
+					<tr>
+						<td style="background: #fff;border-radius: 10px;border:4px solid #000;"><a href="javascript:void(0);" onclick="branco();">Branco</a></td>
+						<td style="background: #ffa500;border-radius: 10px;border:4px solid #000;"><a href="javascript:void(0);" onclick="corrige();">Corrige</a></td>
+						<td style="background: #00fc00;border-radius: 10px;border:4px solid #000;"><a href="javascript:void(0);" onclick="confirma();">Confirma</a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+	<div id="fim">FIM</div>
+	
+	<div id="admin-bar"><a href="javascript:void(0);" onclick="admiMostra();">[A]</a></div>
+	<div id="admin">
+		<h2>Controle</h2>
+		<li><a href="javascript:void(0);" onclick="adminReset();">Zerar votação (apaga tudo!)</a></li>
+		
+		<h2>Resultados</h2>
+		<div id="resultados" style="margin: 0 0 20px 0;"></div>
+		
+		<a href="javascript:void(0);" onclick="adminVolta();">Voltar</a>
+	</div>
+	
+	<audio id="som" src="./som.mp3"></audio>
+    
+    <script type="text/javascript">
+		var gChapas = {
+			'0': {img: './imgs/tiririca.png',  nome: 'Branco'},
+			'ppl': {img: './imgs/540.jpg', nome: 'Coronel Lacerda(PPL)/Agente Penitenciário Madeira(PPL)/Policial Civil Bruno(PPL)'},
+
+			'dem': {img: './imgs/250.jpg', nome: 'Rodrigo Pacheco(DEM)/Renzo Braz(PP)/Ana Maria(PSDB)'},
+
+			'sd': {img: './imgs/777.jpg', nome: 'Dinis Pinheiro(SD)/Alberto Pinto Coelho(PPS)/Henrique Braga(PSDB)'},
+
+			'rede': {img: './imgs/180.jpg', nome: '	Kaka Menezes(REDE)/Odair Ferreira(REDE)/Du Fidelis(REDE)'},
+
+			'phs': {img: './imgs/310.jpg', nome: 'Jornalista Carlos Viana(PHS)/Castellar Guimarães Neto(PHS)/Danilo Martins de Oliveira(PHS)'},
+
+			'pt': {img: './imgs/133.jpg', nome: 'Dilma Rousseff(PT)/Pedro Patrus(PT)/Arnaldo Godoy(PT)'},
+
+			'psol': {img: './imgs/500.jpg', nome: 'Professora Duda Salabert(PSOL)/Chico Bento Gerson(PSOL)/Professor Luiz(PSOL)'},
+
+			'pcb': {img: './imgs/210.jpg', nome: 'Professor Tulio Lopes(PCB)/Eloisa Aquino(PSOL)/Emanuel Bonfante(PCB)'},
+
+			'novo': {img: './imgs/300.jpg', nome: 'Rodrigo Paiva(NOVO)/José Carlos Lassi Caldeira(NOVO)/Eduardo Celeghini(NOVO)'},
+
+			'pstu': {img: './imgs/161.jpg', nome: 'Vanessa Portugal Barbosa(PSTU)/Geraldo Batata(PSTU)/José João da Silva(PSTU)'},
+			
+			'avante': {img: './imgs/700.jpg', nome: 'Edson André P(AVANTE)/Helberth Tibe(AVANTE)/Mestre Rogerio Rocha(AVANTE)'},
+
+			'pco': {img: './imgs/290.jpg', nome: 'Ana Alves(PCO)/Fernando Lacerda(PCO)/Jean Cláudio(PCO)'},
+			
+			'pdt': {img: './imgs/123.jpg', nome: 'Fábio Cherem(PDT)/Daniel Nepomuceno(PV)/Glycon Terra Pinto Júnior(MDB)'},
+		}
+		var gVoto = -1; // branco
+		
+		function escolhe(id) {
+			var aInfo = gChapas[id];
+			
+			$('#picture-party').attr('src', aInfo.img);
+			$('#picture-party').show();			
+			$('#nome').html(aInfo.nome);
+			$('#chapa').html(id);
+			
+			gVoto = id;
+		}
+		
+		function getDadosVotacao() {
+			var votos = JSON.parse(localStorage.getItem("votos"));
+			
+			if(!votos) {
+				localStorage.setItem("votos", {});
+				votos = {};
+			}
+			
+			return votos;
+		}
+
+
+		
+		function confirma() {
+			if(gVoto < 0) {
+                alert('Escolha uma chapa!');
+                return;
+            }
+            
+            avisoFim();
+			
+			var votos = getDadosVotacao();
+
+			if(!votos[gVoto]) {
+				votos[gVoto] = 0;
+			}
+			
+			votos[gVoto] += 1;
+			localStorage.setItem("votos", JSON.stringify(votos));
+		}
+		
+		function corrige() {
+			resetChapa();
+		}
+		
+		function branco() {
+			escolhe(0);
+		}
+		
+		function resetChapa() {
+			gVoto = 0;
+			$('#nome').empty();
+			$('#chapa').empty();
+			$('#picture-party').hide();
+		}
+		
+		function tocaSomFinal() {
+			document.getElementById('som').play();
+			
+			try {
+				var som = new Media('/android_asset/www/som.mp3', function onSuccess() {}, function onError(error) { $('#admin-bar').html('ERRO: ' + error.message); });
+				som.play();
+			} catch(e) {}
+			
+		}
+		
+		function avisoFim() {
+			$('#wrapper').hide();
+			$('#fim').show();
+			
+			tocaSomFinal();
+			
+			setTimeout(function() {
+				resetChapa();
+				$('#fim').hide();
+				$('#wrapper').show();
+			}, 5000);
+		}
+		
+		function admiMostra() {
+			$('#admin').show();
+			adminResultados();
+		}
+		
+		function adminReset() {
+			if(confirm('Apagar todos os votos?')) {
+				localStorage.setItem("votos", JSON.stringify({}));
+				admiMostra();
+			}
+		}
+		
+		function adminResultados() {
+			var votos = getDadosVotacao();
+			var dados = '';
+			
+			for(var chapa in votos) {
+				dados += 'Chapa ' + chapa + ' ('+gChapas[chapa].nome+'): ' + votos[chapa] + ' votos. <br/>';
+			}
+			$('#resultados').html(dados);
+		}
+		
+		function adminVolta() {
+			$('#admin').hide();
+		}
+		
+		function suportaLocalStorage() {
+		  try {
+			return 'localStorage' in window && window['localStorage'] !== null;
+		  } catch (e) {
+			return false;
+		  }
+		}
+		
+		if(!suportaLocalStorage()) {
+			$('#admin-bar').html('ERRO: local storage!');
+		}
+        
+        $('#tabela td').click(function(e) {
+            escolhe($(this).data('num'));
+        });
+	</script>
+
+</body>
+</html>
