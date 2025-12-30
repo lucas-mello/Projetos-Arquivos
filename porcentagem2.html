@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Porcentagem</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  #geral_2 {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+    max-width: 400px;
+    width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+  input[type="button"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    transition: 0.3s;
+  }
+
+  input[type="button"]:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+
+<div id="geral_2">
+  <h1>Calcule a Porcentagem</h1>
+  <form id="formPorcentagem" onsubmit="return false;">
+    <label for="valor1">Valor 1 (quantos %):</label>
+    <input type="text" id="valor1" placeholder="Ex: 10" required>
+
+    <label for="valor2">Valor 2 (o valor procurado):</label>
+    <input type="text" id="valor2" placeholder="Ex: 200" required>
+
+    <input type="button" value="Calcular" onclick="realiza_calculo();">
+
+    <label for="resultado">Seu resultado é:</label>
+    <input type="text" id="resultado" readonly>
+  </form>
+</div>
+
+<script>
+function realiza_calculo() {
+    const valor1 = parseFloat(document.getElementById('valor1').value);
+    const valor2 = parseFloat(document.getElementById('valor2').value);
+
+    if (isNaN(valor1) || isNaN(valor2)) {
+        alert("Por favor, insira números válidos!");
+        return;
+    }
+
+    // cálculo correto da porcentagem
+    const resultado = (valor1 / 100) * valor2;
+
+    document.getElementById('resultado').value = resultado.toFixed(0);
+}
+</script>
+
+</body>
+</html>
