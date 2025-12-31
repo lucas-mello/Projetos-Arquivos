@@ -1,0 +1,326 @@
+<html>
+ <head>
+  <title>Sudoku:</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    .h2{
+       text-align: center;
+       text-decoration:underline;
+       font-size:40px;
+     }
+
+   .h4{ 
+    font-size:30px; 
+    text-align:justify;
+    }
+   
+     .img{
+       width:540px;
+       height:443px;
+       }
+    
+
+  </style>
+ </head>
+ <body bgcolor="#d3d3d3">
+
+<h2 class="h2">Observações:</h2>
+
+<h2 class="h2">Sobre:</h2>
+
+<h4 class="h4">
+
+<li>ALS-XZ Rule (Regra ALS-XZ):</li>
+<br/>
+<li>Identifique dois conjuntos quase bloqueados: Procure por dois conjuntos quase bloqueados onde um candidato específico (por exemplo, X) aparece apenas em duas células de cada conjunto, mas essas células não estão no mesmo bloco.</li>
+<br/>
+<li>Verifique as interseções: Veja se as duas células de cada conjunto quase bloqueado compartilham uma unidade (linha, coluna ou bloco). Se as duas células de cada conjunto estiverem na mesma unidade, você encontrou uma configuração ALS-XZ.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou uma configuração ALS-XZ, pode eliminar o candidato (X) de outras células na mesma unidade onde as células dos conjuntos quase bloqueados estão localizadas.</li>
+<br/>
+<li>O ALS-XZ Rule é uma técnica avançada e requer uma boa compreensão das regras do Sudoku, bem como prática para ser identificado com sucesso.</li>
+<br/>
+<li>Ele é útil para Sudokus de nível intermediário a avançado, onde padrões mais complexos precisam ser analisados para progredir no jogo. Paciência e observação cuidadosa do padrão no tabuleiro são essenciais para aplicar o ALS-XZ Rule efetivamente.</li>
+<br/>
+<li>A regra ALS-XZ (Almost Locked Sets - XZ Rule) é uma técnica avançada no Sudoku que é uma extensão do conceito de conjuntos quase bloqueados. Ela se aplica quando existem dois conjuntos quase bloqueados que compartilham uma unidade (linha, coluna ou bloco) e têm um candidato específico (X) que aparece em apenas duas células de cada conjunto.</li>
+<br/>
+<li>A ideia principal por trás da regra ALS-XZ é que, se existem dois conjuntos quase bloqueados que compartilham uma unidade e têm o mesmo candidato (X) aparecendo em apenas duas células de cada conjunto, então o candidato X não pode aparecer em nenhuma outra célula da unidade compartilhada.</li>
+<br/>
+<li>Vamos entender melhor com um exemplo:</li>
+<br/>
+<li>Suponha que temos dois conjuntos quase bloqueados nas linhas 1 e 2 e ambos compartilham a mesma coluna 3. Além disso, o candidato X aparece apenas nas células A e B na linha 1 e nas células C e D na linha 2.</li>
+<br/>
+<li>Neste caso, o candidato X não pode aparecer em nenhuma outra célula da coluna 3, exceto nas células A, B, C e D.</li>
+<br/>
+<li>A regra ALS-XZ é útil para eliminar candidatos e simplificar o tabuleiro, levando a progressos no jogo. É uma técnica mais avançada e requer prática para ser identificada com sucesso durante a resolução de quebra-cabeças de Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=ALS-XZ+Rule+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+<li>"Remote Pairs" é uma técnica avançada no Sudoku que envolve a observação de dois candidatos em duas células que estão interconectadas através de um terceiro candidato em uma célula distante. Esses dois candidatos nas células remotas podem ser eliminados se os candidatos nas duas células iniciais formarem um par.</li>
+<br/>
+<li>Aqui está como funciona a técnica Remote Pairs:</li>
+<br/>
+<li>Identifique um par de candidatos em duas células: Procure por duas células onde há exatamente dois candidatos em cada uma delas, e esses candidatos formam um par. Ou seja, há dois candidatos A e B em uma célula, e também há dois candidatos A e B em outra célula.</li>
+<br/>
+<li>Encontre uma célula distante com um terceiro candidato: Procure por uma terceira célula, que pode estar em uma linha, coluna ou bloco diferente das duas células iniciais. Nesta célula distante, deve haver um terceiro candidato C, que não é parte do par formado nas células iniciais.</li>
+<br/>
+<li>Verifique a interconexão: Se o candidato C na célula distante for colinear (na mesma linha, coluna ou bloco) com qualquer um dos candidatos do par nas células iniciais, então você tem um Remote Pair.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou um Remote Pair, pode eliminar o candidato C de outras células na mesma linha, coluna ou bloco onde as células interconectadas estão localizadas.</li>
+<br/>
+<li>O Remote Pairs é uma técnica avançada e pode ser útil em Sudokus de nível intermediário a avançado, especialmente quando combinado com outras estratégias avançadas. Praticar a identificação e aplicação de Remote Pairs ajudará você a melhorar suas habilidades no Sudoku e encontrar soluções mais eficientes para quebra-cabeças desafiadores.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Remote+Pairs+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+
+<li>O "Grouped X-Cycles" é uma técnica avançada no Sudoku que é uma variação do "X-Cycle". Um X-Cycle é uma cadeia de células interconectadas onde cada célula contém exatamente dois candidatos, e os candidatos nas células estão interconectados de uma maneira específica.</li>
+<br/>
+<li>No caso do "Grouped X-Cycles", você tem múltiplos X-Cycles que compartilham um conjunto de células. Isso significa que há várias cadeias X interconectadas dentro de um grupo específico de células. Ao analisar essas interconexões, você pode deduzir certos candidatos que podem ser eliminados de outras células no mesmo grupo.</li>
+<br/>
+<li>A aplicação bem-sucedida do Grouped X-Cycles exige uma compreensão profunda dos padrões e interações dos candidatos nas células. Identificar e compreender esses grupos de X-Cycles dentro do mesmo conjunto de células é essencial para aplicar efetivamente essa técnica.</li>
+<br/>
+<li>Em resumo, o Grouped X-Cycles é uma técnica avançada que envolve a análise de várias cadeias X interconectadas dentro de um grupo específico de células. Ao entender essas interconexões, você pode eliminar candidatos e progredir no jogo. Esta técnica é mais complexa e requer prática para ser dominada com sucesso no Sudoku.</li>
+<br/>
+<li>O "Grouped X-Cycles" é uma técnica avançada que envolve a observação cuidadosa de múltiplos X-Cycles (cadeias X) que compartilham um conjunto específico de células dentro de um grupo (linha, coluna ou bloco). Um X-Cycle é uma cadeia de células onde cada célula contém exatamente dois candidatos, e os candidatos nas células estão interconectados de uma maneira específica.</li>
+<br/>
+<li>Para aplicar o Grouped X-Cycles,você deve primeiro identificar várias cadeias X interconectadas dentro do mesmo grupo de células. Em seguida, analise como essas cadeias se sobrepõem ou compartilham candidatos em um conjunto específico de células dentro do grupo.</li>
+<br/>
+<li>Ao observar essas interconexões, você pode deduzir certos candidatos que são excluídos de outras células no mesmo grupo. Ao eliminar esses candidatos, você pode simplificar o tabuleiro e progredir no jogo.</li>
+<br/>
+<li>A chave para aplicar com sucesso o Grouped X-Cycles é a prática e a capacidade de visualizar as interações entre os X-Cycles dentro do mesmo grupo de células. Isso requer habilidade para detectar padrões e fazer deduções lógicas
+com base nas interconexões dos candidatos.</li>
+<br/>
+<li>Lembre-se de que o Grouped X-Cycles é uma técnica avançada e pode não ser tão comum quanto outras estratégias no Sudoku. No entanto, quando identificado corretamente, pode levar a eliminações significativas e ajudar a resolver quebra-cabeças mais desafiadores. Prática, paciência e observação cuidadosa do padrão no tabuleiro são essenciais para aplicar o Grouped X-Cycles com sucesso.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Grouped+X-Cycles%3A+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>O "XYZ-Wing Expanded" é uma variação mais complexa do padrão XYZ-Wing no Sudoku. No XYZ-Wing regular, você tem três células (A, B e C) onde um candidato X aparece exatamente em duas dessas células e um candidato Y aparece exatamente em outras duas células, e todas essas células estão em uma unidade comum (linha, coluna ou bloco). Se a célula C contém o candidato Z, você pode eliminar Z de outras células na mesma unidade.</li>
+<br/>
+<li>No "XYZ-Wing Expanded", você adiciona uma quarta célula (D) à configuração. Neste caso, o candidato Z aparece exatamente em duas das quatro células (A, B, C e D). Além disso, o candidato Z na célula D não precisa estar na mesma unidade que as outras três células (A, B e C). Desde que haja uma relação lógica entre essas quatro células, o padrão XYZ-Wing Expanded é aplicável.</li>
+<br/>
+<li>Aqui está como funciona o XYZ-Wing Expanded:</li>
+<br/>
+<li>Identifique quatro células (A, B, C e D): Encontre quatro células onde um candidato X aparece exatamente em duas delas, um candidato Y aparece exatamente em outras duas, e um candidato Z aparece exatamente em duas dessas quatro células (não necessariamente nas mesmas duas onde X e Y aparecem).</li>
+<br/>
+<li>Verifique as relações lógicas: Analise as relações lógicas entre essas quatro células. Pode haver várias configurações, mas a ideia é que se Z estiver na célula D, então você pode eliminar Z de outras células na mesma unidade que D.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você identificar um XYZ-Wing Expanded, pode eliminar o candidato Z de outras células na mesma unidade que D.</li>
+<br/>
+<li>A aplicação bem-sucedida do XYZ-Wing Expanded requer uma compreensão profunda dos padrões e interações dos candidatos nas células. Identificar e compreender as relações lógicas entre essas quatro células é essencial para aplicar efetivamente essa técnica.</li>
+<br/>
+<li>Lembre-se de que o XYZ-Wing Expanded é uma técnica avançada e pode não ser tão comum quanto outras estratégias no Sudoku. No entanto, quando identificado corretamente, pode levar a eliminações significativas e ajudar a resolver quebra-cabeças mais desafiadores. Prática, paciência e observação cuidadosa do padrão no tabuleiro são essenciais para aplicar o XYZ-Wing Expanded com sucesso.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XYZ-Wing+Expanded+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>O "Two-String Kite" é uma técnica avançada no Sudoku que é uma variação do padrão Kite. Um Kite é uma configuração de quatro células onde dois candidatos aparecem em duas células (chamaremos esses candidatos de X e Y) e formam um par em um bloco, linha ou coluna. O Two-String Kite ocorre quando há duas cadeias de células (ou "cordas") com pares X e Y interconectados.</li>
+<br/>
+<li>Aqui está como funciona o Two-String Kite:</li>
+<br/>
+<li>Identifique duas cordas de células: Encontre duas cadeias de células (linhas, colunas ou blocos) onde há um par X em uma cadeia e um par Y na outra cadeia. Essas cordas devem se cruzar em um bloco específico, formando um padrão de kite.</li>
+<br/>
+<li>Verifique a interconexão: Se houver um par X em uma cadeia de células e um par Y na outra cadeia, e esses pares estiverem interconectados
+em um bloco específico, você encontrou um Two-String Kite.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou um Two-String Kite, pode eliminar os candidatos X e Y das células no bloco onde as duas cadeias de células se cruzam, desde que as células não estejam no kite.</li>
+<br/>
+<li>Ou seja, você pode eliminar X e Y das células no bloco que não fazem parte das duas cordas do kite.</li>
+<br/>
+<li>A aplicação bem-sucedida do Two-String Kite requer prática na identificação desses padrões e na compreensão das relações entre as cordas de células. É uma técnica mais avançada e pode não ser tão comum quanto outras estratégias no Sudoku. No entanto, quando identificado corretamente, pode levar a eliminações significativas e ajudar a resolver quebra-cabeças mais complexos. Prática, paciência e observação cuidadosa do padrão no tabuleiro são essenciais para aplicar o Two-String Kite com sucesso.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Two-String+Kite+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>O "Empty Rectangle" é uma técnica avançada no Sudoku que envolve um padrão específico de células em um quadrado de 4x4. Esse padrão pode ser usado para eliminar candidatos e simplificar o tabuleiro. Aqui está como funciona o Empty Rectangle:</li>
+<br/>
+<li>Identifique um quadrado 4x4: Encontre um quadrado de 4x4 no tabuleiro do Sudoku onde duas linhas (ou colunas) contêm candidatos em apenas duas células e as outras duas linhas (ou colunas) contêm candidatos em três células.</li>
+<br/>
+<li>Encontre um candidato em duas células opostas: Dentro desse quadrado, encontre um candidato que aparece em apenas duas células opostas (ou seja, uma célula na linha superior e outra na linha inferior, ou uma na coluna esquerda e outra na coluna direita).</li>
+<br/>
+<li>Verifique as outras duas linhas (ou colunas): Verifique as outras duas linhas (ou colunas) no mesmo quadrado 4x4. Se o mesmo candidato também aparecer em exatamente duas células opostas dessas linhas (ou colunas), você encontrou um Empty Rectangle.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou um Empty Rectangle, pode eliminar o candidato das outras duas células no mesmo quadrado 4x4 que não fazem parte das duas linhas (ou colunas) que contêm o padrão. Ou seja, se o candidato aparece nas células A e D,
+você pode eliminá-lo das células B e C.</li>
+<br/>
+<li>O Empty Rectangle é uma técnica avançada e requer observação cuidadosa dos padrões no tabuleiro. Identificar esses padrões específicos em um quadrado 4x4 pode levar a eliminações significativas e ajudar a resolver quebra-cabeças mais complexos. Prática e paciência são essenciais para aplicar o Empty Rectangle com sucesso no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Empty+Rectangle+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+<li>"Unique Rectangles" (Retângulos Únicos) é uma técnica avançada no Sudoku que envolve padrões específicos de candidatos dispostos em quatro células interconectadas que formam um retângulo. Esta técnica é baseada na eliminação de candidatos quando certas condições são atendidas em relação aos cantos do retângulo.</li>
+<br/>
+<li>Existem duas variantes de Unique Rectangles: o tipo 1 e o tipo 2.</li>
+<br/>
+<li>Unique Rectangles Tipo 1:</li>
+<br/>
+<li>Identifique um retângulo: Procure por quatro células interconectadas que formam um retângulo (duas em uma linha e duas em outra linha, ou duas em uma coluna e duas em outra coluna).</li>
+<br/>
+<li>Verifique os candidatos: Se, nos cantos do retângulo, houver apenas dois candidatos (por exemplo, 1 e 2), e esses candidatos não aparecerem em outras células da mesma linha ou coluna, você encontrou um Unique Rectangle Tipo 1.</li>
+<br/>
+<li>Aplique a regra de eliminação: Você pode eliminar os candidatos 1 e 2 de outras células na mesma linha ou coluna que o retângulo, pois esses candidatos não podem aparecer no retângulo sem violar as regras do Sudoku.</li>
+<br/>
+<li>Unique Rectangles Tipo 2:</li>
+<br/>
+<li>Identifique um retângulo: Procure por quatro células interconectadas que formam um retângulo.</li>
+<br/>
+<li>Verifique os candidatos: Se, nos cantos do retângulo, houver três candidatos (por exemplo, 1, 2 e 3), e esses candidatos não aparecerem em outras células da mesma linha ou coluna, você encontrou um Unique Rectangle Tipo 2.</li>
+<br/>
+<li>Aplique a regra de eliminação: Você pode eliminar os candidatos 1, 2 e 3 de outras células na mesma linha ou coluna que o retângulo, pois esses candidatos não podem aparecer no retângulo sem violar as regras do Sudoku.</li>
+<br/>
+<li>Lembre-se de que as técnicas de Unique Rectangles são avançadas e podem não ocorrer com frequência em Sudokus mais simples. Prática e observação cuidadosa dos padrões são essenciais para identificar e aplicar com sucesso os Unique Rectangles no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Unique+Rectangles+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+<li>Hidden Unique Rectangle</li>
+
+<br/>
+<li>"Unique Rectangles" é uma técnica avançada no Sudoku que envolve padrões específicos de células em um quadrado 3x3. Esses padrões podem ser usados para eliminar candidatos e simplificar o tabuleiro. A técnica do Unique Rectangles se baseia na observação de configurações especiais de candidatos dentro de um quadrado 3x3.</li>
+<br/>
+<li>Existem quatro tipos principais de padrões de Unique Rectangles:</li>
+<br/>
+<li>Tipo 1: Locked Candidates (Pares Trancados) - Quando há dois pares de candidatos em duas linhas (ou colunas) de um quadrado 3x3 e cada par está em uma linha (ou coluna) diferente, você pode eliminar outros candidatos nessas duas linhas (ou colunas) fora dos pares.</li>
+<br/>
+<li>Tipo 2: Aligned Pairs (Pares Alinhados) - Quando há dois pares de candidatos em duas colunas (ou linhas) de um quadrado 3x3, e os pares estão em linhas (ou colunas) diferentes, você pode eliminar outros candidatos nessas duas colunas (ou linhas) fora dos pares.</li>
+<br/>
+<li>Tipo 3: Aligned Triples (Trincas Alinhadas) - Quando há três candidatos alinhados na mesma linha (ou coluna) de um quadrado 3x3, você pode eliminar outros candidatos na mesma linha (ou coluna) fora dos três candidatos.</li>
+<br/>
+<li>Tipo 4: Skyscraper - Um Skyscraper é uma 
+configuração específica de quatro colunas (ou linhas) e quatro candidatos em um quadrado 3x3, onde duas colunas (ou linhas) contêm os mesmos dois candidatos. Se houver candidatos idênticos nas outras duas colunas (ou linhas), você pode eliminar esses candidatos das células onde as colunas (ou linhas) se cruzam.</li>
+<br/>
+<li>Ao identificar e compreender esses padrões de Unique Rectangles, você pode eliminar candidatos e progredir no jogo. No entanto, a aplicação bem-sucedida do Unique Rectangles exige prática e atenção aos detalhes, já que esses padrões podem não ser tão óbvios à primeira vista. Prática regular ajudará você a identificar esses padrões com mais facilidade durante a resolução de quebra-cabeças de Sudoku.</li>
+<br/>
+<li>O "Hidden Unique Rectangle" (Retângulo Único Oculto) é uma técnica avançada no Sudoku que envolve um padrão específico de candidatos dispostos em quatro células interconectadas que formam um retângulo. A diferença entre o Hidden Unique Rectangle e o Unique Rectangle regular é que, no Hidden Unique Rectangle, duas células contêm um candidato comum, mas esse candidato também está presente em outras células do mesmo bloco, linha ou coluna. Vamos explorar como essa técnica funciona:</li>
+<br/>
+<li>Como funciona o Hidden Unique Rectangle:
+Identifique um retângulo: Procure por quatro células interconectadas que formam um retângulo (duas em uma linha e duas em outra linha, ou duas em uma coluna e duas em outra coluna).</li>
+<br/>
+<li>Verifique os candidatos: Se, nos cantos do retângulo, houver um par de candidatos comum em duas células (por exemplo, 1 e 2), mas esses mesmos candidatos também estiverem presentes em outras células do mesmo bloco, linha ou coluna, você encontrou um Hidden Unique Rectangle.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrar um Hidden Unique Rectangle, pode eliminar os candidatos 1 e 2 de outras células no mesmo bloco, linha ou coluna que o retângulo, pois esses candidatos não podem aparecer no retângulo sem violar as regras do Sudoku.</li>
+<br/>
+<li>O Hidden Unique Rectangle é uma técnica avançada e requer uma compreensão profunda dos padrões e interações de candidatos no Sudoku. Identificar e compreender esses padrões específicos é essencial para aplicar com sucesso o Hidden Unique Rectangle no Sudoku. Prática e paciência são fundamentais para aprimorar suas habilidades nessa técnica avançada.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Hidden+Unique+Rectangle+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+<li>A técnica BUG (Bi-Value Universal Grave) é uma estratégia avançada no Sudoku que é usada quando há apenas duas casas (células) em uma caixa que contêm os mesmos dois candidatos e estão na mesma linha ou coluna. Quando isso ocorre, você pode ter certeza de que esses dois candidatos não podem ser removidos do quebra-cabeça sem violar as regras do Sudoku. Aqui está como a estratégia funciona:</li>
+<br/>
+
+<li>Identifique as Duas Casas: Encontre duas casas na mesma linha ou coluna dentro de uma caixa que contêm os mesmos dois candidatos.</li>
+<br/>
+<li>Elimine Outros Candidatos na Linha/Coluna: Se as duas casas estiverem na mesma linha, você pode eliminar esses dois candidatos de outras células na mesma linha da caixa. Se estiverem na mesma coluna, você pode eliminar os candidatos das outras células na mesma coluna da caixa.</li>
+<br/>
+<li>Consequências do BUG: Se você tentar remover qualquer um dos dois candidatos das casas, você criará um quebra-cabeça insolúvel ou múltiplas soluções, o que não é permitido no Sudoku. Portanto, esses dois candidatos são considerados o "Grave" (grave) na estratégia BUG.</li>
+<br/>
+<li>A técnica BUG é uma estratégia poderosa para resolver quebra-cabeças de Sudoku difíceis, mas é importante notar que ela não aparece com frequência em quebra-cabeças mais simples. Além disso, é uma técnica avançada e requer prática para identificar as situações em que pode ser aplicada com sucesso.</li>
+<br/>
+<li>A técnica BUG (Bi-Value Universal Grave) é uma estratégia avançada no Sudoku usada para provar que certos candidatos em um quebra-cabeça são essenciais para a solução, garantindo que a remoção deles resultaria em um quebra-cabeça insolúvel ou com múltiplas soluções. Aqui estão mais detalhes sobre como funciona:</li>
+<br/>
+<li>Identificação das Casas: Encontre duas casas (células) na mesma caixa, linha ou coluna que contêm exatamente dois candidatos idênticos.</li>
+<br/>
+<li>Eliminação de Outros Candidatos: Se as duas casas estiverem na mesma linha, você pode eliminar esses dois candidatos de outras células na mesma linha da caixa. Se estiverem na mesma coluna, você pode eliminar os candidatos das outras células na mesma coluna da caixa. Se estiverem na mesma caixa, você pode eliminar os candidatos das outras células na mesma caixa, desde que não estejam na mesma linha ou coluna das duas casas.</li>
+<br/>
+<li>Teste BUG: Após eliminar os outros candidatos, tente resolver o Sudoku. Se você for bem-sucedido, então os dois candidatos nas casas originais são essenciais e, se forem removidos, o quebra-cabeça não poderá ser resolvido. Se você não puder resolver o quebra-cabeça, os candidatos são "graves" e essenciais para evitar múltiplas soluções.</li>
+<br/>
+<li>Aplicação Prática: O BUG é uma técnica muito avançada e é raro encontrar situações onde possa ser aplicada. É mais comumente usado em quebra-cabeças extremamente difíceis ou para propósitos teóricos ao analisar a estrutura do Sudoku.</li>
+<br/>
+
+<li>A aplicação bem-sucedida do BUG geralmente requer experiência avançada no Sudoku, pois é uma técnica bastante complexa e não é algo que a maioria dos jogadores de Sudoku encontra regularmente. Portanto, é útil estar familiarizado com ela, mas é importante saber que você provavelmente não precisará usá-la com frequência, a menos que esteja lidando com quebra-cabeças extremamente desafiadores.</li>
+
+<br/>
+<a href="https://www.google.com.br/m?q=Bug+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+
+
+<li>"Multi-Colors" é uma técnica avançada no Sudoku que envolve a observação de múltiplos candidatos que compartilham uma relação específica em células interconectadas. Essa técnica é chamada de "Multi-Colors" porque você estará trabalhando com vários candidatos e suas interações em diferentes partes do tabuleiro.</li>
+<br/>
+<li>Aqui está como funciona o Multi-Colors:</li>
+<br/>
+<li>Identifique grupos de células interconectadas: Procure grupos de células (linhas, colunas ou blocos) onde múltiplos candidatos aparecem, e essas células estão interconectadas de maneiras específicas.</li>
+<br/>
+<li>Observe as interações dos candidatos: Analise como os candidatos interagem em diferentes partes do tabuleiro. Você estará procurando padrões específicos, como a presença de um candidato em uma célula que bloqueia a presença de outro candidato em uma célula conectada.</li>
+<br/>
+<li>Deduza as eliminações: Com base nas interações dos candidatos, deduza quais candidatos podem ser eliminados de outras células nas mesmas linhas, colunas ou blocos onde ocorrem essas interações.</li>
+<br/>
+<li>A técnica Multi-Colors é complexa e requer uma compreensão profunda das interações entre os candidatos nas células. Identificar e compreender esses padrões específicos em diferentes partes do tabuleiro pode levar a eliminações significativas e ajudar a resolver quebra-cabeças mais complexos.</li>
+<br/>
+<li>Lembre-se de que o Multi-Colors é uma técnica avançada e pode não ser tão comum quanto outras estratégias no Sudoku. Prática, paciência e observação cuidadosa do padrão no tabuleiro são essenciais para aplicar o Multi-Colors com sucesso.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Multi-Colors+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+
+<li>A técnica "3D Medusa" é uma estratégia avançada no Sudoku que envolve a observação de cadeias de células onde os candidatos são interconectados em diferentes níveis (linhas, colunas e blocos). A técnica recebe o nome "3D" porque você estará trabalhando em três dimensões do Sudoku: linhas, colunas e blocos</li>.
+<br/>
+<li>Aqui está como funciona a técnica 3D Medusa:</li>
+<br/>
+<li>Identifique uma cadeia de células: Encontre uma cadeia de células interconectadas (em linhas, colunas ou blocos) onde um candidato específico pode aparecer em apenas duas posições na cadeia.</li>
+<br/>
+<li>Expanda a cadeia: A partir das posições iniciais onde o candidato pode aparecer, expanda a cadeia em diferentes níveis (linhas, colunas e blocos). O objetivo é observar as interações entre os candidatos na cadeia em diferentes partes do tabuleiro.</li>
+<br/>
+<li>Deduza as eliminações: Com base nas interações entre os candidatos na cadeia expandida, deduza quais candidatos podem ser eliminados de outras células nas mesmas linhas, colunas ou blocos que fazem parte da cadeia.</li>
+<br/>
+<li>A técnica 3D Medusa é bastante complexa e requer uma compreensão profunda das interações entre os candidatos nas células. É chamada de "Medusa" devido à sua natureza complexa e às múltiplas interações que você precisa observar.</li>
+<br/>
+<li>Identificar e compreender essas interações específicas em diferentes partes do tabuleiro pode levar a eliminações significativas e ajudar a resolver quebra-cabeças de Sudoku mais desafiadores. Lembre-se de que a prática é fundamental para dominar essa técnica e aplicá-la com sucesso.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=3D+Medusa+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"Digit Forcing Chains" (Cadeias Forçadas de Dígitos) é uma técnica avançada no Sudoku que envolve a criação de uma cadeia de células interconectadas onde a presença de um candidato força a presença de outro candidato em uma célula relacionada. Essa técnica é útil para eliminar candidatos e simplificar o tabuleiro.</li>
+<br/>
+<li>Aqui está como funciona a técnica de Digit Forcing Chains:</li>
+<br/>
+<li>Identifique uma cadeia de células interconectadas: Encontre uma sequência de células (linhas, colunas ou blocos) onde um candidato específico pode aparecer em diferentes células ao longo da cadeia.</li>
+<br/>
+<li>Deduza as implicações: Se um candidato aparece em uma célula específica da cadeia, isso força a presença de outro candidato em uma célula relacionada. Por exemplo, se o candidato A está na célula A1 e isso implica que A não pode estar na célula A2, e por sua vez, a ausência de A na célula A2 implica a presença de A na célula A3, então você criou uma cadeia forçada de dígitos.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrar uma cadeia forçada de dígitos, pode eliminar o candidato forçado de outras células na mesma linha, coluna ou bloco que são afetadas pela cadeia.</li>
+<br/>
+<li>A técnica de Digit Forcing Chains pode ser aplicada em diferentes configurações, como "Nice Loops" e "Almost Nice Loops". A chave é entender as implicações lógicas das relações entre os candidatos ao longo da cadeia.</li>
+<br/>
+<li>Essa técnica é avançada e requer prática para ser aplicada com sucesso. Observação cuidadosa e dedução lógica são fundamentais para identificar e criar cadeias forçadas de dígitos durante a resolução de quebra-cabeças de Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Digit+Forcing+Chains+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+<li>
+"Sue de Coq" é uma técnica avançada no Sudoku que envolve a observação de certos padrões em um grupo de células (linha, coluna ou bloco) para eliminar candidatos. Esta técnica é útil quando você identifica um conjunto específico de candidatos dentro do mesmo grupo que, quando combinados, forçam uma eliminação lógica.</li>
+<br/>
+<li>Aqui está como funciona a técnica Sue de Coq:</li>
+<br/>
+<li>Identifique um conjunto de células com candidatos comuns: Encontre um grupo de células em uma linha, coluna ou bloco que contenha um conjunto específico de candidatos em diferentes células, com uma condição especial. Esse conjunto deve incluir candidatos que, quando combinados, forçam uma eliminação.</li>
+<br/>
+<li>Verifique a condição especial: Certifique-se de que o conjunto de candidatos nas células forma um "Sue de Coq." Um Sue de Coq ocorre quando há uma célula (ou duas células em algumas variações) que veem todas as outras células no conjunto de candidatos e são forçadas a ter um candidato específico.</li>
+<br/>
+<li>Deduza as eliminações: Se você identificar um Sue de Coq, pode eliminar os candidatos forçados das outras células no mesmo grupo.</li>
+<br/>
+<li>O Sue de Coq é uma técnica avançada que requer prática para ser identificada com sucesso. É uma técnica poderosa para eliminar candidatos e pode ser aplicada em Sudokus mais difíceis quando você está familiarizado com suas condições e padrões específicos. Prática e paciência são essenciais para aplicar o Sue de Coq com sucesso no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Sue+de+Coq+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>Pattern Overlay Method</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Pattern+Overlay+Method+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+</h4>
+
+ </body>
+ </html>
+
+ 

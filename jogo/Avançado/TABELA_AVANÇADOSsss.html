@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sudoku</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #e8f5e9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      max-width: 900px;
+      width: 90%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      color: #2e7d32;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #a5d6a7, #81c784);
+      border-radius: 16px;
+      padding: 25px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    }
+
+    .card a {
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: bold;
+      color: #1b5e20;
+      display: block;
+    }
+
+    footer {
+      margin-top: 35px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+ <body>
+<script>
+alert("DICAS SUDOKU:");
+</script>
+<marquee direction="right" behavior="alternate">
+<table border="5" cellpadding="20" cellspacing="20" border="5" align="center" id="table">
+
+  <tr>
+    <td id="table" class="h4"><a href="avan.html" target="_blank" title="link">GERAL:</a></td>
+
+    <td id="table" class="h4"><a href="avan2.html" target="_blank" title="link">ALGUMAS TÉCNICAS:</a></td>
+
+    <td id="table" class="h4"><a href="avan3.html" target="_blank" title="link">ALGUMAS TÉCNICAS 1:</a></td>
+  </tr>
+
+  
+  <tr>
+    <td id="table" class="h4"><a href="chat.html" target="_blank" title="link">COM CHAT GPT:</a></td>
+
+    <td id="table" class="h4"><a href="chat1.html" target="_blank" title="link">COM CHAT GPT 1:</a></td>
+
+    <td id="table" class="h4"><a href="diabólico.html" target="_blank" title="link">DIABÓLICO:</a></td>
+  </tr>
+
+
+   <tr>
+    <td id="table" class="h4"><a href="Diagonal.html" target="_blank" title="link">DIAGONAL:</a></td>
+
+    <td id="table" class="h4"><a href="extremo.html" target="_blank" title="link">EXTREMO:</a></td>
+
+    <td id="table" class="h4"><a href="extremo_avan.html" target="_blank" title="link">EXTREMO AVANÇADO:</a></td>
+  </tr>
+
+
+   <tr>
+    <td id="table" class="h4"><a href="killer.html" target="_blank" title="link">KILLER:</a></td>
+
+    <td id="table" class="h4"><a href="mais_sobre_elas_1.html" target="_blank" title="link">COMPLEMENTO COM IA:</a></td>
+
+    <td id="table" class="h4"><a href="mais_sobre_elas_1.1.html" target="_blank" title="link">COMPLEMENTO COM IA 1:</a></td>
+  </tr>
+
+
+
+   <tr>
+    <td id="table" class="h4"><a href="mais_sobre_elas_2.html" target="_blank" title="link">COMPLEMENTO COM IA 2:</a></td>
+
+    <td id="table" class="h4"><a href="mais_sobre_elas_2.1.html" target="_blank" title="link">COMPLEMENTO COM IA 3:</a></td>
+
+    <td id="table" class="h4"><a href="mais_sobre_elas_3.html" target="_blank" title="link">COMPLEMENTO COM IA 4:</a></td>
+  </tr>
+
+
+   <tr>
+    <td id="table" class="h4"><a href="mais_sobre_elas_3.1.html" target="_blank" title="link">COMPLEMENTO COM IA 5:</a></td>
+
+    <td id="table" class="h4"><a href="mais_sobre_elas_4.html" target="_blank" title="link">COMPLEMENTO COM IA 6:</a></td>
+
+    <td id="table" class="h4"><a href="mais_sobre_elas_4.1.html" target="_blank" title="link">COMPLEMENTO COM IA 7:</a></td>
+
+
+ <tr>
+    <td id="table" class="h4"><a href="mais_sobre_elas_5.html" target="_blank" title="link">COMPLEMENTO COM IA 8:</a></td>
+
+    <td id="table" class="h4"><a href="mais_sobre_elas_5.1.html" target="_blank" title="link">COMPLEMENTO COM IA 9:</a></td>
+
+    <td id="table" class="h4"><a href="mais_sobre_elas_6.html" target="_blank" title="link">COMPLEMENTO COM IA 10:</a></td>
+  </tr>
+
+
+ <tr>
+    <td id="table" class="h4"><a href="mais_sobre_elas_6.1.html" target="_blank" title="link">COMPLEMENTO COM IA 11:</a></td>
+
+    <td id="table" class="h4"><a href="mais_sobre_elas_7.html" target="_blank" title="link">COMPLEMENTO COM IA 12:</a></td>
+
+    <td id="table" class="h4"><a href="mais_sobre_elas_7.1.html" target="_blank" title="link">COMPLEMENTO COM IA 13:</a></td>
+  </tr>
+
+  <tr>
+     <td id="table" class="h4"><a href="mais_sobre_elas_8.html" target="_blank" title="link">COMPLEMENTO COM IA 14:</a></td>
+
+     <td id="table" class="h4"><a href="mais_sobre_elas_8.1.html" target="_blank" title="link">COMPLEMENTO COM IA 15:</a></td>
+    
+     <td id="table" class="h4"><a href="mais_sobre_elas_9.html" target="_blank" title="link">COMPLEMENTO COM IA 16:</a></td>
+    
+  </tr>
+
+
+
+
+
+</table>
+</marquee>
+</body>
+</html>

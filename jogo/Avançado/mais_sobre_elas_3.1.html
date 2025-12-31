@@ -1,0 +1,276 @@
+<html>
+ <head>
+  <title>Sudoku:</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    .h2{
+       text-align: center;
+       text-decoration:underline;
+       font-size:40px;
+     }
+
+   .h4{ 
+    font-size:30px; 
+    text-align:justify;
+    }
+   
+     .img{
+       width:540px;
+       height:443px;
+       }
+    
+
+  </style>
+ </head>
+ <body bgcolor="#d3d3d3">
+
+<h2 class="h2">Observações:</h2>
+
+<h2 class="h2">Sobre:</h2>
+
+<h4 class="h4">
+
+<li>O BUG +2 é uma técnica muito avançada e é raro encontrar padrões que se encaixem nesse cenário específico. Requer uma análise minuciosa e uma compreensão profunda das regras do Sudoku. Lembre-se de que essa técnica é mais aplicável em quebra-cabeças extremamente difíceis, quando outras técnicas mais comuns não são suficientes para progredir. Paciência e prática são fundamentais ao trabalhar com estratégias tão avançadas no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Bivalue+Universal+Grave+%28BUG%29+%2B2+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>A técnica "Color Wing" é uma estratégia avançada no Sudoku que envolve a aplicação de conceitos de coloração para encontrar soluções para o quebra-cabeça. Esta técnica é uma extensão do método de coloração, que é usado para identificar padrões de cores no tabuleiro do Sudoku.</li>
+<br/>
+<li>Como funciona o Color Wing:</li>
+<br/>
+<li>Escolha uma cor: Comece atribuindo uma cor específica (por exemplo, vermelho) a um candidato em uma célula específica.</li>
+<br/>
+<li>Siga as implicações: Siga as implicações dessa escolha de cor nas células conectadas no mesmo bloco, linha e coluna. Se um candidato vermelho na célula A implica que uma célula B não pode ser vermelha, então a célula B é da outra cor disponível (por exemplo, azul).</li>
+<br/>
+<li>Continue colorindo: Prossiga colorindo as células, alternando entre duas cores, de acordo com as implicações das escolhas de cores anteriores. Você deve seguir as regras do Sudoku estritamente, garantindo que cada linha, coluna e bloco tenha uma combinação de duas cores.</li>
+<br/>
+<li>Observe padrões: Se você encontrar um padrão onde todas as células de uma cor específica em uma linha, coluna ou bloco são candidatos verdadeiros, você pode eliminar outros candidatos nessas células, pois apenas um dos dois candidatos é verdadeiro.</li>
+<br/>
+<li>O Color Wing é uma técnica avançada que requer uma compreensão sólida dos conceitos de coloração e uma visão detalhada do tabuleiro. Identificar padrões de cores e aplicar corretamente as implicações das escolhas de cores são habilidades essenciais ao usar essa técnica. Prática e paciência são fundamentais para aprimorar suas habilidades no uso do Color Wing no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Colour+Wing+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>A técnica "XY-Chain Subsets Type 6" é uma variação ainda mais complexa da estratégia do XY-Chain no Sudoku. O XY-Chain é uma técnica onde você segue uma cadeia de células, cada uma contendo dois candidatos, onde os candidatos se alternam entre dois números específicos, como 1 e 2. A versão "Type 6" refere-se a uma situação ainda mais intrincada, envolvendo múltiplas cadeias XY-Chain interligadas.</li>
+<br/>
+<li>Como funciona o XY-Chain Subsets Type 6:</li>
+<br/>
+<li>Identifique múltiplas cadeias XY-Chain interligadas: Encontre várias cadeias de células onde os candidatos se alternam entre dois números específicos (por exemplo, 1 e 2). Cada cadeia XY-Chain deve começar e terminar com o mesmo número.</li>
+<br/>
+<li>Verifique as interações com outras células: Além das cadeias XY-Chain principais, observe se há outras células conectadas que compartilham candidatos com essas cadeias. Essas células adicionais são essenciais para aplicar o XY-Chain Subsets Type 6.</li>
+<br/>
+<li>Aplique a regra de eliminação: Ao seguir as interações das múltiplas cadeias XY-Chain, você pode eliminar candidatos em outras células que estão conectadas a essas cadeias. Se você pode provar que, ao escolher um número em uma das cadeias XY-Chain, isso força a escolha de outro número em uma célula conectada, você pode eliminar outros candidatos nessas células adicionais.</li>
+<br/>
+<li>Continue a análise, se necessário: Se você eliminar candidatos com base nas cadeias XY-Chain, observe se isso cria novas interações em outras partes do tabuleiro, o que pode levar a mais eliminações.</li>
+<br/>
+<li>O XY-Chain Subsets Type 6 é uma técnica altamente avançada e raramente é encontrada em Sudokus comuns. Requer uma compreensão profunda dos padrões e interações de candidatos no Sudoku. Identificar e compreender essas cadeias mais complexas é essencial para aplicar com sucesso o XY-Chain Subsets Type 6 no Sudoku. Prática e paciência são fundamentais para aprimorar suas habilidades nesta técnica avançada.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XY-Chain+Subsets+Type+6+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>Hidden Unique Rectangles (Retângulos Únicos Escondidos) é uma técnica avançada no Sudoku que envolve um padrão específico de candidatos ocultos em quatro células do quebra-cabeça. Para entender essa técnica, é importante estar familiarizado com o conceito de Unique Rectangles (Retângulos Únicos).</li>
+<br/>
+<li>Como funciona o Hidden Unique Rectangles:</li>
+<br/>
+<li>Identifique quatro células em um retângulo: Encontre quatro células no tabuleiro que formam um retângulo (duas em uma linha e duas em outra linha, ou duas em uma coluna e duas em outra coluna). Cada célula dentro do retângulo deve conter exatamente dois candidatos.</li>
+<br/>
+<li>Verifique as interações com outras células: Além das quatro células do retângulo, observe se há outras células que compartilham um dos candidatos do retângulo em questão.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você identificar um retângulo onde, ao escolher um dos candidatos em uma célula, isso força a escolha de um candidato diferente em outra célula, você pode eliminar os outros candidatos nas células afetadas pelo retângulo.</li>
+<br/>
+<li>Esteja ciente dos candidatos escondidos: A razão pela qual é chamado de Hidden Unique Rectangles é porque, ao contrário do Unique Rectangles tradicional, os candidatos que são eliminados não estão visíveis diretamente no retângulo, mas estão conectados a ele através de outras células.</li>
+<br/>
+<li>O Hidden Unique Rectangles é uma técnica avançada que pode ser difícil de identificar e aplicar corretamente. É uma ferramenta poderosa para resolver Sudokus difíceis, mas requer prática e uma compreensão profunda dos padrões de candidatos no tabuleiro. Observar padrões ocultos e entender as implicações das escolhas de candidatos são habilidades essenciais ao usar essa técnica.</li>
+<br/>
+
+<a href="https://www.google.com.br/m?q=Hidden+Unique+Rectangles+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>A técnica ALS-XY (Almost Locked Sets XY) é uma estratégia avançada de resolução de Sudoku que combina os conceitos dos Conjuntos Quase Bloqueados (ALS) com os padrões XY-Chain. Esta técnica é útil quando você tem um conjunto de células ALS onde dois candidatos (X e Y) estão presentes em diferentes células do ALS, e esses ALS estão interconectados por meio de candidatos compartilhados.</li>
+<br/>
+<li>Como funciona o ALS-XY:</li>
+<br/>
+<li>Identifique um conjunto de ALS: Encontre um conjunto de ALS onde os candidatos X e Y estão presentes em diferentes células de diferentes ALS, e esses ALS estão interconectados por meio de candidatos compartilhados.</li>
+<br/>
+<li>Construa o XY-Chain: Use a lógica do XY-Chain para criar uma cadeia de ALS, onde a verdade de X leva à verdade de Y e vice-versa. Esta cadeia deve envolver ALS interconectados pelos candidatos compartilhados.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você pode provar que X é verdadeiro em uma célula específica do ALS usando o XY-Chain e isso leva à verdade de Y, você pode eliminar Y de outras células no mesmo ALS.</li>
+<br/>
+<li>Continue a análise, se necessário: Se você eliminar candidatos com base na cadeia ALS-XY, observe se isso cria novas interações em outras partes do tabuleiro, o que pode levar a mais eliminações.</li>
+<br/>
+<li>O ALS-XY é uma técnica avançada que requer uma compreensão sólida dos Conjuntos Quase Bloqueados (ALS) e dos padrões XY-Chain. Identificar e aplicar corretamente esses padrões específicos pode ajudá-lo a eliminar candidatos e a resolver Sudokus muito difíceis. Prática e paciência são essenciais para aprimorar suas habilidades nesta técnica avançada.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=ALS-XY+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+
+<li>Fishy Cycle é uma técnica avançada de resolução de Sudoku que envolve a aplicação de conceitos de Cadeias e Técnicas de Peixes para encontrar soluções para o quebra-cabeça. Embora a terminologia "Fishy Cycle" não seja padrão e pode variar, geralmente, refere-se a um padrão complexo que combina conceitos de Cadeias de Células e Peixes.</li>
+<br/>
+<li>Como funciona o Fishy Cycle (um exemplo hipotético):</li>
+<br/>
+<li>Identifique um padrão complexo: Encontre um padrão no tabuleiro onde várias cadeias de células e peixes estão interconectados de maneira específica. Pode haver combinações de Cadeias Forçadas (Forcing Chains), Cadeias de Células (Cell Chains), Peixes (Fish), etc.</li>
+<br/>
+<li>Analise as interações: Estude as interações entre as cadeias de células e peixes. Observe como as escolhas feitas em uma parte do tabuleiro afetam outras partes por meio das interconexões.</li>
+<br/>
+<li>Aplique a lógica e a regra de eliminação: Use a lógica das cadeias e dos peixes para determinar as implicações das escolhas de números em determinadas células. Se uma escolha for verdadeira, isso pode levar à eliminação de candidatos em outras partes do tabuleiro.</li>
+<br/>
+<li>Continue a análise, se necessário: Se você eliminar candidatos com base no Fishy Cycle, observe se isso cria novas interações em outras partes do tabuleiro, o que pode levar a mais eliminações.</li>
+<br/>
+<li>O Fishy Cycle é uma técnica avançada que requer uma compreensão profunda dos padrões e interações de candidatos no Sudoku. Identificar e compreender esses padrões mais complexos é essencial para aplicar com sucesso o Fishy Cycle no Sudoku. Prática, paciência e habilidade analítica são fundamentais para dominar essa técnica avançada. Vale notar que essa técnica pode não ser encontrada com frequência e é mais comum em Sudokus extremamente difíceis ou variantes mais complexas do jogo.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Fishy+Cycle+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>Almost Almost Locked Sets (AALS) é uma técnica avançada de resolução de Sudoku que envolve a aplicação dos conceitos de Almost Locked Sets (ALS) de maneira mais complexa e detalhada. Os ALS são grupos de células em que alguns números candidatos estão restritos a essas células, e esses números não aparecem em nenhuma outra célula no mesmo grupo (linha, coluna ou bloco). O AALS expande essa ideia, introduzindo interações mais complexas entre os ALS.</li>
+<br/>
+<li>Como funciona o AALS (um exemplo hipotético):</li>
+<br/>
+<li>Identifique grupos de ALS: Encontre grupos de ALS, onde cada grupo tem seus próprios candidatos restritos a esse conjunto específico de células. Estes ALS podem estar em diferentes unidades (linha, coluna ou bloco).</li>
+<br/>
+<li>Observe as interações entre os grupos: Analise as interações entre os grupos de ALS. Observe se os candidatos de um grupo de ALS têm interações específicas com outros grupos de ALS. Por exemplo, um número candidato em um ALS pode ser eliminado por causa da presença de outro ALS na mesma unidade.</li>
+<br/>
+<li>Aplique as regras de eliminação: Utilize as regras de eliminação derivadas das interações entre os grupos de ALS. Se um candidato for restrito a um determinado grupo de ALS e não puder aparecer em outras células devido a interações com outros ALS, então esse candidato pode ser eliminado dessas células.</li>
+<br/>
+<li>Continue a análise, se necessário: Se você eliminar candidatos com base nas interações entre os grupos de ALS, observe se isso cria novas interações em outras partes do tabuleiro, o que pode levar a mais eliminações.</li>
+<br/>
+<li>O AALS é uma técnica avançada que requer uma compreensão profunda dos padrões e interações de candidatos no Sudoku. Identificar e compreender essas interações mais complexas é essencial para aplicar com sucesso o AALS no Sudoku. Prática, paciência e habilidade analítica são fundamentais para dominar essa técnica avançada. Como muitas técnicas avançadas, o AALS pode ser especialmente útil em Sudokus extremamente difíceis e variantes mais complexas do jogo.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Almost+Almost+Locked+Sets+%28AALS%29+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>A técnica "Remote Pairs Type 3" é uma estratégia avançada no Sudoku que envolve a aplicação de conceitos de Pares Distantes para encontrar soluções para o quebra-cabeça. Enquanto os Pares Distantes (Remote Pairs) são geralmente considerados quando os candidatos de um par estão em duas células que estão em grupos diferentes (por exemplo, duas colunas diferentes na mesma região), a variação "Type 3" é uma situação ainda mais específica e complexa.</li>
+<br/>
+<li>Como funciona o Remote Pairs Type 3:</li>
+<br/>
+<li>Identifique grupos específicos: Encontre grupos de células que compartilham candidatos em várias células de diferentes unidades (linhas, colunas ou blocos) de forma específica. Em cada grupo, os candidatos de um par estão presentes em duas células diferentes e distantes no mesmo grupo.</li>
+<br/>
+<li>Analise as interações: Estude as interações entre os grupos específicos. Observe se há outras células no mesmo grupo que compartilham candidatos com esses pares distantes.</li>
+<br/>
+<li>Aplique a lógica e a regra de eliminação: Se você pode provar que um candidato em uma das células do par distante é verdadeiro, isso deve levar à eliminação dos candidatos correspondentes nas outras células do mesmo grupo.</li>
+<br/>
+<li>Continue a análise, se necessário: Se você eliminar candidatos com base nos Remote Pairs Type 3, observe se isso cria novas interações em outras partes do tabuleiro, o que pode levar a mais eliminações.</li>
+<br/>
+<li>O Remote Pairs Type 3 é uma técnica avançada que requer uma compreensão sólida dos padrões e interações de candidatos no Sudoku. Identificar e compreender esses padrões específicos e complexos é essencial para aplicar com sucesso o Remote Pairs Type 3 no Sudoku. Prática, paciência e habilidade analítica são fundamentais para dominar essa técnica avançada. Vale notar que essa técnica é rara e geralmente encontrada em Sudokus extremamente difíceis.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Remote+Pairs+Type+3+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+<li>A técnica "Diamond Ring" é uma estratégia avançada no Sudoku que envolve um padrão específico de células e candidatos no tabuleiro. É chamada de "Diamond Ring" devido à sua semelhança visual com um anel de diamante.</li>
+<br/>
+<li>Como funciona o Diamond Ring:</li>
+<br/>
+<li>Identifique um padrão de células: Encontre um conjunto específico de células no tabuleiro que formam um padrão em forma de losango. Cada célula deve conter exatamente dois candidatos.</li>
+<br/>
+<li>Verifique as interações com outras células: Observe se as células do padrão do Diamond Ring têm interações com outras células no mesmo bloco, linha ou coluna. Preste atenção às células que compartilham candidatos com as células do padrão.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você puder provar que um dos candidatos em uma célula do Diamond Ring é verdadeiro, isso deve levar à eliminação dos candidatos correspondentes nas células compartilhando o mesmo candidato nas interações com o padrão.</li>
+<br/>
+<li>Continue a análise, se necessário: Se você eliminar candidatos com base no Diamond Ring, observe se isso cria novas interações em outras partes do tabuleiro, o que pode levar a mais eliminações.</li>
+<br/>
+<li>O Diamond Ring é uma técnica avançada que requer uma compreensão sólida dos padrões e interações de candidatos no Sudoku. Identificar e aplicar corretamente esses padrões específicos pode ajudar a eliminar candidatos e a resolver Sudokus mais difíceis. Prática, paciência e habilidade analítica são fundamentais para dominar essa técnica avançada. É importante notar que o Diamond Ring é uma estratégia menos comum, sendo encontrada em Sudokus muito desafiadores e complexos.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Diamond+Ring+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+<li>As "Multivalue Chains" (Cadeias Multivalor) são uma técnica avançada de resolução de Sudoku que envolve a aplicação de cadeias lógicas para identificar padrões complexos nos candidatos das células. É uma extensão do conceito das "Forcing Chains" (Cadeias Forçadas), mas em vez de se concentrar em uma cadeia com dois valores alternados, as Multivalue Chains envolvem cadeias mais longas e complexas, onde vários valores podem estar envolvidos.</li>
+<br/>
+<li>Como funcionam as Multivalue Chains:</li>
+<br/>
+<li>Identifique uma cadeia multivalor: Encontre uma cadeia de células onde múltiplos valores alternados estão presentes. Ou seja, em vez de ter apenas dois valores alternados em uma cadeia, você pode ter três, quatro ou até mais valores.</li>
+<br/>
+<li>Analise as interações: Estude as interações entre os diferentes valores na cadeia. Observe como a verdade de um valor leva à verdade de outro, criando uma sequência lógica de candidatos.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você pode provar que um dos valores em uma célula específica da cadeia é verdadeiro, isso deve levar à eliminação dos outros valores na mesma célula.</li>
+<br/>
+<li>Continue a análise, se necessário: Se você eliminar candidatos com base na cadeia multivalor, observe se isso cria novas interações em outras partes do tabuleiro, o que pode levar a mais eliminações.</li>
+<br/>
+<li>As Multivalue Chains são uma técnica avançada e são particularmente úteis em Sudokus extremamente difíceis ou variantes mais complexas do jogo. Dominar essa técnica requer prática, paciência e uma compreensão profunda das interações de candidatos no Sudoku. Identificar e compreender padrões multivalor específicos nas células é essencial para aplicar com sucesso as Multivalue Chains.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Multivalue+Chains+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>As "Alternating Inference Chains" (AIC) Type 3 são uma extensão da técnica AIC no Sudoku. AICs são cadeias de células que alternam entre candidatos verdadeiros e falsos, e a versão Type 3 envolve padrões mais complexos dessas cadeias. Nesse contexto, "alternância" refere-se ao fato de que os candidatos verdadeiros e falsos se alternam na cadeia.</li>
+<br/>
+<li>Como funcionam as AIC Type 3:</li>
+<br/>
+<li>Identifique uma cadeia AIC complexa: Encontre uma cadeia de células onde múltiplos candidatos estão presentes, e esses candidatos se alternam entre verdadeiros e falsos de maneira específica. Ou seja, você terá uma sequência de células onde os candidatos verdadeiros e falsos se intercalam de uma maneira complexa.</li>
+<br/>
+<li>Analise as interações: Estude as interações entre os diferentes candidatos na cadeia AIC Type 3. Observe como a verdade de um candidato leva à verdade de outro candidato, criando uma sequência lógica complexa de candidatos.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você pode provar que um candidato específico na cadeia AIC Type 3 é verdadeiro, isso deve levar à eliminação dos outros candidatos na mesma cadeia.</li>
+<br/>
+<li>Continue a análise, se necessário: Se você eliminar candidatos com base na cadeia AIC Type 3, observe se isso cria novas interações em outras partes do tabuleiro, o que pode levar a mais eliminações.</li>
+<br/>
+<li>Dominar as AIC Type 3 requer prática e uma compreensão profunda das interações de candidatos no Sudoku. Identificar e compreender esses padrões complexos nas células é essencial para aplicar com sucesso as Alternating Inference Chains Type 3. Esta técnica é mais útil em Sudokus extremamente difíceis e em situações onde outras técnicas mais simples não são suficientes para resolver o quebra-cabeça.</li>
+<br/>
+
+<a href="https://www.google.com.br/m?q=Alternating+Inference+Chains+%28AIC%29+Type+3+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+<li>As "Empty Rectangles Type 4" são uma variação avançada da técnica Empty Rectangles no Sudoku. Empty Rectangles envolvem a identificação de um retângulo de células vazias (células sem candidatos) que formam um padrão específico. A variação Type 4 se refere a um cenário particularmente complexo e específico nesse padrão.</li>
+<br/>
+<li>Como funcionam as Empty Rectangles
+Type 4:</li>
+<br/>
+<li>Identifique um retângulo vazio (Empty Rectangle): Encontre um padrão de células vazias que formam um retângulo. O retângulo deve ser composto por células sem candidatos e deve ser possível adicionar candidatos a pelo menos uma das células do retângulo.</li>
+<br/>
+<li>Observe as interações com outras células: Analise as células fora do retângulo. Se existirem células que compartilham um candidato com uma célula dentro do retângulo, e ao adicionar esse candidato ao retângulo, resulta na eliminação de candidatos em outras partes do tabuleiro, você está diante de um Empty Rectangle Type 4.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se adicionar um candidato ao retângulo vazio leva à eliminação de candidatos em outras células (especificamente, se essa adição fornece uma solução única para o Sudoku), então você pode eliminar os outros candidatos nas células dentro do retângulo.</li>
+<br/>
+<li>Continue a análise, se necessário: Se você eliminar candidatos com base no Empty Rectangle Type 4, observe se isso cria novas interações em outras partes do tabuleiro, o que pode levar a mais eliminações.</li>
+<br/>
+<li>Identificar e compreender padrões de Empty Rectangles Type 4 requer prática e uma compreensão profunda das interações de candidatos no Sudoku. Esta técnica é mais útil em Sudokus extremamente difíceis e em situações onde outras técnicas mais simples não são suficientes para resolver o quebra-cabeça.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Empty+Rectangles+Type+4+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"Remote Locked Sets" (RLS) é uma técnica avançada no Sudoku que envolve a aplicação de conjuntos bloqueados em células distantes no tabuleiro, levando a eliminações de candidatos em outras partes do quebra-cabeça.</li>
+<br/>
+<li>Como funciona o Remote Locked Sets:</li>
+<br/>
+<li>Identifique um conjunto bloqueado remoto: Encontre um conjunto de células em uma unidade (linha, coluna ou bloco) que compartilham um conjunto específico de candidatos, mas essas células não estão necessariamente todas na mesma região. Ou seja, as células não precisam estar todas na mesma linha, coluna ou bloco, mas ainda compartilham os mesmos candidatos.</li>
+<br/>
+<li>Analise as interações: Observe se os candidatos no conjunto bloqueado remoto interagem com outras células no mesmo grupo (linha, coluna ou bloco) onde o conjunto está localizado. Se adicionar ou remover um candidato em uma célula do conjunto bloqueado remoto levar à eliminação de candidatos em outras células do mesmo grupo, você está diante de um Remote Locked Set.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se uma célula no conjunto bloqueado remoto tiver um candidato verdadeiro, isso levará à eliminação dos candidatos correspondentes nas outras células do conjunto.</li>
+<br/>
+<li>Continue a análise, se necessário: Se você eliminar candidatos com base no Remote Locked Set, observe se isso cria novas interações em outras partes do tabuleiro, o que pode levar a mais eliminações.</li>
+<br/>
+<li>O Remote Locked Sets é uma técnica avançada que requer uma compreensão sólida dos padrões e interações de candidatos no Sudoku. Identificar e aplicar corretamente esses conjuntos bloqueados remotos é essencial para usar com sucesso o Remote Locked Sets. Prática, paciência e habilidade analítica são fundamentais para dominar essa técnica avançada. Como muitas técnicas avançadas, o Remote Locked Sets pode ser especialmente útil em Sudokus extremamente difíceis e em variantes mais complexas do jogo.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Remote+Locked+Sets+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+
+
+</h4>
+
+ </body>
+ </html>
+
+ 

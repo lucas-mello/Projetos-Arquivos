@@ -1,0 +1,438 @@
+<html>
+ <head>
+  <title>Sudoku:</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    .h2{
+       text-align: center;
+       text-decoration:underline;
+       font-size:40px;
+     }
+
+   .h4{ 
+    font-size:30px; 
+    text-align:justify;
+    }
+   
+     .img{
+       width:540px;
+       height:443px;
+       }
+    
+
+  </style>
+ </head>
+ <body bgcolor="#d3d3d3">
+
+<h2 class="h2">Observações:</h2>
+
+<h2 class="h2">EXPLORANDO MAIS SOBRE OUTRAS:</h2>
+
+<h4 class="h4">
+
+<li>Ligações e Inferências:</li>
+<br/>
+<li>A base de todas as cadeias são dois tipos de implicações básicas, normalmente chamadas de "elos" ou "inferências" (neste guia, o termo "elo" é usado como sinônimo de ambos).</li>
+<br/>
+<li>Elos fracos</li>
+<br/>
+<li>Se duas entidades estão fracamente ligadas, elas não podem ser verdadeiras ao mesmo tempo. Isso significa: se uma delas é verdadeira, então a outra tem que ser falsa (mas ambas podem ser falsas também, então se uma for falsa, nada pode ser concluído). Em cadeias simples, as entidades são normalmente apenas candidatas, que compartilham uma casa ou uma cela.</li>
+<br/>
+<li>Ligações Fortes</li>
+<br/>
+<li>Se duas entidades estão fortemente ligadas, elas não podem ser falsas ao mesmo tempo. Isso significa: se uma delas for falsa, a outra precisa ser verdadeira (ambas verdadeiras só é possível em tipos de ligações muito avançados). Se usarmos candidatos, precisaríamos de exatamente dois candidatos compartilhando uma célula, ou exatamente duas instâncias do mesmo candidato compartilhando uma casa (um par conjugado em termos de coloração).
+
+Esses dois tipos de ligação são a base para todos os tipos de cadeias, portanto, a diferença entre eles precisa ser completamente compreendida. Resumindo:
+
+Ligação Fraca: Se a é verdadeiro, então b é falso.
+Ligação Forte: Se a é falso, então b é verdadeiro.
+Para formar uma cadeia a partir de ligações, o tipo de ligação precisa ser alternado (daí o nome "Cadeia de Inferência Alternada" ou AIC). Toda cadeia é uma AIC em sua essência. Uma cadeia pode então ser lida como "se a é falso, b tem que ser verdadeiro, então c tem que ser falso, d tem que ser verdadeiro etc.". Para complicar um pouco mais, dois candidatos que estão fortemente ligados também estão sempre fracamente ligados. Isso significa que um elo forte pode ser usado como um elo fraco em cadeias (o contrário não é possível).</li>
+<br/>
+<li>O que foi dito acima é suficiente para entender cadeias básicas, e provavelmente é melhor começar com alguns exemplos concretos imediatamente (você pode, por exemplo, pular para Pares Remotos agora mesmo). Para uma compreensão completa dos tópicos deste capítulo, os parágrafos seguintes também são importantes. Volte e leia-os quando tiver uma compreensão básica de cadeias simples.</li>
+<br/>
+<li>Links de Grupo</li>
+<br/>
+<li>Links de grupo formam inferências entre mais de dois candidatos. Normalmente, usamos apenas dois candidatos para formar um link: se eles forem as únicas instâncias dentro de sua casa, eles estão fortemente ligados; se houver outras instâncias restantes, eles estão fracamente ligados. Se considerarmos também as interseções entre casas, podemos construir um tipo de link um pouco mais avançado. Considere o exemplo abaixo (retirado de Candidatos Bloqueados):</li>
+<br/>
+<li>Observe os candidatos 5 na linha 3 (ignore as cores por enquanto, elas são da movimentação de Candidatos Bloqueados). Temos três instâncias do candidato 5 nessa linha (colunas 1, 2 e 7). Quaisquer dois desses candidatos estão fracamente ligados; não é possível construir uma ligação forte na linha 3 (candidatos demais). Existe uma ligação forte no bloco 1 entre r3c1 e r3c2 (apenas duas instâncias do candidato 5 no bloco 1), mas não entre r3c12 e r3c7. Isso muda se considerarmos r3c12 como um nó, um Nó de Grupo. Podemos então tirar as seguintes conclusões:
+
+Se ambos os r3c12 não forem 5, r3c7 tem que ser 5 (ligação forte agrupada).
+Se r3c7 não for 5, um dos r3c12 tem que ser 5 (ligação forte agrupada).
+Como em qualquer ligação forte, eles também podem formar uma ligação fraca:
+
+Se um dos r3c12 for 5, r3c7 não pode ser 5 (ligação fraca agrupada).
+Se r3c7 for 5, nem r3c1 nem r3c2 podem ser 5 (ligação fraca agrupada).</li>
+<br/
+<img src="Imagens/lc101 (1).png" alt="imagem" border="5" class="img">
+<li>Também podem existir ligações entre nós de grupo, como pode ser visto no exemplo abaixo:</li>
+<br/>
+<li>Vamos analisar o candidato 2 na linha 9, coluna 4 e bloco 8 (para facilitar o acompanhamento da explicação, as células foram coloridas): Temos uma ligação forte agrupada na linha 9 entre r9c9 e r9c56 e outra na coluna 4 entre r6c4 e r78c4. Ambas as ligações funcionam conforme descrito acima.
+
+Dentro do bloco 8, existe outra ligação fraca entre o nó de grupo r9c56 e o ​​nó de grupo r78c4 (ligação fraca porque existem outras instâncias do candidato 2 no bloco 8):
+
+Se um dos nós r9c56 for 2, nem r7c4 nem r8c4 podem ser 2 (ligação fraca agrupada).
+Se um dos nós r78c4 for 2, nem r9c5 nem r9c6 podem ser 2 (ligação fraca agrupada).
+As três ligações podem ser combinadas em uma cadeia curta (essa cadeia não tem efeito por si só, mas pode se tornar parte de uma cadeia mais longa, como demonstrado em Loops Agrupados Agradáveis):
+
+r6c4 = 2 = r78c4 - 2 - r9c56 = 2 = r9c9</li>
+<br/>
+<img src="Imagens/gn101.png" alt="imagem" border="5" class="img">
+<li>Conjuntos Quase Bloqueados (ALS)</li>
+<br/>
+<li>ALS significa "Conjunto Quase Bloqueado" e é descrito em detalhes no capítulo sobre ALS deste guia. Por ora, basta saber que um ALS é um grupo de células dentro de uma casa, que possui N+1 candidatos em N células. Os ALSs em si não provam nada, mas coisas muito interessantes podem ser feitas com eles. Se um candidato for removido do ALS, ele se torna um Conjunto Bloqueado (também conhecido como Subconjunto Nu). Mas essa é exatamente a definição de uma ligação forte. Considere, por exemplo, um ALS imaginário com candidatos {1234} em três células:
+
+Se o candidato 1 não estiver definido no ALS, o ALS se torna um Conjunto Bloqueado para os candidatos {234} (ligação forte).
+Se o ALS não for um Conjunto Bloqueado para os candidatos {234}, o candidato 1 precisa estar definido dentro do ALS (ligação forte).
+Um ALS é alcançado por meio de uma ligação fraca (um candidato precisa ser removido do ALS) e deixado por meio de uma ligação fraca (o Conjunto Bloqueado resultante elimina algum candidato fora do ALS). O elo forte necessário entre esses dois elos fracos é o fato de que o ALS se torna um Conjunto Bloqueado, conforme mostrado acima.</li>
+<br/>
+<li>Cadeias versus Redes</li>
+<br/>
+<li>O que é uma cadeia e o que é uma rede tem sido tema de muitas discussões acaloradas entre jogadores de sudoku. O HoDoKu usa a seguinte definição: Em uma cadeia, cada elo depende apenas do passo imediatamente anterior. Se um elo só funciona, se depende do resultado de um elo mais acima na cadeia, a cadeia se torna uma rede. O mesmo acontece se a cadeia se bifurcar em ramos que se encontram novamente mais abaixo na cadeia.</li>
+<br/>
+<li>Notação</li>
+<br/>
+<li>Para comunicar cadeias a outros jogadores, foram desenvolvidos sistemas de notação. Três tipos de notação ainda são comumente usados:
+
+Notação de Cadeia Forçada (usada para Cadeias/Redes Forçadas no HoDoKu)
+Notação de Loop Legal (usada para todo o resto no HoDoKu)
+Notação AIC (ou Eureka) (atualmente não implementada no HoDoKu)</li>
+<br/>
+<li>Notação de Cadeia Forçada</li>
+<br/>
+<li>A notação de Cadeia Forçada utiliza expressões do tipo [célula]=[valor] (ou [célula]<>[valor]) para seguir a cadeia. O exemplo do Par Remoto à esquerda seria:
+
+r2c7<>4 => r2c7=5 => r2c2<>5 => r2c2=4 => r3c1<>4 => r3c1=5 => r6c1<>5 => r6c1=4
+
+Por brevidade, as expressões "<>" são frequentemente omitidas, exceto nos pontos finais da cadeia:
+
+r2c7<>4 => r2c7=5 => r2c2=4 => r3c1=5 => r6c1=4
+
+Essa brevidade pode tornar a notação de Cadeia Forçada um pouco difícil de acompanhar.</li>
+<br/>
+<li>Notação de Loops Agradáveis</li>
+<br/>
+<li>A notação de loops agradáveis ​​usa "-x-" para ligações fracas e "=x=" para ligações fortes. As ligações são escritas apenas entre células (as ligações dentro das células são implícitas). O Par Remoto na notação de loops agradáveis:
+
+r2c7 -5- r2c2 -4- r3c1 -5- r6c1
+
+Para esclarecer como a cadeia começa e termina (o primeiro e o último elo em 4 são completamente omitidos), esses elos podem ser adicionados à notação:
+
+4- r2c7 -5- r2c2 -4- r3c1 -5- r6c1 -4</li>
+<br/>
+<li>Notação AIC</li>
+<br/>
+<li>A notação AIC não omite nada. "-" é usado para ligações fracas, "=" para ligações fortes, os candidatos são escritos entre parênteses antes da célula afetada. Se uma ligação ocorrer dentro de uma célula, ela é incluída entre parênteses. O par remoto:
+
+(4=5)r2c7-(5=4)r2c2-(4=5)r3c1-(5=4)r6c1</li>
+<br/>
+<li>Exibindo Cadeias no HoDoKu</li>
+<br/>
+<li>Quando o HoDoKu exibe uma cadeia, ele simboliza as ligações entre as células com setas (tracejadas para ligações fracas, sólidas para ligações fortes). O fundo verde significa "conjunto de candidatos", o fundo azul significa "candidato não definido". Em cadeias canibais (a cadeia elimina candidatos que fazem parte da própria cadeia), a eliminação tem precedência sobre a cadeia. Em Cadeias/Redes de Força complexas, o mesmo candidato pode fazer parte de diferentes cadeias e, portanto, ter cores diferentes. A cor resultante para tal candidato é inteiramente aleatória.</li>
+<br/>
+<hr color="#000"/>
+<li>Par de controles remotos:</li>
+<br/>
+<li>O Par Remoto é a técnica de encadeamento mais simples. Ele considera apenas células bivaloradas que contêm os mesmos dois candidatos. Como as células são bivaloradas, existe uma ligação forte dentro de cada célula entre os dois candidatos. As ligações entre as células podem, portanto, ser fracas (as células precisam se enxergar). Para eliminar algo, a cadeia precisa ter pelo menos quatro células de comprimento. O Par Remoto garante que qualquer célula dentro da cadeia tenha o valor oposto ao da célula anterior. Qualquer célula fora do Par Remoto que veja duas células com valores diferentes não pode ter um dos dígitos do Par Remoto definido.
+
+Pares Remotos podem ser replicados por um ou dois movimentos de Cor Simples.</li>
+<br/>
+<img src="Imagens/rp01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/rp02.png" alt="imagem" border="5" class="img">
+<li>Exemplo à esquerda: Se r2c7 for 5, r3c1 também deve ser 5, e r2c2 e r6c1 devem ser 4, ou vice-versa. Em outras palavras: Se r2c7 for 5, r6c1 será 4; se r2c7 for 4, r6c1 será 5 (as células r2c7 e r6c1 têm polaridade oposta). Qualquer célula que veja essas duas células (no exemplo, r6c7) não pode ser nem 4 nem 5.
+
+O exemplo à direita começa com r7c8 e termina com r8c4. A cadeia tem 8 células. Todas as células que veem células do Par Remoto com polaridade oposta não podem ser nem 2 nem 8.</li>
+<br/>
+<hr color="#000"/>	
+<li>X-Chain:</li>
+<br/>
+<li>Cadeias-X são cadeias que usam apenas um dígito. Cadeias-X de comprimento 4 são às vezes chamadas de Peixes-Turbot e podem ser encontradas usando as variantes apropriadas do Turbot (Arranha-céu, Pipa de 2 Cordas ou Retângulo Vazio).
+
+O importante nas Cadeias-X é que elas precisam começar e terminar com uma ligação forte. Isso garante que uma das extremidades contenha o dígito da cadeia. Esse dígito pode ser removido de qualquer célula que veja ambas as extremidades da cadeia.</li>
+<br/>
+<img src="Imagens/x01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/x02.png" alt="imagem" border="5" class="img">
+<li>À esquerda: Se r1c2 não for 7, r1c9 tem que ser 7, r2c8 não pode ser 7, r7c8 tem que ser 7, r7c3 não pode ser 7 e r4c3 tem que ser 7. Se, por outro lado, r4c3 não for 7, então r7c3 tem que ser 7, r7c8 não pode ser 7, r2c8 tem que ser 7, r1c9 não pode ser 7 e r1c2 tem que ser 7. Conclusão: Um de r1c2 ou r4c3 deve ser 7. r4c2 vê ambas as células e também não pode ser 7.
+
+À direita: A cadeia X prova que ou r4c2 ou r6c5 é 3. O valor 3 pode ser eliminado de r6c123.</li>
+<br/>
+<hr color="#000"/>	
+<li>Cadeia XY</li>
+<br/>
+<li>Uma cadeia XY é uma cadeia que utiliza apenas células bivaloradas (semelhante a pares remotos), mas as células podem ter candidatos arbitrários. A única restrição (além das óbvias necessidades para as ligações) é que a cadeia XY começa e termina com uma ligação forte no mesmo dígito. Assim como nas cadeias X, isso prova que um dos pontos finais deve ter esse candidato posicionado, e ele pode ser eliminado de todas as células que veem ambas as extremidades da cadeia.
+
+Assim como em pares remotos, todas as ligações fortes estão dentro das células, e todas as ligações fracas estão entre as células.</li>
+<br/>
+<img src="Imagens/xyc01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/xyc02.png" alt="imagem" border="5" class="img">
+<li>Exemplo à esquerda: 3- r7c4 -9- r5c4 -8- r5c6 -2- r2c6 -3 (leia-se: se r7c4 não for 3, tem que ser 9; r5c4 não pode ser 9 e tem que ser 8; r5c6 não pode ser 8 e tem que ser 2; r2c6 não pode ser 2 e tem que ser 3; tente você mesmo o contrário). Se você observar a coluna 6, verá que restam apenas duas instâncias do candidato 2. Portanto, r5c6 e r2c6 estão fortemente ligados pelo candidato 2. Para a cadeia XY, não precisamos dessa ligação forte, mas sim de uma ligação fraca. Podemos usar a ligação forte como ligação fraca, conforme mencionado anteriormente.
+
+Exemplo à direita: 8- r6c5 -4- r8c5 -1- r8c4 -9- r3c4 -8</li>
+<br/>
+<hr color="#000"/>	
+<li>Nice Loop/AIC:</li>
+<br/>
+<li>Regras de propagação de loops agradáveis</li>
+<br/>
+<li>Os Nice Loops são cadeias que se conectam de volta à célula onde começaram. Para facilitar a localização da cadeia, um conjunto de regras de propagação foi definido. Assim como na notação de Nice Loop (veja acima), o que acontece dentro das células é completamente ignorado; apenas as conexões entre as células são consideradas:
+
+Quando um nó possui duas conexões fortes, os dígitos devem ser diferentes.
+Quando um nó possui duas conexões fracas, a célula deve ser bivalorada e os dígitos devem ser diferentes.
+Quando um nó possui duas conexões diferentes (uma fraca e uma forte), os dígitos devem ser iguais.</li>
+<br/>
+<li>Considere a segunda regra: se uma célula for alcançada e deixada por uma conexão fraca, a conexão forte necessária deve ocorrer dentro da célula. Portanto, a célula deve ser bivalorada e a conexão de saída deve ter um dígito diferente.
+
+Se você usará essas regras de propagação ou simplesmente tentará alternar os tipos de conexão, é claro, fica a seu critério. O link a seguir leva a um tutorial sobre Nice Loops, que explica as regras em detalhes e fornece muitos exemplos.
+
+A conexão de volta à célula original determina o tipo de loop: Descontínuo ou Contínuo. Se gerar uma contradição, o laço é descontínuo. Dependendo de como o laço começou, o dígito inicial pode ser inserido ou eliminado. Se o laço se fechar perfeitamente (se você pudesse segui-lo repetidamente sem detectar um fim), o laço é contínuo.</li>
+<br/>
+<li>Loop agradável descontínuo</li>
+<br/>
+<img src="Imagens/dnl01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/dnl02.png" alt="imagem" border="5" class="img">
+<li>Exemplo à esquerda: r1c8 -7- r7c8 -8- r7c9 -4- r4c9 -5- r4c8 =5= r1c8. O laço começa com uma ligação fraca em 7 (a premissa inicial é "se r1c8 é 7"), mas a célula inicial é alcançada novamente por meio de uma ligação forte em 5. Isso significa: "se r1c8 é 7, então é 5", ou (já que 5 e 7 compartilham uma célula e, portanto, estão fracamente ligados) "se r1c8 é 7, então não é 7" - uma clara contradição, que prova que a premissa era falsa. 7 pode ser eliminado de r1c8.
+
+Exemplo à direita: r8c2 =4= r8c9 -4- r9c9 -2- r9c3 =2= r7c2 =4= r8c2. O laço começa com uma ligação forte em 4 (premissa: "se r8c2 não for 4") e termina também com uma ligação forte em 4. Isso significa: "se r8c2 não for 4, então é 4" - uma contradição que prova que r8c2 de fato tem que ser 4. 4 pode ser colocado em r8c2 (o HoDoKu não faz colocações com Laços Legais, ele elimina todos os outros candidatos, restando apenas um). Outra maneira de ver esse tipo de laço é como uma verdade: o laço prova que, se r8c2 não for 4, então é de fato 4. Mas se for 4, então também é 4. Ambas as possibilidades (r8c2=4 e r8c2<>4) levam ao mesmo resultado: r8c2=4, que, portanto, tem que ser verdade.</li>
+<br/>
+<li>Cadeia de Inferência Alternativa Tipo 1</li>
+<br/>
+<li>Qualquer AIC pode ser vista como uma combinação de um ou mais Nice Loops Descontínuos (o HoDoKu só mostrará um AIC se ele fornecer mais de uma eliminação; AICs com apenas uma eliminação são sempre mostrados como Nice Loops Descontínuos). Os AICs começam e terminam com uma ligação forte e possuem ligações alternadas entre elas, sem quaisquer outras restrições.
+
+Um AIC Tipo 1 começa e termina em uma ligação forte para o mesmo dígito, provando assim que esse dígito deve ser colocado em uma das células finais do AIC. Isso elimina esse dígito de todas as células que podem ver ambas as extremidades do AIC.</li>
+<br/>
+<img src="Imagens/aic101.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/aic102.png" alt="imagem" border="5" class="img">
+<li>À esquerda: 5- r1c2 -3- r1c4 =3= r3c4 =9= r7c4 =2= r7c2 -2- r8c3 -5. Ou r1c2 ou r8c3 é 5, então nenhum dos conjuntos r123c3 e r78c2 pode ser 5.
+
+À direita: 6- r2c5 -7- r2c1 =7= r6c1 =6= r6c7 -6- r2c7 =6= r3c8 -6. O que é especial aqui é que um dos candidatos eliminados (6 em ​​r2c7) faz parte da cadeia. Isso é perfeitamente legal. O AIC é chamado de canibalístico.</li>
+<br/>
+<li>Cadeia de Inferência Alternativa Tipo 2</li>
+<br/>
+<li>Um AIC Tipo 2 começa e termina em uma ligação forte para dois dígitos diferentes em duas células que se veem mutuamente. Isso prova que o dígito final não pode estar na célula inicial e o dígito inicial não pode estar na célula final.</li>
+<br/>
+<img src="Imagens/aic201.png" alt="imagem" border="5" class="img"
+<br/>
+<img src="Imagens/aic202.png" alt="imagem" border="5" class="img">>
+<li>À esquerda: 4- r6c2 =4= r9c2 -4- r9c5 -9- r5c5 =9= r5c4 =8= r6c4 -8. Começamos com 4 em r6c2 e terminamos com 8 em r6c4. 4 não pode estar em r6c4 e 8 não pode estar em r6c2. Prove para o candidato 4: Se r6c2<>4, então r6c4=8, o que significa que r6c4 não pode ser 4. Mas se r6c2=4, r6c4 também não pode ser 4, porque as células se veem. Temos uma veracidade que prova que r6c4 não pode ser 4.
+
+À direita: 8- r1c8 -2- r1c7 =2= r6c7 =6= r6c3 =5= r4c2 =2= r4c8 -2. O número 2 não pode estar em r1c8 e o número 8 não pode estar em r4c8.</li>
+<br/>
+<li>Loops contínuos agradáveis ​​(Loops AIC)</li>
+<br/>
+<li>Loops contínuos e loops AIC são exatamente a mesma coisa. Eles ocorrem com menos frequência do que loops descontínuos, mas, quando presentes, geralmente são muito eficazes. Um loop é contínuo se a ligação de volta à célula original mais a primeira ligação obedecerem às regras de propagação, ou, dito de outra forma, se não houver contradição na célula inicial/final.
+
+O que torna os loops contínuos tão eficazes é que todos os links fracos no loop são convertidos em links fortes. Isso significa que todos os candidatos adicionais nas casas ou células que fornecem os links fracos podem ser eliminados.</li>
+<br/>
+<img src="Imagens/cnl01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/cnl02.png" alt="imagem" border="5" class="img">
+<li>Exemplo à esquerda: 5 = r7c6 = 2 = r6c6 -2 - r4c5 -3 - r8c5 = 3 = r8c6 = 5 = r7c6 = 2. A célula r7c6 é deixada por uma ligação forte em 2 e alcançada novamente por uma ligação forte em 5 (primeira regra de propagação). Existe uma ligação fraca entre os candidatos 2 e 5 na célula r7c6; todas as regras para a construção de AICs são cumpridas. Eliminações: A primeira ligação fraca está dentro da célula inicial, entre os candidatos 2 e 5; todos os outros candidatos nessa célula podem ser eliminados (6 e 8). A próxima ligação fraca está no bloco 5, entre 2 em r6c6 e 2 em r4c5; todos os outros candidatos 2 no bloco 5 podem ser eliminados. A próxima ligação fraca está no candidato 3 na coluna 5 (elimina o 3 de r26c5) e, por último, mas não menos importante, a ligação fraca entre 3 e 5 em r8c6 (elimina o 8 nessa célula).
+
+Exemplo à direita: 9 = r7c5 = 1 = r7c9 = 7 = r3c9 -7- r3c3 = 7 = r1c3 = 5 = r1c6 -5- r8c6 = 5 = r8c4 = 7 = r7c4 = 9 = r7c5 = 1. As ligações fracas dentro das células estão em r7c5, r7c9, r1c3, r8c4 e r7c4. As ligações fracas entre as células estão na linha 3 (nada a eliminar) e na coluna 6.</li>
+<br/>
+<hr color="#000"/>
+<li>Loop agradável agrupado/AIC:</li>
+<br/>
+<li>Somente nós de grupo</li>
+<br/>
+<img src="Imagens/gdnl01 (1).png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/gcnl01D (1).png" alt="imagem" border="5" class="img">
+<li>À esquerda: Loop Descontínuo Agrupado Nice Loop r7c1 =2= r2c1 -2- r2c5 =2= r1c5 =8= r13c4 -8- r5c4 -3- r5c3 -2- r79c3 =2= r7c1. Os dois links de grupo são para o candidato 8 nas células r13c4 e para o candidato 2 em r79c3. A lógica para o primeiro link de grupo é a seguinte: Se r1c5 não for 8, então r1c4 ou r3c4 tem que ser 8; isso significa que r5c3 não pode ser 8. Para o segundo link de grupo: Se r5c3 for 2, então nem r7c3 nem r9c3 podem ser 2; Isso significa que r7c1 tem que ser 2.
+
+À direita: Loop Contínuo Agrupado 2 = r6c4 = 1 = r6c3 - 1 - r9c3 = 1 = r9c9 = 2 = r9c56 - 2 - r78c4 = 2 = r6c4 = 1. Os links de grupo estão ambos no candidato 2: Interseção da linha 9 com o bloco 8 (r9c56) e interseção da coluna 4 com o bloco 8 (r78c4). A lógica: Se r9c9 não for 2, então r9c5 ou r9c6 tem que ser 2; isso significa que nem r8c4 nem r7c4 podem ser 2 e, consequentemente, r6c4 tem que ser 2. O link fraco entre os nós de grupo r9c56 e r78c4 ocorre no bloco 8 e elimina todos os outros candidatos 2 desse bloco.</li>
+<br/>
+<img src="Imagens/gaic01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/gaic02.png" alt="imagem" border="5" class="img">
+<li>À esquerda: AIC agrupado 5- r7c2 -6- r6c2 -3- r6c4 -7- r45c5 =7= r3c5 =6= r3c6 -6- r9c6 -5 (ligação de grupo em 7 em r45c5 - mesma lógica acima).
+
+À direita: AIC agrupado 4- r2c5 =4= r9c5 -4- r9c9 -1- r89c8 =1= r2c8 -1- r2c456 =1= r1c4 -1. Este exemplo possui duas ligações de grupo. Uma delas (r2c456) possui três células (o máximo para uma ligação de grupo). Uma dessas células é a célula inicial. Isso não forma um loop: um nó de grupo não é o mesmo que um nó simples. No entanto, isso leva à eliminação de um dos membros da ligação de grupo, tornando a cadeia canibalística.</li>
+<br/>
+<li>Nódulos de grupo e ELA</li>
+<br/>
+<li>Se permitirmos ALS como nós em cadeias e loops, as coisas ficam realmente interessantes (e não param por aí: AURs, Almost Fish, etc., também podem ser nós). Para visualizar essas cadeias, a opção apropriada precisa ser habilitada no HoDoKu (a partir da versão 1.2, os nós ALS estão desabilitados por padrão).
+
+Nós ALS em Loops Contínuos Agrupados são especialmente interessantes: se considerarmos todos os candidatos ALS, subtrairmos os candidatos usados ​​para entrar e sair do ALS (eles são links fracos normais que se tornam links fortes, como de costume em loops contínuos), os candidatos restantes ficam bloqueados dentro das células ALS e podem fornecer eliminações em todas as células que veem todas as instâncias de um dos candidatos bloqueados dentro do ALS. Observe que isso só é possível em loops contínuos.</li>
+<br/>
+<img src="Imagens/gdnlals01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/gcnlals01 (1).png" alt="imagem" border="5" class="img">
+<li>À esquerda: Loop Descontínuo Agrupado Nice Loop r8c2 -5- r7c12 =5= r7c5 =2= r8c5 -2- ALS:r8c34 -5- r8c2. Começamos de forma simples: Se 5 estiver definido em r8c2 (premissa), nem r7c1 nem r7c2 podem ser 5, r7c5 tem que ser 5 e não pode ser 2, r8c5 tem que ser 2 e r8c3 não pode ser 2. Mas r8c3 era o único candidato 2 no ALS r8c34 {256}. Isso reduz o ALS a um conjunto bloqueado nos candidatos {56} em r8c34. Possíveis eliminações por esse Conjunto Bloqueado (e, portanto, possíveis elos fracos para nossa cadeia) são 5 em r8c2 e r8c5 e 6 em r8c6. Estamos interessados ​​apenas em r8c2, pois esta é a nossa célula inicial. O elo fraco contradiz a premissa, pois 5 pode ser eliminado de r8c2.
+
+À direita: O sudoku é o mesmo do nosso exemplo de Loop Contínuo Agrupado acima. Se permitirmos nós ALS, podemos extrair mais algumas eliminações (mas isso não importa: o sudoku é resolvido após qualquer um dos dois loops).
+
+O loop: Loop Contínuo Agrupado 2= r9c9 =3= r9c6 -3- ALS:r6c56 -2- r6c4 =2= r78c4 -2- r9c56 =2= r9c9 =3. A ligação fraca dentro da célula r9c9 elimina o candidato 1, a ligação fraca no ALS (candidato 3) elimina todos os outros 3s da coluna 6. O ALS fica usando o candidato 2, que eliminaria outros 2s da linha 6, se houvesse algum. Mas o ALS ainda tem um candidato restante: o candidato 8. Ele fica bloqueado dentro das células r6c56 do ALS e elimina 8 de todas as células que veem ambas as células (8 eliminações no total). As eliminações para o candidato 2 também veem uma célula do ALS cada uma, mas não podem ser eliminadas pelo ALS: primeiro, cada célula teria que ver todas as instâncias do candidato 2 dentro do ALS e, segundo, 2 não está bloqueado dentro do ALS, ele é o candidato de saída. Os 2s são eliminados pela ligação fraca entre o nó de grupo r78c4 e o nó de grupo r9c56 (ambos no bloco 8).</li>
+<br/>
+<img src="Imagens/gaic1als02.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/gaic1als01.png" alt="imagem" border="5" class="img">
+<li>Finalmente, dois exemplos de AICs com nós ALS:
+
+À esquerda: AIC agrupado 4- r8c6 -3- ALS:r78c7,r8c89,r9c8 -6- r9c4 -9- r6c4 -4. Isso não é novidade, apenas o ALS é relativamente grande: 6 candidatos ({123469}) em 5 células (r78c7,r8c89,r9c8).
+
+À direita: AIC agrupado 6- r7c1 -8- ALS:r29c3 =6= r5c3 -6. Este é interessante, pois mostra uma força exercida por um nó ALS. O ALS é r29c3 {189}. Ele é alcançado através do candidato 8 em r9c3, o que deixa o par bloqueado {19}. O próximo nó r5c3 tem candidatos {169}: 1 e 9 são eliminados pelo Conjunto Bloqueado, restando 6 como único candidato nessa célula, forçando-o.
+
+Como o HoDoKu atualmente não suporta links em mais de um candidato, a cadeia é escrita como mostrado acima. Uma notação mais completa seria: 6- r7c1 -8- ALS:r29c3 -19- r5c3 -6 (o ALS precisa ser alcançado e deixado em um link fraco).</li>
+<br/>
+<hr color="#000"/>
+<li>Conjunto Quase Bloqueado (ALS):</li>
+<br/>
+<li>Um Conjunto Bloqueado (ou Conjunto Nu) é um grupo de N células não resolvidas dentro de uma mesma casa que, juntas, contêm apenas N candidatos. É um conceito simples que permite eliminar todos os candidatos do conjunto bloqueado de todas as outras células na mesma casa que o próprio conjunto bloqueado.
+
+Um Conjunto Quase Bloqueado é um grupo de células não resolvidas dentro de uma mesma casa que seria um Conjunto Bloqueado se faltasse apenas um candidato. Mais formalmente: um grupo de N células com N+1 candidatos. Todo solucionador conhece esse fenômeno: ao procurar por Subconjuntos Nus, geralmente encontramos muitos e muitos Conjuntos Quase Bloqueados (ALBs).
+
+Um ALB em si não faz nada, mas é possível usá-los como nós em cadeias (veja ALBs em Cadeias). Outra possibilidade de obter algo de um ALB é combiná-lo com outro ALB. Técnicas que usam esse princípio são descritas aqui.</li>
+<br/>
+<li>Candidato Comum Restrito (RCC)</li>
+<br/>
+<li>Para combinar dois conjuntos de números aleatórios (ALS), eles devem compartilhar pelo menos um candidato. "Compartilhar" significa que todas as instâncias do candidato no ALS 1 veem todas as instâncias desse candidato no ALS 2. Tal candidato é chamado de Candidato Comum Restrito (ou CCR, na sigla em inglês).
+
+A utilidade de um CCR reside no fato de que ele só pode ser verdadeiro em um dos ALS: todas as células de um ALS veem umas às outras, portanto, um dígito só pode ser colocado uma vez em um ALS. Um CCR é ainda mais restrito: como todas as instâncias possíveis de um CCR em ambos os ALS precisam ver umas às outras, colocar um CCR em qualquer célula desses ALS elimina completamente esse dígito de um dos dois ALS. Esse ALS se transforma, assim, em um Conjunto Bloqueado.
+
+Às vezes, dois ALS compartilham não apenas um, mas dois CCRs. Esses ALS são chamados de "duplamente vinculados" e são a base para algumas técnicas bastante eficazes.</li>
+<br/>
+<li>Sobreposição de ELA</li>
+<br/>
+<li>A sobreposição de ALS é permitida em todas as técnicas de ALS. Há apenas uma restrição: a área de sobreposição entre dois ALS não deve conter um RCC.</li>
+<br/>
+<hr color="#000"/>
+<li>ALS-XZ:</li>
+<br/>
+<li>ALS-XZ com ligação simples</li>
+<br/>
+<li>Esta é a técnica ALS mais simples: Encontre dois ALS que compartilhem um RCC (o RCC é chamado de X). Se ambos os ALS contiverem um dígito comum Z que não seja o RCC, Z pode ser eliminado de todas as células que não são ALS e que veem todas as ocorrências de Z em ambos os ALS. Um ALS-XZ é, na verdade, uma cadeia ALS de comprimento 2.
+
+A lógica por trás do ALS-XZ também é bastante simples: Devido ao RCC, pelo menos um dos ALS se torna um Conjunto Bloqueado (ainda não sabemos qual). Como ambos os ALS contêm o dígito Z, Z fica bloqueado em pelo menos um dos ALS. Isso significa que, em todas as células ALS juntas, um Z deve ser colocado. Portanto, qualquer célula que veja todas as possíveis colocações de Z não pode conter Z.</li>
+<br/>
+<img src="Imagens/axz01.png" alt="imagem" border="5" class="img">
+<li>Exemplo à esquerda: Temos dois ALS: ALS A (r1c67, candidatos {679}) e ALS B (r3c289, {6789}). Em ambos os ALS, o dígito 6 ocorre apenas no bloco 3, sendo, portanto, um RCC (X - marcado em violeta). Ambos os ALS têm como dígito comum, além do RCC, o dígito 7 (Z - marcado em azul na imagem). As células r3c56 não fazem parte de nenhum dos ALS e podem ver todas as células ALS que poderiam se tornar 7. O dígito 7 pode ser eliminado dessas células.
+
+Exemplo à direita: A=r456c3,r6c2 {34568}, B=r7c2,r9c1 {378}, X=3, Z=8 => r789c3<>8. O ALS A é um pouco maior nesse exemplo (4 células com 5 candidatos), mas os princípios são os mesmos.</li>
+<br/>
+<li>ALS-XZ duplamente ligado</li>
+<br/>
+<li>Se os dois ALS tiverem dois RCCs, as coisas ficam realmente interessantes. Lembre-se de que um dígito RCC só pode ser colocado em um ALS, transformando o outro ALS em um conjunto bloqueado. Se tivermos dois RCCs, um deles precisa ser colocado no ALS A, transformando o ALS B em um conjunto bloqueado, e o outro precisa estar no ALS B, transformando o ALS A em um conjunto bloqueado (qual RCC estará em qual ALS ainda é desconhecido). Ambos os RCCs em um mesmo ALS é impossível, porque ambos os RCCs seriam eliminados do outro ALS, restando apenas N-1 candidatos para N células, o que é inválido.
+
+O que podemos concluir de um ALS-XZ duplamente ligado? Ambos os RCCs estão bloqueados em um mesmo ALS, portanto, os RCCs podem ser eliminados de todas as células não-ALS nas regiões que os fornecem. Mas, mais importante ainda, todos os dígitos que não são RCC ficam bloqueados dentro de seus respectivos ALS e eliminam todos os dígitos fora do ALS que podem ver todas as instâncias do dígito no ALS (a eliminação pode até ser feita em uma célula pertencente ao outro ALS, tornando o ALS-XZ canibalístico).</li>
+<br/>
+<img src="Imagens/daxz01.png" alt="imagem" border="5" class="img">
+<li>À esquerda: A=r2c239 {2479}, B=r4c23 {124}, X=2,4. As sequências ALS A e B estão duplamente ligadas pelos candidatos 2 e 4, não havendo nenhum dígito comum adicional Z. Todas as ocorrências do RCC 2 estão na coluna 2, o que elimina o 2 de r1c2. Todas as ocorrências do RCC 4 estão na coluna 3, o que elimina o 4 de r16c3. A sequência ALS A agora possui os dígitos não-RCC 7 e 9 restantes. Todas as ocorrências de ambos os dígitos estão restritas à linha 2, portanto, 7 e 9 podem ser eliminados de todas as outras células da linha 2. A sequência ALS B possui apenas o dígito 1 restante; todas as ocorrências desse dígito estão na linha 4 e bloco 4, o que elimina todos os outros 1s dessas casas.
+
+A sequência ALS B possui apenas o dígito 1 restante; todas as ocorrências desse dígito estão na linha 4 e bloco 4, o que elimina todos os outros 1s dessas casas.
+
+O ALS-XZ no exemplo à direita é o terceiro movimento neste sudoku (após um Hidden Single e um Locked Candidates Type 1): A=r23c4 {467}, B=r2c23,r3c23 {14678}, X=4,6. RCC 4 está restrito à linha 3 (sem eliminações), RCC 6 à linha 2 (r2c5<>6). O ALS A tem o dígito 7 restante (elimina do bloco 2 e da coluna 4), o ALS B tem 1, 7 e 8 restantes (elimina do bloco 1 e da coluna 2 - coluna 2 apenas para o dígito 1). A última distinção é importante: os dígitos 7 e 8 estão restritos ao bloco 1 e só podem eliminar desse bloco. Mas o dígito 1 está restrito à interseção do bloco 1 e da coluna 2 e, portanto, pode eliminar de ambas as casas.</li>
+<br/>
+<hr color="#000"/>
+<li>ALS-XY-Wing:</li>
+<br/>
+<li>Uma ALS-XY-Wing precisa de três ALSs: A, B e C (é uma cadeia ALS de comprimento três: z-A-x-C-y-B-z). A ALS A compartilha o RCC X com a ALS C, e a ALS B compartilha o RCC Y com a ALS C (X e Y não podem ser o mesmo dígito). Tanto a ALS A quanto a ALS B têm um dígito em comum, Z. Z pode ser eliminado de todas as células que contêm todas as ocorrências de Z em A e B.
+
+A lógica é a mesma que para uma cadeia ALS (veja abaixo): se Z não estiver na ALS A, então A deve conter X (apenas um dígito pode estar ausente em uma ALS). Isso significa que a ALS C deve conter Y (X está ausente em C) e, portanto, a ALS B deve conter Z (Y está ausente em B). O inverso também funciona: se a ALS B não contiver Z, a ALS A deve contê-lo.</li>
+<br/>
+<img src="Imagens/axy01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/axy02.png" alt="imagem" border="5" class="img">
+<li>À esquerda: A=r7c156 {3678}, B=r579c8 {2389}, C=r9c34 {179}, X,Y=7,9, Z=3. RCC 7 está restrito ao bloco 7, RCC 9 à linha 9 (ambos marcados em violeta - os números são coincidência). O dígito comum 3 deve ser colocado em uma das células azuis, nunca podendo estar em r7c7.
+
+À direita: A=r1c78 {247}, B=r25c4 {679}, C=r259c9 {3467}, X,Y=4,6, Z=7. Observe que ALS C também contém o dígito 7, mas isso é irrelevante para a movimentação.</li>
+<br/>
+<hr color="#000"/>
+<li>Cadeia ALS</li>
+<br/>
+<li>Cadeias ALS são uma série de ALS conectadas por RCCs. A primeira e a última ALS devem conter um dígito em comum; esse dígito é eliminado de todas as células que veem todas as instâncias do dígito em ambas as extremidades da cadeia ALS. Algumas restrições são impostas aos RCCs: dois RCCs adjacentes não podem ser iguais. Na verdade, ao construir cadeias ALS que contêm ALS duplamente conectadas, a escolha dos RCCs corretos é um pouco mais complexa do que isso. Uma discussão sobre todas as possibilidades com ALS duplamente conectadas está além do escopo deste guia; consulte as Regras de Adjacência Comum Restrita no Fórum do Jogador.
+
+A lógica: a cadeia prova que, se o dígito em comum não estiver na ALS inicial, ele deve estar na ALS final, eliminando assim todos os pares de todas as instâncias do dígito em comum na ALS final. Se o dígito em comum estiver na ALS inicial, no entanto, ele elimina o dígito em comum de todos os pares da ALS inicial. A combinação de ambos os casos (uma veracidade típica) proporciona as eliminações mencionadas acima.
+
+Algumas explicações das Cadeias ALS (frequentemente chamadas de "Cadeias ALS-XY") dependem da reversibilidade da cadeia. Na verdade, porém, algumas cadeias mais complexas com ALS duplamente ligadas não são reversíveis. A lógica descrita acima se aplica mesmo nesses casos.
+
+As Cadeias ALS podem ser escritas na notação de Nice Loop, com os RCCs como elos fracos entre os ALS.</li>
+<br/>
+<img src="Imagens/ach01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/ach02.png" alt="imagem" border="5" class="img">
+<li>Exemplo à esquerda: 69- r1c4789 {24569} -5- r8c4 {56} -6- r58c3 {256} -2- r2c123,r3c3 {23469} -69. Nada de especial nessa cadeia, exceto pelo fato de possuir dois dígitos em comum (6 e 9). O segundo ALS é uma célula bivalorada simples (o menor ALS possível - dois candidatos em uma célula).
+
+Exemplo à direita: 3- r2c1249 {23567} -7- r2c7 {37} -3- r7c7 {37} -7- r7c4,r8c5 {237} -3. Dois ALS nessa cadeia estão duplamente ligados: r2c7 e r7c7 ligados por {37}. Isso é válido, desde que todos os RCCs adjacentes sejam diferentes.</li>
+<br/>
+<hr color="#000"/>
+<li>Flor da Morte:</li>
+<br/>
+<li>Uma Flor da Morte consiste em uma célula-tronco e pétalas. Cada pétala é um ALS (Anexo de Linhagem) que possui um RCC (Anexo de Linhagem Relativa) com a célula-tronco. Se uma pétala puder ser encontrada para cada candidato na célula-tronco, e se todos os ALS das pétalas tiverem um dígito em comum, esse dígito pode ser eliminado de todas as células que veem todas as instâncias do dígito em comum em todas as pétalas.
+
+Se a sobreposição não for permitida (padrão no HoDoKu), é muito difícil encontrar uma Flor da Morte com mais de dois candidatos na célula-tronco (tal Flor da Morte é sempre um ALS-XY-Asa). Se a sobreposição for permitida (sem necessidade de restrições), Flores da Morte muito interessantes podem ser encontradas.
+
+A lógica por trás da Flor da Morte é simples: um dos candidatos na célula-tronco deve ser verdadeiro, bloqueando assim o dígito em comum no ALS conectado.</li>
+<br/>
+<img src="Imagens/db01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/db02.png" alt="imagem" border="5" class="img">
+<li>Exemplo à esquerda: [r3c4], -4- r2c23,r3c23 {14678}, -7- r2c4 {67}. A célula-tronco r3c4 possui RCC 4 com ALS r2c23,r3c23 e RCC 7 com ALS r2c4. Ambos os ALS têm o dígito 6 em comum, eliminando o 6 de r2c5. Este é um exemplo típico de "Death Blossom" não sobreposto, que na verdade é um ALS-XY-Wing.
+
+Exemplo à direita: [r7c6], -3- r8c3456 {23569}, -6- r8c4 {56}, -9- r8c345 {2569}. Neste exemplo, ALS 2 e ALS 3 se sobrepõem completamente a ALS 1 (a célula r8c4 está contida nos três ALS!). Isso é válido. O dígito comum é 5 (6 é um dígito comum, mas também um RCC, não pode ser usado para eliminações), o Death Blossom elimina 5 de r8c2.</li>
+<br/>
+<li>Modelos - Os modelos são um método de padrão de dígito único. Em uma grade de Sudoku vazia, existem exatamente 46.656 possibilidades para posicionar todas as 9 ocorrências de um dígito na grade. Cada vez que uma ocorrência do dígito é colocada, todas as combinações que não contêm essa célula se tornam inválidas, e cada vez que outro dígito é colocado em uma célula, todas as combinações que contêm essa célula se tornam inválidas. Se todos os modelos possíveis tiverem sido calculados, o dígito pode ser eliminado de qualquer célula que não esteja contida em pelo menos um dos modelos restantes, e pode ser definido em todas as células que estão contidas em todos os modelos restantes.
+
+Pela descrição, deve ficar claro que os modelos não se destinam a jogadores humanos. Eles podem, no entanto, ser usados ​​como indicadores: se nenhuma eliminação de modelo estiver presente, nenhuma ocorrência de um padrão de dígito único pode ser encontrada (por exemplo: uma busca muito demorada por tipos de peixes complexos não é necessária). O inverso não é necessariamente válido.</li>
+<br/>
+<hr color="#000"/>
+<li>Corrente de força</li>
+<br/>
+<li>Antes de se aprofundar em Cadeias de Forçamento ou Redes, certifique-se de ter compreendido completamente a Introdução sobre cadeias.
+
+Cadeia de Forçamento é um termo genérico para qualquer cadeia que leva a uma contradição ou a uma verdade e, portanto, força algo (qualquer Nice Loop Descontínuo ou qualquer AIC é uma Cadeia de Forçamento por essa definição). Cadeias que não levam a uma contradição por si só podem ser combinadas em uma Cadeia de Forçamento Múltipla. Todas as cadeias juntas podem provar uma verdade ou uma contradição, levando assim a um forçamento.
+
+Em uma verdade, múltiplas cadeias têm o mesmo resultado. Se uma das premissas das cadeias tiver que ser verdadeira, o resultado também deverá ser verdadeiro. Exemplos de premissas que podem fornecer uma veracidade:
+
+Cadeias que começam com todos os candidatos de uma célula (um dos candidatos deve ser verdadeiro e pelo menos um dos candidatos deve ser falso)
+Cadeias que começam com todas as ocorrências de um candidato em uma casa
+Cadeias que começam com todos os dígitos adicionais de um UR (atualmente não implementado no HoDoKu)
+Em uma contradição, todas as cadeias começam com a mesma premissa, mas levam a implicações que não podem ser todas verdadeiras. Exemplos de contradições:
+
+Cadeias que provam que uma célula não pode conter um dígito
+Cadeias que eliminam todas as ocorrências de um dígito de uma casa
+Cadeias que definem mais de um dígito em uma célula
+Cadeias que definem mais de uma ocorrência de um dígito em uma casa</li>
+<br/>
+<li>As possibilidades de múltiplas cadeias de força são praticamente ilimitadas.
+
+Se uma cadeia de força ou rede for visualizada no HoDoKu, a enorme quantidade de links pode tornar a imagem completamente ilegível. Portanto, é possível exibir apenas uma cadeia por vez (consulte "Usando o Sistema de Dicas" no Manual do Usuário).</li>
+<br/>
+<img src="Imagens/fcv01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/fcv02.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/fcv03.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/fcv04.png" alt="imagem" border="5" class="img">
+<li>O exemplo mostra uma Cadeia de Forças Verídica bastante simples, que prova que r1c7 tem que ser 4 (a primeira imagem mostra todos os elos de uma vez, as outras três imagens mostram as três cadeias).
+
+Cadeia de Forças Verídica => r1c7=4
+
+r4c4=1 r8c4=6 r6c8=6 r1c8=3 r1c7=4
+r4c6=1 r4c7=3 r1c7=4
+r4c7=1 r5c8=5 r1c8=3 r1c7=4
+Significado: Para cada possível posição do dígito 1 na linha 4, pode-se provar que r1c7 é 4. Portanto, r1c7 deve ser 4.
+
+Para cada Cadeia de Forças Verídica, existe uma Cadeia de Forças Contraditória complementar. A contradição para o exemplo acima:
+
+Contradição de cadeia forçada em r4 => r1c7=4
+
+r1c7<>4 r1c7=3 r1c8=5 r5c8=1 r8c4=1 r4c4<>1
+r1c7<>4 r1c7=3 r4c6=3 r4c6<>1
+r1c7<>4 r1c7=3 r1c8=5 r5c8=1 r4c7<>1
+Significado: Se r1c7 não for 4, a linha 4 não contém o dígito 1. Como isso não é possível, a premissa deve estar errada, 4 pode ser colocado em r1c7.</li>
+<br/>
+
+<hr color="#000"/>
+
+</h4>
+
+ </body>
+ </html>
+
+ 

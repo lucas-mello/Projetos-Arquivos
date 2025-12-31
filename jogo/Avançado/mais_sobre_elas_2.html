@@ -1,0 +1,411 @@
+<html>
+ <head>
+  <title>Sudoku:</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    .h2{
+       text-align: center;
+       text-decoration:underline;
+       font-size:40px;
+     }
+
+   .h4{ 
+    font-size:30px; 
+    text-align:justify;
+    }
+   
+     .img{
+       width:540px;
+       height:443px;
+       }
+    
+
+  </style>
+ </head>
+ <body bgcolor="#d3d3d3">
+
+<h2 class="h2">Observações:</h2>
+
+<h2 class="h2">Sobre:</h2>
+
+<h4 class="h4">
+<li>"Linked Pairs" é uma técnica no Sudoku que envolve a observação de pares de candidatos em células interconectadas em uma linha, coluna ou bloco. Esses pares de candidatos são chamados de "pares ligados" porque a presença de um candidato em uma célula implica a presença do outro candidato em outra célula interconectada. Aqui está como funciona:</li>
+<br/>
+<li>Identifique um par de candidatos: Encontre dois candidatos específicos que aparecem apenas em duas células na mesma linha, coluna ou bloco.Essas duas células são os membros do par ligado.</li>
+<br/>
+<li>Verifique as interconexões: Se o candidato A está presente em uma célula e o candidato B está presente na outra célula do par ligado, verifique as células relacionadas (ou seja, células na mesma linha, coluna ou bloco) para ver se uma delas força a presença do candidato A ou B. Se isso acontecer, você encontrou um par ligado.</li>
+<br/>
+<li>Deduza as eliminações: Se você encontrou um par ligado, pode eliminar os candidatos A e B de outras células na mesma linha, coluna ou bloco que são afetadas pelo par ligado.</li>
+<br/>
+<li>A técnica de Linked Pairs é uma estratégia básica, mas útil para eliminar candidatos e simplificar o tabuleiro. É uma técnica eficaz para Sudokus de dificuldade média. Praticar essa técnica ajudará a desenvolver sua habilidade de observação e dedução no jogo.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Linked+Pairs+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"Cell Forcing Chains" é uma técnica avançada no Sudoku que envolve a criação de uma cadeia de células interconectadas onde a presença de um candidato força a presença de outro candidato em células relacionadas. Ao criar e observar essas cadeias, você pode eliminar candidatos e simplificar o tabuleiro.</li>
+<br/>
+<li>Aqui está como funciona a técnica de Cell Forcing Chains:</li>
+<br/>
+<li>Identifique uma cadeia de células: Encontre uma sequência de células (linhas, colunas ou blocos) onde um candidato específico pode aparecer em diferentes células ao longo da cadeia.</li>
+<br/>
+<li>Deduza as implicações: Se um candidato aparece em uma célula específica da cadeia, isso força a presença de outro candidato em uma célula relacionada. Por exemplo, se o candidato A está na célula A1 e isso implica que A não pode estar na célula A2, e por sua vez, a ausência de A na célula A2 implica a presença de A na célula A3, então você criou uma cadeia forçada de células.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrar uma cadeia forçada de células, pode eliminar o candidato forçado de outras células na mesma linha, coluna ou bloco que são afetadas pela cadeia.</li>
+<br/>
+<li>Ao criar e observar cuidadosamente essas cadeias de células forçadas, você pode eliminar candidatos e progredir no jogo. A técnica de Cell Forcing Chains pode ser bastante complexa, especialmente em quebra-cabeças de Sudoku mais difíceis, mas é uma ferramenta poderosa quando dominada.</li>
+<br/>
+<li>Prática regular e atenção aos detalhes são essenciais para aplicar o Cell Forcing Chains com sucesso no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=cell+forcing+chains+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"Unique Loop" é uma técnica avançada no Sudoku, também conhecida como "Unique Rectangle" ou "Single Alternate Sue de Coq." Esta técnica é usada para eliminar candidatos em situações específicas onde uma célula é forçada a ter um candidato específico, criando assim uma configuração única no tabuleiro.</li>
+<br/>
+<li>Aqui está como funciona o Unique Loop:</li>
+<br/>
+<li>Encontre uma configuração específica: Procure por um padrão no tabuleiro onde há quatro células em um retângulo (2x2), e cada uma dessas células contém apenas dois candidatos.</li>
+<br/>
+<li>Verifique as interconexões: Analise as interações entre esses candidatos nas quatro células do retângulo. Se você encontrar uma situação em que, se um candidato estiver presente em uma célula específica, isso força a presença de outro candidato em outra célula do retângulo, você identificou um Unique Loop.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou um Unique Loop, pode eliminar o candidato forçado de outras células na mesma linha, coluna ou bloco que são afetadas pelo Loop.</li>
+<br/>
+<li>O Unique Loop é uma técnica poderosa, mas também complexa, e geralmente é usada em Sudokus muito difíceis ou quebra-cabeças extremamente complicados. Identificar e entender essa configuração específica requer prática e habilidade em observar os padrões no tabuleiro.</li>
+<br/>
+<li>A aplicação bem-sucedida do Unique Loop pode levar a eliminações significativas e ajudar a resolver Sudokus muito desafiadores. No entanto, esta técnica é avançada e pode não ser tão comum ou necessária em quebra-cabeças de dificuldade média ou fácil.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Unique+Loop+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"Remote Pairs 2," também conhecido como "Bivalue Universal Grave," é uma técnica avançada no Sudoku que envolve padrões específicos de candidatos em células interconectadas. Essa técnica é uma extensão do conceito de Remote Pairs, onde você observa pares de candidatos em células interconectadas. No Remote Pairs 2, você está procurando uma configuração mais complexa.</li>
+<br/>
+<li>Aqui está como funciona o Remote Pairs 2 (Bivalue Universal Grave):</li>
+<br/>
+<li>Identifique um conjunto de células interconectadas: Procure por um conjunto de células (linhas, colunas ou blocos) onde existem três candidatos específicos (A, B e C) em três células interconectadas.</li>
+<br/>
+<li>Verifique as interações: Analise as interações entre esses candidatos nas células do conjunto. Se houver uma relação em que, se A estiver presente em uma célula específica, isso força a presença de B em outra célula interconectada, e por sua vez, a ausência de B força a presença de C em uma terceira célula do conjunto, você encontrou um Remote Pairs 2 (Bivalue Universal Grave).</li>
+<br/>
+<li>Deduza as eliminações: Se você encontrou um Remote Pairs 2, pode eliminar os candidatos A e C das células afetadas, mesmo que eles não estejam diretamente relacionados à regra de eliminação. Isso ocorre porque a presença de A implica B, e a ausência de B implica C.</li>
+<br/>
+<li>O Remote Pairs 2 (Bivalue Universal Grave) é uma técnica avançada e requer uma compreensão profunda das interações entre os candidatos nas células. Identificar e compreender esses padrões específicos em diferentes partes do tabuleiro pode levar a eliminações significativas e ajudar a resolver quebra-cabeças de Sudoku mais desafiadores. Prática e paciência são essenciais para aplicar o Remote Pairs 2 com sucesso no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Remote+Pairs+2+%28Bivalue+Universal+Grave%29+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+<li>O termo "Sudoku Swordfish" refere-se a uma técnica avançada no Sudoku que envolve padrões específicos de candidatos em células interconectadas. O Swordfish é uma variação do X-Wing, uma técnica que envolve grupos de células em diferentes linhas e colunas, onde um candidato específico pode aparecer apenas em duas ou três células em cada linha ou coluna.No Swordfish, essa configuração é estendida para três linhas (ou três colunas), criando uma formação que se assemelha a um "Swordfish."</li>
+<br/>
+<li>Aqui está como funciona o Sudoku Swordfish:
+Identifique um padrão Swordfish: Procure por três linhas (ou três colunas) onde um candidato específico (por exemplo, o número 1) aparece apenas em duas ou três células em cada linha (ou coluna), mas não em outras células dessas linhas (ou colunas). A configuração deve se parecer com um Swordfish quando visualizada no tabuleiro.</li>
+<br/>
+<li>Verifique as interações: Analise as interações entre os candidatos nessas linhas (ou colunas). Se houver uma relação em que, se o candidato 1 estiver presente em uma célula específica em uma linha (ou coluna), isso força a presença de 1 em uma célula específica em outra linha (ou coluna) do Swordfish, então você encontrou um Swordfish.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou um Swordfish, pode eliminar o candidato 1 de outras células nas colunas (ou linhas) afetadas pelo Swordfish.</li>
+<br/>
+<li>O Swordfish é uma técnica poderosa para eliminar candidatos e simplificar o tabuleiro. Ele é particularmente útil em Sudokus mais difíceis, onde padrões complexos de candidatos estão presentes. Prática e paciência são essenciais para identificar e aplicar com sucesso o Swordfish no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Sudoku+Swordfish+Fish&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"Gordonian Logic" é uma técnica avançada no Sudoku que envolve a observação de padrões específicos para eliminar candidatos em células interconectadas. Essa técnica é chamada "Gordonian" em homenagem ao seu criador, Edmund Gordon.</li>
+<br/>
+<li>A técnica Gordonian Logic é uma estratégia que se baseia na observação de células onde dois candidatos específicos (por exemplo, os números 1 e 2) estão presentes. Quando esses dois candidatos estão presentes em duas células interconectadas e também estão presentes em uma terceira célula ligada a ambas, você pode eliminar candidatos de outras células na mesma linha, coluna ou bloco dessas células interconectadas.</li>
+<br/>
+<li>Aqui está como funciona a Gordonian Logic:</li>
+<br/>
+<li>Identifique duas células interconectadas: Encontre duas células em uma linha, coluna ou bloco onde os candidatos 1 e 2 estão presentes. Essas duas células formam a base da Gordonian Logic.</li>
+<br/>
+<li>Encontre uma terceira célula conectada: Localize uma terceira célula na mesma linha, coluna ou bloco que esteja conectada a ambas as células identificadas no passo 1 e que contenha os candidatos 1 e 2.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou essas três células (duas com candidatos 1 e 2, e uma terceira conectada a ambas), pode eliminar os candidatos 1 e 2 de 
+outras células na mesma linha, coluna ou bloco que são afetadas por essa configuração.</li>
+<br/>
+<li>A Gordonian Logic é uma técnica mais avançada e pode não aparecer com frequência em Sudokus mais simples. No entanto, em quebra-cabeças mais complexos, essa técnica pode levar a eliminações significativas e ajudar a resolver o tabuleiro. Prática e paciência são essenciais para aplicar com sucesso a Gordonian Logic no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Gordonian+Logic+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+
+<li>"XYZ-Wing 2" é uma variação avançada da técnica XYZ-Wing no Sudoku. A técnica XYZ-Wing é uma estratégia avançada que envolve três células interconectadas, cada uma contendo três candidatos. Na variação XYZ-Wing 2, você procura uma configuração específica que se assemelha a um XYZ-Wing, mas com um padrão mais complexo.</li>
+<br/>
+<li>Aqui está como funciona o XYZ-Wing 2:</li>
+<br/>
+<li>Identifique três células interconectadas: Procure por três células em diferentes blocos que estejam interconectadas por causa de candidatos específicos. Cada célula deve conter três candidatos.</li>
+<br/>
+<li>Verifique as interações: Analise as interações entre essas três células. Se você observar um padrão onde, se um candidato estiver presente em uma célula específica, isso força a presença de outro candidato em uma segunda célula, que por sua vez força a presença de um terceiro candidato em uma terceira célula, você encontrou um XYZ-Wing 2.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você identificou um XYZ-Wing 2, pode eliminar os candidatos forçados de outras células no mesmo bloco que são afetadas pelo padrão.</li>
+<br/>
+<li>O XYZ-Wing 2 é uma técnica avançada que requer uma compreensão profunda das interações entre os candidatos nas células. Identificar e compreender esses padrões específicos em diferentes partes do tabuleiro pode levar a eliminações significativas e ajudar a resolver quebra-cabeças de Sudoku mais desafiadores. Prática e paciência são essenciais para aplicar o XYZ-Wing 2 com sucesso no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XYZ-Wing+2+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+<li>"Grouped Nice Loops" é uma técnica avançada no Sudoku que envolve a observação de padrões específicos de candidatos em um grupo de células interconectadas, como uma linha, coluna ou bloco. Essa técnica é uma extensão do conceito de "Nice Loops", que é uma estratégia para eliminar candidatos em células interconectadas.</li>
+<br/>
+<li>Aqui está como funciona o "Grouped Nice Loops":</li>
+<br/>
+<li>Identifique um grupo de células interconectadas: Procure por um grupo de células em uma linha, coluna ou bloco onde existem candidatos específicos em células interconectadas.</li>
+<br/>
+<li>Verifique as interações: Analise as interações entre esses candidatos nas células do grupo. Se você observar um padrão onde os candidatos estão dispostos de maneira que se um candidato estiver presente em uma célula específica,isso força a presença de outro candidato em outra célula do grupo, e assim por diante, você encontrou um "Grouped Nice Loop".</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você identificar um "Grouped Nice Loop", pode eliminar os candidatos forçados de outras células no mesmo grupo que são afetadas pelo padrão.</li>
+<br/>
+
+<li>O "Grouped Nice Loops" é uma técnica avançada e requer uma compreensão profunda das interações entre os candidatos nas células. Identificar e compreender esses padrões específicos em diferentes partes do tabuleiro pode levar a eliminações significativas e ajudar a resolver quebra-cabeças de Sudoku mais desafiadores. Prática e paciência são essenciais para aplicar o "Grouped Nice Loops" com sucesso no Sudoku.</li>
+<br/>
+
+<a href="https://www.google.com.br/m?q=grouped+nice+loops+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"Bivalue Universal Grave +1" (BUG+1) é uma técnica avançada no Sudoku que envolve padrões específicos em um grupo de células interconectadas. O BUG+1 é uma extensão do conceito de BUG, que significa "Bivalue Universal Grave". Ambos os métodos são usados para identificar situações onde há uma contradição fundamental nas candidaturas, indicando que uma das suposições iniciais estava incorreta.</li>
+<br/>
+<li>No BUG original, você procura por uma célula com apenas dois candidatos e verifica se nenhuma outra célula no mesmo bloco compartilha esses dois candidatos. Se isso acontecer, há um BUG no Sudoku.</li>
+<br/>
+<li>No BUG+1, além de encontrar o BUG, você verifica se uma terceira célula no mesmo bloco contém pelo menos um dos candidatos do BUG. Se for o caso, então há uma contradição no Sudoku, indicando que a suposição inicial está incorreta.</li>
+<br/>
+<li>Aqui está como funciona o BUG+1:</li>
+<br/>
+<li>Identifique um BUG: Encontre uma célula com apenas dois candidatos onde nenhuma outra célula no mesmo bloco contenha esses dois candidatos.</li>
+<br/>
+<li>Verifique a terceira célula: Analise as outras células no mesmo bloco. Se uma terceira célula contém pelo menos um dos candidatos do BUG, então você encontrou um BUG+1.</li>
+<br/>
+<li>Conclusão: Se você identificar um BUG+1, isso indica que a suposição inicial (um dos dois candidatos do BUG) estava incorreta, e a outra opção deve ser a escolha correta para a célula.</li>
+<br/>
+<li>O BUG+1 é uma técnica avançada e requer uma compreensão profunda das interações entre os candidatos nas células. Identificar e compreender esses padrões específicos em diferentes partes do tabuleiro pode levar à descoberta de contradições lógicas, indicando que uma escolha inicial estava errada. Prática e paciência são essenciais para aplicar o BUG+1 com sucesso no Sudoku.</li>
+<br/>
+
+<a href="https://www.google.com.br/m?q=Bivalue+Universal+Grave+%28BUG%29+%2B1+Sudoku-X&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+<li>O "Mutant Swordfish" é uma variação avançada da técnica Swordfish no Sudoku. O Swordfish é uma estratégia que envolve três linhas (ou colunas) onde um determinado candidato só pode aparecer em três células em cada linha (ou coluna), e essas células estão alinhadas em três colunas (ou linhas) diferentes.</li>
+<br/>
+<li>O Mutant Swordfish é uma extensão do Swordfish, onde as três linhas (ou colunas) podem não estar perfeitamente alinhadas. Em outras palavras, as células do candidato em cada linha (ou coluna) não precisam estar na mesma posição relativa nas três linhas (ou colunas). Desde que haja três linhas (ou colunas) onde o candidato aparece em três células em cada uma delas, é considerado um Mutant Swordfish.</li>
+<br/>
+<li>Aqui está como funciona o Mutant Swordfish:</li>
+<br/>
+<li>Identifique três linhas (ou colunas) com três células cada: Procure por três linhas (ou colunas) onde um candidato específico só aparece em três células em cada uma delas.</li>
+<br/>
+<li>Verifique a interconexão das células: As três linhas (ou colunas) não precisam estar perfeitamente alinhadas. Contanto que haja três linhas (ou colunas) onde o candidato aparece em três células em cada uma delas, você tem um Mutant Swordfish.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou um Mutant Swordfish, pode eliminar o candidato das outras células nas colunas (ou linhas) afetadas pelo padrão.</li>
+<br/>
+<li>O Mutant Swordfish é uma técnica avançada e pode levar a eliminações significativas em Sudokus mais difíceis. Identificar e compreender esses padrões específicos em diferentes partes do tabuleiro pode levar a eliminações lógicas importantes. Prática e paciência são essenciais para aplicar o Mutant Swordfish com sucesso no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/search?q=mutant+Swordfish+Sudoku&client=ms-opera-mobile&sca_esv=579179295&channel=new&espv=1&sxsrf=AM9HkKmyEVlHo-Gu05iEcRRF3JBW1tNuQw%3A1699031264296&ei=4ChFZaSpEZDV1sQP4vGlmAc&oq=mutant+Swordfish+Sudoku&gs_lp=EhNtb2JpbGUtZ3dzLXdpei1zZXJwIhdtdXRhbnQgU3dvcmRmaXNoIFN1ZG9rdTIHEAAYHhiwAzIIEAAYogQYsAMyCBAAGKIEGLADMggQABiiBBiwAzIIEAAYogQYsANIqgZQ_QVY_QVwAHgAkAEAmAGrAqABqwKqAQMyLTG4AQPIAQD4AQHiAwQYASBBiAYBkAYF&sclient=mobile-gws-wiz-serp" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"Nishio" é uma técnica avançada no Sudoku que envolve a tentativa e erro controlados para resolver o quebra-cabeça. É uma estratégia de último recurso, geralmente usada quando todas as técnicas lógicas convencionais falharam em avançar na resolução do Sudoku.</li>
+<br/>
+<li>Aqui está como funciona o método Nishio:</li>
+<br/>
+<li>Escolha uma célula vazia: Selecione uma célula vazia no tabuleiro para iniciar o processo Nishio.</li>
+<br/>
+<li>Escolha um candidato: Escolha um candidato que você gostaria de testar na célula selecionada.</li>
+<br/>
+<li>Tente o candidato: Coloque o candidato escolhido na célula e continue resolvendo o Sudoku usando as técnicas lógicas convencionais.</li>
+<br/>
+<li>Verifique se a escolha leva a uma contradição: Se, ao colocar o candidato na célula, você encontrar uma contradição no tabuleiro (como duas instâncias do mesmo número na mesma linha, coluna ou bloco), então você sabe que o candidato escolhido é inválido.</li>
+<br/>
+<li>Reverta a escolha e tente outro candidato: Se a escolha do candidato levar a uma contradição, reverta a célula para o estado vazio e escolha outro candidato para testar.</li>
+<br/>
+<li>Repita até resolver ou encontrar uma contradição: Continue esse processo de tentativa e erro controlados até encontrar uma solução válida para o Sudoku ou até encontrar outra contradição. Se encontrar outra contradição, reverta a célula para o estado vazio novamente e teste um candidato diferente.</li>
+<br/>
+<li>O método Nishio é geralmente usado como último recurso quando todas as outras técnicas falharam. No entanto, ele pode ser demorado e pode envolver várias tentativas e reversões até encontrar a solução correta. É importante ter cuidado ao usar o Nishio para evitar erros e garantir que você esteja seguindo todas as regras do Sudoku durante o processo de tentativa e erro.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Nishio+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>Empty Rectangles Type 1 and Type 2</li>
+<br/>
+<li>"Empty Rectangles" são padrões específicos no Sudoku que podem levar a eliminações lógicas de candidatos. Existem dois tipos principais de Empty Rectangles: Tipo 1 (ER1) e Tipo 2 (ER2). Vou explicar cada um deles:
+Tipo 1 (ER1):</li>
+<br/>
+<li>Identifique um quadrado vazio: Encontre um quadrado de células vazias 2x2 (ou seja, um bloco onde existem exatamente quatro células vazias).</li>
+<br/>
+<li>Verifique as interações dos candidatos: Se, dentro desse quadrado vazio, houver duas células onde um candidato aparece apenas nessas duas células, você identificou um ER1.
+Aplique a regra de eliminação: Se um ER1 for encontrado, pode-se eliminar o candidato em questão de outras células na mesma linha e na mesma coluna das células do ER1.</li>
+<br/>
+<li>Tipo 2 (ER2):</li>
+<br/>
+<li>Identifique um quadrado vazio: Encontre um quadrado de células vazias 2x2.</li>
+<br/>
+<li>Verifique as interações dos candidatos: Se, dentro desse quadrado vazio, houver duas células onde um candidato aparece apenas nessas duas células, e uma terceira célula (fora do quadrado vazio) na mesma linha ou coluna que vê ambas as células do ER2, você identificou um ER2.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se um ER2 for encontrado, pode-se eliminar o candidato em questão de outras células na mesma linha e na mesma coluna das células do ER2, fora do quadrado vazio.</li>
+<br/>
+<li>Os Empty Rectangles são técnicas avançadas e podem não ocorrer com frequência em Sudokus mais simples. No entanto, em quebra-cabeças mais complexos, eles podem levar a eliminações importantes. Prática e paciência são essenciais para identificar e aplicar com sucesso os padrões dos Empty Rectangles no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Empty+Rectangles+Type+1+and+Type%C2%A02+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+
+<li>"Digit Forcing Chains Type 2" é uma técnica avançada no Sudoku que envolve criar cadeias de candidatos para eliminar candidatos de outras células no tabuleiro. As Digit Forcing Chains são uma variação do conceito de Forcing Chains, onde você cria uma sequência de candidatos interconectados para deduzir as escolhas corretas.</li>
+<br/>
+<li>Como funciona o Digit Forcing Chains Type 2:</li>
+<br/>
+<li>Escolha um candidato: Comece escolhendo um candidato específico em uma célula e marque essa célula como o início da cadeia.</li>
+<br/>
+<li>Encontre uma célula conectada: Procure por uma célula interconectada à primeira célula, onde o mesmo candidato é uma escolha válida. Marque essa célula como o próximo passo na cadeia.</li>
+<br/>
+<li>Continue a cadeia: Encontre outra célula conectada à segunda célula, onde o candidato escolhido ainda é uma opção válida. Continue a cadeia até chegar a uma célula onde não há outras escolhas possíveis além do candidato inicial.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se a cadeia terminar em uma célula onde o candidato inicial é a única escolha válida, isso implica que o candidato deve estar nessa célula. Portanto, você pode eliminar outros candidatos dessa célula.</li>
+<br/>
+<li>Repita o processo: Você pode repetir esse processo escolhendo diferentes candidatos e criando cadeias para eliminar candidatos de outras células no tabuleiro.</li>
+<br/>
+<li>As Digit Forcing Chains Type 2 são uma técnica avançada e podem levar a eliminações importantes, especialmente em Sudokus mais difíceis. Elas exigem uma compreensão profunda das interações dos candidatos nas células e a capacidade de criar cadeias de lógica para deduzir as escolhas corretas. Prática e paciência são essenciais para aplicar com sucesso as Digit Forcing Chains Type 2 no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Digit+Forcing+Chains+Type+2+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+
+
+<li>O padrão "Skyscraper Pattern " é uma técnica avançada no Sudoku que envolve padrões específicos de candidatos em duas colunas (ou duas linhas) interconectadas. A Skyscraper é uma variação do conceito X-Wing e Swordfish. Aqui está como funciona:</li>
+<br/>
+<li>Como funciona o Skyscraper:</li>
+<br/>
+<li>Escolha um candidato: Comece escolhendo um candidato específico para focar, por exemplo, o número 1.</li>
+<br/>
+<li>Procure duas colunas interconectadas: Procure por duas colunas onde o candidato escolhido (por exemplo, o número 1) aparece em duas células em cada coluna, e essas colunas estão na mesma linha.</li>
+<br/>
+<li>Verifique as interações: Analise as interações do candidato nas colunas. Se houver uma célula na linha que vê as quatro células nas duas colunas, você identificou um padrão Skyscraper.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou um Skyscraper, pode eliminar o candidato 1 de outras células na mesma linha que são vistas pelas quatro células envolvidas no padrão.</li>
+<br/>
+<li>O Skyscraper é chamado assim porque visualmente se assemelha a um arranha-céu. Ele pode ser estendido para mais de duas colunas, criando padrões mais complexos como "Two-String Kite" e "Jellyfish".</li>
+<br/>
+<li>A prática e a observação cuidadosa dos padrões são essenciais para identificar e aplicar com sucesso a técnica do Skyscraper no Sudoku. Lembre-se de que essa é uma técnica avançada e pode não ser tão comum em Sudokus mais simples.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Skyscraper+Pattern+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+
+<li>"XY-Chain Subsets" é uma técnica avançada no Sudoku que combina os conceitos de "XY-Chain" com a ideia de "Subconjuntos". O XY-Chain é uma cadeia de células interconectadas, onde as células alternam entre dois candidatos específicos. A técnica de Subconjuntos envolve encontrar grupos de células onde um determinado candidato só pode aparecer nessas células, criando um conjunto exclusivo.</li>
+<br/>
+<li>Quando você combina esses dois conceitos, você cria o XY-Chain Subsets. Aqui está como funciona:</li>
+<br/>
+<li>Encontre um XY-Chain: Procure por uma cadeia de células onde os candidatos alternam entre dois números específicos, por exemplo, 1 e 2. Esta é a parte do XY-Chain.</li>
+<br/>
+<li>Verifique os Subconjuntos: Em ambas as extremidades do XY-Chain, verifique se há um subconjunto de células que contêm apenas os candidatos 1 e 2. Isso cria um grupo exclusivo onde apenas os números 1 e 2 podem aparecer.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrar um XY-Chain com subconjuntos exclusivos nas extremidades, pode eliminar os candidatos 1 e 2 de outras células no mesmo subconjunto. Isso ocorre porque, no contexto do XY-Chain, esses números só podem aparecer nas posições do subconjunto.</li>
+<br/>
+<li>Essa técnica requer uma compreensão profunda dos conceitos de XY-Chain e Subconjuntos, bem como a habilidade de identificar padrões específicos no tabuleiro. Praticar a observação desses padrões em Sudokus mais complexos ajudará a aprimorar suas habilidades na aplicação do XY-Chain Subsets.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XY-Chain+Subsets+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"XYZ-Wing Subsets" é uma técnica avançada no Sudoku que combina o conceito de "XYZ-Wing" com a ideia de "Subconjuntos". O XYZ-Wing é uma estrutura onde três células estão interconectadas, cada uma contendo três candidatos diferentes. Quando três células XYZ-Wing formam um padrão específico, elas podem ser usadas para eliminar candidatos de outras células no tabuleiro.</li>
+<br/>
+<li>Quando você adiciona a ideia de Subconjuntos ao XYZ-Wing, você procura por conjuntos específicos de candidatos dentro das células XYZ-Wing que criam um subconjunto exclusivo.</li>
+<br/>
+<li>Aqui está como funciona o XYZ-Wing Subsets:</li>
+<br/>
+<li>Encontre um XYZ-Wing: Procure por três células interconectadas (um XYZ-Wing) onde cada célula contém três candidatos diferentes.
+Verifique os Subconjuntos: Dentro das células XYZ-Wing, verifique se há um subconjunto de candidatos que aparecem apenas nessas três células. Ou seja, se três candidatos (por exemplo, 1, 2 e 3) aparecem apenas nessas três células, você encontrou um subconjunto exclusivo.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrar um XYZ-Wing com um subconjunto exclusivo dentro dele, pode eliminar esses candidatos (por exemplo, 1, 2 e 3) de outras 
+células no mesmo subconjunto.</li>
+<br/>
+<li>Essa técnica combina a complexidade do XYZ-Wing com a precisão dos subconjuntos, exigindo uma compreensão profunda dos padrões e interações de candidatos no tabuleiro. Identificar corretamente esses padrões específicos é essencial para aplicar com sucesso o XYZ-Wing Subsets no Sudoku. Prática e paciência são fundamentais para aprimorar suas habilidades nessa técnica avançada.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XYZ-Wing+Subsets+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>O "Death Blossom" é uma técnica avançada no Sudoku que envolve um padrão complexo de candidatos. Esta técnica é chamada "Death Blossom" devido à sua natureza intricada e ao número de candidatos envolvidos, criando uma estrutura semelhante a uma flor.</li>
+<br/>
+<li>Para aplicar o Death Blossom, você precisa encontrar um padrão específico no tabuleiro onde várias células estão interconectadas por candidatos, criando uma cadeia complexa de relações. Esta técnica é altamente avançada e requer uma compreensão profunda dos padrões e interações de candidatos no Sudoku.</li>
+<br/>
+<li>Devido à complexidade do Death Blossom, é difícil fornecer instruções específicas ou exemplos sem um contexto visual. Recomendo que você procure por diagramas ou vídeos detalhados que mostrem exemplos específicos do Death Blossom em ação para entender melhor como aplicá-lo no Sudoku.</li>
+<br/>
+<li>Lembre-se de que técnicas muito avançadas como o Death Blossom geralmente são usadas em Sudokus extremamente difíceis e podem não aparecer com frequência em quebra-cabeças mais comuns. Prática, paciência e um profundo entendimento dos padrões do Sudoku são essenciais para dominar essa técnica avançada.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Death+Blossom+sudolu&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+
+<li>O "Mutant Jellyfish" é uma técnica avançada no Sudoku, uma variação do padrão "Jellyfish". Ambos os padrões envolvem uma estrutura específica de candidatos dispostos em células interconectadas em um tabuleiro do Sudoku.</li>
+<br/>
+<li>Como funciona o Mutant Jellyfish:</li>
+<br/>
+<li>Identifique colunas ou linhas interconectadas: 
+Procure por quatro colunas ou quatro linhas interconectadas onde um candidato específico aparece em quatro células em cada uma delas.</li>
+<br/>
+<li>Verifique as interações: Verifique se há interseções entre essas colunas ou linhas, onde o mesmo candidato aparece em quatro células. Essas interseções formam um padrão parecido com um quadrado.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrar um Mutant Jellyfish, pode eliminar o candidato em questão de outras células na mesma linha ou coluna que são afetadas pelo padrão.</li>
+<br/>
+<li>Assim como o Jellyfish, o Mutant Jellyfish é uma técnica avançada e requer uma compreensão profunda das interações dos candidatos nas células. Identificar e compreender esses padrões específicos em diferentes partes do tabuleiro
+pode levar a eliminações lógicas importantes. Prática e paciência são essenciais para aplicar o Mutant Jellyfish com sucesso no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Mutant+Jellyfish+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>As "Alternating Inference Chains (AIC) Type 2" são uma técnica avançada no Sudoku que envolvem a criação de cadeias lógicas complexas para deduzir escolhas de candidatos. A técnica é uma extensão das "Inference Chains" básicas, que são cadeias de células conectadas por candidatos, onde a escolha de um candidato em uma célula implica a escolha de outro candidato em outra célula.</li>
+<br/>
+<li>O tipo 2 das AIC envolve cadeias onde dois números alternam, ou seja, se um número é verdadeiro, o outro deve ser falso e vice-versa.</li>
+<br/>
+<li>Como funcionam as AIC Type 2:</li>
+<br/>
+<li>Escolha dois números: Comece escolhendo dois números específicos para focar, por exemplo, 1 e 2.</li>
+<br/>
+<li>Crie uma cadeia de células: Encontre uma sequência de células interconectadas onde os candidatos alternam entre os números escolhidos. Por exemplo, se a célula A tem 1 como candidato, a célula B deve ter 2 como candidato, e assim por diante.</li>
+<br/>
+<li>Encontre uma conclusão lógica: Procure uma célula no final da cadeia que tenha um candidato exclusivo, ou seja, apenas um dos números escolhidos pode ser verdadeiro. Isso implica que o outro número na cadeia deve ser verdadeiro, levando a uma conclusão lógica.</li>
+
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrar uma conclusão lógica, pode eliminar os candidatos opostos nas células interconectadas na cadeia.</li>
+<br/>
+<li>As AIC Type 2 são bastante complexas e exigem uma compreensão profunda das interações dos candidatos nas células. Praticar a identificação desses padrões em Sudokus mais difíceis ajudará a aprimorar suas habilidades na aplicação das Alternating Inference Chains Type 2 no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Alternating+Inference+Chains+%28AIC%29+Type%C2%A02+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>As "XY-Chain Subsets Type 2" são uma técnica avançada no Sudoku que combinam os conceitos de "XY-Chain" com a ideia de "Subconjuntos". O XY-Chain é uma cadeia de células interconectadas, onde as células alternam entre dois candidatos específicos. A técnica de Subconjuntos envolve encontrar grupos de células onde um determinado candidato só pode aparecer nessas células, criando um conjunto exclusivo.</li>
+<br/>
+
+<hr color="#000"/>
+
+
+
+
+</h4>
+
+ </body>
+ </html>
+
+ 

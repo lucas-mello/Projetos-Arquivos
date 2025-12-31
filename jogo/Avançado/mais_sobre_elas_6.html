@@ -1,0 +1,401 @@
+<html>
+ <head>
+  <title>Sudoku:</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    .h2{
+       text-align: center;
+       text-decoration:underline;
+       font-size:40px;
+     }
+
+   .h4{ 
+    font-size:30px; 
+    text-align:justify;
+    }
+   
+     .img{
+       width:540px;
+       height:443px;
+       }
+    
+
+  </style>
+ </head>
+ <body bgcolor="#d3d3d3">
+
+<h2 class="h2">Observações:</h2>
+
+<h2 class="h2">Sobre:</h2>
+
+<h4 class="h4">
+
+
+<li>"Remote Pairs Type 2" é uma extensão da técnica de "Remote Pairs" no Sudoku. Em termos gerais, "Remote Pairs" ocorrem quando você tem dois candidatos em duas células que estão vinculadas indiretamente por meio de outras células no mesmo grupo (linha, coluna ou bloco). A técnica envolve a eliminação de outros candidatos nessas duas células com base na relação indireta que elas compartilham.</li>
+<br/>
+<li>Na versão "Remote Pairs Type 2", a relação indireta entre as duas células é um pouco mais complexa do que na versão básica de "Remote Pairs". Aqui está um exemplo para ilustrar "Remote Pairs Type 2":</li>
+<br/>
+<li>Suponha que em uma coluna, você tem as seguintes células:</li>
+<br/>
+<li>Célula A contém os candidatos {2, 3, 5}.</li>
+<br/>
+<li>Célula B contém os candidatos {2, 5}.</li>
+<br/>
+<li>Célula C contém os candidatos {3, 4, 5}.</li>
+<br/>
+<li>Célula D contém os candidatos {1, 2, 5}.</li>
+<br/>
+<li>Neste caso, as células A, B e C compartilham o candidato 5. Se você puder determinar que o candidato 5 deve estar em A e B (com base na exclusão de outros candidatos), você pode eliminar o candidato 5 da célula D. Isso ocorre porque, mesmo que a célula D não compartilhe uma relação direta com as células A e B, ela compartilha um relacionamento indireto com base no candidato 5.</li>
+<br/>
+<li>É importante notar que encontrar e aplicar "Remote Pairs Type 2" exige uma compreensão sólida dos padrões de candidatos e das regras do Sudoku. Praticar e identificar esses padrões ajudará a melhorar suas habilidades no jogo.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Remote+Pairs+Type+2+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>A "Unique Loop" (ou "Loop Único", em português) é uma técnica avançada no Sudoku que envolve encontrar um ciclo de candidatos em um tabuleiro, onde as escolhas de candidatos formam um loop. Esse loop é único no sentido de que não há outra maneira de preencher os candidatos no tabuleiro, levando a uma solução única. Uma vez identificado um loop único, você pode usar isso para eliminar outros candidatos no tabuleiro, o que por sua vez permite resolver o Sudoku.</li>
+<br/>
+<li>Aqui está um exemplo simples de um loop único:</li>
+<br/>
+<li>Suponha que você tenha um conjunto de células no qual um determinado número, por exemplo, 1, só pode aparecer em quatro células específicas (A, B, C e D) de uma linha. Além disso, você observa que, se o 1 aparecer em A, então deve aparecer em B; se aparecer em B, então deve aparecer em C; e se aparecer em C, então deve aparecer em D. E, finalmente, se aparecer em D, então deve aparecer em A novamente, formando um ciclo: A -> B -> C -> D -> A.</li>
+<br/>
+<li>Nesse caso, você pode eliminar o número 1 de outras células na mesma linha que não estão no loop único. Isso é possível porque, para qualquer configuração de 1 nas células A, B, C e D, o ciclo único determina os candidatos nessas células de forma única.</li>
+<br/>
+<li>A identificação e aplicação de loops únicos podem ser bastante complexas e geralmente são usadas em Sudokus extremamente difíceis ou em situações em que outras técnicas mais simples não são suficientes para resolver o tabuleiro. É uma técnica avançada que requer prática e familiaridade com padrões de Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Unique+Loop+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>O "Grouped Skyscraper" é uma técnica avançada de resolução de Sudoku que envolve encontrar padrões específicos de candidatos em grupos de células interligadas (linhas, colunas ou blocos). É uma variação do conceito básico do "Skyscraper".</li>
+<br/>
+<li>Para entender o "Grouped Skyscraper", primeiro, você precisa compreender o "Skyscraper" regular. No "Skyscraper", você identifica duas colunas ou duas linhas onde um determinado número só pode aparecer em duas células (digamos, A e B). Se A está na mesma linha que C e B está na mesma linha que D, e C e D estão na mesma coluna, você pode eliminar o número em outras células que estejam na interseção dessas linhas e colunas.</li>
+<br/>
+<li>O "Grouped Skyscraper" expande esse conceito para grupos maiores de células. Você procura conjuntos de colunas ou linhas onde um número específico pode aparecer apenas em um conjunto limitado de células e, ao formar intersecções entre esses grupos, você elimina candidatos em outras células que compartilham essas intersecções.</li>
+<br/>
+<li>Essa técnica é bastante complexa e requer prática para identificar os padrões. O "Grouped Skyscraper" é uma ferramenta poderosa quando você precisa resolver Sudokus muito difíceis, mas é uma técnica avançada que pode ser desafiadora de aplicar. Praticar regularmente e resolver Sudokus mais difíceis ajudará a desenvolver a habilidade de reconhecer e aplicar essa técnica eficientemente.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Grouped+Skyscraper+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+<li>"Continuous Nice Loops" (CNL) é uma técnica avançada de resolução de Sudoku que envolve encontrar padrões específicos de candidatos para eliminar outras possibilidades no tabuleiro. Esta técnica é uma variação do conceito básico de "Nice Loops".</li>
+<br/>
+<li>Um "Nice Loop" ocorre quando você encontra um ciclo de células, onde dois candidatos em células adjacentes se alternam. Por exemplo, se você tem um loop onde na célula A o candidato é 1, na célula B é 2, na célula C é 1 novamente, e assim por diante, formando um ciclo, isso cria um "Nice Loop". Quando você tem um "Nice Loop", você pode eliminar os candidatos alternados fora do loop.</li>
+<br/>
+<li>O "Continuous Nice Loop" expande esse conceito. Em vez de um ciclo, você procura várias cadeias de células, onde os candidatos se alternam, e essas cadeias estão conectadas umas às outras. Assim, você forma um loop contínuo de candidatos se alternando entre várias cadeias de células. Quando isso acontece, você pode eliminar os candidatos alternados fora desse loop contínuo.</li>
+<br/>
+<li>Identificar e aplicar "Continuous Nice Loops" exige uma compreensão profunda dos padrões de candidatos e das regras do Sudoku. Esta técnica é geralmente usada para resolver Sudokus muito difíceis, onde outras técnicas mais simples não são suficientes. Praticar e resolver Sudokus desafiadores ajudará a desenvolver sua habilidade em reconhecer e aplicar essa técnica eficazmente.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Continuous+Nice+Loops+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+<li>"Grouped Nice Loops" (GNL) é uma técnica avançada de resolução de Sudoku que envolve encontrar padrões específicos de candidatos em grupos de células interligadas (linhas, colunas ou blocos) para eliminar outras possibilidades no tabuleiro. Essa técnica é uma extensão do conceito básico de "Nice Loops".</li>
+<br/>
+<li>Um "Nice Loop" ocorre quando você encontra um ciclo de células onde dois candidatos em células adjacentes se alternam. Por exemplo, se você tem um loop onde na célula A o candidato é 1, na célula B é 2, na célula C é 1 novamente, e assim por diante, formando um ciclo, isso cria um "Nice Loop". Quando você tem um "Nice Loop", você pode eliminar os candidatos alternados fora do loop.</li>
+<br/>
+<li>O "Grouped Nice Loops" expande esse conceito para grupos maiores de células. Você procura conjuntos de colunas, linhas ou blocos onde um número específico pode aparecer apenas em um conjunto limitado de células. Então, ao formar intersecções entre esses grupos, você cria loops contínuos de candidatos se alternando entre vários grupos de células. Quando isso acontece, você pode eliminar os candidatos alternados fora desses loops contínuos.</li>
+<br/>
+<li>Identificar e aplicar "Grouped Nice Loops" exige uma compreensão profunda dos padrões de candidatos e das regras do Sudoku. Essa técnica é geralmente usada para resolver Sudokus muito difíceis, onde outras técnicas mais simples não são suficientes. Praticar e resolver Sudokus desafiadores ajudará a desenvolver sua habilidade em reconhecer e aplicar essa técnica eficazmente.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Grouped+Nice+Loops+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"Franken X-Wing" é uma técnica avançada de resolução de Sudoku que envolve um padrão específico de candidatos em um tabuleiro, semelhante ao conceito básico do "X-Wing". Enquanto o "X-Wing" envolve um padrão de duas linhas e duas colunas, o "Franken X-Wing" ocorre quando você tem mais de duas linhas e colunas formando o padrão.</li>
+<br/>
+<li>Para entender o "Franken X-Wing", primeiro, você precisa compreender o conceito básico do "X-Wing". O "X-Wing" ocorre quando você encontra duas linhas onde um determinado número só pode aparecer em duas colunas específicas em ambas as linhas. Se essas colunas também compartilham duas linhas específicas, você pode eliminar o número em outras células que estão na interseção dessas linhas e colunas.</li>
+<br/>
+<li>O "Franken X-Wing" expande esse conceito para incluir mais de duas linhas e colunas. Se você encontrar um padrão onde um número específico só pode aparecer em mais de duas colunas em mais de duas linhas, e essas colunas e linhas compartilham intersecções específicas, você pode eliminar o número de outras células que estão nessas intersecções.</li>
+<br/>
+<li>Identificar e aplicar o "Franken X-Wing" exige prática e familiaridade com padrões de Sudoku. Esta técnica é útil para resolver Sudokus mais difíceis, especialmente quando outras técnicas não são suficientes para progredir. Praticar regularmente e resolver Sudokus desafiadores ajudará a desenvolver a habilidade de reconhecer e aplicar essa técnica eficientemente.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Franken+X-Wing+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>O "Franken Swordfish" é uma técnica avançada de resolução de Sudoku que se baseia no padrão do "Swordfish", uma técnica que envolve três linhas (ou colunas) onde um número específico só pode aparecer em três colunas (ou linhas) em cada uma dessas três linhas (ou colunas). O "Franken Swordfish" ocorre quando esse padrão se repete em outras áreas do tabuleiro.</li>
+<br/>
+<li>Para identificar e aplicar o "Franken Swordfish", você precisa procurar grupos de três linhas onde um número pode aparecer apenas em três colunas específicas em cada linha. Além disso, esses grupos de três linhas devem se repetir em outras partes do tabuleiro. Se esses padrões se alinharem, você pode eliminar o número em outras células que estão na interseção dessas linhas e colunas.</li>
+<br/>
+<li>A ideia central é semelhante à do "Swordfish", mas o "Franken Swordfish" é mais complexo, pois envolve mais áreas do tabuleiro com o mesmo padrão. Essa técnica é útil para resolver Sudokus mais difíceis, especialmente quando outras técnicas não são suficientes para progredir.</li>
+<br/>
+<li>Identificar e aplicar o "Franken Swordfish" requer prática e uma compreensão sólida dos padrões de Sudoku. À medida que você ganha experiência em resolver Sudokus, será capaz de reconhecer esses padrões complexos e aplicar essa técnica com mais eficácia.</li>
+<br/>
+<li>"Franken Swordfish" é uma técnica avançada de resolução de Sudoku que combina os conceitos do "Swordfish" com outras estruturas semelhantes. O "Swordfish" é uma técnica que envolve a identificação de um padrão onde um número específico pode aparecer apenas em três colunas e três linhas específicas, formando uma figura de "Swordfish". O "Franken Swordfish" ocorre quando há uma configuração semelhante, mas com mais de três colunas e três linhas.</li>
+<br/>
+<li>Para entender o "Franken Swordfish", primeiro, você deve compreender o conceito básico do "Swordfish". No "Swordfish", você procura por três colunas onde um número específico só pode aparecer em três linhas específicas, e vice-versa. Se essas colunas compartilham as mesmas três linhas, você pode eliminar o número de outras células nessas linhas e colunas.</li>
+<br/>
+<li>O "Franken Swordfish" ocorre quando o mesmo padrão se repete, mas com mais de três colunas e três linhas. Por exemplo, pode haver um padrão onde um número específico só pode aparecer em quatro colunas e quatro linhas, formando uma estrutura semelhante ao "Swordfish". Nesse caso, se essas colunas compartilharem as mesmas quatro linhas, você pode eliminar o número de outras células nessas linhas e colunas.</li>
+<br/>
+<li>Identificar e aplicar o "Franken Swordfish" exige prática e uma compreensão sólida dos padrões de Sudoku. Essa técnica é útil para resolver Sudokus mais difíceis, especialmente quando outras técnicas não são suficientes para progredir. Praticar regularmente e resolver Sudokus desafiadores ajudará a desenvolver a habilidade de reconhecer e aplicar essa técnica eficientemente.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Franken+Swordfish+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"XY-Chain Subsets Type 10" refere-se a uma variação avançada da técnica de "XY-Chain", que é uma técnica de resolução de Sudoku usada para eliminar candidatos em células específicas. A versão "Type 10" indica uma complexidade maior da técnica, geralmente envolvendo padrões mais intricados e difíceis de identificar.</li>
+<br/>
+<li>O "XY-Chain" é uma técnica na qual você procura uma cadeia de células onde os candidatos se alternam entre dois números (digamos, 1 e 2). Quando você encontra uma cadeia desse tipo, pode eliminar outros candidatos na célula de início e na célula final da cadeia.</li>
+<br/>
+<li>A versão "XY-Chain Subsets Type 10" envolve uma cadeia de XY mais complexa, geralmente com várias intersecções e ramificações, tornando-a mais difícil de ser identificada. É uma técnica avançada que é útil para Sudokus extremamente difíceis ou puzzles com padrões de candidatos muito complexos.
+</li>
+<br/>
+<li>Para identificar e aplicar "XY-Chain Subsets Type 10", você precisa ter uma compreensão profunda das regras do Sudoku e prática em reconhecer padrões de cadeias XY mais complexos. Essa técnica requer paciência, prática e habilidade para resolver Sudokus desafiadores. Praticar com Sudokus difíceis e trabalhar com diferentes padrões ajudará a desenvolver sua capacidade de identificar e aplicar essa técnica efetivamente.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XY-Chain+Subsets+Type+10+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"Almost Nice Loops" (ANL) é uma técnica avançada de resolução de Sudoku que envolve padrões específicos de candidatos para eliminar outras possibilidades no tabuleiro. Esta técnica é uma variação do conceito básico de "Nice Loops".</li>
+<br/>
+<li>Em um "Nice Loop", você encontra um ciclo de células onde dois candidatos em células adjacentes se alternam. Por exemplo, se você tem um loop onde na célula A o candidato é 1, na célula B é 2, na célula C é 1 novamente, e assim por diante, formando um ciclo, isso cria um "Nice Loop". Quando você tem um "Nice Loop", você pode eliminar os candidatos alternados fora do loop.</li>
+<br/>
+<li>Os "Almost Nice Loops" são semelhantes aos "Nice Loops", mas com uma diferença crucial: uma das células no ciclo contém um candidato que pode aparecer em outras células na mesma unidade (linha, coluna ou bloco). Portanto, essa célula não é estritamente um candidato do "Nice Loop". No entanto, como a célula faz parte do ciclo, você pode eliminar os candidatos alternados fora do loop, desde que esses candidatos não estejam na mesma unidade que o candidato da célula "Almost" do ciclo.</li>
+<br/>
+<li>Identificar e aplicar "Almost Nice Loops" exige uma compreensão profunda dos padrões de candidatos e das regras do Sudoku. Esta técnica é geralmente usada para resolver Sudokus muito difíceis, onde outras técnicas mais simples não são suficientes para progredir. Praticar e resolver Sudokus desafiadores ajudará a desenvolver sua habilidade em reconhecer e aplicar essa técnica eficazmente.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Almost+Nice+Loops+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"Almost Continuous Nice Loops" (ACNL) é uma técnica avançada de resolução de Sudoku que envolve padrões específicos de candidatos para eliminar outras possibilidades no tabuleiro. Esta técnica é uma extensão do conceito básico de "Continuous Nice Loops".</li>
+<br/>
+<li>Em um "Continuous Nice Loop", você encontra várias cadeias de células onde os candidatos se alternam, e essas cadeias estão conectadas umas às outras, formando um loop contínuo. Quando isso acontece, você pode eliminar os candidatos alternados fora desse loop contínuo.</li>
+<br/>
+<li>Os "Almost Continuous Nice Loops" são semelhantes aos "Continuous Nice Loops", mas com uma diferença crucial: uma das células na cadeia contém um candidato que pode aparecer em outras células na mesma unidade (linha, coluna ou bloco). Portanto, essa célula não é estritamente um candidato da cadeia contínua. No entanto, como a célula faz parte do loop contínuo, você pode eliminar os candidatos alternados fora do loop, desde que esses candidatos não estejam na mesma unidade que o candidato da célula "Almost" na cadeia.</li>
+<br/>
+<li>Identificar e aplicar "Almost Continuous Nice Loops" exige uma compreensão profunda dos padrões de candidatos e das regras do Sudoku. Esta técnica é geralmente usada para resolver Sudokus muito difíceis, onde outras técnicas mais simples não são suficientes para progredir. Praticar e resolver Sudokus desafiadores ajudará a desenvolver sua habilidade em reconhecer e aplicar essa técnica eficazmente.</li>
+<br/>
+<li>"Almost Continuous Nice Loops" é uma técnica avançada de resolução de Sudoku que envolve padrões específicos de candidatos para eliminar outras possibilidades no tabuleiro. Essa técnica é uma extensão do conceito de "Continuous Nice Loops" e é usada para resolver Sudokus muito difíceis.</li>
+<br/>
+<li>Em um "Continuous Nice Loop" (CNL), você procura um ciclo contínuo de células onde dois candidatos em células adjacentes se alternam. Esse ciclo permite eliminar os candidatos alternados fora do loop. O "Almost Continuous Nice Loops" envolve uma situação semelhante, mas com uma diferença crucial: uma das células no ciclo contínuo contém um candidato que pode aparecer em outras células na mesma unidade (linha, coluna ou bloco).</li>
+<br/>
+<li>Nesse caso, a célula "Almost" não é estritamente parte do ciclo, mas como ela está próxima do ciclo contínuo, você ainda pode eliminar os candidatos alternados fora do loop, desde que esses candidatos não estejam na mesma unidade que o candidato da célula "Almost."</li>
+<br/>
+<li>Identificar e aplicar "Almost Continuous Nice Loops" requer um entendimento profundo dos padrões de candidatos e das regras do Sudoku. Essa técnica é usada para resolver Sudokus muito difíceis, onde outras técnicas mais simples não são suficientes para progredir. Praticar e resolver Sudokus desafiadores ajudará a desenvolver sua habilidade em reconhecer e aplicar essa técnica eficazmente.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Almost+Continuous+Nice+Loops+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"XY-Chain Subsets Type 11" é uma variação avançada da técnica de "XY-Chain", que é uma técnica de resolução de Sudoku usada para eliminar candidatos em células específicas. A versão "Type 11" indica uma complexidade maior da técnica, geralmente envolvendo padrões mais intricados e difíceis de identificar.</li>
+<br/>
+<li>O "XY-Chain" é uma técnica na qual você procura uma cadeia de células onde os candidatos se alternam entre dois números (digamos, 1 e 2). Quando você encontra uma cadeia desse tipo, pode eliminar outros candidatos na célula de início e na célula final da cadeia.</li>
+<br/>
+<li>A versão "XY-Chain Subsets Type 11" envolve uma cadeia de XY mais complexa, geralmente com várias intersecções e ramificações, tornando-a mais difícil de ser identificada. É uma técnica avançada que é útil para Sudokus extremamente difíceis ou puzzles com padrões de candidatos muito complexos.</li>
+<br/>
+<li>Para identificar e aplicar "XY-Chain Subsets Type 11", você precisa ter uma compreensão profunda das regras do Sudoku e prática em reconhecer padrões de cadeias XY mais complexos. Essa técnica requer paciência, prática e habilidade para resolver Sudokus desafiadores. Praticar com Sudokus difíceis e trabalhar com diferentes padrões ajudará a desenvolver sua capacidade de identificar e aplicar essa técnica efetivamente.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XY-Chain+Subsets+Type+11&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+<li>"XY-Chain Subsets Type 12" é uma variação avançada da técnica de "XY-Chain", que é uma técnica de resolução de Sudoku usada para eliminar candidatos em células específicas. A versão "Type 12" indica uma complexidade maior da técnica, geralmente envolvendo padrões mais intricados e difíceis de identificar.</li>
+<br/>
+<li>O "XY-Chain" é uma técnica na qual você procura uma cadeia de células onde os candidatos se alternam entre dois números (digamos, 1 e 2). Quando você encontra uma cadeia desse tipo, pode eliminar outros candidatos na célula de início e na célula final da cadeia.</li>
+<br/>
+<li>A versão "XY-Chain Subsets Type 12" envolve uma cadeia de XY mais complexa, geralmente com várias intersecções e ramificações, tornando-a mais difícil de ser identificada. É uma técnica avançada que é útil para Sudokus extremamente difíceis ou puzzles com padrões de candidatos muito complexos.</li>
+<br/>
+<li>Para identificar e aplicar "XY-Chain Subsets Type 12", você precisa ter uma compreensão profunda das regras do Sudoku e prática em reconhecer padrões de cadeias XY mais complexos. Essa técnica requer paciência, prática e habilidade para resolver Sudokus desafiadores. Praticar com Sudokus difíceis e trabalhar com diferentes padrões ajudará a desenvolver sua capacidade de identificar e aplicar essa técnica efetivamente.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XY-Chain+Subsets+Type+12+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"XYZ-Wing Subsets Type 10" é uma variação avançada da técnica de "XYZ-Wing", uma estratégia utilizada para resolver Sudokus. A versão "Type 10" indica uma complexidade maior da técnica, geralmente envolvendo padrões mais intricados e difíceis de identificar.</li>
+<br/>
+<li>O "XYZ-Wing" é uma técnica em que você procura três células contendo candidatos específicos em um bloco, linha ou coluna, formando um padrão de "asa de borboleta". Se as células compartilham os mesmos três candidatos, você pode eliminar esses candidatos de outras células na mesma unidade (bloco, linha ou coluna).</li>
+<br/>
+<li>A versão "XYZ-Wing Subsets Type 10" envolve um padrão mais complexo de XYZ-Wing, geralmente com várias intersecções e ramificações, tornando-a mais difícil de ser identificada. Essa técnica é útil para resolver Sudokus extremamente difíceis ou puzzles com padrões de candidatos muito complexos.</li>
+<br/>
+<li>Para identificar e aplicar "XYZ-Wing Subsets Type 10", é necessário ter uma compreensão profunda das regras do Sudoku e prática em reconhecer padrões de XYZ-Wing mais complexos. Essa técnica requer paciência, prática e habilidade para resolver Sudokus desafiadores. Praticar com Sudokus difíceis e trabalhar com diferentes padrões ajudará a desenvolver sua capacidade de identificar e aplicar essa técnica efetivamente.</li>
+<br/>
+
+<a href="https://www.google.com.br/m?q=XYZ-Wing+Subsets+Type+10+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"XYZ-Wing Subsets Type 11" é uma variação avançada da técnica de "XYZ-Wing", uma estratégia usada para resolver Sudokus. A versão "Type 11" indica uma complexidade maior da técnica, geralmente envolvendo padrões mais intricados e difíceis de identificar.</li>
+<br/>
+<li>O "XYZ-Wing" é uma técnica onde você procura três células contendo candidatos específicos em um bloco, linha ou coluna, formando um padrão de "asa de borboleta". Se as células compartilham os mesmos três candidatos, você pode eliminar esses candidatos de outras células na mesma unidade (bloco, linha ou coluna).</li>
+<br/>
+<li>A versão "XYZ-Wing Subsets Type 11" envolve um padrão mais complexo de XYZ-Wing, geralmente com várias intersecções e ramificações, tornando-a mais difícil de ser identificada. Essa técnica é útil para resolver Sudokus extremamente difíceis ou puzzles com padrões de candidatos muito complexos.</li>
+<br/>
+<li>Para identificar e aplicar "XYZ-Wing Subsets Type 11", é necessário ter uma compreensão profunda das regras do Sudoku e prática em reconhecer padrões de XYZ-Wing mais complexos. Essa técnica requer paciência, prática e habilidade para resolver Sudokus desafiadores. Praticar com Sudokus difíceis e trabalhar com diferentes padrões ajudará a desenvolver sua capacidade de identificar e aplicar essa técnica efetivamente.</li>
+<br/>
+
+<a href="https://www.google.com.br/m?q=XYZ-Wing+Subsets+Type+11+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+<li>"ALS-XY-Cycle" é uma técnica avançada de resolução de Sudoku que envolve os conceitos de "ALS" (Almost Locked Sets) e "XY-Cycle". Para entender essa técnica, é útil estar familiarizado com ambos os conceitos básicos.</li>
+<br/>
+<li>Almost Locked Sets (ALS): ALS refere-se a um conjunto de células em uma unidade (linha, coluna ou bloco) que estão vinculadas por um conjunto de candidatos exclusivos (não podem aparecer em mais nenhuma célula dentro da unidade). No entanto, algumas dessas células podem ter candidatos adicionais em comum com outras células fora do conjunto, tornando-as "quase" exclusivas.</li>
+<br/>
+<li>XY-Cycle: Um XY-Cycle ocorre quando você tem um conjunto de três células onde os candidatos formam um ciclo XY. Por exemplo, na primeira célula, o candidato é X, na segunda é Y e na terceira é X novamente, criando um ciclo. Se isso acontecer, você pode eliminar os candidatos X e Y de outras células na mesma unidade.</li>
+<br/>
+<li>O "ALS-XY-Cycle" acontece quando você tem um ALS que contém um conjunto de três células formando um XY-Cycle. O ciclo XY dentro do ALS permite que você elimine os candidatos X e Y de outras células no ALS e, por extensão, nas outras células da unidade que contém o ALS.</li>
+<br/>
+<li>Identificar e aplicar "ALS-XY-Cycle" exige uma compreensão profunda dos padrões de candidatos e das regras do Sudoku. Esta técnica é geralmente usada para resolver Sudokus muito difíceis, onde outras técnicas mais simples não são suficientes para progredir. Praticar e resolver Sudokus desafiadores ajudará a desenvolver sua habilidade em reconhecer e aplicar essa técnica eficazmente.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=ALS-XY-Cycle+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+
+<li>"ALS-XY-Coloring Type 2" é uma técnica avançada de resolução de Sudoku que combina os conceitos de "ALS" (Almost Locked Sets) e "XY-Coloring". Para entender essa técnica, é útil estar familiarizado com ambos os conceitos básicos.</li>
+<br/>
+<li>Almost Locked Sets (ALS): ALS refere-se a um conjunto de células em uma unidade (linha, coluna ou bloco) que estão vinculadas por um conjunto de candidatos exclusivos (não podem aparecer em mais nenhuma célula dentro da unidade). No entanto, algumas dessas células podem ter candidatos adicionais em comum com outras células fora do conjunto, tornando-as "quase" exclusivas.</li>
+<br/>
+<li>XY-Coloring: O XY-Coloring ocorre quando você tem um conjunto de células onde dois candidatos (X e Y) aparecem alternadamente, formando um padrão de cores. Você pode então colorir as células em dois grupos, cada grupo representando uma cor (X ou Y). Se o XY-Coloring resultar em duas células com a mesma cor em uma unidade, você pode eliminar o candidato dessa cor das outras células na mesma unidade.</li>
+<br/>
+<li>A versão "ALS-XY-Coloring Type 2" envolve a utilização de um conjunto de ALS onde os candidatos X e Y formam um padrão de cores XY. Se um dos ALS na cadeia contiver um par XY que forme um ciclo, você pode usar essa informação para colorir as células do ALS. Depois de colorir as células do ALS, você pode usar a técnica de XY-Coloring para eliminar candidatos das células na mesma unidade que compartilham a mesma cor.</li>
+<br/>
+<li>Identificar e aplicar "ALS-XY-Coloring Type 2" exige uma compreensão profunda dos padrões de candidatos e das regras do Sudoku. Esta técnica é geralmente usada para resolver Sudokus muito difíceis, onde outras técnicas mais simples não são suficientes para progredir. Praticar e resolver Sudokus desafiadores ajudará a desenvolver sua habilidade em reconhecer e aplicar essa técnica eficazmente.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=ALS-XY-Coloring+Type+2&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"ALS-XY-Chain Type 2" é uma técnica avançada de resolução de Sudoku que combina os conceitos de "ALS" (Almost Locked Sets) e "XY-Chain". Para entender essa técnica, é útil estar familiarizado com ambos os conceitos básicos.</li>
+<br/>
+<li>Almost Locked Sets (ALS): ALS refere-se a um conjunto de células em uma unidade (linha, coluna ou bloco) que estão vinculadas por um conjunto de candidatos exclusivos (não podem aparecer em mais nenhuma célula dentro da unidade). No entanto, algumas dessas células podem ter candidatos adicionais em comum com outras células fora do conjunto, tornando-as "quase" exclusivas.</li>
+<br/>
+<li>XY-Chain: O XY-Chain ocorre quando você tem uma cadeia de células onde os candidatos se alternam entre dois números (digamos, 1 e 2). Quando você encontra uma cadeia desse tipo, pode eliminar outros candidatos na célula de início e na célula final da cadeia.</li>
+<br/>
+<li>A versão "ALS-XY-Chain Type 2" envolve um padrão mais complexo de XY-Chain, onde as células na cadeia são parte de ALS. Isso significa que você está procurando uma cadeia XY onde as células com os candidatos X e Y são parte do mesmo ALS. Quando você encontra essa cadeia, pode eliminar candidatos em outras células do ALS, bem como nas células de início e fim da cadeia XY.</li>
+<br/>
+<li>Identificar e aplicar "ALS-XY-Chain Type 2" exige uma compreensão profunda dos padrões de candidatos e das regras do Sudoku. Esta técnica é geralmente usada para resolver Sudokus muito difíceis, onde outras técnicas mais simples não são suficientes para progredir. Praticar e resolver Sudokus desafiadores ajudará a desenvolver sua habilidade em reconhecer e aplicar essa técnica eficazmente.</li>
+<br/>
+
+<a href="https://www.google.com.br/m?q=ALS-XY-Coloring+Type+2+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+
+<li>"ALS-XY-Chain Type 3" é uma técnica avançada de resolução de Sudoku que combina os conceitos de "ALS" (Almost Locked Sets) e "XY-Chain". Para entender essa técnica, é útil estar familiarizado com ambos os conceitos básicos.</li>
+
+<li>Almost Locked Sets (ALS): ALS refere-se a um conjunto de células em uma unidade (linha, coluna ou bloco) que estão vinculadas por um conjunto de candidatos exclusivos (não podem aparecer em mais nenhuma célula dentro da unidade). No entanto, algumas dessas células podem ter candidatos adicionais em comum com outras células fora do conjunto, tornando-as "quase" exclusivas.</li>
+
+<li>XY-Chain: O XY-Chain ocorre quando você tem uma cadeia de células onde os candidatos se alternam entre dois números (digamos, 1 e 2). Quando você encontra uma cadeia desse tipo, pode eliminar outros candidatos na célula de início e na célula final da cadeia.</li>
+
+<li>A versão "ALS-XY-Chain Type 3" envolve um padrão mais complexo de XY-Chain, onde as células na cadeia são parte de ALS. Isso significa que você está procurando uma cadeia XY onde as células com os candidatos X e Y são parte do mesmo ALS. Quando você encontra essa cadeia, pode eliminar candidatos em outras células do ALS, bem como nas células de início e fim da cadeia XY.</li>
+
+<li>Identificar e aplicar "ALS-XY-Chain Type 3" exige uma compreensão profunda dos padrões de candidatos e das regras do Sudoku. Esta técnica é geralmente usada para resolver Sudokus muito difíceis, onde outras técnicas mais simples não são suficientes para progredir. Praticar e resolver Sudokus desafiadores ajudará a desenvolver sua habilidade em reconhecer e aplicar essa técnica eficazmente.</li>
+
+<a href="https://www.google.com.br/m?q=ALS-XY-Chain+Type+3+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+<li>"Forcing Net Subsets" é uma técnica avançada de resolução de Sudoku que envolve o conceito de "Forcing Net" combinado com a identificação de subconjuntos de candidatos. Para entender essa técnica, é útil estar familiarizado com ambos os conceitos básicos:</li>
+<br/>
+<li>Forcing Net: Um "Forcing Net" é um conjunto de candidatos em várias células que são interdependentes, o que significa que, se um candidato em uma célula específica for verdadeiro, ele força outros candidatos em diferentes células a serem falsos. Um "Forcing Net" pode ser visualizado como uma rede de dependências entre candidatos.</li>
+<br/>
+<li>Subconjuntos de Candidatos: Em um conjunto específico de células (como um bloco, linha ou coluna), você pode ter um subconjunto de candidatos (por exemplo, três células com candidatos 1, 2 e 3). Identificar subconjuntos de candidatos é uma técnica comum no Sudoku, onde você pode eliminar esses candidatos de outras células na mesma unidade.</li>
+<br/>
+<li>"Forcing Net Subsets" ocorre quando você identifica um subconjunto de candidatos em um "Forcing Net". Se o subconjunto de candidatos for verdadeiro, ele força a verdade de outros candidatos no Forcing Net, permitindo que você elimine esses candidatos de outras células na mesma unidade.</li>
+<br/>
+<li>Identificar e aplicar "Forcing Net Subsets" exige uma compreensão profunda dos padrões de candidatos e das regras do Sudoku. Esta técnica é geralmente usada para resolver Sudokus muito difíceis, onde outras técnicas mais simples não são suficientes para progredir. Praticar e resolver Sudokus desafiadores ajudará a desenvolver sua habilidade em reconhecer e aplicar essa técnica eficazmente.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Forcing+Net+Subsets+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"Almost ALS-XY-Wing Type 2" é uma técnica avançada de resolução de Sudoku que combina os conceitos de "Almost Locked Sets" (ALS) e "XY-Wing". Para entender essa técnica, é útil estar familiarizado com ambos os conceitos básicos.</li>
+<br/>
+<li>Almost Locked Sets (ALS): ALS refere-se a um conjunto de células em uma unidade (linha, coluna ou bloco) que estão vinculadas por um conjunto de candidatos exclusivos (não podem aparecer em mais nenhuma célula dentro da unidade). No entanto, algumas dessas células podem ter candidatos adicionais em comum com outras células fora do conjunto, tornando-as "quase" exclusivas.</li>
+<br/>
+<li>XY-Wing: Um XY-Wing ocorre quando você tem três células em uma unidade, onde duas delas compartilham um candidato X e as outras duas compartilham um candidato Y. Se as três células estiverem alinhadas em uma linha, coluna ou bloco, você pode eliminar os candidatos X e Y das outras células na mesma unidade.</li>
+<br/>
+<li>A versão "Almost ALS-XY-Wing Type 2" ocorre quando você tem um ALS em que três células formam um padrão de XY-Wing, mas uma dessas células não é parte do ALS, tornando-o "quase" um XY-Wing. Se o candidato X ou Y for verdadeiro no ALS, ele forçará a eliminação de outros candidatos nas células fora do ALS na mesma unidade.</li>
+<br/>
+<li>Identificar e aplicar "Almost ALS-XY-Wing Type 2" exige uma compreensão profunda dos padrões de candidatos e das regras do Sudoku. Esta técnica é geralmente usada para resolver Sudokus muito difíceis, onde outras técnicas mais simples não são suficientes para progredir. Praticar e resolver Sudokus desafiadores ajudará a desenvolver sua habilidade em reconhecer e aplicar essa técnica eficazmente.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Almost+ALS-XY-Wing+Type+2+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"Almost ALS-XY-Wing Type 3" é uma técnica avançada de resolução de Sudoku que combina os conceitos de "Almost Locked Sets" (ALS) e "XY-Wing". Para entender essa técnica, é útil estar familiarizado com ambos os conceitos básicos.</li>
+<br/>
+<li>Almost Locked Sets (ALS): ALS refere-se a um conjunto de células em uma unidade (linha, coluna ou bloco) que estão vinculadas por um conjunto de candidatos exclusivos (não podem aparecer em mais nenhuma célula dentro da unidade). No entanto, algumas dessas células podem ter candidatos adicionais em comum com outras células fora do conjunto, tornando-as "quase" exclusivas.</li>
+<br/>
+<li>XY-Wing: Um XY-Wing ocorre quando você tem três células em uma unidade, onde duas delas compartilham um candidato X e as outras duas compartilham um candidato Y. Se as  três células estiverem alinhadas em uma linha, coluna ou bloco, você pode eliminar os candidatos X e Y das outras células na mesma unidade.</li>
+<br/>
+<li>A versão "Almost ALS-XY-Wing Type 3" ocorre quando você tem um ALS em que três células formam um padrão de XY-Wing, mas uma dessas células não é parte do ALS, tornando-o "quase" um XY-Wing. Se o candidato X ou Y for verdadeiro no ALS, ele forçará a eliminação de outros candidatos nas células fora do ALS na mesma unidade.</li>
+<br/>
+<li>Identificar e aplicar "Almost ALS-XY-Wing Type 3" exige uma compreensão profunda dos padrões de candidatos e das regras do Sudoku. Esta técnica é geralmente usada para resolver Sudokus muito difíceis, onde outras técnicas mais simples não são suficientes para progredir. Praticar e resolver Sudokus desafiadores ajudará a desenvolver sua habilidade em reconhecer e aplicar essa técnica eficazmente.</li>
+<br/>
+<li>Claro, vou fornecer mais detalhes sobre a técnica "Almost ALS-XY-Wing Type 3".</li>
+<br/>
+<li>Como Funciona:</li>
+<br/>
+<li>Identificar o ALS: Comece identificando um conjunto de células em uma unidade (linha, coluna ou bloco) que formam um Almost Locked Set (ALS). Ou seja, essas células contêm um conjunto de candidatos que é exclusivo para elas, mas alguns desses candidatos também aparecem em outras células da mesma unidade.</li>
+<br/>
+<li>Verificar o Padrão XY-Wing: Dentro do ALS, procure por três células onde duas delas compartilham um candidato X e as outras duas compartilham um candidato Y. Essas células formam um padrão XY-Wing, mas uma das células do padrão (aquela que não faz parte do ALS) será um "quase" XY-Wing.</li>
+<br/>
+<li>Forçar a Eliminação: Se o candidato X ou Y for verdadeiro no ALS, ele força a eliminação dos outros candidatos X e Y das células fora do ALS na mesma unidade que a célula "quase" XY-Wing. Isso ocorre porque se o candidato X (por exemplo) for verdadeiro, a célula "quase" XY-Wing deve ser Y, forçando a eliminação de Y das outras células na mesma unidade.</li>
+<br/>
+<li>Exemplo:</li>
+<br/>
+<li>Considere o seguinte ALS em uma coluna (| representa uma barra divisória entre células na mesma unidade):</li>
+<br/>
+<li>ALS: | 1 | 2 | 3 | 4 | 5 |</li>
+<br/>
+<li>Agora, observe as seguintes células na mesma coluna:</li>
+<br/>
+<li>Padrão XY-Wing: | 1 | 2 |</li>
+<br/>
+<li>"Quase" XY-Wing: | 3 |</li>
+<br/>
+<li>Se o candidato 1 for verdadeiro no ALS, ele forçará a eliminação do candidato 2 da célula 3 na mesma coluna.</li>
+<br/>
+<li>Dificuldade e Utilização:</li>
+<br/>
+<li>A técnica "Almost ALS-XY-Wing Type 3" é bastante avançada e é usada para resolver Sudokus extremamente difíceis, onde outras técnicas mais comuns não são suficientes para a progressão do jogo. Identificar padrões complexos como esse requer prática e experiência em resolver Sudokus de alto nível.</li>
+<br/>
+<li>Recomendo praticar com Sudokus difíceis e, gradualmente, você desenvolverá a habilidade de identificar e aplicar essa técnica, bem como outras técnicas avançadas, para resolver Sudokus desafiadores.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Almost+ALS-XY-Wing+Type+3+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"Almost ALS-XY-Chain Type 2" é uma técnica avançada de resolução de Sudoku que combina os conceitos de "Almost Locked Sets" (ALS) e "XY-Chain". Para entender essa técnica, é útil estar familiarizado com ambos os conceitos básicos.</li>
+<br/>
+<li>Almost Locked Sets (ALS): ALS refere-se a um conjunto de células em uma unidade (linha, coluna ou bloco) que estão vinculadas por um conjunto de candidatos exclusivos (não podem aparecer em mais nenhuma célula dentro da unidade). No entanto, algumas dessas células podem ter candidatos adicionais em comum com outras células fora do conjunto, tornando-as "quase" exclusivas.</li>
+<br/>
+<li>XY-Chain: Um XY-Chain ocorre quando você tem uma cadeia de células onde os candidatos se alternam entre dois números (digamos, 1 e 2). Quando você encontra uma cadeia desse tipo, pode eliminar outros candidatos na célula de início e na célula final da cadeia.</li>
+<br/>
+<li>A versão "Almost ALS-XY-Chain Type 2" envolve um padrão mais complexo de XY-Chain, onde as células na cadeia são parte de ALS. Isso significa que você está procurando uma cadeia XY onde as células com os candidatos X e Y são parte do mesmo ALS. Quando você encontra essa cadeia, pode eliminar candidatos em outras células do ALS, bem como nas células de início e fim da cadeia XY.</li>
+<br/>
+<li>Identificar e aplicar "Almost ALS-XY-Chain Type 2" exige uma compreensão profunda dos padrões de candidatos e das regras do Sudoku. Esta técnica é geralmente usada para resolver Sudokus muito difíceis, onde outras técnicas mais simples não são suficientes para progredir. Praticar e resolver Sudokus desafiadores ajudará a desenvolver sua habilidade em reconhecer e aplicar essa técnica eficazmente.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Almost+ALS-XY-Chain+Type+2+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+
+</h4>
+
+ </body>
+ </html>
+
+ 

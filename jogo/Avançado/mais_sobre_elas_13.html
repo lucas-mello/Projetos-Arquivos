@@ -1,0 +1,233 @@
+<html>
+ <head>
+  <title>Sudoku:</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    .h2{
+       text-align: center;
+       text-decoration:underline;
+       font-size:40px;
+     }
+
+   .h4{ 
+    font-size:30px; 
+    text-align:justify;
+    }
+   
+     .img{
+       width:540px;
+       height:443px;
+       }
+    
+
+  </style>
+ </head>
+ <body bgcolor="#d3d3d3">
+
+<h2 class="h2">Observações:</h2>
+
+<h2 class="h2">EXPLORANDO MAIS SOBRE OUTRAS:</h2>
+
+<h4 class="h4">
+<li>Técnica Swordfish Sudoku: Casos de Uso e Exemplos</li>
+<br/>
+<li>Se você consegue encontrar pares isolados, trios ocultos e X-wings, leve suas habilidades no Sudoku para o próximo nível com a estratégia do peixe-espada. Essa técnica avançada é ideal para jogadores que precisam de estratégias para resolver quebra-cabeças desafiadores.
+
+Com a estratégia do peixe-espada no Sudoku, você simplesmente expande um X-wing para criar um padrão de até nove células distribuídas em três linhas e três colunas. Você pode usar esse padrão para eliminar opções, ajudando a encontrar respostas para as células e a restringir as possibilidades em outras células.
+
+Assim que você conseguir identificar e usar o padrão do peixe-espada, resolverá mais quebra-cabeças com mais eficiência ao jogar Sudoku online.</li>
+<br/>
+<li>Como encontrar um peixe-espada</li>
+<br/>
+<li>A técnica de resolução "peixe-espada" é uma estratégia de Sudoku que estende o padrão "X-wing" para outro conjunto de linhas e colunas. Para encontrar o padrão, concentre-se em um candidato que apareça em apenas duas ou três células em cada uma das três linhas (ou colunas). As duas ou três células também devem estar alinhadas com apenas três unidades opostas.
+
+Portanto, se um único candidato aparecer em duas ou três células em cada uma das três linhas, e essas células estiverem todas dentro das mesmas três colunas, você encontrou um possível padrão "peixe-espada". Se esse único candidato se estender a quatro linhas que se alinham com quatro colunas, você pode até ter encontrado um padrão "água-viva".
+
+Um padrão "peixe-espada" em sua forma perfeita, que é bastante rara, tem o mesmo candidato aparecendo em três linhas e três colunas que se alinham formando um padrão organizado de três por três, com nove células.</li>
+<br/>
+<img src="Imagens/swordfish-sudokmple.png" alt="imagem" border="5" class="img">	
+<li>Embora o padrão "peixe-espada" seja uma extensão do padrão "X-wing", identificá-lo é um pouco como encontrar trios ocultos. Isso ocorre porque o padrão exige apenas que o candidato apareça em duas ou três células em cada uma das três linhas ou colunas.
+
+Para identificar um "peixe-espada", procure os seguintes critérios:
+
+Um único candidato aparece em exatamente três linhas ou exatamente três colunas. Por exemplo, o número 5 aparece em três linhas diferentes (4, 6 e 7).
+
+Em cada uma dessas linhas (ou colunas), o candidato está limitado a apenas duas ou três células que se encontram nas mesmas três colunas. As três linhas são chamadas de conjuntos base. Neste exemplo, o candidato 5 aparece em duas células em cada linha (D4, I4, C6, I6, D7 e I7) e em três colunas alinhadas (C, D e I).
+
+Se você encontrar um "peixe-espada", poderá eliminar esse candidato dos conjuntos de cobertura. Os conjuntos de cobertura são a unidade oposta àquela em que os conjuntos de base são encontrados, neste caso, as colunas C, D e I. Você pode eliminar o candidato 5 dessas colunas, com exceção das células do conjunto de base.</li>
+<br/>
+<img src="Imagens/example.png" alt="imagem" border="5" class="img">
+<li>Assim como a asa X, um padrão de espadarte pode ser orientado de duas maneiras: horizontalmente (linhas) ou verticalmente (colunas). A orientação se refere a como o candidato se alinha — por colunas verticalmente ou por linhas horizontalmente — e determina onde você pode eliminar candidatos. Em um padrão de espadarte horizontal (alinhado por linhas), você elimina o candidato alvo das colunas, e em um padrão de espadarte vertical (alinhado por colunas), você elimina o candidato alvo das linhas.</li>
+<br/>
+<li>Exemplos de Sudoku de Peixe-Espada</li>
+<br/>
+<li>Para tirar o máximo proveito da estratégia do peixe-espada, comece usando marcas de lápis para anotar todos os candidatos possíveis em cada célula. Em seguida, procure padrões de peixe-espada e use-os para eliminar candidatos dos conjuntos de cobertura.
+
+Os exemplos a seguir mostrarão como identificar padrões de peixe-espada em quebra-cabeças Sudoku desafiadores.</li>
+<br/>
+<li>Padrão de peixe-espada com orientação horizontal</li>
+<br/>
+<li>Um padrão de espadarte com orientação horizontal é um espadarte com um único candidato limitado a três linhas. Se você já marcou todos os candidatos em um quebra-cabeça, pode procurar linhas em que apenas dois ou três candidatos iguais aparecem.
+
+Uma técnica para solucionadores avançados, o padrão de espadarte tem duas etapas simples para ser identificado e os candidatos eliminados:</li>
+<br/>
+<li>Identifique um único candidato que apareça apenas duas ou três vezes em três linhas e em no máximo três colunas. Por exemplo, o candidato 4 aparece apenas duas ou três vezes nas linhas 2, 4 e 6 e se alinha com apenas três colunas: B, D e E. As linhas são os conjuntos básicos para o padrão do peixe-espada.</li>
+<br/>
+<li>Elimine o candidato identificado nos conjuntos base (linhas) dos conjuntos de cobertura (colunas). Como o número 4 deve ocupar uma das células marcadas em cada linha, ele não pode aparecer em nenhum outro lugar nas colunas B, D ou E. Portanto, você pode eliminar o número 4 de qualquer outra célula nessas colunas (B1, D5 e E3) fora do padrão de espadarte.</li>
+<br/>
+<img src="Imagens/horizontalxample.png" alt="imagem" border="5" class="img">
+<li>Padrão de peixe-espada com orientação vertical</li>
+<br/>
+<li>O peixe-espada também pode ter orientação vertical e é igualmente fácil de identificar. Siga os mesmos passos que seguiria para a orientação horizontal, mas procure as colunas em vez das linhas para encontrar as bases:</li>
+<br/>
+<li>Identifique um único candidato que apareça apenas duas ou três vezes em três colunas e em no máximo três linhas. Por exemplo, o candidato 7 aparece apenas duas ou três vezes nas colunas B, D e F e se alinha apenas em três linhas: 1, 3 e 5. Essas colunas são os conjuntos básicos para o padrão do peixe-espada.</li>
+<br/>
+<li>Elimine o candidato identificado nos conjuntos base (colunas) dos conjuntos de cobertura (linhas). Como o 7 deve ocupar uma das células marcadas em cada coluna, ele não pode aparecer em nenhum outro lugar nas linhas 1, 3 ou 5. Portanto, você pode eliminar o 7 de qualquer outra célula nessas linhas (A5, C1 e E3) fora do padrão de espadarte.</li>
+<br/>
+<img src="Imagens/verticale.png" alt="imagem" border="5" class="img">
+<li>Utilizar novas estratégias pode ajudá-lo a vencer quebra-cabeças de Sudoku mais desafiadores e difíceis. Portanto, use esta técnica do peixe-espada para quebra-cabeças difíceis ou de nível especialista e elimine mais candidatos para que você possa resolver os quebra-cabeças de Sudoku mais rapidamente.</li>
+<br/>
+<li>Estratégia de Sudoku X-Cycle + Exemplos</li>
+<br/>
+<li>Os ciclos X são padrões lógicos poderosos que ajudam a eliminar candidatos em quebra-cabeças de Sudoku. Um tipo de cadeia de inferência alternada (AIC), eles usam ligações fortes e fracas alternadas entre as células de um único dígito, formando ciclos fechados ou cadeias de inferência lógica. Quando você encontra um ciclo X alternado adequado para um único candidato, pode eliminá-lo das células fora da cadeia (células fora da cadeia principal) que veem ambas as extremidades de uma ligação forte ou fraca.
+
+Embora os ciclos X possam parecer complexos à primeira vista, eles seguem regras consistentes e podem levar a eliminações precisas sem necessidade de palpites. Depois de aprender a identificá-los, eles podem se tornar uma ferramenta confiável para resolver quebra-cabeças, especialmente em Sudokus difíceis.</li>
+<br/>
+<li>Como Encontrar Ciclos X</li>
+<br/>
+<li>Indicada para quebra-cabeças mais difíceis, a estratégia do ciclo X é semelhante à coloração simples do Sudoku e consiste em encontrar um ciclo de um único dígito composto por elos fortes e fracos alternados. Quando formadas corretamente, essas cadeias lógicas permitem eliminar candidatos seguindo as consequências de cada elo.</li>
+<br/>
+<img src="Imagens/x-cycle-sudoku-strategy-pattern.jpg" alt="imagem" border="5" class="img">
+<li>Embora os X-cycles façam parte de uma família mais ampla de técnicas de Sudoku conhecidas como Nice Loops, eles são um subconjunto específico e mais restrito, o que os torna mais fáceis de identificar e aplicar de forma consistente em quebra-cabeças mais difíceis.</li>
+<br/>
+<li>Entenda os elos fortes e fracos</li>
+<br/>
+<li>Você encontrará muita linguagem relacionada a "loops" que se sobrepõe a X-cycles, o que pode ser confuso. Loops e X-cycles são apenas tipos diferentes de cadeias de inferência alternadas (AIC) que dependem do uso de links fortes e fracos para criar loops ou padrões.</li>
+<br/>
+<li>Uma ligação forte geralmente existe quando o mesmo candidato aparece em exatamente duas células dentro de uma unidade (linha, coluna ou bloco). Assim, a ligação criada entre os dois candidatos resulta em: se um for falso, o outro deve ser verdadeiro. A ligação é forte porque impõe uma verdade (veracidade) e funciona em ambas as direções para qualquer candidato em qualquer célula. Por exemplo, se o par isolado (3, 8) aparecer apenas duas vezes em uma linha, coluna ou bloco, isso resulta em uma ligação forte entre os dois 3 e uma ligação forte entre os dois 8, porque se um 3 não for a resposta, o outro deve ser a resposta. O mesmo vale para o candidato 8.	</li>
+<br/>
+<li>Uma ligação fraca é mais facilmente reconhecida quando o mesmo candidato aparece em mais de duas células em uma unidade. A ligação entre os múltiplos candidatos resulta no seguinte: se um for verdadeiro, o outro deve ser falso, mas não o contrário. A ligação é fraca porque não impõe uma veracidade nem confirma uma resposta, e não pode funcionar na direção oposta (provar que algo é verdadeiro) devido aos múltiplos candidatos. Por exemplo, se 8 for um candidato em três células de um bloco, se um dos 8 for a resposta, os outros devem ser falsos. No entanto, se um dos 8 não for a resposta, você não pode confirmá-lo como a resposta em outra célula do bloco porque você tem outros dois 8 nesse bloco.</li>
+<br/>
+<li>Certifique-se de que o X-Cycle siga estas regras.</li>
+<br/>
+<li>Os ciclos X são diferentes de outros AICs porque devem atender aos seguintes critérios:</li>
+<br/>
+<li>Concentre-se em um único dígito: os ciclos X são cadeias de um único dígito. Todos os elos da cadeia representam posições candidatas para o mesmo dígito (candidato x) e a lógica da cadeia se aplica somente a esse dígito. Por exemplo, a grade abaixo traça as ligações entre o candidato 7 no quebra-cabeça.</li>
+<br/>
+<li>Alterne entre ligações fortes e ligações fracas. O ciclo deve alternar estritamente entre ligações fortes e fracas. Ligações fortes oferecem uma inferência forte: se um candidato for falso, o outro deve ser verdadeiro. Ligações fracas oferecem uma inferência fraca: se um candidato for verdadeiro, o outro deve ser falso. Essa sequência alternada garante o fluxo lógico. Por exemplo, de A1 para A4 é forte; de ​​A4 para E4 é fraco; de E4 para E6 é forte; de ​​E6 para G6 é fraco; de G6 para G1 é forte; e de G1 de volta para A1 é fraco. Para alternar corretamente, você verá que os ciclos X contêm um número par de células no loop.</li>
+<br/>
+<li>Pode fluir em qualquer direção. O tipo de ligação (forte ou fraca) permanece o mesmo, independentemente da direção em que você traça o ciclo. Isso significa que você pode analisar o ciclo a partir de qualquer ponto e ainda aplicar a lógica da ligação de forma consistente. Por exemplo, de A1 para G1 é fraca; de G1 para G6 é forte; de ​​G6 para E6 é fraca; de E6 para E4 é forte; de ​​E4 para A4 é fraca e de A4 de volta para A1 é forte.</li>
+<br/>
+<li>Forme um laço fechado. As extremidades da cadeia estão na mesma célula (A1). Um ciclo X válido termina na célula inicial, formando um laço contínuo. Esse fechamento é necessário para a aplicação das regras de eliminação ou posicionamento com base nos tipos de ligação e na estrutura do laço.	</li>
+<br/>
+<li>É possível encontrar ciclos X até mesmo na lógica por trás de outras técnicas de resolução, como X-wings e alguns padrões de peixe-espada.</li>
+<br/>
+<img src="Imagens/x-cycle-sudoku-strategy-example.jpg" alt="imagem" border="5" class="img">
+<li>Exemplos de como usar a técnica de Sudoku X-Cycle</li>
+<br/>
+<li>Os ciclos X seguem regras de ligação rigorosas que levam a conclusões úteis, mesmo em quebra-cabeças de nível especialista, permitindo eliminar um candidato de uma ou mais células.
+
+Lembre-se de que ligações fortes tornam algo verdadeiro e ligações fracas tornam algo falso. Os ciclos X combinam ambos os tipos de ligações para prender a lógica em um loop e garantir um resultado. Estas seções apresentam um exemplo de cada tipo usando as regras dos ciclos X.</li>
+<br/>
+<li>Regra 1 do Ciclo X: Eliminação com um Elo Fraco</li>
+<br/>
+<li>Com a primeira regra do ciclo X, você pode eliminar um candidato com base em uma ligação fraca que é flanqueada por duas ligações fortes no ciclo. Se o ciclo X contém uma ligação fraca entre duas células, então um dos pontos finais da ligação fraca deve ser verdadeiro se for flanqueado por duas ligações fortes. Portanto, qualquer célula que veja esses dois pontos finais de ligação fraca não pode conter o candidato alvo no ciclo X.
+
+Por exemplo, F3 e F5 são ambos pontos finais de uma ligação fraca flanqueada por ligações fortes em cada extremidade (C3 para F3 e F5 para B5). Portanto, 2 deve ser a resposta para F3 ou F5. Assim, qualquer célula que veja tanto F3 quanto F5 não pode ter o candidato 2. Isso permite que você elimine o candidato 2 de F1. Seguindo a mesma lógica, você também pode eliminar o candidato 2 de B1, C1 e G2.</li>
+<br/>
+<img src="Imagens/on-example.jpg" alt="imagem" border="5" class="img">
+<li></li>
+<br/>
+<li>Regra 2 do Ciclo X: Eliminações com uma forte ligação</li>
+<br/>
+<li>Com a próxima regra do ciclo X, você pode eliminar candidatos que interagem com ambas as extremidades de uma ligação forte. Em uma ligação forte (par conjugado), o candidato deve ser a resposta em uma dessas células. Se o mesmo candidato em outra célula interage com ambas as extremidades, você pode eliminar o candidato dessa outra célula.
+
+Por exemplo, as células D5 e F6 contêm o candidato alvo 7 e compartilham um bloco 3x3 com as extremidades da ligação forte para o candidato 7 (células E4 e E6). Como 7 deve ser a resposta para E4 ou E6, você pode eliminar o candidato 7 em quaisquer células que interajam com ambas as extremidades de E4 e E6. Sabendo o que você sabe sobre a Regra 1 do ciclo X, você também pode eliminar qualquer 7 que interaja com duas extremidades de uma ligação fraca.</li>
+<br/>
+<img src="Imagens/ination-example.jpg" alt="imagem" border="5" class="img">
+<hr color="#000"/>
+<li>Links:</p>
+
+<li><a href="https://sudokubliss.com/guides/hidden-pairs-technique" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://sudoku.com/sudoku-rules/pointing-pairs/" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://sudoku.com/sudoku-rules/pointing-triples/" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://sudoku.com/sudoku-rules/h-wing/" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://sudoku.com/sudoku-rules/y-wing/" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://hodoku.sourceforge.net/en/tech_hidden.php" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://hodoku.sourceforge.net/en/tech_fishfs.php" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://homepages.cwi.nl/~aeb/games/sudoku/solving16.html" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://www.sudokulovers.com/br/solution/060000030500206701002080000600050100050002040003400005001020607700304000020007304" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://sudoku.com/sudoku-rules/swordfish/" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://www.sudokuwiki.org/sword_fish_strategy" target="_blank" title="link"><li>SITE COMPLETO:</li></a></li>
+<li><a href="https://www.reddit.com/r/sudoku/comments/13q5l0s/technique_for_finding_xyzwings/?tl=pt-br" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://sudoku.eco.br/xyz-wing/xyz2/" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://sudokuaday.com/sudoku-strategies/xyz-wing" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://www.sudokuwiki.org/Print_XYZ_Wing" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://www.sudokuwiki.org/Grouped_X_Cycles" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://sudokuaday.com/pt/sudoku-strategies/nice-loops" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://hodoku.sourceforge.net/en/tech_fishc.php" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://www.sudoku9981.com/sudoku-solving/mutant-fish.php" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://www.sudoku9981.com/sudoku-solving/mutant-fish.php" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://hodoku.sourceforge.net/en/tech_misc.php" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://sudokusolver.app/colortrap.html" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://sudokusolver.app/colortrap.html" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://www.sudoku9981.com/sudoku-solving/color-wing.php" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://sudokusolver.app/colorwing.html" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://www.taupierbw.be/SudokuCoach/SC_SimpleColoring.shtml" target="_blank" title="link"><li>SITE COMPLETO:</li></a></li>
+<li><a href="http://sudopedia.enjoysudoku.com/Fishy_Cycle.html" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="http://forum.enjoysudoku.com/method-hierachy-t3188.html" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://www.sudokuwiki.org/Extended_Unique_Rectangles" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://sudokubliss.com/guides/almost-locked-set" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="http://jcbonsai.free.fr/sudoku/JSudokuUserGuide/chainsTechniques.html" target="_blank" title="link"><li>Link:</li></a></li>
+<li><a href="https://hodoku.sourceforge.net/en/tech_intro.php" target="_blank" title="link"><li>COMPLETO:</li></a></li>
+
+
+
+<li><a href="https://www.youtube.com/watch?v=_k_HAvSYnjY" target="_blank" title="link"><li>CANAL RAFAEL CIRINO:</li></a></li>
+<li><a href="https://www.youtube.com/@BakuSudoku/videos" target="_blank" title="link"><li>CANAL RAFAEL CIRINO::</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=okTnzo6o4L0" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=UKZGih8mMm0" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=l2e_NVJqCpk&vl=pt-BR" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=dD1fSm8BEj8" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=-uW7c5SpF7g" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=KOLoVWw1Yp8" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=Db2PYcXy7ik" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=o2rnhV38bPo" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=KwsEVysRI9c" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=Ih8ZGEyhu0s" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=lrzaKGWxgNE" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=yfPEAShfCeo" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=n4zJD89XuQI" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=CDhFzNkDVsE" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=vN3LrOLnT7Q" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=Ao1ueD_30vE" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=gFrAKmDwUzw" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=_k_HAvSYnjY" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=CZ_BHqRE8jw" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=mWQNO2Cl7Z0" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=BLcsjww1QIo" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=TIEdN-gH4No" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=UYNlFS8L4-I" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=VJeJnOJxPMc" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=1Y_1a2y_6D0" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=HoELynTTAq4" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=vV6tBoagyRE" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=Zb2YNXWZnQU" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=N57BwXWwsZI" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=abhSx3GX3a4" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=4XdCaUPuLXI" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=AKTaPPnmQqs" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=az2M0V9QCXk" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/shorts/NDJmAY-Onsk" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=G2TLe2oaob4" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+<li><a href="https://www.youtube.com/watch?v=n6zrKpU6vZY" target="_blank" title="link"><li>VÍDEOS:</li></a></li>
+
+<li><a href="Pdf/book.pdf" target="_blank" title="link"><li>PDF:</li></a></li>
+<li><a href="Pdf/ug4_proj.pdf" target="_blank" title="link"><li>PDF:</li></a></li>
+
+<hr color="#000"/>
+
+</h4>
+
+ </body>
+ </html>

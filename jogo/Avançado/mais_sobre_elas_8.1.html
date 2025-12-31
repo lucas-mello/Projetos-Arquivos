@@ -1,0 +1,602 @@
+<html>
+ <head>
+  <title>Sudoku:</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    .h2{
+       text-align: center;
+       text-decoration:underline;
+       font-size:40px;
+     }
+
+   .h4{ 
+    font-size:30px; 
+    text-align:justify;
+    }
+   
+     .img{
+       width:540px;
+       height:443px;
+       }
+    
+
+  </style>
+ </head>
+ <body bgcolor="#d3d3d3">
+
+<h2 class="h2">Observações:</h2>
+
+<h2 class="h2">Sobre:</h2>
+
+<h4 class="h4">
+
+
+<li>O W-Wing Type 5 é uma técnica avançada no Sudoku que envolve quatro células interligadas de uma maneira específica, permitindo eliminações em outras células do tabuleiro. Antes de entender o W-Wing Type 5, é essencial compreender o conceito básico do W-Wing:</li>
+<br/>
+<li>W-Wing:Um W-Wing ocorre quando existem quatro células (A, B, C e D) que compartilham dois candidatos (por exemplo, A=1, B=2) e estão interligadas de uma maneira específica.
+As células A e D devem estar em duas linhas diferentes (ou duas colunas diferentes, dependendo da orientação), enquanto as células B e C estão em uma terceira linha (ou coluna) que se cruza com as outras duas.
+Se A e C ou B e D contiverem os mesmos dois candidatos, esses candidatos podem ser eliminados de outras células na mesma linha ou coluna onde o W-Wing está localizado.
+Agora, o W-Wing Type 5 é uma variação específica do W-Wing. Neste caso, A e C compartilham os mesmos dois candidatos, enquanto B e D também compartilham os mesmos dois candidatos. Além disso, há outra célula E na mesma linha (ou coluna) que compartilha um dos candidatos (por exemplo, E=1).</li>
+<br/>
+<li>Para aplicar o W-Wing Type 5, você deve procurar essas configurações específicas no tabuleiro, onde as células A, B, C e D formam um W-Wing, e uma célula adicional E compartilha um dos candidatos. Ao identificar tal padrão, você pode eliminar candidatos nas células E e em outras células na mesma linha ou coluna do W-Wing Type 5.</li>
+<br/>
+<li>Praticar e familiarizar-se com diferentes padrões no Sudoku é essencial para aplicar técnicas avançadas, como o W-Wing Type 5, de forma eficaz. Quanto mais você pratica, melhor será sua capacidade de identificar e aplicar essas técnicas em seus quebra-cabeças.
+<br/>
+<a href="https://www.google.com.br/m?q=W-Wing+Type+5+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>Em Sudoku, os Remote Locked Sets Type 2 são uma técnica avançada usada para eliminar candidatos em células específicas. Para entender os Remote Locked Sets Type 2, primeiro, precisamos entender o que são Locked Sets.</li>
+<br/>
+<li>Locked Sets:
+Um Locked Set ocorre quando um conjunto de candidatos para um determinado número está restrito a um grupo específico de células em uma linha, coluna ou bloco. Ou seja, um número específico só pode aparecer em um grupo restrito de células em uma determinada unidade (linha, coluna ou bloco).</li>
+<br/>
+<li>Remote Locked Sets Type 2:
+Os Remote Locked Sets Type 2 ocorrem quando um número é restrito a um conjunto específico de células em uma unidade (linha, coluna ou bloco) e esse número também é um candidato em outras células remotas, em outra unidade que intersecta a primeira unidade. Em outras palavras, o número está bloqueado em um conjunto específico de células em uma unidade, mas também é candidato em células fora dessa unidade, em uma outra unidade.</li>
+<br/>
+<li>Quando você identifica um Remote Locked Set Type 2, você pode eliminar esse número como candidato nas células remotas, melhorando assim suas eliminações no tabuleiro de Sudoku.</li>
+<br/>
+<li>É importante praticar e treinar seus olhos para identificar padrões como Remote Locked Sets Type 2 durante a resolução de Sudoku. Quanto mais você pratica, mais habilidoso se torna em aplicar técnicas avançadas como esta para resolver quebra-cabeças mais difíceis.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Remote+Locked+Sets+Type+2+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>A técnica "Hidden Continuous Nice Loops" é uma estratégia avançada no Sudoku que envolve encontrar um ciclo contínuo de candidatos em um grupo de células (linha, coluna ou bloco) onde cada célula no ciclo tem dois candidatos e existe uma cadeia lógica que conecta todos os candidatos no ciclo, permitindo a eliminação de outros candidatos.</li>
+<br/>
+<li>Vamos explicar essa técnica com um exemplo:</li>
+<br/>
+<li>Considere a seguinte grade (os candidatos estão listados para cada célula):</li>
+<br/>
+
+| .  .  .  | .  .  .  | .  .  .  |
+| .  12 .  | .  .  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  .  |
++----------+----------+----------+
+| .  .  .  | .  .  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  . 
+ |
+| .  .  .  | .  .  .  | .  .  .  |
++----------+----------+----------+
+| .  .  .  | .  .  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  .  |
+<li>Neste exemplo, observe as células R2C2 e R2C3, que contêm os candidatos 1 e 2, respectivamente. Além disso, observe as células R4C2 e R4C3, que também contêm os candidatos 1 e 2, respectivamente. Temos um ciclo contínuo de candidatos 1 e 2 nas células R2C2, R2C3, R4C2 e R4C3.</li>
+<br/>
+<li>Para aplicar a técnica Hidden Continuous Nice Loops, precisamos encontrar uma cadeia lógica que conecta esses candidatos no ciclo contínuo. Neste caso, a cadeia lógica é a seguinte:</li>
+<br/>
+<li>Se R2C2 é 1, então R2C3 é 2 (devido ao ciclo contínuo).</li>
+<br/>
+<li>Se R2C3 é 2, então R4C3 é 1 (devido ao ciclo contínuo).</li>
+<br/>
+<li>Se R4C3 é 1, então R4C2 é 2 (devido ao ciclo contínuo).</li>
+<br/>
+<li>Se R4C2 é 2, então R2C2 é 1 (devido ao ciclo contínuo).</li>
+<br/>
+<li>Como resultado, podemos eliminar todos os outros candidatos nas células R2C2, R2C3, R4C2 e R4C3, porque sabemos que uma dessas células deve conter 1 e a outra deve conter 2, formando um ciclo contínuo.</li>
+<br/>
+<li>A técnica Hidden Continuous Nice Loops é uma estratégia avançada que requer prática para ser identificada durante a resolução do Sudoku. É importante observar cuidadosamente as interações entre os candidatos e encontrar as cadeias lógicas que conectam os candidatos no ciclo contínuo para aplicar essa técnica efetivamente.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Hidden+Continuous+Nice+Loops+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>XYZ-Wing Subsets Type 21</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XYZ-Wing+Subsets+Type+21+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>A técnica "Turbot Fish Type 5" é uma variação avançada da estratégia de Turbot Fish no Sudoku. O Turbot Fish é uma técnica que envolve quatro células em uma formação específica, criando padrões que permitem a eliminação de outros candidatos na mesma linha, coluna ou bloco.</li>
+<br/>
+<li>No caso do Turbot Fish Type 5, a formação específica envolve quatro blocos, quatro linhas e quatro colunas, com dois candidatos que estão presentes em quatro células interconectadas de uma maneira específica.</li>
+<br/>
+<li>Aqui está um exemplo de um Turbot Fish Type 5:</li>
+<br/>
+<li>Considere a seguinte grade (os candidatos estão listados para cada célula):</li>
+<br/>
+
+|  .   .   .  |  1   .   .  |  .   .   .  |
+|  2   .   .  |  .   .   .  |  .   .   .  |
+|  .   .   .  |  .   .   .  |  .   .   .  |
++-------------+-------------+-------------+
+|  .   .   .  |  .   .   .  |  .   .   .  |
+|  .   .   .  |  .   .   .  |  .   .   .  |
+|  .   .   .  |  .   .   .  |  .   .   .  |
++-------------+-------------+-------------+
+|  .   .   .  |  .   .   .  |  .   .   .  |
+|  .   .   .  |  .   .   .  |  .   .   .  |
+|  .   .   .  |  .   .   .  |  .   .   .  |
+<li>Neste exemplo, imagine que há um candidato 1 presente em quatro células dos quatro blocos interconectados, especificamente nas células (1,1), (2,4), (3,7) e (4,2). Além disso, o candidato 1 não deve estar presente em outras células nessas quatro linhas e quatro colunas.</li>
+<br/>
+<li>Essa formação específica cria um padrão de Turbot Fish Type 5, permitindo a eliminação de outros candidatos na mesma linha, coluna ou bloco das células do candidato 1. O padrão de Turbot Fish Type 5 é mais complexo do que os padrões de Turbot Fish tradicionais, envolvendo quatro blocos, quatro linhas e quatro colunas interconectadas.</li>
+<br/>
+<li>A identificação e aplicação eficaz do Turbot Fish Type 5 requer prática e habilidade na resolução avançada de Sudoku. É importante observar cuidadosamente as interações entre os candidatos em várias células para identificar padrões complexos como este durante a resolução do quebra-cabeça.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Turbot+Fish+Type+5+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>A técnica "Hidden Remote Pairs" é uma estratégia avançada no Sudoku que envolve a identificação de um par de candidatos que está oculto em células específicas, mas que influencia outras células remotas, permitindo a eliminação de outros candidatos nessas células remotas.</li>
+<br/>
+<li>Aqui está um exemplo para ilustrar a técnica Hidden Remote Pairs:</li>
+<br/>
+<li>Considere a seguinte grade (os candidatos estão listados para cada célula):</li>
+<br/>
+
+|  1    23  345 |  678  9    56  |  2345  78  3458 |
+|  678  9   345 |  23   123  7   |  3456  456  4568 |
+|  268  27  56  |  4    123  58  |  2356  9   3568 |
++---------------+---------------+------------------+
+|  367  8   2   |  9    5    4   |  1     367  367 |
+|  467  1   467 |  237  237  236 |  9     356  356 |
+|  9    5   34  |  1    6    8   |  234   234  234 |
++---------------+---------------+------------------+
+|  345  346  1  |  235  234  9   |  7     58   58  |
+|  234  346  8  |  235  234  25  |  256   1    9   |
+|  2345 7   9   |  235  8    1   |  256   56   256  |
+<li>Neste exemplo, observe as células R1C1 e R1C6, que contêm os candidatos 1 e 5, respectivamente. Esses candidatos formam um par oculto na unidade 1 (linha 1). Embora não haja nenhuma célula na mesma unidade com ambos os candidatos, as células R1C3 (candidato 3) e R1C9 (candidato 8) estão influenciadas remotamente pelas células do par oculto.</li>
+<br/>
+<li>Portanto, podemos eliminar os candidatos 3 e 8 das células R1C3 e R1C9, respectivamente, porque sabemos que os candidatos 1 e 5 estão restritos à mesma linha (linha 1) devido ao par oculto.</li>
+<br/>
+<li>A técnica Hidden Remote Pairs é útil para situações em que um par oculto em uma unidade específica influencia outras células distantes, permitindo a eliminação de candidatos nessas células remotas. É uma técnica avançada que requer prática para ser identificada durante a resolução do Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Hidden+Remote+Pairs+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>A técnica "Almost Almost Locked Sets (AALS) X-Chain" é uma estratégia avançada no Sudoku que envolve a identificação de um padrão de candidatos que formam uma cadeia em forma de X. É uma extensão do conceito de "Almost Locked Sets (ALS) X-Chain". Nesta técnica, você procura por conjuntos de candidatos que estão quase trancados (ou seja, quase formam um conjunto trancado) e estão dispostos em uma cadeia em forma de X.</li>
+<br/>
+<li>Para entender melhor o AALS X-Chain, é útil revisar o conceito de "Almost Locked Sets (ALS) X-Chain" primeiro:</li>
+<br/>
+<li>Almost Locked Sets (ALS) X-Chain:</li>
+<br/>
+<li>Consiste em um conjunto de candidatos que formam uma cadeia em forma de X, onde os candidatos estão quase trancados.
+"Almost Locked" significa que os candidatos estão quase em um conjunto trancado, exceto por um candidato adicional em um dos grupos.
+Você pode eliminar os candidatos comuns a todos os grupos na cadeia X.</li>
+<br/>
+<li>Almost Almost Locked Sets (AALS) X-Chain:
+É uma extensão do ALS X-Chain, onde você identifica uma cadeia X com quase conjuntos trancados, mas dois candidatos estão quase trancados em cada grupo.
+Você ainda pode eliminar os candidatos comuns a todos os grupos na cadeia X, mesmo que haja dois candidatos quase trancados em cada grupo.
+Aqui está um exemplo para ilustrar o AALS X-Chain:</li>
+<br/>
+<li>Considere a seguinte grade (os candidatos estão listados para cada célula):</li>
+<br/>
+
+|  123  45  6 |  78  9   4 |  12  3   78 |
+|  78   9   4 |  12  3   5 |  12  6   78 |
+|  5    23  1 |  6   78  78 |  4   9   23 |
++-------------+-------------+-------------+
+|  4    1   7 |  23  5   9 |  36  8   26 |
+|  6    8   23|  4   1   23|  9   5   7  |
+|  9    5   23|  78  6   78|  1   24  24 |
++-------------+-------------+-------------+
+|  1    6   9 |  5   4   23|  78  27  18 |
+|  23   4   8 |  9   27  1 |  5   27  6  |
+|  23   7   5 |  23  8   6 |  23  1   9  |
+<li>Neste exemplo, observe as células R1C1, R3C1, R3C3 e R7C3. Elas formam uma cadeia X com dois candidatos quase trancados em cada grupo. O candidato 1 é quase trancado nas células R1C1 e R7C3, enquanto o candidato 23 é quase trancado nas células R3C1 e R3C3.</li>
+<br/>
+<li>Você pode eliminar o candidato 1 nas células R1C3 e R7C1, bem como o candidato 23 nas células R7C9 e R3C9, seguindo o padrão da cadeia X.</li>
+<br/>
+<li>Lembre-se de que a técnica AALS X-Chain é avançada e requer prática para identificar e aplicar eficientemente durante a resolução do Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Almost+Almost+Locked+Sets+%28AALS%29+X-Chain+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>XY-Chain Subsets Type 22</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XY-Chain+Subsets+Type+22+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>XYZ-Wing Subsets Type 22 </li>
+<br/>
+<a href="https://www.google.com.br/m?q=XYZ-Wing+Subsets+Type+22++Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+
+<li>A técnica "Hidden Conjugate Pair" é uma estratégia avançada no Sudoku que envolve a identificação de um par de candidatos em um grupo (linha, coluna ou bloco) que estão ligados de forma oculta. Eles formam um par conjugado quando estão restritos a duas células dentro do mesmo grupo e não podem aparecer em outras células do mesmo grupo.</li>
+<br/>
+<li>Quando você identifica um par conjugado oculto, você pode eliminar esses candidatos de outras células no mesmo grupo, pois você sabe que eles devem ocupar essas duas células específicas.</li>
+<br/>
+<li>Aqui está um exemplo para ilustrar essa técnica:</li>
+<br/>
+<li>Considere a seguinte grade (os candidatos estão listados para cada célula):</li>
+<br/>
+
+|  123   12    3  |  45    45    6  |  7     8    9  |
+|  4    567  567  |  8     2    9  |  1     3    56 |
+|  89    89    1  |  7     3    45 |  2     456  56 |
++-----------------+-----------------+-----------------+
+|  567   4     2  |  9     8    3  |  56    1    7  |
+|  1     3     89 |  46    7    56 |  456   2    46 |
+|  5679  5679  56 |  1     45   2  |  3     456  8  |
++-----------------+-----------------+-----------------+
+|  23    1     4  |  56    9    8  |  356   7    56 |
+|  678   678   67 |  3     1    47 |  9     456  246|
+|  56    256   56 |  2     456  47 |  8     456  1  |
+
+<li>Neste exemplo, observe as células na coluna do meio (células com candidatos 2 e 5). O candidato 2 aparece apenas nas células R1C2 e R2C2 (linha 1 e linha 2, coluna 2). O candidato 5 aparece apenas nas células R3C2 e R6C2 (linha 3 e linha 6, coluna 2). Como esses são os únicos lugares onde esses candidatos podem aparecer na coluna, você pode eliminar outros candidatos 2 e 5 dessa coluna.</li>
+<br/>
+<li>Assim, a "Hidden Conjugate Pair" permite que você elimine candidatos de outras células do mesmo grupo quando você identifica um par oculto que se encaixa nas condições de um par conjugado.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Hidden+Conjugate+Pair+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+
+<li>XY-Chain Subsets Type 23</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XY-Chain+Subsets+Type+23+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>XYZ-Wing Subsets Type 23</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XYZ-Wing+Subsets+Type+23+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+<li>Remote Pairs Type 3</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Remote+Pairs+Type+3+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>Turbot Fish Type 6</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Turbot+Fish+Type+6+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>Sue de Coq Type 4</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Sue+de+Coq+Type+4+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>XYZ-Wing Subsets Type 24</li>
+<br/> 
+<a href="https://www.google.com.br/m?q=XYZ-Wing+Subsets+Type+24+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+
+
+<li>"Hidden Remote Locked Sets" é uma técnica avançada de resolução de Sudoku que envolve padrões específicos em conjuntos de células que compartilham candidatos com outras células no tabuleiro. Esta técnica é uma extensão das técnicas de "Locked Sets" e "Hidden Sets". Vou explicar como funciona:</li>
+<br/>
+<li>Como Funciona Hidden Remote Locked Sets:
+Identificar Candidatos Comuns: Comece identificando um conjunto de candidatos que aparecem apenas em um grupo específico de células (linha, coluna ou bloco), mas esses candidatos também são encontrados em outras células dentro do mesmo bloco.</li>
+<br/>
+<li>Excluir Outros Candidatos: Se você encontrar um conjunto de candidatos que se encaixam nesse padrão, você pode eliminar esses candidatos de outras células no mesmo bloco, desde que essas células não estejam no mesmo grupo (linha, coluna ou bloco) que as células onde o padrão foi identificado.</li>
+<br/>
+<li>Exemplo Prático:
+Suponha que você esteja analisando um bloco de Sudoku:</li>
+<br/>
+
+| 1   6   8 |
+| 4   3  59 |
+| 259 59  7 |
+
+
+<li>No exemplo acima, o candidato "5" aparece apenas nas células da coluna central do bloco.
+Além disso, dentro do mesmo bloco, há outras células que não estão na coluna central, mas ainda compartilham o candidato "5".
+Neste caso, você pode eliminar o candidato "5" das outras células no mesmo bloco, exceto aquelas na coluna central.</li>
+<br/>
+<li>Hidden Remote Locked Sets podem ser complexos de identificar e aplicar. Eles exigem uma compreensão profunda das relações entre os candidatos no tabuleiro. Praticar e estudar diferentes padrões e cenários ajudará você a identificar e usar essa técnica com eficácia.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Hidden+Remote+Locked+Sets+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>Almost Almost Locked Sets (AALS) XY-Chain</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Almost+Almost+Locked+Sets+%28AALS%29+XY-Chain+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+<li>XY-Chain Subsets Type 24</li>
+<br/> 
+<a href="https://www.google.com.br/m?q=XY-Chain+Subsets+Type+24+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+
+<li>XY-Chain é uma técnica avançada de resolução de Sudoku que envolve a criação de uma cadeia de células interconectadas. Essa cadeia é usada para eliminar candidatos e resolver o quebra-cabeça. Aqui está como funciona:</li>
+<br/>
+<li>Como Funciona o XY-Chain:
+Escolha um Candidato Inicial: Comece escolhendo um candidato (por exemplo, o número "1") e encontre todas as ocorrências desse candidato no tabuleiro.</li>
+<br/>
+<li>Encontre uma Cadeia de Células Interconectadas: Procure por uma cadeia de células onde cada célula contém o candidato escolhido e está conectada à próxima célula na cadeia na mesma linha, coluna ou bloco.</li>
+<br/>
+<li>A(1) -> B(1) -> C(1)</li>
+<br/>
+<li>Conecte a Cadeia de Células: Estabeleça a conexão entre as células na cadeia. Por exemplo, se A(1) está conectada a B(1), e B(1) está conectada a C(1), então A(1) está indiretamente conectada a C(1) por meio da cadeia.</li>
+<br/>
+<li>Encontre uma Contradição de Candidatos: Se você encontrar uma célula que está conectada à última célula na cadeia e também possui um candidato adicional que entra em conflito com o candidato inicial da cadeia, você pode eliminar o candidato inicial da célula final na cadeia.</li>
+<br/>
+<li>Exemplo Prático:</li>
+<br/>
+<li>Suponha que você tenha a cadeia: A(1) -> B(1) -> C(1).</li>
+<br/>
+<li>Se a célula C(1) também contém o candidato "2", isso entra em conflito com o candidato "1".</li>
+<br/>
+<li>Portanto, você pode eliminar o candidato "1" da célula C(1).
+O XY-Chain é uma técnica poderosa, mas pode ser complicado de identificar e aplicar. Requer prática e uma boa compreensão das relações entre candidatos no tabuleiro do Sudoku. Com o tempo, você se tornará mais habilidoso ao usar essa estratégia para resolver quebra-cabeças desafiadores.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XY-Chain+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+
+<li>A técnica Color Wing é uma estratégia avançada no Sudoku que se baseia no conceito de coloração. Esta técnica é usada para encontrar padrões específicos no tabuleiro que permitem a eliminação de candidatos. Aqui está como funciona:</li>
+<br/>
+<li>Como Funciona o Color Wing:
+Escolha um Candidato e Atribua uma Cor: Escolha um candidato específico e atribua uma cor a ele. Por exemplo, você pode escolher o candidato "1" e atribuir a cor vermelha a todas as células que contêm o candidato "1".</li>
+<br/>
+<li>Procure por Células Conectadas: Procure por células conectadas ao longo de linhas, colunas e blocos que contenham o mesmo candidato. Essas células formarão grupos coloridos (por exemplo, células vermelhas) e podem incluir candidatos diferentes.</li>
+<br/>
+<li>Encontre um Conflito de Cores: Se você encontrar uma célula que pertence a dois grupos coloridos diferentes (por exemplo, uma célula vermelha que também é azul), isso cria um conflito de cores.</li>
+<br/>
+<li>Eliminação de Candidatos: Se houver um conflito de cores, você pode eliminar o candidato escolhido (por exemplo, "1") de todas as células que compartilham a mesma linha, coluna ou bloco com a célula que possui o conflito de cores.</li>
+<br/>
+<li>Exemplo Prático:</li>
+<br/>
+<li>Você atribui a cor vermelha ao candidato "1" em um grupo de células.</li>
+<br/>
+<li>Você descobre que uma célula vermelha está conectada a uma célula azul (pertencente a outro grupo colorido).</li>
+<br/>
+<li>Isso cria um conflito de cores.</li>
+<br/>
+<li>Como resultado do conflito, você pode eliminar o candidato "1" de outras células na mesma linha, coluna ou bloco da célula que tem o conflito de cores.
+<br/>
+<li>A Color Wing é uma técnica avançada que exige uma boa compreensão do jogo e prática para ser utilizada eficazmente. Familiarizar-se com padrões de coloração ajudará você a identificar oportunidades para aplicar essa estratégia durante o jogo.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Color+Wing+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>A variante do XYZ-Wing é uma técnica avançada do Sudoku que expande o conceito do XYZ-Wing básico para incluir mais conjuntos de candidatos. Enquanto o XYZ-Wing padrão envolve três conjuntos de candidatos, a variante do XYZ-Wing inclui mais conjuntos de candidatos. A técnica é aplicada da seguinte forma:</li>
+<br/>
+<li>Como Funciona a Variante do XYZ-Wing:</li>
+<br/>
+<li>Identifique Mais Conjuntos de Candidatos: Procure conjuntos de candidatos que aparecem em quatro células, mas não necessariamente em todas elas. O importante é que cada candidato em um conjunto deve estar em no máximo três células.</li>
+<br/>
+
+A B C
+D E F
+G H I
+
+
+<li>Eliminação de Candidatos: Se você encontrar um padrão onde os candidatos em um conjunto (por exemplo, candidatos A, B, C e D) só podem aparecer em quatro células específicas dentro da variante do XYZ-Wing, você pode eliminar esses candidatos de outras células nessas linhas ou colunas.</li>
+<br/>
+<li>Exemplo Prático:
+Considere o padrão: Os candidatos A, B, C e D aparecem apenas em quatro células específicas. Isso forma um XYZ-Wing variante. Se o candidato A estiver verdadeiro em uma célula dentro desse padrão, você pode eliminar os candidatos B, C e D das outras células na mesma linha, coluna ou bloco.</li>
+<br/>
+<li>Essa técnica requer uma compreensão sólida dos candidatos e padrões no tabuleiro. A prática com exemplos específicos ajudará a aprimorar suas habilidades ao usar essa variante do XYZ-Wing.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XYZ-Wing+%28Variante%29+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+<li>A variante do Swordfish é uma técnica avançada de Sudoku que expande o conceito do Swordfish básico para incluir mais conjuntos de candidatos. Enquanto o Swordfish padrão envolve três linhas ou colunas e três conjuntos de candidatos, a variante do Swordfish inclui mais linhas, colunas ou conjuntos de candidatos. A técnica é aplicada da seguinte forma:</li>
+<br/>
+<li>Como Funciona a Variante do Swordfish:</li>
+<br/>
+<li>Identifique Conjuntos de Candidatos em Mais de Três Linhas/Colunas: Procure conjuntos de candidatos que aparecem em mais de três linhas, colunas ou blocos, mas não necessariamente em todas elas. O importante é que cada candidato em um conjunto deve estar em no máximo três linhas, colunas ou blocos.</li>
+<br/>
+
+X X X       X X X X       X X X
+X X X       X X X X       X X X
+X X         X X X         X X X
+
+<li>Eliminação de Candidatos: Se você encontrar um padrão onde os candidatos em um conjunto (por exemplo, candidato X) só podem aparecer em três linhas, colunas ou blocos específicos dentro da variante do Swordfish, você pode eliminar esse candidato de outras células nessas linhas, colunas ou blocos.</li>
+<br/>
+<li>Exemplo Prático:
+Considere o padrão: O candidato X aparece apenas nas linhas 1, 2 e 3, colunas 1, 2 e 3, e blocos 1 e 2. Isso forma um Swordfish variante. Se o candidato X estiver verdadeiro em uma célula dentro desse padrão, você pode eliminar o candidato X das outras células nessas linhas, colunas ou blocos.</li>
+<br/>
+<li>Essa técnica requer uma compreensão sólida dos candidatos e padrões no tabuleiro. A prática com exemplos específicos ajudará a aprimorar suas habilidades ao usar essa variante do Swordfish.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Swordfish+%28Variante%29+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+<li>Fishy Cycle é uma técnica avançada de resolução de Sudoku que envolve um ciclo de células com candidatos. Essa técnica pode ser bastante complexa e requer um conhecimento profundo dos relacionamentos com os candidatos. Veja como funciona:</li>
+<br/>
+<li>Como funciona o ciclo suspeito:</li>
+<br/>
+<li>Identifique um ciclo de células: procure um ciclo de células (um loop) onde cada célula contém um candidato que pode eliminar o candidato na próxima célula do ciclo. O ciclo deve fechar até a célula inicial.</li>
+<br/>
+<li>A -> B -> C -> D -> A</li>
+<br/>
+<li>Eliminação de Candidatos: Se o candidato A na primeira célula pode eliminar o candidato B na segunda célula, o candidato B na segunda célula pode eliminar o candidato C na terceira célula, e assim por diante até que o candidato D na última célula possa eliminar o candidato A em a primeira célula, você pode eliminar esses candidatos de outras células na mesma unidade do ciclo.</li>
+<br/>
+<li>Exemplo prático:
+Considere um ciclo: A(1) -> B(2) -> C(3) -> D(4) -> A(1). Se A(1) pode eliminar B(2), B(2) pode eliminar C(3), C(3) pode eliminar D(4) e D(4) pode eliminar A(1), você pode eliminar candidatos 1, 2, 3 e 4 de outras células na mesma unidade do ciclo.</li>
+<br/>
+<li>Essa técnica é difícil de detectar e executar e geralmente envolve padrões complexos no quebra-cabeça. A prática e a experiência com diferentes quebra-cabeças de Sudoku melhorarão sua capacidade de identificar e usar o Fishy Cycle de maneira eficaz.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Fishy+Cycle+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+<li>A variante avançada do XYZ-Wing é uma técnica sofisticada do Sudoku que leva em conta quatro conjuntos de candidatos (A, B, C e D) em quatro células interligadas. Além dos candidatos A, B, C e D, a variante avançada também inclui os candidatos E e F em células adicionais.</li>
+<br/>
+<li>Como Funciona a Variante Avançada do XYZ-Wing:</li>
+<br/>
+<li>Encontre um Padrão XYZ-Wing com Candidatos E e F: Procure um conjunto de quatro células interconectadas onde os candidatos A, B, C e D aparecem em quatro células, formando um XYZ-Wing. Além disso, existem duas células adicionais que contêm os candidatos E e F.</li>
+<br/>
+
+A _ E
+_ B _
+D _ F
+
+
+<li>Candidatos E e F nas Células Adicionais: Nas células que contêm os candidatos E e F, você tem a possibilidade de eliminação de candidatos.</li>
+<br/>
+<li>Eliminação de Candidatos: Se uma das células contendo A, B, C ou D estiver verdadeira, você pode eliminar os candidatos E e F das células correspondentes. Da mesma forma, se E ou F estiverem verdadeiros, você pode eliminar A, B, C e D das células correspondentes.</li>
+<br/>
+<li>Exemplo Prático:
+Considere o padrão XYZ-Wing: A(1) _ E(5), _ B(2) _, D(3) _ F(6). Se A(1) estiver verdadeiro, então você pode eliminar E(5) da célula onde E aparece. Se F(6) estiver verdadeiro, então você pode eliminar A(1), B(2) e D(3) das células correspondentes.</li>
+<br/>
+<li>Esta variante avançada do XYZ-Wing requer uma compreensão sólida dos candidatos e padrões no tabuleiro. A prática com exemplos específicos ajudará a aprimorar suas habilidades ao usar essa técnica.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XYZ-Wing+%28Variante+Avan%C3%A7ada%29+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>O XY-Chain é uma técnica avançada de Sudoku que envolve uma cadeia de células interconectadas com candidatos A e B. Na variante forçada do XY-Chain, além dos candidatos A e B, você também leva em consideração os candidatos C e D. A técnica funciona da seguinte maneira:</li>
+<br/>
+<li>Como Funciona a Variante Forçada do XY-Chain:</li>
+<br/>
+<li>Encontre uma Cadeia de Células com A e B: Procure uma cadeia de células interconectadas onde os candidatos A e B aparecem alternadamente. Ou seja, as células estão ligadas da seguinte forma: A -> B -> A -> B.</li>
+<br/>
+<li>Introduza Candidatos C e D: Nas células onde não há A ou B, você tem os candidatos C e D. Estes são os outros dois candidatos na variante forçada do XY-Chain.</li>
+<br/>
+<li>Eliminação de Candidatos: Se uma das células com A ou B na cadeia estiver verdadeira, então você pode eliminar os candidatos C e D das células onde A ou B aparecem. Se C ou D estiverem verdadeiros, você pode eliminar A e B das células onde C ou D aparecem.</li>
+<br/>
+<li>Exemplo Prático:
+Considere a cadeia: A(1) -> B(2) -> A(1) -> B(2), onde as células A e B contêm os candidatos 1 e 2, respectivamente. Se A(1) estiver verdadeiro, então a célula onde B(2) aparece pode ser eliminada. Da mesma forma, se B(2) estiver verdadeiro, então a célula onde A(1) aparece pode ser eliminada.</li>
+<br/>
+<li>Esta variante forçada do XY-Chain adiciona complexidade à técnica básica, tornando-a mais poderosa quando aplicada corretamente. Lembre-se de que essa técnica requer uma compreensão sólida dos candidatos e padrões no tabuleiro. Praticar com exemplos específicos ajudará a aprimorar suas habilidades ao usar essa técnica.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XY-Chain+%28Variante+For%C3%A7ada%29+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+
+
+<li>O W-Wing é uma técnica avançada do Sudoku que envolve um padrão especial de quatro células. Na variante W-Wing, além dos candidatos A e B, você também considera os candidatos C e D. A técnica funciona assim:</li>
+<br/>
+<li>Como Funciona a Variante W-Wing:</li>
+<br/>
+<li>Encontre o Padrão W-Wing: Procure um conjunto de quatro células que formem uma estrutura semelhante a um "W". Duas das células contêm os candidatos A e B, e as outras duas contêm os candidatos C e D.</li>
+<br/>
+A _ D
+_ B _
+
+<li>Candidatos C e D nas Células Interligadas: Além dos candidatos A e B, as células interligadas contêm os candidatos C e D. Ou seja, se uma célula com A ou B contém C ou D, respectivamente, você tem um W-Wing.</li>
+<br/>
+<li>Eliminação de Candidatos: Se uma das células contendo A ou B estiver verdadeira, você pode eliminar os candidatos C e D das células interligadas. Da mesma forma, se C ou D estiverem verdadeiros, você pode eliminar os candidatos A e B das células interligadas.</li>
+<br/>
+<li>Exemplo Prático:
+Considere o padrão W-Wing: A(1) _ D(3), _ B(2) _. Se A(1) estiver verdadeiro, então você pode eliminar D(3) das células interligadas. Se B(2) estiver verdadeiro, então você pode eliminar C(1) das células interligadas.</li>
+<br/>
+<li>Essa técnica requer uma compreensão sólida dos candidatos e padrões no tabuleiro. Praticar com exemplos específicos ajudará a aprimorar suas habilidades ao usar essa variante do W-Wing.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=W-Wing+%28Variante%29+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>X-Cycle é uma técnica avançada de Sudoku que envolve um ciclo de candidatos em células interligadas. Na variante X-Cycle, além dos candidatos A e B, você também leva em consideração os candidatos C e D. A técnica funciona da seguinte maneira:</li>
+<br/>
+<li>Como Funciona a Variante X-Cycle:</li>
+<br/>
+<li>Encontre um Ciclo de Candidatos: Procure um ciclo de quatro células onde os candidatos A e B aparecem alternadamente. Ou seja, as células estão ligadas da seguinte forma: A -> B -> C -> D -> A.</li>
+<br/>
+<li>Introduza Candidatos C e D: Nas células C e D, onde não há A ou B, você tem candidatos C e D. Estes são os outros dois candidatos na variante X-Cycle.</li>
+<br/>
+<li>Eliminação de Candidatos: Se uma das células A ou B na cadeia estiver verdadeira, então você pode eliminar os candidatos C e D das células C e D, respectivamente. Se A ou B estiverem falsos, você pode eliminar A e B das células C e D, respectivamente.</li>
+<br/>
+<li>Exemplo Prático:
+Considere o ciclo: A(1) -> B(2) -> C(3) -> D(4) -> A(1), onde as células A e B contêm os candidatos 1 e 2, respectivamente. Se A(1) estiver verdadeiro, então C(3) e D(4) não podem conter os candidatos 3 e 4, respectivamente. Da mesma forma, se B(2) estiver verdadeiro, então C(3) e D(4) não podem conter os candidatos 3 e 4, respectivamente.</li>
+<br/>
+<li>Esta técnica requer uma compreensão sólida dos candidatos e padrões no tabuleiro. A prática com exemplos específicos ajudará a aprimorar suas habilidades ao usar essa técnica.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=X-Cycle+%28Variante%29%0D+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>Sue de Coq é uma técnica avançada de Sudoku que envolve padrões específicos em torno de conjuntos conjugados. Na sua variante, além dos conjuntos conjugados, também são levados em consideração os conjuntos triplos.</li>
+<br/>
+<li>Como Funciona a Variante Sue de Coq:</li>
+<br/>
+<li>Identifique um Conjunto Conjugado Triplo (A, B, C): Encontre três células em uma linha, coluna ou bloco que contêm três candidatos (A, B, C) e não contêm outros candidatos.</li>
+<br/>
+<li>Conjunto Triplo com uma Célula Adicional: Encontre uma quarta célula que esteja na mesma linha, coluna ou bloco que contenha um dos candidatos do conjunto triplo e não contenha os outros dois candidatos.</li>
+<br/>
+<li>Eliminação de Candidatos: Se essa quarta célula contém um dos candidatos do conjunto triplo, você pode eliminar esse candidato das células vizinhas ao conjunto triplo (ou seja, as células que compartilham a mesma linha, coluna ou bloco).</li>
+<br/>
+<li>Exemplo Prático:
+Considere um conjunto triplo (A, B, C) nas células A, B e C, e uma quarta célula D que está na mesma linha que contém o candidato A.</li>
+<br/>
+<li>Se A estiver presente em D, você pode eliminar A das células que compartilham a linha com o conjunto triplo (B e C).
+Da mesma forma, se B ou C estiver presente em D, você pode eliminar B ou C, respectivamente, das células que compartilham a linha com o conjunto triplo.
+Essa variante do Sue de Coq adiciona complexidade à técnica básica, tornando-a mais poderosa quando aplicada corretamente. Lembre-se de que essa técnica requer uma compreensão sólida dos conjuntos conjugados e triplos, bem como da estrutura do Sudoku no tabuleiro. Praticar com exemplos específicos ajudará a aprimorar suas habilidades ao usar essa técnica.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Sue+de+Coq+%28Variante%29+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>A técnica XY-Chain é uma técnica avançada de Sudoku que envolve uma cadeia de células conectadas onde dois candidatos alternam-se em uma sequência. A variante com conjugação adiciona uma camada extra de complexidade, envolvendo conjuntos conjugados nas células. Aqui está como funciona:</li>
+<br/>
+<li>XY-Chain com Conjugação:
+Identifique uma Cadeia XY: Procure por uma cadeia XY no tabuleiro, onde os candidatos alternam-se em uma sequência. Por exemplo, se as células A, B e C têm os candidatos A: 1, B: 2, A: 3, você tem uma cadeia XY (1 -> 2 -> 3).</li>
+<br/>
+<li>Adicione Conjuntos Conjugados: Introduza conjuntos conjugados nas células XY. Ou seja, uma célula dentro da cadeia XY tem um par conjugado de candidatos. Por exemplo, se a célula B tem os candidatos 2 e 4, isso cria um conjunto conjugado (2, 4).</li>
+<br/>
+<li>Eliminação de Candidatos: Se a cadeia XY envolve conjuntos conjugados, você pode eliminar candidatos fora dos conjuntos conjugados. Se, durante a cadeia XY, você alcançou um conjunto conjugado e encontrou uma célula que não faz parte desse conjunto, você pode eliminar os candidatos da célula que não estão no conjunto conjugado.</li>
+<br/>
+<li>Exemplo Prático:
+Considere a cadeia XY: A(1) -> B(2) -> C(3) -> D(4) -> E(5), onde as células B e D têm conjuntos conjugados (2, 4). Se A(1) é verdadeiro, então B(2) deve ser verdadeiro, levando a D(4) verdadeiro, e assim por diante. Se B(2) é falso, então D(4) é verdadeiro, o que leva a E(5) sendo verdadeiro.</li>
+<br/>
+<li>Nesse caso, você pode eliminar o candidato 5 da célula E, porque se B(2) fosse falso, D(4) seria verdadeiro, tornando E(5) falso.</li>
+<br/>
+<li>A técnica XY-Chain com conjugação pode ser bastante complexa e requer uma compreensão sólida dos candidatos e padrões no tabuleiro. Praticar com exemplos específicos ajudará a aprimorar suas habilidades na aplicação dessa técnica.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XY-Chain+%28Variante+com+Conjuga%C3%A7%C3%A3o%29+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>O "Unique Rectangle" (Retângulo Único) é uma técnica avançada no Sudoku que é usada para eliminar candidatos em situações específicas. A técnica se baseia em um padrão em que quatro células formam um retângulo, e há apenas dois candidatos presentes nesses quatro quadrados.</li>
+<br/>
+<li>Como Funciona o Unique Rectangle:</li>
+<br/>
+<li>Quatro Células com Apenas Dois Candidatos: Encontre um conjunto de quatro células em um quadrado de 2x2 no qual existem apenas dois candidatos presentes.</li>
+<br/>
+<li>Verifique as Conexões: Verifique se as quatro células estão de tal forma que, se um dos candidatos estiver presente em uma das células, o outro candidato não pode estar presente em nenhuma das outras três células.</li>
+<br/>
+<li>Eliminação de Candidatos: Se o padrão atender às condições mencionadas, você pode eliminar o candidato comum das outras células no mesmo bloco, linha ou coluna.</li>
+<br/>
+<li>Exemplo Prático:
+Considere as células no quadrado de 2x2:</li>
+<br/>
+<li>Célula A: Candidatos 1, 2</li>
+<br/>
+<li>Célula B: Candidatos 1, 3</li>
+<br/>
+<li>Célula C: Candidatos 2, 3</li>
+<br/>
+<li>Célula D: Candidatos 1, 2</li>
+<br/>
+<li>Se a célula A contiver o candidato 1, então a célula B não pode conter o candidato 1, e vice-versa. O mesmo se aplica para as células C e D. Portanto, você pode eliminar o candidato 1 das células B e D e o candidato 2 das células A e C.</li>
+<br/>
+<li>O Unique Rectangle é uma técnica sutil e requer uma compreensão cuidadosa do padrão e das condições para ser aplicada corretamente. Ele pode ajudar a resolver Sudokus mais difíceis quando identificado corretamente.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Unique+Rectangle+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+</h4>
+
+ </body>
+ </html>
+
+ 

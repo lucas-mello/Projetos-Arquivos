@@ -1,0 +1,464 @@
+<html>
+ <head>
+  <title>Sudoku:</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    .h2{
+       text-align: center;
+       text-decoration:underline;
+       font-size:40px;
+     }
+
+   .h4{ 
+    font-size:30px; 
+    text-align:justify;
+    }
+   
+     .img{
+       width:540px;
+       height:443px;
+       }
+    
+
+  </style>
+ </head>
+ <body bgcolor="#d3d3d3">
+
+<h2 class="h2">Observações:</h2>
+
+<h2 class="h2">Sobre:</h2>
+
+<h4 class="h4">
+
+
+<li>XY-Chain Subsets Type 17</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XY-Chain+Subsets+Type+17+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+<li>Hidden Almost Nice Loops (HANL) é uma técnica avançada no Sudoku que envolve pares de candidatos em duas células em uma linha, coluna ou bloco que, quando combinados com um candidato em outra célula na mesma unidade, criam um ciclo quase agradável (quase nice loop).</li>
+<br/>
+<li>Aqui está um exemplo para ilustrar a técnica Hidden Almost Nice Loops:</li>
+<br/>
+<li>Considere a seguinte grade (os candidatos estão listados para cada célula):</li>
+<br/>
+
+| .  .  .  | .  .  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  .  |
++----------+----------+----------+
+| .  .  .  | .  .  .  | .  .  .  |
+| .  .  .  | 1  2  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  .  |
++----------+----------+----------+
+| .  .  .  | .  .  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  .  |
+<li>Neste exemplo, observe as células R5C5 (candidato 1) e R5C6 (candidato 2). Se uma dessas células for 1, então R4C6 deve ser 1 para evitar um loop quase agradável. Se uma delas for 2, então R6C5 deve ser 2. Portanto, há um ciclo quase agradável entre R5C5, R5C6 e R4C6 (ou R6C5).</li>
+<br/>
+<li>A técnica Hidden Almost Nice Loops envolve identificar esses padrões ocultos em que os candidatos formam um ciclo quase agradável. Esses padrões podem ser difíceis de detectar e requerem uma compreensão profunda das interações entre os candidatos em diferentes partes do tabuleiro.</li>
+<br/>
+<li>Lembre-se de que essa técnica é avançada e geralmente é aplicada em quebra-cabeças complexos onde outras técnicas mais simples não são suficientes para resolver o Sudoku. Prática e paciência são essenciais ao tentar aplicar essa técnica.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Hidden+Almost+Nice+Loops+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>A técnica Sue de Coq é uma estratégia avançada no Sudoku que envolve três candidatos em uma linha, coluna ou bloco, onde dois desses candidatos estão em um par conjugado. O terceiro candidato está em uma célula na mesma unidade e forma uma relação com o par conjugado. Sue de Coq Type 3 é uma variação dessa técnica que inclui um candidato extra em uma célula conectada ao grupo inicial.</li>
+<br/>
+<li>Aqui está um exemplo para ilustrar a técnica Sue de Coq Type 3:</li>
+<br/>
+<li>Considere a seguinte grade (os candidatos estão listados para cada célula):</li>
+<br/>
+
+| .  .  .  | .  .  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  .  |
++----------+----------+----------+
+| .  .  .  | .  .  .  | .  .  .  |
+| .  .  .  | 1  .  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  .  |
++----------+----------+----------+
+| .  .  .  | .  .  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  .  |
+<li>Neste exemplo, observe as células R5C5 (candidato 1) e R5C6 (candidato 2), que formam um par conjugado. Agora, também observe a célula R5C4, que contém o candidato 3.</li>
+<br/>
+<li>Se R5C4 for resolvida como 3, então R5C5 deve ser 1 e R5C6 deve ser 2, devido ao par conjugado. Portanto, R5C4 = 3 cria uma relação com o par conjugado e ajuda a eliminar candidatos em outras células.</li>
+<br/>
+<li>Sue de Coq Type 3 é uma técnica avançada e requer uma compreensão sólida das interações entre os candidatos no Sudoku. Ela é útil em situações complexas onde as técnicas mais simples não são suficientes para resolver o quebra-cabeça. Prática e experiência são essenciais ao tentar aplicar essa técnica com sucesso.</li>
+<br/>
+<li>Claro, vou fornecer mais detalhes sobre a técnica Sue de Coq Type 3 no Sudoku.</li>
+<br/>
+<li>Sue de Coq Type 3:</li>
+<br/>
+<li>Identificação do Padrão:</li>
+<br/>
+<li>Encontre três candidatos em uma linha, coluna ou bloco onde dois deles formam um par conjugado (ou seja, aparecem apenas nessas duas células na unidade) e o terceiro candidato está em uma célula que pode ver ambas as células do par conjugado.</li>
+<li>Eliminações:</li>
+<br/>
+<li>Se o terceiro candidato for verdadeiro, então ele força o par conjugado a ser verdadeiro, levando a várias eliminações no restante do tabuleiro. Isso ocorre porque, se o terceiro candidato for verdadeiro, os outros dois candidatos do par conjugado não podem ser verdadeiros. Portanto, os candidatos em outras células na mesma linha, coluna ou bloco como o par conjugado podem ser eliminados.</li>
+<br/>
+<li>Exemplo:</li>
+<br/>
+<li>Considere o seguinte cenário (os candidatos estão listados para cada célula):</li>
+<br/>
+
+| .  .  .  | .  .  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  .  |
++----------+----------+----------+
+| .  .  .  | .  .  .  | .  .  .  |
+| .  .  .  | 1  .  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  .  |
++----------+----------+----------+
+| .  .  .  | .  .  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  .  |
+| .  .  .  | .  .  .  | .  .  .  |
+<li>Neste exemplo, R5C5 (candidato 1) e R5C6 (candidato 2) formam um par conjugado. Se R5C4 for 3, então R5C5 deve ser 1 e R5C6 deve ser 2. Isso, por sua vez, leva a eliminações em outras células da mesma linha.
+<br/>
+<li>Sue de Coq Type 3 é uma técnica poderosa, mas também complexa. Ela exige uma compreensão profunda das interações entre os candidatos e é frequentemente usada em quebra-cabeças de Sudoku muito difíceis, onde outras técnicas mais simples não são suficientes para a resolução. Prática e paciência são essenciais ao aplicar essa técnica com sucesso.
+<br/>
+<a href="https://www.google.com.br/m?q=Sue+de+Coq+Type+3+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>WXYZ-Wing Subsets Type 2 é uma variação avançada da técnica de Sudoku conhecida como WXYZ-Wing. Para entender essa variação, primeiro, vamos revisar o conceito básico do WXYZ-Wing:</li>
+<br/>
+<li>WXYZ-Wing Básico:</li>
+<br/>
+<li>Um WXYZ-Wing ocorre quando você tem quatro células (W, X, Y e Z) em que dois candidatos formam um par conjugado (por exemplo, W e X são um par conjugado), e o terceiro candidato (Y) é diferente dos dois, enquanto o quarto candidato (Z) é comum a todas as três células.</li>
+<br/>
+<li>Se W ou X for verdadeiro, então Y deve ser verdadeiro, eliminando outros candidatos na célula Y.</li>
+<br/>
+<li>Se W e X forem falsos, então Z deve ser verdadeiro, eliminando outros candidatos na célula Z.</li>
+<br/>
+<li>WXYZ-Wing Subsets Type 2:</li>
+<br/>
+<li>Nesta variação, consideramos casos em que as células W, X, Y e Z estão todas dentro do mesmo bloco. Além disso, W, X e Y têm candidatos em comum em outras células dentro do mesmo bloco.</li>
+<br/>
+<li>Identificação do Padrão:</li>
+<br/>
+<li>Encontre quatro células (W, X, Y e Z) dentro do mesmo bloco, onde W e X formam um par conjugado, Y é diferente de W e X, e Z é comum a todas as três.</li>
+<br/>
+<li>Além disso, outras células no mesmo bloco contêm candidatos que são um subconjunto de W, X e Y (ou seja, esses candidatos aparecem apenas em W, X e Y, mas não em outras células do bloco).</li>
+<br/>
+<li>Eliminações:</li>
+<br/>
+<li>Se W ou X for verdadeiro, então Y deve ser verdadeiro, eliminando outros candidatos em Y.</li>
+<br/>
+<li>Se W, X e Y forem falsos, então Z deve ser verdadeiro, eliminando outros candidatos em Z.</li>
+<br/>
+<li>Além disso, como as outras células no bloco contêm um subconjunto de W, X e Y, podemos eliminar esses candidatos dessas células.</li>
+<br/>
+<li>Exemplo:</li>
+<br/>
+<li>Considere o seguinte bloco (os candidatos estão listados para cada célula):</li>
+<br/>
+
+| .  .  . | .  .  . | .  .  . |
+| .  1  . | .  .  . | .  2  . |
+| .  .  . | .  .  . | .  .  . |
++---------+---------+---------+
+| .  .  . | .  .  . | .  .  . |
+| .  .  . | .  .  . | .  .  . |
+| .  .  . | .  .  . | .  .  . |
++---------+---------+---------+
+| .  .  . | .  .  . | .  .  . |
+| .  2  . | .  .  . | .  1  . |
+| .  .  . | .  .  . | .  .  . |
+<li>Neste exemplo, R2C2 (candidato 1) e R8C2 (candidato 2) formam um par conjugado. R2C8 (candidato 2) é diferente de R2C2 e R8C2, enquanto R8C8 (candidato 1) é comum a todas as três. Além disso, R2C5 (candidato 1) e R8C5 (candidato 2) são um subconjunto de W, X e Y. Portanto, podemos eliminar outros candidatos em R2C5, R2C8, R8C2 e R8C8 com base nesse padrão.</li>
+<br/>
+<li>Espero que isso ajude a entender o conceito do WXYZ-Wing Subsets Type 2! Lembre-se de que essa técnica é avançada e requer prática para ser aplicada com precisão.</li>
+<br/>
+<li>Certamente, vou fornecer mais detalhes sobre a técnica do WXYZ-Wing Subsets Type 2 no Sudoku:</li>
+<br/>
+<li>O WXYZ-Wing Subsets Type 2 é uma técnica avançada de resolução de Sudoku que se baseia na ideia básica do WXYZ-Wing, mas com a adição de um subconjunto de candidatos em outras células do bloco onde o padrão WXYZ é encontrado.</li>
+<br/>
+<li>Como Funciona:</li>
+<br/>
+<li>Identificação do Padrão:</li>
+<br/>
+<li>Encontre quatro células (W, X, Y e Z) dentro do mesmo bloco, onde W e X formam um par conjugado, Y é diferente de W e X, e Z é comum a todas as três.
+<br/>
+<li>Além disso, outras células no mesmo bloco contêm um subconjunto de W, X e Y (ou seja, esses candidatos aparecem apenas em W, X e Y, mas não em outras células do bloco).</li>
+<br/>
+<li>Eliminações:</li>
+<br/>
+<li>Se W ou X for verdadeiro, então Y deve ser verdadeiro, eliminando outros candidatos em Y.</li>
+<br/>
+<li>Se W, X e Y forem falsos, então Z deve ser verdadeiro, eliminando outros candidatos em Z.</li>
+<br/>
+<li>Além disso, como as outras células no bloco contêm um subconjunto de W, X e Y, podemos eliminar esses candidatos dessas células.</li>
+<br/>
+<li>Exemplo:</li>
+<br/>
+<li>Considere o seguinte bloco (os candidatos estão listados para cada célula):</li>
+<br/>
+
+| .  .  . | .  .  . | .  .  . |
+| .  1  . | .  .  . | .  2  . |
+| .  .  . | .  .  . | .  .  . |
++---------+---------+---------+
+| .  .  . | .  .  . | .  .  . |
+| .  .  . | .  .  . | .  .  . |
+| .  .  . | .  .  . | .  .  . |
++---------+---------+---------+
+| .  .  . | .  .  . | .  .  . |
+| .  2  . | .  .  . | .  1  . |
+| .  .  . | .  .  . | .  .  . |
+<li>Neste exemplo, R2C2 (candidato 1) e R8C2 (candidato 2) formam um par conjugado. R2C8 (candidato 2) é diferente de R2C2 e R8C2, enquanto R8C8 (candidato 1) é comum a todas as três. Além disso, R2C5 (candidato 1) e R8C5 (candidato 2) são um subconjunto de W, X e Y. Portanto, podemos eliminar outros candidatos em R2C5, R2C8, R8C2 e R8C8 com base nesse padrão.</li>
+<br/>
+<li>Essa técnica requer prática para ser identificada corretamente, mas pode ser muito útil ao resolver Sudoku mais difíceis. Espero que isso esclareça o conceito! Se você tiver mais perguntas ou precisar de mais exemplos, sinta-se à vontade para perguntar.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=WXYZ-Wing+Subsets+Type+2+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>A técnica do Color Trap é uma estratégia avançada no Sudoku que envolve a identificação de padrões de cores nos candidatos. Vou explicar como funciona:</li>
+<br/>
+<li>Identificação de Padrões de Cores:</li>
+<br/>
+<li>A ideia central do Color Trap é dividir os candidatos em dois grupos distintos, geralmente representados por cores diferentes (por exemplo, vermelho e azul).
+Um candidato pertence a uma cor específica se for obrigatoriamente verdadeiro na solução ou se tiver um forte relacionamento com outros candidatos que pertencem a essa mesma cor.</li>
+<br/>
+<li>Regras Básicas:</li>
+<br/>
+<li>Dois candidatos de cores diferentes não podem ser verdadeiros na mesma unidade (linha, coluna ou bloco).</li>
+<br/>
+<li>Se um candidato de uma cor for verdadeiro, todos os outros candidatos dessa mesma cor devem ser falsos.</li>
+<br/>
+<li>Aplicação:</li>
+<br/>
+<li>Ao identificar padrões de cores, você pode usar eliminações baseadas nas regras acima para determinar quais candidatos são verdadeiros e quais são falsos.</li>
+<br/>
+Ao eliminar candidatos de uma cor em uma unidade específica (linha, coluna ou bloco), você pode reduzir as opções para os outros candidatos na mesma unidade.</li>
+<br/>
+<li>Exemplo:</li>
+<br/>
+<li>Considere o seguinte bloco (os candidatos estão listados para cada célula):</li>
+<br/>
+
+| .  .  . |
+| .  .  . |
+| .  .  . |
+<li>Suponha que os candidatos em R1C1 e R2C2 sejam "1" (representados em vermelho) e os candidatos em R1C2, R2C1 e R3C3 sejam "2" (representados em azul). Se R1C1 for verdadeiro (vermelho), então todos os outros candidatos vermelhos (R2C2) devem ser falsos. Se R1C2 for verdadeiro (azul), então todos os outros candidatos azuis (R2C1 e R3C3) devem ser falsos.</li>
+<br/>
+<li>Aplicação do Color Trap:
+Se você conseguir identificar corretamente padrões de cores e aplicar as regras básicas do Color Trap, poderá resolver alguns candidatos e, por sua vez, facilitar a resolução de outras partes do quebra-cabeça.</li>
+<br/>
+<li>O Color Trap é uma técnica avançada e requer prática para ser usada eficazmente. Espero que isso ajude a entender o conceito! Se você tiver mais perguntas ou precisar de mais exemplos, sinta-se à vontade para perguntar.</li>
+<br/>
+<li>Claro, vou fornecer mais detalhes sobre a técnica do Color Trap no Sudoku.</li>
+<br/>
+<li>Detalhes Avançados:</li>
+<br/>
+<li>Cenários de Aplicação:</li>
+<br/>
+<li>O Color Trap é especialmente útil quando você identifica dois grupos distintos de candidatos em uma unidade (linha, coluna ou bloco), cada um contendo pelo menos um candidato verdadeiro.</li>
+<li>Você pode usar o Color Trap quando esses grupos se sobrepõem em uma única unidade, criando uma situação em que um candidato verdadeiro em um grupo eliminaria todos os candidatos no outro grupo.</li>
+Coloring Chains:</li>
+<br/>
+<li>O Color Trap pode ser estendido para formar Coloring Chains, onde você segue uma cadeia de eliminações entre os candidatos coloridos. Por exemplo, se um candidato vermelho elimina um candidato azul, e esse candidato azul elimina outro candidato vermelho, você pode seguir essa cadeia de eliminações para encontrar mais candidatos que podem ser determinados como verdadeiros ou falsos.
+Uso em Quebra-Cabeças Mais Complexos:</li>
+<br/>
+<li>Em quebra-cabeças de Sudoku mais desafiadores, o Color Trap pode ser uma ferramenta poderosa para resolver candidatos difíceis, especialmente quando combinado com outras técnicas avançadas. Ele é frequentemente usado em conjunto com técnicas como XY-Chain, Swordfish, ou Jellyfish para resolver quebra-cabeças mais complexos.</li>
+<br/>
+<li>Prática e Paciência:</li>
+<br/>
+<li>A chave para o sucesso com o Color Trap é a prática e a paciência. Quanto mais você praticar a identificação de padrões de cores e a aplicação das regras do Color Trap, mais eficaz você se tornará ao usá-lo para resolver candidatos.</li>
+<br/>
+<li>Exemplo Adicional:</li>
+<br/>
+<li>Vou fornecer um exemplo para ilustrar melhor como o Color Trap pode ser aplicado. Considere um bloco com os seguintes candidatos:</li>
+<br/>
+
+| .  .  . |
+| .  .  . |
+| .  .  . |
+<li>Suponha que os candidatos em R1C1, R1C2 e R2C3 são "1" (vermelho), e os candidatos em R2C1, R3C2 e R3C3 são "2" (azul). Se você encontrar uma cadeia de eliminações que começa com um candidato vermelho eliminando um candidato azul e vice-versa, isso cria um padrão de Color Trap que pode ser usado para determinar os valores dos candidatos.</li>
+<br/>
+<li>Lembre-se de que a prática é essencial ao trabalhar com técnicas avançadas como o Color Trap. À medida que você ganha experiência, se torna mais eficiente em aplicar essa técnica para resolver Sudoku mais difíceis.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Color+Trap+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+
+<li>A técnica Unique Rectangles Type 5, também conhecida como UR Type 5, é uma estratégia avançada no Sudoku que envolve padrões específicos nas configurações de candidatos. Vou explicar como funciona essa técnica:</li>
+<br/>
+<li>Identificação de UR Type 5:</li>
+<br/>
+<li>Um UR Type 5 ocorre quando há quatro células em um bloco (um quadrante 3x3) que compartilham apenas dois candidatos em comum.
+Esses quatro candidatos formam um retângulo no bloco.
+Dois cantos do retângulo têm os mesmos dois candidatos, enquanto os outros dois cantos têm outros dois candidatos.</li>
+<br/>
+<li>Regra Básica:</li>
+<br/>
+<li>Se o retângulo contiver os mesmos dois candidatos em duas configurações diferentes, isso leva a uma contradição, pois o Sudoku deve ter apenas uma solução.
+Portanto, os candidatos do retângulo não podem ser verdadeiros.
+Eliminações Baseadas em UR Type 5:</li>
+<br/>
+<li>Quando você identifica um UR Type 5 em um bloco, pode eliminar os candidatos comuns ao retângulo das outras células no bloco.
+Por exemplo, se os candidatos A e B formam o retângulo e estão presentes em quatro células, você pode eliminar A e B de outras células no mesmo bloco.</li>
+<br/>
+<li>Exemplo:
+Considere o seguinte bloco com os candidatos:</li>
+<br/>
+
+| .  .  . |
+| .  AB . |
+| .  AB . |
+<li>Neste caso, A e B são os dois candidatos do retângulo. Se houver um candidato C em outra célula do bloco que compartilha o mesmo bloco com A e B, então C pode ser eliminado, pois a presença de C levaria a múltiplas soluções.</li>
+<br/>
+<li>Aplicação do UR Type 5:
+Ao identificar corretamente um UR Type 5, você pode eliminar candidatos em outras partes do quebra-cabeça, simplificando o jogo e permitindo que você resolva mais células.</li>
+<br/>
+<li>Lembre-se de que o UR Type 5 é uma técnica avançada e requer prática para ser usada eficazmente. À medida que você ganha experiência em reconhecer esses padrões, poderá aplicar essa técnica para resolver quebra-cabeças mais difíceis. Se você tiver mais perguntas ou precisar de mais exemplos, sinta-se à vontade para perguntar.</li>
+<br/>
+<li>Certamente, vou fornecer mais detalhes sobre a técnica Unique Rectangles Type 5 (UR Type 5) no Sudoku.</li>
+<br/>
+<li>Características do UR Type 5:</li>
+<br/>
+<li>Padrão de Quatro Células:</li>
+<br/>
+<li>UR Type 5 envolve quatro células em um bloco 3x3 que formam um padrão de retângulo. Estas quatro células compartilham apenas dois candidatos em comum.
+Dois Conjuntos de Dois Candidatos:</li>
+<br/>
+<li>As quatro células são divididas em dois conjuntos de duas células cada. Cada conjunto contém dois candidatos idênticos.</li>
+Contradição na Solução:
+<br/>
+<li>Se esses dois conjuntos de dois candidatos tiverem a mesma configuração em outra parte do bloco, isso levará a uma contradição, pois o Sudoku só pode ter uma solução válida.</li>
+<br/>a
+<li>Estratégia de Eliminação:
+Quando você identifica um UR Type 5 em um bloco, você pode usar a seguinte estratégia:</li>
+<br/>
+<li>Eliminação de Candidatos:
+Os candidatos do retângulo não podem ser verdadeiros, porque isso levaria a múltiplas soluções.
+Portanto, você pode eliminar os candidatos do retângulo de outras células no mesmo bloco.</li>
+<br/>
+<li>Exemplo:
+Considere o seguinte bloco com os candidatos:</li>
+<br/>
+| .  .  . |
+| .  AB . |
+| .  AB . |
+<li>Neste caso, A e B são os dois candidatos do retângulo. Se houver outra célula no bloco com os candidatos AB, você pode eliminar AB dessa célula devido ao UR Type 5.</li>
+<br/>
+<li>Dificuldade e Aplicação:</li>
+<br/>
+<li>O UR Type 5 é uma técnica avançada que é útil em quebra-cabeças de Sudoku mais difíceis.
+Requer prática para identificar esse padrão e aplicá-lo eficazmente para resolver o quebra-cabeça.
+Espero que isso forneça uma compreensão mais clara do UR Type 5. Se você tiver mais perguntas ou precisar de mais exemplos, sinta-se à vontade para perguntar!</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Unique+Rectangles+Type+5+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>O Almost Locked Sets (ALS) X-Chain é uma técnica avançada no Sudoku que envolve a aplicação de grupos de candidatos conhecidos como Conjuntos Quase Bloqueados (ALS). O X-Chain é uma forma específica de cadeia em que dois ALS (conjuntos quase bloqueados) se conectam de maneira cruzada, formando um padrão em forma de X. Vou explicar como funciona essa técnica:</li>
+<br/>
+<li>Conjuntos Quase Bloqueados (ALS):</li>
+<br/>
+<li>ALS são grupos de células em que cada célula contém um conjunto exclusivo de candidatos. Cada conjunto pode ter mais de um candidato, mas é exclusivo para essa célula.
+Existem duas formas de ALS: ALS-XZ (quando uma célula tem dois candidatos) e ALS-XY (quando uma célula tem três candidatos).</li>
+<br/>
+<li>X-Chain com ALS:
+
+Para formar um X-Chain, você identifica dois ALS (conjuntos quase bloqueados) que compartilham um candidato em comum.
+Você começa na célula do primeiro ALS que contém esse candidato compartilhado e segue uma cadeia de células que têm esse candidato, pulando entre os ALS.
+A cadeia deve alternar entre os dois ALS, formando um padrão em forma de X.
+Se a cadeia terminar em uma célula que também está no segundo ALS, isso cria uma contradição e significa que o candidato compartilhado nas células iniciais do primeiro ALS não pode ser verdadeiro.
+Exemplo de X-Chain com ALS:
+Considere os dois ALS a seguir, onde A, B e C são candidatos:</li>
+<br/>
+<li>ALS1: A B</li>
+<br/>
+<li>ALS2: B C</li>
+<br/>
+<li>Neste caso, há um candidato B que é compartilhado entre os dois ALS. Você pode seguir uma cadeia de células com o candidato B, pulando entre os ALS:</li>
+<br/>
+<li>ALS1 -> B -> ALS2 -> B</li>
+<br/>
+<li>Se a cadeia terminar em uma célula que também está no ALS1, isso cria uma contradição, e o candidato B nas células iniciais do ALS1 não pode ser verdadeiro.</li>
+<br/>
+<li>Aplicação do ALS X-Chain:</li>
+<br/>
+<li>Ao identificar um ALS X-Chain, você pode eliminar os candidatos alternados na cadeia de células. Ou seja, os candidatos B nas células que não estão no ALS compartilhado podem ser eliminados.
+Lembre-se de que essa é uma técnica avançada e pode ser complexa de entender no início. Praticar com quebra-cabeças que envolvem ALS X-Chains ajudará a fortalecer sua compreensão e habilidade de aplicá-las durante a resolução do Sudoku. Se você tiver mais perguntas ou precisar de exemplos adicionais, sinta-se à vontade para perguntar!</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Almost+Locked+Sets+%28ALS%29+X-Chain+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>O Death Blossom Type 3 é uma técnica avançada no Sudoku que envolve a aplicação de conjuntos de candidatos conhecidos como Conjuntos Quase Bloqueados (ALS). O "Death Blossom" é uma cadeia complexa de ALS que leva a eliminações em outras partes do tabuleiro. Vou explicar como funciona essa técnica:</li>
+<br/>
+<li>Conjuntos Quase Bloqueados (ALS):</li>
+<br/>
+<li>ALS são grupos de células em que cada célula contém um conjunto exclusivo de candidatos. Cada conjunto pode ter mais de um candidato, mas é exclusivo para essa célula.
+Existem duas formas de ALS: ALS-XZ (quando uma célula tem dois candidatos) e ALS-XY (quando uma célula tem três candidatos).
+Death Blossom Type 3:</li>
+<br/>
+<li>No Death Blossom Type 3, você identifica três ALS (ALS1, ALS2 e ALS3) que compartilham um conjunto de candidatos específico.
+ALS1 e ALS3 devem ter dois candidatos cada, enquanto ALS2 deve ter três candidatos.
+O conjunto de candidatos deve ser o mesmo em ALS1, ALS2 e ALS3.
+A ideia é seguir uma cadeia complexa de candidatos entre as células desses ALS, levando a eliminações.
+Exemplo de Death Blossom Type 3:
+Considere os três ALS a seguir, onde A, B e C são candidatos:</li>
+<br/>
+<li>ALS1: A B</li>
+<br/>
+<li>ALS2: A B C</li>
+<br/>
+<li>ALS3: A B</li>
+<br/>
+<li>Neste caso, os ALS1, ALS2 e ALS3 compartilham o conjunto de candidatos A e B. Você pode seguir uma cadeia de células com esses candidatos entre os ALS:</li>
+<br/>
+<li>ALS1 -> A -> ALS2 -> B -> ALS3 -> A -> ALS1</li>
+<br/>
+<li>Se a cadeia terminar em uma célula que também está no ALS2, isso cria uma contradição, e os candidatos A e B nas células iniciais dos ALS1 e ALS3 não podem ser verdadeiros.</li>
+<br/>
+<li>Aplicação do Death Blossom Type 3:</li>
+<br/>
+<li>Ao identificar um Death Blossom Type 3, você pode eliminar os candidatos alternados na cadeia de células. Ou seja, os candidatos A e B nas células que não estão no ALS compartilhado podem ser eliminados.
+Essa é uma técnica avançada e pode ser desafiadora de entender e aplicar. Praticar com quebra-cabeças que envolvem Death Blossom Type 3 ajudará a fortalecer sua compreensão e habilidade de aplicá-lo durante a resolução do Sudoku. Se você tiver mais perguntas ou precisar de exemplos adicionais, sinta-se à vontade para perguntar!</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Death+Blossom+Type+3+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+<li>O Conjugate Pair (ou Par Conjugado) é uma técnica avançada no Sudoku que envolve dois candidatos exclusivos em duas células dentro de uma mesma linha, coluna ou bloco. Esses dois candidatos aparecem apenas nessas duas células e são chamados de "conjugados" porque a presença de um exclui o outro nesses locais específicos. Vou explicar como funciona essa técnica:</li>
+<br/>
+<li>Conjugate Pair:</li>
+<br/>
+<li>Em uma linha, coluna ou bloco específico, se houver duas células onde apenas dois candidatos possíveis aparecem, esses candidatos são considerados um par conjugado.
+Por exemplo, se em uma linha você tem duas células com candidatos A e B e esses são os únicos candidatos nessas células, então A e B formam um par conjugado.
+Como Identificar um Par Conjugado:</li>
+<br/>
+<li>Exclusividade: Verifique se apenas duas células na linha, coluna ou bloco contêm os candidatos A e B, e nenhum outro candidato.
+Eliminação: Ao identificar um par conjugado, você pode eliminar os candidatos A e B de outras células na mesma linha, coluna ou bloco.
+Exemplo de Par Conjugado:
+Considere a seguinte linha:</li>
+<br/>
+<li>[ A B C D E F G H I ]</li>
+<br/>
+<li>Se as células na posição 4 e 6 (considerando uma indexação de 1) contiverem apenas os candidatos A e B, então A e B formam um par conjugado. Você pode eliminar A e B das outras células na mesma linha, ficando assim:</li>
+<br/>
+<li>[ A B * * * * * * * ]</li>
+<br/>
+<li>Agora, outras técnicas podem ser aplicadas com base na eliminação desses candidatos.</li>
+<br/>
+<li>Aplicação do Par Conjugado:</li>
+<br/>
+<li>Após identificar um par conjugado, você pode procurar outras técnicas que se beneficiem da eliminação desses candidatos. Por exemplo, se um bloco agora tem apenas duas células possíveis para um determinado candidato, você pode aplicar a técnica Naked Pair nesse bloco.
+O Par Conjugado é uma técnica útil quando você identifica esses padrões durante a resolução do Sudoku, especialmente quando outras células ou regiões do tabuleiro dependem da eliminação desses candidatos específicos. Praticar com quebra-cabeças Sudoku ajudará a aprimorar suas habilidades na identificação e aplicação do Par Conjugado.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Conjugate+Pair+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+</h4>
+
+ </body>
+ </html>
+
+ 

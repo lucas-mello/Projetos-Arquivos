@@ -1,0 +1,462 @@
+<html>
+ <head>
+  <title>Sudoku:</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    .h2{
+       text-align: center;
+       text-decoration:underline;
+       font-size:40px;
+     }
+
+   .h4{ 
+    font-size:30px; 
+    text-align:justify;
+    }
+   
+     .img{
+       width:540px;
+       height:443px;
+       }
+    
+
+  </style>
+ </head>
+ <body bgcolor="#d3d3d3">
+
+<h2 class="h2">Observações:</h2>
+
+<h2 class="h2">EXPLORANDO MAIS SOBRE OUTRAS:</h2>
+
+<h4 class="h4">
+
+<li>Full House/Último Dígito
+Os números simples são as técnicas mais básicas para resolver sudokus e, dentro dos números simples, o Full House também é o mais fácil.</li>
+<br/>
+<img src="Imagens/fh01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/fh02.png" alt="imagem" border="5" class="img">
+<li>Uma casa cheia é simplesmente o último dígito que pode ser colocado em uma casa. Se for o último dígito de toda a grade, às vezes é chamado de "Último Dígito". No exemplo acima, à esquerda, o bloco 8 tem apenas uma célula vazia. O único dígito que falta é o 6; portanto, r9c6 deve ser um 6.
+
+No exemplo à direita, a casa cheia está na linha 5: apenas o dígito 1 está faltando.</li>
+<br/>
+<hr color="#000"/>
+<li>Hidden Single:</li>
+<br/>
+<img src="Imagens/h101.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/h102.png" alt="imagem" border="5" class="img">
+<li>"Dígito Único Oculto" significa que, para um determinado dígito e casa, resta apenas uma célula para colocar esse dígito. A própria célula tem mais de um candidato restante; o dígito correto está, portanto, oculto entre os demais.
+
+Observe a célula r3c4 no exemplo à esquerda: os dígitos 4, 6 e 9 são possíveis de acordo com a regra. Se observarmos atentamente a linha 3, no entanto, notaremos que, nessa linha, o dígito 6 só pode ser colocado em r3c4. As células r3c1, r3c2 e r3c3 estão bloqueadas pelo dígito 6 em r2c3, e a célula r3c6 está bloqueada pelo dígito 6 em r6c6. Isso significa que o dígito 6 pode ser colocado em r3c4.
+
+No exemplo à direita, um dos vários dígitos únicos ocultos pode ser encontrado em r6c4: o dígito 3 é o único 3 na linha 6, coluna 4 e bloco 5.</li>
+<br/>
+<hr color="#000"/>
+<li>Naked Single:</li>
+<br/>
+<img src="Imagens/n101.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/n102.png" alt="imagem" border="5" class="img">
+<li>"Naked Single" significa que, em uma célula específica, resta apenas um dígito possível (o último candidato restante não tem outros candidatos para se esconder e, portanto, está "nu"). O dígito deve então ser colocado nessa célula.
+
+Exemplo à esquerda: Observe a célula r6c7: Não é um "hidden Single". A linha 6 tem outro 6 possível em r6c4, e as células c7 e b6 têm outro 6 possível em r5c7. Mas, ao examinarmos todas as células que podem ver r6c7, notamos que elas contêm todos os dígitos, exceto o 6. Portanto, o 6 é o último candidato possível para r6c7.
+
+No Sudoku à direita, colocar o 3 em r3c4 (um "Hidden Single") desbloqueia o "Naked Single" em r3c3: É o último dígito possível ali e pode ser colocado.</li>
+<br/>
+<li>Como encontrá-los</li>
+<br/>
+<li>Encontrar Full Houses é autoexplicativo. Encontrar números isolados, tanto ocultos quanto descobertos, não é tão fácil. Eles são um bom exemplo de por que é tão difícil especificar um nível de dificuldade para as técnicas: ao jogar com lápis e papel, os números isolados ocultos são fáceis de encontrar, mas encontrar os descobertos pode levar um tempo. Ao jogar com um programa de computador como o HoDoKu, que controla automaticamente os candidatos restantes, encontrar os descobertos é trivial, mas encontrar os ocultos pode ser bastante trabalhoso devido à quantidade de candidatos restantes na grade (especialmente no início do jogo).
+
+Ao jogar manualmente, os números isolados ocultos podem ser encontrados por meio de "hachura cruzada": concentre-se em um dígito e um bloco. Desenhe linhas através de todas as linhas e colunas que já possuem uma ocorrência desse dígito (mentalmente, por favor). Se restar apenas uma célula, essa célula é um número isolado oculto para aquele dígito.</li>
+<br/>
+<img src="Imagens/h103.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/h104.png" alt="imagem" border="5" class="img">
+<li>A imagem à esquerda mostra a técnica para o dígito 3 no bloco 5: todas as células desse bloco estão "bloqueadas" por um dígito 3 já posicionado; r6c4 é a última célula possível para o dígito 3 no bloco 5.
+
+A imagem à direita mostra outra possibilidade: usar filtros. Se os filtros estiverem ativados, movimentos de dígitos únicos e candidatos bloqueados podem ser encontrados facilmente.
+
+Encontrar dígitos únicos livres manualmente envolve preencher todos os candidatos possíveis ou tentar células promissoras (conte todos os dígitos nas células que veem a célula alvo pretendida; se restar apenas uma possibilidade, trata-se de um dígito único livre).</li>
+<br/>
+<hr color="#000"/>
+<li>Candidatos Bloqueados Tipo 1 (Apontando)
+Se em um bloco todos os candidatos de um determinado dígito estiverem confinados a uma linha ou coluna, esse dígito não poderá aparecer fora desse bloco nessa linha ou coluna.</li>
+<br/>
+<img src="Imagens/lc101.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/lc102.png" alt="imagem" border="5" class="img">
+<li>Observe o exemplo à esquerda: no bloco 1, o candidato 5 só pode ir para a linha 3. Isso significa que uma das células r3c1 ou r3c2 precisa ser o 5, caso contrário, o bloco 1 ficaria sem o 5, o que não é possível. Significa também que o 5 pode ser eliminado de r3c7, pois r3c7 vê tanto r3c1 quanto r3c2. O Sudoku se resolve com números individuais após essa jogada.
+
+Jogadas com candidatos bloqueados podem eliminar até 6 candidatos, como pode ser visto no exemplo à direita: na caixa 8, o candidato 1 está bloqueado na linha 7 e, portanto, pode ser eliminado da interseção das caixas 7 e 9 com a linha 7.</li>
+<br/>
+<hr color="#000"/>
+<li>Candidatos bloqueados Tipo 2 (Reivindicando):</li>
+<br/>
+<li>O tipo 2 de candidatos bloqueados funciona exatamente ao contrário: se em uma linha (ou coluna) todos os candidatos de um determinado dígito estiverem confinados a um bloco, esse candidato será eliminado de todas as outras células desse bloco.</li>
+<br/>
+<img src="Imagens/lc201.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/lc202.png" alt="imagem" border="5" class="img">
+<li>Observe o exemplo à esquerda: na linha 2, o candidato 7 só pode ir para o bloco 1. Ele pode ser eliminado de todas as células do bloco 1 que não pertencem à linha 2, no nosso caso, a célula r3c2. O Sudoku se resolve com os números individuais depois disso.
+
+O exemplo à direita mostra um movimento de candidatos bloqueados em uma coluna: todos os números 4 na coluna 6 estão no bloco 2. Eles podem ser eliminados em qualquer outro lugar desse bloco, como mostrado na imagem.</li>
+<br/>
+<hr color="#000"/>
+<li>Como encontrá-los</li>
+<br/>
+<img src="Imagens/lc203.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/lc204.png" alt="imagem" border="5" class="img">
+<li>Os movimentos de candidatos bloqueados geralmente são identificados inserindo marcas de lápis na grade sempre que um candidato estiver confinado a uma linha ou coluna dentro de um bloco. Observe o exemplo à esquerda: o 6 em r7c2 bloqueia a linha 7. No bloco 8, o candidato 6 só pode ir para a coluna 5. Isso significa que nenhum 6 pode estar na coluna 5, seja no bloco 2 ou no bloco 5 (Candidatos Bloqueados Tipo 1).
+
+O exemplo à direita mostra a outra variante: no bloco 8, o candidato 6 só pode ir para a coluna 4, e no bloco 9, apenas para a coluna 8. Como em ambos os blocos os candidatos 6 estão confinados às linhas 7 e 8, no terceiro bloco dessa rampa (bloco 7), o 6 precisa estar na linha 9 (ou, em termos da definição acima: o 6 pode ser eliminado com segurança de r8c2).
+
+Os candidatos bloqueados podem ser identificados facilmente quando filtros são aplicados a um dígito. Para um exemplo, consulte "Usando Filtros" no Manual do Usuário.</li>
+<br/>
+<li>Hidden Pair:Par oculto:</li>
+<br/>
+<li>Todos os Subconjuntos Ocultos funcionam da mesma maneira; a única coisa que muda é o número de células e candidatos afetados pela mudança. Considere o Par Oculto: se você encontrar duas células dentro de uma casa de forma que dois candidatos não apareçam em nenhum outro lugar fora dessas células nessa casa, esses dois candidatos devem ser colocados nessas duas células. Todos os outros candidatos podem, portanto, ser eliminados.</li>
+<br/>
+<img src="Imagens/h201.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/h202.png" alt="imagem" border="5" class="img">
+<li>Observe a coluna 9 no exemplo à esquerda: os candidatos 1 e 9 aparecem apenas nas células r5c9 e r7c9 (frequentemente abreviadas como r57c9) dessa coluna (eles aparecem em outras células na linha 5, linha 7, bloco 6 e bloco 9, mas isso não é importante aqui). Uma dessas duas células deve ser 1 e a outra 9. Ainda não sabemos qual é qual, mas sabemos que r5c9 não pode ser 6.
+
+Pares ocultos podem estar escondidos sob muitos outros candidatos, como mostrado no exemplo à direita: r1c12 é um par oculto para os candidatos 4 e 7 (neste caso, eles estão ocultos na linha 1 e no bloco 1), mas essas células contêm outros 10 candidatos, que podem ser eliminados.</li>
+<br/>
+<hr color="#000"/>
+<li>Hidden Triple:</li>
+<br/>
+<li>Os Hidden Triples funcionam da mesma forma que os Hidden Pairs, só que com três células e três candidatos.</li>
+<br/>
+<img src="Imagens/h301.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/h302.png" alt="imagem" border="5" class="img">
+<li>O exemplo à esquerda mostra uma Tripla Oculta no bloco 7: os candidatos 2, 4 e 5 aparecem apenas nas células r8c2, r9c2 e r9c3 desse bloco. O número 1 pode ser eliminado de r9c2 e o 6 de r9c3, o que resolve o Sudoku.
+
+O exemplo à direita é especial, pois a Tripla Oculta é o primeiro passo da solução (não há números individuais disponíveis no estado inicial do Sudoku). A tripla está na coluna 6 (r468c6) com os candidatos 2, 5 e 6. Após a tripla, apenas números individuais são necessários para resolver o Sudoku.</li>
+<br/>
+<hr color="#000"/>
+<li>Hidden Quadruple:</li>
+<br/>
+<li>Quádruplos ocultos (4 candidatos em 4 células) são relativamente raros. É muito difícil identificá-los sem usar marcas de lápis.</li>
+<br/>
+<img src="Imagens/h401.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/h402.png" alt="imagem" border="5" class="img">
+<li>O exemplo da esquerda está novamente em um bloco (células r7c56 e r8c56, todas no bloco 8) usando os candidatos 2, 4, 5 e 8. O exemplo da direita está na coluna 9 (r1238c9) usando os candidatos 2, 4, 5 e 9.</li>
+<br/>
+<li>Como encontrá-los</li>
+<br/>
+<img src="Imagens/h203.png" alt="imagem" border="5" class="img">
+<li>Pares ocultos podem ser encontrados facilmente usando marcas de lápis. Observe o Sudoku: após algumas marcas de lápis individuais serem aplicadas nos candidatos 4 e 8, o par oculto em r3c46 torna-se imediatamente visível. Nenhum outro candidato pode ocupar uma dessas células.
+
+Encontrar subconjuntos ocultos maiores requer uma boa memória de curto prazo. Muitos jogadores preferem usar subconjuntos nus maiores em vez de subconjuntos ocultos maiores, depois de aplicar as marcas de lápis, mas isso é, obviamente, uma questão de preferência.</li>
+<br/>
+<hr color="#000"/>
+<li>Naked Pair/Locked Pair:</li>
+<br/>
+<li>Os subconjuntos nus são semelhantes aos subconjuntos ocultos; a única diferença é que, em vez de os candidatos estarem confinados a células (como nos subconjuntos ocultos), trata-se de células que contêm apenas um determinado número de candidatos.</li>
+<br/>
+<li>Naked Pair</li>
+<br/>
+<li>Se você encontrar duas células, ambas na mesma casa, que tenham apenas os mesmos dois candidatos restantes, poderá eliminar esses dois candidatos de todas as outras células daquela casa.</li>
+<br/>
+<img src="Imagens/n201.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/n202.png" alt="imagem" border="5" class="img">
+<li>Exemplo à esquerda: as células r8c3 e r8c4 estão ambas na mesma casa (linha 8) e têm apenas os candidatos 3 e 9 restantes. Conclui-se imediatamente que uma das células deve ser 3 e a outra 9 (qual delas ainda é desconhecido). Mas podemos afirmar com segurança que r8c2 não pode ser 3. O sudoku se resolve com números individuais a partir daí.
+
+O exemplo à direita mostra um Par Isolado em uma caixa: r4c5 e r5c6 formam um Par Isolado na caixa 5, eliminando assim os candidatos 8 e 9 de todas as outras células dessa caixa.</li>
+<br/>
+<hr color="#000"/>
+<li>Locked Pair:</li>
+<br/>
+<li>Se as duas células que formam o Par Desprotegido estiverem confinadas não apenas a uma, mas a duas casas (uma linha e um bloco ou uma coluna e um bloco), elas são às vezes chamadas de Par Bloqueado. Os candidatos podem ser eliminados de ambas as casas.</li>
+<br/>
+<img src="Imagens/l201.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/l202.png" alt="imagem" border="5" class="img">
+<li>No lado esquerdo, r3c79 é um par bloqueado na linha 3 e bloco 3, eliminando, portanto, 2 candidatos de r3c3 (linha 3) e de r1c9 (bloco 3). O lado direito mostra um par bloqueado na linha 8 e bloco 8, eliminando 18 candidatos.</li>
+<br/>
+<hr color="#000"/>
+<li>Naked Triple/Locked Triple:</li>
+<br/>
+<li>Naked Triple</li>
+<br/>
+<li>Se você encontrar três células, todas na mesma casa, que tenham apenas os mesmos três candidatos restantes, poderá eliminar esses candidatos de todas as outras células daquela casa. É importante observar que nem todas as células precisam conter os três candidatos, mas não pode haver mais de três candidatos nas três células juntas.</li>
+<br/>
+<img src="Imagens/n302.png" alt="imagem" border="5" class="img">
+<li>Exemplo à esquerda: as células r2c2, r4c2 e r5c2 estão todas na mesma casa (coluna 2) e, juntas, só têm os candidatos 3, 6 e 9 restantes. Conclui-se imediatamente que uma das células deve ser 3, outra 6 e a última 9 (que é qual, ainda não sabemos). Mas podemos afirmar com segurança que r1c2 não pode ser 6. O sudoku se resolve com números individuais a partir daí.
+
+O exemplo à direita mostra uma Tripla Isolada em uma caixa: r3c45 e r1c5 formam uma Tripla Isolada na caixa 2, eliminando assim os candidatos 1, 2 e 6 de todas as outras células dessa caixa.</li>
+<br/>
+<hr color="#000"/>
+<li>Locked Triple:</li>
+<br/>
+<li>Se as três células que formam o Triplo Nu estiverem confinadas não apenas a uma, mas a duas casas (uma linha e um bloco ou uma coluna e um bloco), elas são às vezes chamadas de Triplo Bloqueado. Os candidatos podem ser eliminados de ambas as casas.</li>
+<br/>
+<li>No lado esquerdo, r789c5 é um Triplo Bloqueado na coluna 5 e bloco 8, eliminando, portanto, 9 de r8c4 (bloco 8) e de r2c5 (coluna 5). O lado direito mostra um Triplo Bloqueado em 5, 6, 7 na linha 5 e bloco 6, eliminando 18 candidatos.</li>
+<br/>
+<img src="Imagens/l301.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/l302.png" alt="imagem" border="5" class="img">
+<hr color="#000"/>
+<li>Naked Quadruple:</li>
+<br/>
+<li>As quádruplas nuas funcionam exatamente da mesma forma que os pares e triplos nus, apenas com quatro candidatos em quatro células. Como a interseção entre uma linha ou coluna e uma caixa só pode ter três células, uma quádrupla bloqueada não existe.</li>
+<br/>
+<img src="Imagens/n401.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/n402.png" alt="imagem" border="5" class="img">
+<li>O lado esquerdo mostra um Quadruplo Nu na linha 8: candidatos 3, 4, 8, 9 nas células r8c1346, eliminando 3 e 8 de r8c7 e 9 de r8c8. O lado direito tem o Quadruplo Nu no bloco 7: candidatos 4, 6, 7, 9 nas células r8c2, r789c3.</li>
+<br/>
+<hr color="#000"/>
+<li>Como encontrá-los</li>
+<br/>
+<li>A melhor maneira de encontrar subconjuntos nus é quando todos os candidatos restantes já foram selecionados. Nesse caso, eles são fáceis de identificar e muito eficientes.</li>
+<br/>
+<hr color="#000"/>
+<li>Introdução</li>
+<br/>
+<li>O termo "peixe" denota um grupo de técnicas que funcionam com o mesmo princípio, mas que deram origem a uma incrível variedade de padrões (como peixes de verdade). Começam com os simples X-Wings (encontrados em qualquer tutorial) e chegam até os Leviatãs Mutantes Canibais com Barbatanas. As espécies maiores são bastante trabalhosas de encontrar manualmente e são mais comumente usadas por programas de computador, mas as mais simples são fáceis de identificar e podem fazer um Sudoku avançar rapidamente.
+
+Esta seção tenta abordar completamente todos os tipos de "peixe". Se você estiver interessado apenas nas variantes básicas e achar as explicações aqui muito complexas, vá diretamente para as descrições dos "Peixes Básicos".
+
+"Peixe" são padrões de um único dígito. "Um único dígito" significa que apenas os candidatos com o mesmo dígito são considerados ao analisar um "peixe". "Padrão" significa que a posição dos candidatos na grade é importante. O termo é usado para diferenciá-los de cadeias.</li>
+<br/>
+<li>Principio</li>
+<br/>
+<li>O princípio por trás do algoritmo Fish é muito simples: procure um certo número de casas não sobrepostas. Essas casas são chamadas de conjuntos base (conjunto é sinônimo de casa aqui), e os candidatos contidos nelas são os candidatos base. Não sobrepostos significa que qualquer candidato base está contido em apenas um conjunto base; os próprios conjuntos podem se sobrepor. Agora, procure um número igual de casas diferentes não sobrepostas que cubram todos os candidatos base. Esses novos conjuntos são os conjuntos de cobertura, que contêm os candidatos de cobertura. Se tal combinação existir, todos os candidatos de cobertura que não são candidatos base podem ser eliminados.</li>
+<br/>
+<li>Como funciona</li>
+<br/>
+<li>O jogo dos peixes utiliza o fato de que um dígito só pode aparecer uma vez em uma casa. Como consideramos apenas candidatos do mesmo dígito, qualquer conjunto base deve conter exatamente uma célula com o valor do peixe. O mesmo vale para os conjuntos de cobertura. Como todos os candidatos base fazem parte de um conjunto de cobertura, bem como de um conjunto base, as possíveis posições dos candidatos tornam-se muito restritas. Se tivermos N conjuntos base e N conjuntos de cobertura, exatamente N células devem conter o dígito do peixe. A regra do Sudoku garante que em cada conjunto de cobertura exatamente um candidato base deve estar presente. Como de costume, não sabemos qual, é claro, mas sabemos que deve ser um, portanto, nenhum dos candidatos de cobertura que não são candidatos base são posições possíveis. Eles podem ser eliminados.</li>
+<br/>
+<hr color="#000"/>
+<li>Shapes and Sizes:</li>
+<br/>
+<li>Exemplos podem ser encontrados no capítulo sobre Peixes Básicos.</li>
+<br/>
+<li>As combinações de tipos de casas (fileiras, colunas, blocos) usadas para construir os conjuntos de base e cobertura determinam o tipo de peixe (os tipos são dados como [conjuntos de base]/[conjuntos de cobertura]):</li>
+<br/>
+<li>[linhas]/[colunas] ou [colunas]/[linhas]: Peixe Básico (o termo "Básico" é normalmente omitido)</li>
+<br/>
+<li>[linhas e caixas]/[colunas e caixas] ou [colunas e caixas]/[linhas e caixas]: Peixe Frankenstein (normalmente apenas um dos conjuntos contém pelo menos uma caixa)</li>
+<br/>
+<li>Combinações arbitrárias de linhas/colunas/caixas em um ou ambos os conjuntos: Peixe Mutante</li>
+<br/>
+<li>Ao descrever peixes, geralmente são anotados os conjuntos de base e cobertura, que determinam a espécie. Exemplos:</li>
+<br/>
+<li>4 c39 r46: Peixe para o dígito 4, conjuntos base são as colunas 3 e 9, conjuntos de cobertura são as linhas 4 e 6 -> (Básico) X-Wing</li>
+<br/>
+<li>4 c39b8 r469: Peixe para o dígito 4, conjuntos base são as colunas 3 e 9 e a caixa 8, conjuntos de cobertura são as linhas 4, 6 e 9 -> Peixe-espada Frankenstein</li>
+<br/>
+<li>4 r159c9 c45b36: Peixe para o dígito 4, conjuntos base linha 1, 5, 9 e coluna 9, conjuntos de cobertura coluna 4, 5 e blocos 3, 6 -> Água-viva Mutante</li>
+<br/>
+<hr color="#000"/>
+<li>Fins and Sashiminess:</li>
+<br/>
+<li>(Exo) Fins</li>
+<br/>
+<li>O truque na pesca é, obviamente, encontrar conjuntos de cobertura que contenham todos os candidatos base. Infelizmente, na maioria das vezes, candidatos base sobrando. Isso destrói a premissa do peixe ("em qualquer conjunto de cobertura, exatamente um candidato base deve ser verdadeiro"), porque qualquer um dos candidatos base extras poderia ser verdadeiro. Esses candidatos extras são chamados de barbatanas (ou, mais precisamente, exobarbatanas para diferenciá-las das endobarbatanas - veja abaixo), e o peixe se torna um Peixe com Barbatanas.
+
+A boa notícia é que eliminações ainda são possíveis sob certas circunstâncias. A lógica é a seguinte: ou todas as barbatanas são falsas, então temos um peixe que elimina todos os candidatos de cobertura que não são candidatos base (as possíveis eliminações), ou uma das barbatanas é verdadeira, eliminando assim todos os candidatos que podem ver a célula da barbatana. Se combinarmos as duas possibilidades, obtemos a seguinte regra: em um Peixe com Barbatanas, todas as possíveis eliminações que veem todas as barbatanas podem ser eliminadas.
+
+Exemplos de Peixes com Barbatanas podem ser encontrados em Peixes com Barbatanas/Sashimim.</li>
+<br/>
+<li>Sashiminess</li>
+<br/>
+<li>Em descrições disponíveis na internet, encontram-se muitas condições adicionais sobre candidatos a peixes (um certo número de candidatos, pelo menos, neste ou naquele conjunto base). Todas elas são desnecessárias. Qualquer peixe que tenha o mesmo número de conjuntos base e de cobertura, onde todos os candidatos base estejam dentro dos conjuntos de cobertura, funciona. A razão para essas regras adicionais é uma discussão ainda não resolvida na comunidade de Sudoku: a questão da degeneração. Certos tipos de padrões atendem às regras dos peixes, mas contêm um peixe menor que poderia eliminar algo primeiro ou que poderia ser simulado por movimentos mais fáceis (normalmente movimentos simples e movimentos com candidatos bloqueados). Alguns jogadores de Sudoku chamam esses peixes de "degenerados" e não os consideram válidos.
+
+Em certo sentido, a discussão é acadêmica. Independentemente de o peixe ser degenerado ou não, as eliminações derivadas dele são sempre válidas. Há um caso especial, onde a diferença é importante para entender os vários nomes de peixes: se um peixe degenerado tiver barbatanas, os movimentos mais fáceis contidos no peixe não podem ser executados porque são impedidos pelas barbatanas. O que obtemos é um Peixe com Barbatanas, que nem sequer seria um peixe se não fossem pelas barbatanas. Tal peixe é frequentemente chamado de Sashimi.</li>
+<br/>
+<li>Ainda não se chegou a um consenso sobre se o termo Sashimi deve substituir o termo "com barbatanas" (comumente visto em vários fóruns) ou se deve ser um atributo adicional ao nome do peixe, descrevendo sua "sashimiidade". Dependendo do lado da discussão que você escolher, será Sashimi X-Wing ou Sashimi X-Wing com Barbatanas (você pode, é claro, ignorar a discussão e ficar apenas com Peixe com Barbatanas - é exatamente isso que o HoDoKu faz para todos os tipos de peixe não básicos).</li>
+<br/>
+<hr color="#000"/>
+<li>Endo Fins and Cannibalism:</li>
+<br/>
+<li>Uma condição importante para os peixes era que nem os conjuntos de bases nem os conjuntos de cobertura podiam se sobrepor (e sobreposição aqui significa: nenhum candidato a base pode estar em mais de um conjunto de bases e nenhum candidato a cobertura pode estar em mais de um conjunto de cobertura). Se diminuirmos essa restrição, obtemos duas técnicas avançadas: Endo Fins e Canibalismo.</li>
+<br/>
+<li>Endo Fins</li>
+<br/>
+<li>Se um candidato a base estiver presente em mais de um setor base, nossos cálculos deixam de funcionar. Se esse candidato fosse verdadeiro, teríamos apenas (N-1) candidatos posicionados para N conjuntos de cobertura: um conjunto de cobertura ficaria sem um candidato a base posicionado, destruindo assim o peixe. Por outro lado, já tínhamos candidatos a base que, quando posicionados, destroem o peixe: chamamos esses candidatos de barbatanas.
+
+Isso significa que podemos permitir candidatos a base que estejam presentes em mais de um conjunto base, desde que os tratemos como barbatanas. Para diferenciar essas novas barbatanas das barbatanas comuns, chamamos-lhes barbatanas endoplumas.
+
+As barbatanas endoplumas aumentam consideravelmente o número de peixes possíveis (e, portanto, o número de eliminações possíveis por peixe), mas também aumentam consideravelmente o número de combinações possíveis de conjuntos base. Some isso ao fato de que as barbatanas endoplumas só podem existir em Peixes Frankenstein ou Mutantes e você verá que o número de combinações possíveis para procurar Peixes Frankenstein/Mutantes com barbatanas endoplumas os torna muito difíceis de encontrar para jogadores humanos.</li>
+<br/>
+<li>Cannibalism</li>
+<br/>
+<li>Agora vejamos o que acontece se um candidato a base fizer parte não apenas de um, mas de dois conjuntos de cobertura. Se esse candidato fosse colocado, ainda precisaríamos de N candidatos a base para satisfazer a regra do Sudoku para os conjuntos de base. Infelizmente, também teríamos N candidatos colocados dentro dos conjuntos de cobertura. Isso significa que teríamos um conjunto de cobertura com duas células contendo o dígito do peixe, violando assim a regra do Sudoku.
+
+Conclusão: Se tivermos um peixe válido, um candidato a base contido em dois conjuntos de cobertura deve ser falso, ou, dito de outra forma, pode ser eliminado. Como faz parte do conjunto de base, o peixe está praticamente se autodestruindo. Tal peixe é, consequentemente, chamado de Peixe Canibal.
+
+A mesma lógica se aplica se um peixe canibal tiver barbatanas. Como em qualquer peixe com barbatanas, no entanto, o candidato a base só pode ser eliminado quando vê todas as barbatanas.</li>
+<br/>
+<hr color="#000"/>
+<li>For a general description of fishing techniques including explanations for all necessary terms please see Fish (general). For all examples please note that it is not necessary for every intersection between a base and a cover set to contain a fish digit. It is however necessary that every base and every cover set contains at least one fish digit.</li>
+<br/>
+<li>X-Wing:</li>
+<br/>
+<li>Considere duas linhas (os conjuntos base). Se você encontrar duas colunas, de forma que todos os candidatos a um dígito específico (o dígito do peixe) em ambas as linhas estejam contidos nas colunas (os conjuntos de cobertura), todos os candidatos a peixe nas colunas que não fazem parte das linhas podem ser eliminados. O resultado é chamado de X-Wing nas linhas.
+
+Se você trocar os termos "linhas" e "colunas" na descrição acima, obterá um X-Wing nas colunas.</li>
+<br/>
+<img src="Imagens/bf201.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/bf202.png" alt="imagem" border="5" class="img">
+<li>Considere o exemplo à esquerda: Os conjuntos base são as linhas 2 e 5 (elas têm o candidato 5 em r2c58 e r5c58). As colunas 5 e 8 são os conjuntos de cobertura: Todos os candidatos dos conjuntos base estão contidos nessas colunas. O que resta é um 5 em r4c5: Ele faz parte de um conjunto de cobertura, mas não de um conjunto base. Esse candidato pode ser eliminado.
+
+A lógica por trás disso funciona da seguinte forma: As linhas 2 e 5 têm apenas dois candidatos 5 cada. Se r2c5=5, r2c8 e r5c5 não podem ser 5. Isso deixa r5c8 como a última possibilidade para um 5 na linha 5. Se r2c8=5, o mesmo argumento leva a r5c5=5. Não importa como você veja, ou r2c5 ou r5c5 deve ser 5. Portanto, r4c5 não pode ser 5.
+
+O exemplo à direita mostra um X-Wing nas colunas: A base Os conjuntos são as colunas 1 e 5, e os conjuntos de cobertura são as linhas 2 e 5. Todos os candidatos nas linhas que não estão nas colunas podem ser eliminados.</li>
+<br/>
+<hr color="#000"/>
+<li>Swordfish:</li>
+<br/>
+<li>Os Swordfish funcionam exatamente da mesma forma que os X-Wings, só que com três conjuntos de base e três conjuntos de cobertura em vez de apenas dois.</li>
+<br/>
+<img src="Imagens/bf301.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/bf302.png" alt="imagem" border="5" class="img">
+<li>À esquerda, os conjuntos base são as linhas 1, 2 e 9. Os conjuntos de cobertura são as colunas 1, 5 e 8, e o dígito de peixe é 2. Os candidatos 2 em r7c1 e em r6c8 são candidatos de cobertura que não são candidatos base e podem ser eliminados.
+
+À direita, os conjuntos base r247 são combinados com os conjuntos de cobertura c235 para eliminar 4 de r3c235, r6c235, r8c235 e r9c23.</li>
+<br/>
+<hr color="#000"/>
+<li>Jellyfish:</li>
+<br/>
+<li>As águas-vivas precisam de quatro conjuntos de base e quatro conjuntos de cobertura. Ambos os exemplos abaixo foram retirados da Coleção Águas-Vivas Puras no Fórum de Novos Jogadores de Sudoku.</li>
+<br/>
+<img src="Imagens/bf401.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/bf402.png" alt="imagem" border="5" class="img">
+<li>À esquerda, temos uma Jellyfish em r3467/c1259 para o dígito 7, eliminando todos os candidatos marcados em vermelho. À direita, a Jellyfish está em r1367/c2589, também para o dígito 7.</li>
+<br/>
+<hr color="#000"/>
+<li>Peixes básicos maiores</li>
+<br/>
+<li>Peixes básicos maiores que águas-vivas são, obviamente, possíveis, mas desnecessários: para qualquer peixe maior, existirá um menor complementar.</li>
+<br/>
+<hr color="#000"/>
+<li>Finned/Sashimi X-Wing:</li>
+<br/>
+<li>Um X-Wing com barbatanas é um X-Wing comum, onde um ou mais candidatos a base não estão cobertos por um conjunto de cobertura. Como explicado em Peixe (geral), apenas os candidatos a cobertura que veem todas as barbatanas (e que, obviamente, não são candidatos a base) podem ser eliminados.
+
+Um Peixe com barbatanas se torna Sashimi se o peixe restante estiver incompleto (ou degenerado), quando todas as barbatanas são falsas.</li>
+<br/>
+<img src="Imagens/fbf201.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/sbf201 (2).png" alt="imagem" border="5" class="img">
+<li>No exemplo à esquerda, temos um X-Wing em r24/c35. Infelizmente, temos um candidato a base adicional em r2c1, que não está contido em nenhum dos conjuntos de cobertura (c35). Este candidato é a barbatana. Se a barbatana fosse falsa, teríamos um X-Wing comum que poderia eliminar 9 de r35c3 e r5c5 (as eliminações possíveis). Se a barbatana for verdadeira, ela elimina 9 de r1c1, r2c35 e r3c3. Como uma das duas possibilidades precisa ser verdadeira (ou a barbatana é falsa, e então temos o X-Wing, ou é verdadeira), a interseção dos dois conjuntos de candidatos deletáveis ​​pode ser eliminada (em outras palavras: todas as eliminações possíveis que veem todas as barbatanas). Em nosso exemplo, apenas uma célula faz parte de ambos os conjuntos: r3c3.
+
+À direita, temos um X-Wing Sashimi (com barbatana) em c36/r37 com duas barbatanas em r89c3. Se nenhuma das barbatanas fosse verdadeira, restaria apenas um X-Wing. Após uma inspeção mais detalhada, vemos que o X-Wing restante poderia ser substituído por um único em r3c3 (seguido por outro em r7c6): o X-Wing está degenerado. É isso que faz deste peixe um sashimi. A lógica é a mesma de um X-Wing com barbatanas normal: r7c1 é o único candidato a cobertura que pode mostrar ambas as barbatanas, portanto, pode ser eliminado.</li>
+<br/>
+<hr color="#000"/>
+<li>Finned/Sashimi Swordfish:</li>
+<br/>
+<li>O Finned/Sashimi Swordfish funciona exatamente como o Finned/Sashimi X-Wing, só que com três conjuntos de base/capa em vez de dois.</li>
+<br/>
+<img src="Imagens/fbf301 (1).png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/sbf301s (1).png" alt="imagem" border="5" class="img">
+<li>À esquerda, temos um Swordfish c159/r357; a célula base "restante" r1c9 representa a barbatana. As possíveis eliminações do Swordfish sem a barbatana são r3c7, r5c3 e r7c6. Dessas, apenas r3c7 apresenta a barbatana (mesma célula) e pode ser eliminada.
+
+O Swordfish à direita está nas linhas: r269/c258, com a barbatana em r6c4. As únicas duas células de cobertura que apresentam a barbatana são r45c5, resultando em duas eliminações. Sem a barbatana em r6c4, teríamos apenas uma célula em r6c2, portanto, Sashimi.</li>
+<br/>
+<hr color="#000"/>
+<li>Finned/Sashimi Jellyfish:</li>
+<br/>
+<li>Se adicionarmos outra combinação de base/cobertura, obteremos uma água-viva com barbatanas/sashimi.</li>
+<br/>
+<img src="Imagens/fbf401.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/sbf401.png" alt="imagem" border="5" class="img">
+<li>Exemplo à esquerda: Medusa com barbatanas r2479/c1348, barbatana em r4c9. As células de cobertura r56c8 mostram a barbatana. Se a barbatana for falsa, o peixe degeneraria em um Peixe-espada (r479/c134), eliminando 9 de r26c3. Esta Medusa com barbatanas poderia, portanto, ser chamada de Sashimi também.
+
+Exemplo à direita: Medusa r1469/c1289, barbatana em r9c3, eliminações r7c12, r8c12. Sem a barbatana, obtemos um único valor em r9c9, portanto, Sashimi.</li>
+<br/>
+<hr color="#000"/>
+<li>Peixes de barbatanas grandes/para sashimi</li>
+<br/>
+<li>Para peixes maiores, como os de barbatanas ou para sashimi, haverá um peixe complementar para as mesmas eliminações. Não é necessário procurar peixes maiores.</li>
+<br/>
+<hr color="#000"/>
+<li>(Finned) Franken Fish:</li>
+<br/>
+<li>Se pelo menos um dos conjuntos de base ou capa for uma caixa, o peixe resultante é chamado de Peixe Frankenstein. As regras para os peixes permanecem inalteradas.</li>
+<br/>
+<img src="Imagens/ff401.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/ff301.png" alt="imagem" border="5" class="img">
+<li>A imagem à esquerda acima mostra uma Água-viva Frankenstein: r125b7/c1257 leva às seguintes eliminações: r3c257, r4c12, r6c2578. À primeira vista, parece uma Água-viva Básica nas linhas. A única diferença é que o quarto conjunto base não é uma linha, mas um bloco: Isso a torna um Peixe Frankenstein.
+
+O lado direito mostra exatamente o mesmo estado de sudoku que o da esquerda, mas um peixe diferente: c34b6/r346. Há três conjuntos base/cobertura, então é um Peixe-espada. Os conjuntos base contêm um bloco, então é um Peixe-espada Frankenstein. E um candidato base está "sobrando": r5c7. Esta é uma barbatana, então é um Peixe-espada Frankenstein com Barbatanas. A eliminação é r3c8.
+
+Muitos peixes avançados produzem padrões que foram descritos sob um nome diferente. A maioria desses padrões diferentes é mais fácil de identificar. As possibilidades adicionais introduzidas pelo uso de caixas como base ou cobertura levam ao surgimento de peixes com nadadeiras endotraqueais e ao canibalismo. As variedades possíveis são realmente infinitas; abaixo, dois exemplos desses tipos de peixes:</li>
+<br/>
+<img src="Imagens/fff201.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/fff302.png" alt="imagem" border="5" class="img">
+<li>O exemplo à esquerda mostra um X-Wing Frankenstein com barbatanas: os conjuntos base são a linha 6 e o ​​bloco 1, os conjuntos de cobertura são as colunas 3 e 5. O número 2 em r2c1 não está coberto por um conjunto de cobertura e, portanto, é uma barbatana. A única eliminação possível para o Peixe Frankenstein sem barbatanas é em r2c5. Como ele vê a barbatana, torna-se uma eliminação real. Esse padrão é mais conhecido como Retângulo Vazio.
+
+O exemplo à direita mostra um tipo de peixe mais complexo: os conjuntos base são as linhas 1 e 5 e o bloco 3, os conjuntos de cobertura são as colunas 6 e 8 e o bloco 2. Três conjuntos base/cobertura indicam um Peixe-Espada, e blocos em conjuntos base/cobertura indicam um Peixe-Espada Frankenstein. As eliminações possíveis são r2c4, r24c6 e r4c8. Observando mais atentamente, vemos, no entanto, que os candidatos base r1c89 não estão apenas na linha 1 do conjunto base, mas também no bloco 3 do conjunto base: eles devem ser tratados como barbatanas ("endo barbatanas"). Como nenhuma das possíveis eliminações abrange todas as barbatanas, não temos mais nada a fazer. Felizmente, porém, o candidato base r1c6 está presente em dois conjuntos de cobertura: coluna 6 e caixa 2, sendo, portanto, uma possível eliminação canibalística. Ele abrange todas as barbatanas, tornando-se assim a verdadeira eliminação para este peixe (um Espadarte Frankenstein Canibalístico com Barbatanas).</li>
+<br/>
+<hr color="#000"/>
+<li>(Finned) Mutant Fish:</li>
+<br/>
+<li>Se permitirmos todos os tipos possíveis de habitats nas bases e coberturas dos nossos peixes, os resultados tornam-se ainda mais complexos. Além disso, os exemplares menores são frequentemente conhecidos por um nome diferente.</li>
+<br/>
+<img src="Imagens/fmf201.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/fmf401.png" alt="imagem" border="5" class="img">
+<li>Vamos começar novamente pelo lado esquerdo: os conjuntos base são a linha 6 e a coluna 2, os conjuntos de cobertura são a coluna 6 e o ​​bloco 4. Dois setores cada significam X-Wing, linhas e colunas misturadas nos conjuntos base significam X-Wing Mutante. A célula base r7c2 não está coberta, portanto, X-Wing Mutante com Barbatanas. A eliminação é r7c6. Este padrão específico também é conhecido como Pipa de Duas Cordas ou como Peixe-Turbot (que, aliás, não é um peixe, mas uma corrente...).
+
+O exemplo acima, no lado direito, mostra uma Água-viva Mutante com Barbatanas: r16c47/c1b358, barbatanas em r1c6 e r7c7, a eliminação é r7c6.</li>
+<br/>
+<li>O exemplo à esquerda não parece muito mais complicado do que a água-viva acima, mas é. Trata-se do menor peixe disponível na grade, uma Baleia Mutante com Barbatanas: 4 r35c89b49 r69c347b3 fr4c1 efr9c8 => r9c1<>4. Embora seja engraçado olhar para esses monstros, é altamente improvável que um solucionador humano encontre um peixe assim. Nem é necessário: a eliminação pode ser reproduzida por um Loop Agrupado ou uma Cadeia de Força.</li>
+<br/>
+<img src="Imagens/fmf601.png" alt="imagem" border="5" class="img">
+<hr color="#000"/>
+<li>Siamese Fish:</li>
+<br/>
+<li>Se em um dado estado de Sudoku existirem dois peixes do mesmo tipo, que ocupem as mesmas células, mas levem a eliminações diferentes, esses dois peixes podem ser combinados em um único Peixe Siamês. Para que um Peixe Siamês seja possível, os peixes que o compõem devem ser de alguma espécie de peixe com nadadeiras que difiram em um conjunto de cobertura. A forma mais simples de um X-Wing Siamês Sashimi é mais conhecida como Arranha-Céus.</li>
+<br/>
+<img src="Imagens/sfbf301.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/sfbf01.png" alt="imagem" border="5" class="img">
+<li>O exemplo à esquerda (postado no Fórum de Jogadores) é um Espadarte Sashimi Siamês em 1: O primeiro peixe está em r358 c259, barbatana em r8c6, eliminando 1 de r7c5; o segundo está em r358 c269, barbatana em r5c5, eliminando 1 de r4c6.
+
+O segundo exemplo é uma Água-viva Sashimi Siamês em 8 (cada peixe tem duas barbatanas): O primeiro peixe está em r4678 c1689, barbatanas em r4c2 e r6c2, eliminando 8 de r5c1 (note que, embora o segundo candidato eliminado, r9c2, veja ambas as barbatanas, ele não é um candidato de cobertura e, portanto, não pode ser eliminado apenas pelo primeiro peixe). O segundo peixe está em r4678 c2689, barbatanas em r7c1 e r8c1, eliminando 8 de r9c2.
+
+O HoDoKu suporta peixes siameses, mas apenas se a opção "Permitir Duals/Siameses" estiver ativada.</li>
+<br/>
+<hr color="#000"/>
+<li>Skyscraper</li>
+<br/>
+<li>O padrão Arranha-Céus é um padrão simples que ocorre com bastante frequência em sudokus e pode ser facilmente identificado. Não é nada de novo: um Arranha-Céus é uma forma especial de peixe-prego e pode ser visto como dois X-Wings de sashimi.
+
+A descrição do padrão parece mais complicada do que realmente é: concentre-se em um dígito. Encontre duas linhas (ou colunas) que contenham apenas dois candidatos para esse dígito. Se dois desses candidatos estiverem na mesma coluna (ou linha), um dos outros dois candidatos deve ser verdadeiro. Todos os candidatos que aparecem em ambas as colunas podem, portanto, ser eliminados. Vejamos alguns exemplos:</li>
+<br/>
+<img src="Imagens/sk01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/sk02.png" alt="imagem" border="5" class="img">
+<li>Considere o exemplo da esquerda: na coluna 6, o dígito 1 só pode estar na linha 1 ou na linha 5. Na coluna 9, o dígito 1 só pode estar na linha 3 ou na linha 5. r5c6 e r5c9 estão na mesma linha (a "base" do arranha-céu). Podemos raciocinar da seguinte forma: se r1c6 não for verdadeiro, então r5c6 deve ser verdadeiro (apenas dois valores possíveis, um deles deve ser verdadeiro: ligação forte). Mas se r5c6 for verdadeiro, r5c9 não pode ser verdadeiro, pois estão na mesma linha (ligação fraca). E se r5c9 não for verdadeiro, r3c9 deve ser verdadeiro (ligação forte). Assim, provamos que r3c9 deve ser verdadeiro se r1c6 não for verdadeiro. O mesmo argumento se aplica se partirmos do princípio de que r3c9 não é verdadeiro: segue-se que r1c6 deve ser verdadeiro. Como uma das condições r1c6 e r3c9 precisa ser verdadeira, todos os candidatos que podem ver ambas as células podem ser eliminados (em nosso exemplo: r1c78 e r3c45).
+
+Felizmente, não é necessário seguir a lógica toda vez que você procura um Arranha-céu: basta identificar o padrão.</li>
+<br/>
+<li>É possível observar que a posição dos candidatos está sujeita a uma restrição: as duas células superiores precisam estar na mesma faixa, caso contrário, nenhum candidato pode ser eliminado.
+
+O exemplo à direita mostra um Skyscraper, que foi rotacionado 90 graus no sentido horário: Skyscraper em 4 em r2c5,r8c4 (conectado por r28c1) => r1c44
+
+Se observarmos novamente o exemplo à esquerda, podemos facilmente identificar os dois Sashimi X-Wings contidos nele: O primeiro é c59/r35, com aleta em r1c6, eliminando 1 de r3c45. O segundo é c59/r15, com aleta em r3c9, eliminando 1 de r1c78.</li>
+<hr color="#000"/>
+
+</h4>
+
+ </body>
+ </html>
+
+ 

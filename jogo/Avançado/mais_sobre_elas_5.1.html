@@ -1,0 +1,526 @@
+<html>
+ <head>
+  <title>Sudoku:</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    .h2{
+       text-align: center;
+       text-decoration:underline;
+       font-size:40px;
+     }
+
+   .h4{ 
+    font-size:30px; 
+    text-align:justify;
+    }
+   
+     .img{
+       width:540px;
+       height:443px;
+       }
+    
+
+  </style>
+ </head>
+ <body bgcolor="#d3d3d3">
+
+<h2 class="h2">Observações:</h2>
+
+<h2 class="h2">Sobre:</h2>
+
+<h4 class="h4">
+
+<li>As "Triplas Nus" (também conhecidas como "Naked Triples") são uma técnica intermediária no Sudoku, mais avançada que os Pares Nus. Elas envolvem identificar três células em uma mesma unidade (linha, coluna ou bloco) que contêm exatamente os mesmos três candidatos. Quando você encontra essas triplas, pode eliminar esses candidatos das outras células na mesma unidade.</li>
+<br/>
+<li>Aqui está como funciona:</li>
+<br/>
+<li>Identifique Triplas Nus: Procure por três células em uma unidade (linha, coluna ou bloco) que contenham apenas os mesmos três candidatos.</li>
+<br/>
+<li>Exemplo: Se numa coluna você tem três células com candidatos {2, 5, 8} e nenhuma outra célula nessa coluna contém esses três candidatos, você encontrou uma tripla nu.</li>
+<br/>
+<li>Elimine Candidatos: Uma vez que você identificou uma tripla nu, pode eliminar esses três candidatos das outras células na mesma unidade. Isso ocorre porque, sabendo que esses três números estão restritos a essas três células, eles não podem aparecer em outras células na mesma unidade.</li>
+<br/>
+<li>Exemplo: Se as células A, B e C na mesma coluna contêm o trio nu {2, 5, 8}, você pode eliminar os candidatos 2, 5 e 8 das outras células naquela coluna.</li>
+<br/>
+<li>As triplas nus são uma técnica mais poderosa que os pares nus e ajudam a reduzir significativamente as possibilidades em outras células. No entanto, assim como com outras técnicas, é fundamental observar atentamente todas as unidades (linhas, colunas e blocos) para identificar essas triplas e aplicar a técnica com precisão.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Triplas+Nus+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+<li>Os "Quads Nus" (ou "Naked Quads") são uma técnica intermediária no Sudoku, mais avançada que os Pares Nus e as Triplas Nus. Eles envolvem identificar quatro células em uma mesma unidade (linha, coluna ou bloco) que contenham exatamente os mesmos quatro candidatos. Quando você encontra esses quatro números, pode eliminar esses candidatos das outras células na mesma unidade.</li>
+<br/>
+<li>Aqui está como funciona:</li>
+<br/>
+<li>Identifique Quads Nus: Procure por quatro células em uma unidade (linha, coluna ou bloco) que contenham apenas os mesmos quatro candidatos.</li>
+<br/>
+<li>Exemplo: Se em um bloco você tem quatro células com candidatos {1, 3, 6, 9} e nenhuma outra célula nesse bloco contém esses quatro candidatos, você encontrou um quad nu.</li>
+<br/>
+<li>Elimine Candidatos: Uma vez que você identificou um quad nu, pode eliminar esses quatro candidatos das outras células na mesma unidade. Isso ocorre porque, sabendo que esses quatro números estão restritos a essas quatro células, eles não podem aparecer em outras células na mesma unidade.</li>
+<br/>
+<li>Exemplo: Se as células A, B, C e D no mesmo bloco contêm o quad nu {1, 3, 6, 9}, você pode eliminar os candidatos 1, 3, 6 e 9 das outras células naquele bloco.</li>
+<br/>
+<li>Os Quads Nus são uma técnica poderosa que ajuda a reduzir significativamente as possibilidades em outras células. No entanto, assim como com outras técnicas, é fundamental observar atentamente todas as unidades (linhas, colunas e blocos) para identificar esses quads e aplicar a técnica com precisão.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Quads+Nus+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>Os "Pares Escondidos" (ou "Hidden Pairs") são uma técnica intermediária no Sudoku que envolve identificar um par de candidatos que aparecem apenas em duas células dentro de uma mesma unidade (linha, coluna ou bloco). Apesar de não estarem visíveis inicialmente, esses pares escondidos permitem eliminar outros candidatos nas mesmas células, proporcionando avanço na resolução do Sudoku.</li>
+<br/>
+<li>Aqui está como funciona:</li>
+<br/>
+<li>Identifique Pares Escondidos: Procure por duas células em uma unidade (linha, coluna ou bloco) onde apenas dois candidatos são possíveis e esses candidatos são os mesmos em ambas as células.</li>
+<br/>
+<li>Exemplo: Em uma linha, você tem duas células com candidatos {3, 7} e apenas essas duas células contêm esses candidatos.</li>
+<br/>
+<li>Elimine Outros Candidatos: Após identificar um par escondido, você pode eliminar esses dois candidatos de outras células na mesma unidade. Isso ocorre porque você sabe que esses dois números estão restritos às duas células com o par escondido, então eles não podem aparecer em outras células na mesma unidade.</li>
+<br/>
+<li>Exemplo: Se as células A e B em uma linha contêm o par escondido {3, 7}, você pode eliminar os candidatos 3 e 7 de outras células naquela linha.</li>
+<br/>
+<li>Os Pares Escondidos são uma técnica eficaz para eliminar candidatos e simplificar o jogo, especialmente quando combinados com outras estratégias avançadas. Eles podem ajudar a revelar mais pares e padrões, levando a mais eliminações e, eventualmente, à resolução bem-sucedida do Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Pares+Escondidos+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>As "Triplas Escondidas" (ou "Hidden Triples") são uma técnica intermediária no Sudoku que envolve identificar um trio de candidatos que aparecem apenas em três células dentro de uma mesma unidade (linha, coluna ou bloco). Embora essas triplas não sejam visíveis inicialmente, elas permitem eliminar outros candidatos nas mesmas células, proporcionando avanço na resolução do Sudoku.</li>
+<br/>
+<li>Aqui está como funciona:</li>
+<br/>
+<li>Identifique Triplas Escondidas: Procure por três células em uma unidade (linha, coluna ou bloco) onde apenas três candidatos são possíveis e esses candidatos são os mesmos em todas as três células.</li>
+<br/>
+<li>Exemplo: Em uma coluna, você tem três células com candidatos {1, 4, 7} e apenas essas três células contêm esses candidatos.</li>
+<br/>
+<li>Elimine Outros Candidatos: Após identificar uma tripla escondida, você pode eliminar esses três candidatos de outras células na mesma unidade. Isso ocorre porque você sabe que esses três números estão restritos às três células com a tripla escondida, então eles não podem aparecer em outras células na mesma unidade.</li>
+<br/>
+<li>Exemplo: Se as células A, B e C em uma coluna contêm a tripla escondida {1, 4, 7}, você pode eliminar os candidatos 1, 4 e 7 de outras células naquela coluna.</li>
+<br/>
+<li>As Triplas Escondidas são uma técnica eficaz para eliminar candidatos e simplificar o jogo, especialmente quando combinadas com outras estratégias avançadas. Elas podem ajudar a revelar mais triplas e padrões, levando a mais eliminações e, eventualmente, à resolução bem-sucedida do Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Triplas+Escondidas+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+<li>Quads Escondidos</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Quads+Escondidos+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>Os "Pares Conjugados" (ou "Conjugate Pairs") são uma técnica intermediária no Sudoku que envolve a identificação de um par de candidatos que aparecem apenas em duas células em uma mesma unidade (linha, coluna ou bloco). No entanto, essas duas células estão interligadas de uma maneira específica, o que permite fazer eliminações em outras células na mesma unidade.</li>
+<br/>
+<li>Aqui está como funciona:</li>
+<br/>
+<li>Identifique Pares Conjugados: Procure por um par de candidatos que aparecem apenas em duas células em uma unidade (linha, coluna ou bloco).</li>
+<br/>
+<li>Exemplo: Em uma linha, você tem duas células com candidatos {2, 6} e apenas essas duas células contêm esses candidatos.</li>
+<br/>
+<li>Verifique a Interligação: Além de encontrar o par de candidatos, verifique se há outra célula na mesma unidade que compartilha uma unidade secundária (ou seja, uma coluna em uma linha, uma linha em uma coluna, ou um bloco em um bloco) com ambas as células do par conjugado.</li>
+<br/>
+<li>Exemplo: Se o par conjugado {2, 6} está nas células A e B da linha, e a célula C na mesma linha também está no mesmo bloco que A e B, então você encontrou um par conjugado com interligação.</li>
+<br/>
+<li>Elimine Outros Candidatos: Se você encontrar um par conjugado com interligação, pode eliminar esses dois candidatos (do exemplo, 2 e 6) de outras células na unidade secundária compartilhada (neste caso, a mesma linha). Isso ocorre porque você sabe que esses dois números estão restritos às duas células com o par conjugado, então eles não podem aparecer em outras células na mesma unidade secundária.</li>
+<br/>
+<li>As eliminações feitas usando pares conjugados podem ser úteis para resolver Sudokus mais complexos, especialmente quando combinadas com outras estratégias avançadas. É fundamental observar atentamente todas as unidades e encontrar as interligações corretas para aplicar essa técnica com precisão.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Pares+Conjugados+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>As "Triplas Conjugadas" (ou "Conjugate Triples") são uma técnica avançada no Sudoku que envolve a identificação de três células em uma mesma unidade (linha, coluna ou bloco) que contêm três candidatos específicos e estão interligadas de uma maneira específica. Esta técnica permite fazer eliminações em outras células na mesma unidade.</li>
+<br/>
+<li>Aqui está como funciona:</li>
+<br/>
+<li>Identifique Triplas Conjugadas: Procure por três células em uma unidade (linha, coluna ou bloco) que contenham exatamente três candidatos e esses candidatos sejam os mesmos nas três células.</li>
+<br/>
+<li>Exemplo: Em uma coluna, você tem três células com candidatos {1, 5, 9} e apenas essas três células contêm esses candidatos.</li>
+<br/>
+<li>Verifique a Interligação: Além de encontrar a tripla conjugada, verifique se há outras células na mesma unidade que compartilham uma unidade secundária (ou seja, uma linha em uma coluna, uma coluna em uma linha, ou um bloco em um bloco) com todas as três células da tripla conjugada.</li>
+<br/>
+<li>Exemplo: Se a tripla conjugada {1, 5, 9} está nas células A, B e C de uma coluna, e as células D e E na mesma coluna também estão no mesmo bloco que A, B e C, então você encontrou uma tripla conjugada com interligação.</li>
+<br/>
+<li>Elimine Outros Candidatos: Se você encontrar uma tripla conjugada com interligação, pode eliminar esses três candidatos (do exemplo, 1, 5 e 9) das outras células na unidade secundária compartilhada (neste caso, a mesma coluna). Isso ocorre porque você sabe que esses três números estão restritos às três células com a tripla conjugada, então eles não podem aparecer em outras células na mesma unidade secundária.</li>
+<br/>
+<li>As eliminações feitas usando triplas conjugadas podem ser poderosas para resolver Sudokus difíceis, especialmente quando combinadas com outras estratégias avançadas. É fundamental observar atentamente todas as unidades e encontrar as interligações corretas para aplicar essa técnica com precisão.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Triplas+Conjugadas+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>"Simple Coloring" é uma técnica intermediária no Sudoku que envolve a identificação e aplicação de regras de coloração em células específicas para eliminar candidatos. Esta técnica é útil quando você tem duas cores disponíveis (por exemplo, azul e vermelho) para marcar células em um Sudoku.</li>
+<br/>
+<li>Aqui está como funciona:</li>
+<br/>
+<li>Escolha duas Cores: Escolha duas cores diferentes (por exemplo, azul e vermelho) para representar os candidatos em uma determinada célula.</li>
+<br/>
+<li>Aplique as Regras de Coloração:</li>
+<br/>
+<li>Regra 1: Se um candidato em uma célula só aparece em células de uma cor específica (por exemplo, azul), então esse candidato pode ser eliminado de outras células da mesma cor.</li>
+<br/>
+<li>Regra 2: Se um candidato em uma célula está em células de ambas as cores (por exemplo, azul e vermelho), então esse candidato pode ser eliminado de outras células que compartilham uma unidade (linha, coluna ou bloco) com ambas as cores.</li>
+<br/>
+<li>Elimine Candidatos: Use as regras acima para eliminar candidatos de outras células na mesma unidade onde as cores foram aplicadas.</li>
+<br/>
+<li>Exemplo: Se você marca um candidato 3 em azul em uma célula e encontra células azuis que compartilham uma unidade com essa célula, você pode eliminar o candidato 3 dessas células azuis.</li>
+<br/>
+<li>O Simple Coloring é uma técnica eficaz para resolver Sudokus intermediários e pode ser particularmente útil em quebra-cabeças de dificuldade moderada. É uma introdução ao mundo das técnicas de coloração mais avançadas no Sudoku. Praticar e compreender como aplicar regras de coloração pode levar a uma melhor compreensão das estratégias de resolução.
+<br/>
+<a href="https://www.google.com.br/m?q=Simple+Coloring+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>O "Y-Cycle" é uma técnica avançada no Sudoku que envolve a identificação de três células em uma unidade (linha, coluna ou bloco) que compartilham três candidatos específicos e estão dispostos em um padrão que se assemelha a um "Y". Esta técnica permite fazer eliminações em outras células na mesma unidade.</li>
+<br/>
+<li>Aqui está como funciona:</li>
+<br/>
+<li>Identifique o Y-Cycle: Procure por três células em uma unidade (linha, coluna ou bloco) que contenham exatamente três candidatos e esses candidatos sejam os mesmos nas três células. Além disso, as três células devem formar um padrão em forma de "Y".</li>
+<br/>
+<li>Exemplo: Em uma linha, você tem três células com candidatos {2, 5, 8} e apenas essas três células contêm esses candidatos, com uma célula no meio e duas células nos extremos da linha.</li>
+<br/>
+<li>Elimine Outros Candidatos: Se você encontrar um Y-Cycle, pode eliminar esses três candidatos (do exemplo, 2, 5 e 8) das outras células na mesma unidade (ou seja, a mesma linha neste caso). Isso ocorre porque você sabe que esses três números estão restritos às três células com o Y-Cycle, então eles não podem aparecer em outras células na mesma unidade.</li>
+<br/>
+<li>O Y-Cycle é uma técnica avançada e requer uma compreensão sólida do padrão em forma de "Y" e das relações entre as células. Encontrar e aplicar Y-Cycles pode ajudar a resolver Sudokus de dificuldade mais elevada quando combinado com outras estratégias avançadas. Lembre-se de observar atentamente todas as unidades e encontrar padrões específicos para aplicar essa técnica com precisão.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Y-Cycle+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>Um "Hidden Unique Rectangle" é uma configuração específica em um Sudoku onde uma determinada unidade (linha, coluna ou bloco) possui quatro células com candidatos que formam um retângulo, mas sem outras células na mesma unidade com os mesmos candidatos. Esta configuração pode parecer um retângulo "oculto" porque os candidatos formam um padrão de 2x2, mas não é visível inicialmente.</li>
+<br/>
+<li>Aqui está como funciona:</li>
+<br/>
+<li>Identifique o Hidden Unique Rectangle: Procure por uma unidade (linha, coluna ou bloco) com quatro células que contenham exatamente quatro candidatos e esses candidatos formem um retângulo 2x2. Isso significa que existem duas células com dois candidatos idênticos cada, e essas células estão dispostas em uma linha (horizontal ou vertical) ou em uma coluna.</li>
+<br/>
+<li>Exemplo (em uma coluna):</li>
+
+| 1 |
+| 1 |
+| 2 |
+| 2 |
+<br/>
+<li>Elimine Candidatos: Se você encontrar um Hidden Unique Rectangle, pode eliminar os candidatos desse retângulo das outras células na mesma unidade. Isso ocorre porque você sabe que os números do retângulo estão restritos a essas quatro células, então eles não podem aparecer em outras células na mesma unidade.</li>
+<br/>
+<li>Exemplo (em uma coluna): Se as células A e B contêm o candidato 1 e as células C e D contêm o candidato 2, você pode eliminar os candidatos 1 e 2 das outras células na mesma coluna.</li>
+<br/>
+<li>Hidden Unique Rectangles são uma técnica mais avançada e podem ser úteis para resolver Sudokus de dificuldade mais elevada. É importante observar cuidadosamente as unidades para identificar esses padrões ocultos e aplicar a técnica com precisão.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Hidden+Unique+Rectangle+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>As "Técnicas de Conjuntos Quase Bloqueados" (ALS, do inglês Almost Locked Sets) são estratégias avançadas no Sudoku que envolvem padrões mais complexos de candidatos em grupos de células (também chamados de conjuntos) em uma unidade (linha, coluna ou bloco). Estas técnicas podem ser aplicadas quando há uma relação específica entre os candidatos em várias células.</li>
+<br/>
+<li>Existem várias variações das Técnicas ALS, incluindo ALS-XZ, ALS-XY, ALS-XY-Wing, ALS-XZ Rule, ALS-Y-Cycles, entre outras. Abaixo, vou descrever algumas dessas variações:</li>
+<br/>
+<li>ALS-XZ: Envolve dois conjuntos (grupos de células) onde um conjunto contém um candidato específico (X) e o outro contém um conjunto de candidatos (Z). Quando esses dois conjuntos compartilham uma unidade, os candidatos Z podem ser eliminados de outras células na mesma unidade.</li>
+<br/>
+<li>ALS-XY: Similar ao ALS-XZ, mas envolve dois conjuntos onde cada conjunto contém um candidato específico (X e Y). Se esses dois conjuntos compartilham uma unidade, os candidatos Y podem ser eliminados de outras células na mesma unidade.</li>
+<br/>
+<li>ALS-XY-Wing: É uma extensão do ALS-XY, onde três conjuntos estão envolvidos. Se três conjuntos contendo candidatos X, Y e Z compartilham uma unidade, então qualquer célula na unidade que contém Z pode eliminar X e Y de seus candidatos.</li>
+<br/>
+<li>ALS-XZ Rule: Similar ao ALS-XZ, mas com uma regra adicional: se um conjunto contém X e o outro contém Z, e esses conjuntos compartilham uma unidade, os candidatos Z podem ser eliminados de outras células na mesma unidade, exceto aquelas que contêm X.</li>
+<br/>
+<li>ALS-Y-Cycles: Envolve três conjuntos onde cada conjunto contém um candidato específico (X, Y e Z). Se os três conjuntos compartilham uma unidade de uma maneira específica, então os candidatos X, Y e Z podem ser eliminados de outras células na mesma unidade.</li>
+<br/>
+<li>As Técnicas ALS são bastante complexas e requerem uma compreensão profunda dos padrões formados pelos candidatos em várias células. Elas são úteis para resolver Sudokus muito difíceis e podem ser combinadas com outras estratégias avançadas para resolver quebra-cabeças mais desafiadores. Ao aplicar as Técnicas ALS, é fundamental observar atentamente as unidades e entender as relações entre os conjuntos de candidatos para eliminar com precisão os candidatos apropriados.</li>
+
+<hr color="#000"/>
+
+
+<li>O "ALS-XZ" é uma variação das técnicas de Conjuntos Quase Bloqueados (ALS, do inglês Almost Locked Sets) no Sudoku. Ele envolve dois conjuntos (grupos de células) em uma unidade (linha, coluna ou bloco) onde um conjunto contém um candidato específico (X) e o outro contém um conjunto de candidatos (Z). Quando esses dois conjuntos compartilham uma unidade, os candidatos Z podem ser eliminados das outras células na mesma unidade, exceto aquelas que contêm X.</li>
+<br/>
+<li>Aqui está como funciona o ALS-XZ:</li>
+<br/>
+<li>Identifique os Conjuntos: Encontre dois conjuntos na mesma unidade onde um conjunto (por exemplo, A) contém o candidato X e o outro conjunto (por exemplo, B) contém um conjunto de candidatos Z.</li>
+<br/>
+<li>Verifique a Unidade Compartilhada: Verifique se os conjuntos A e B compartilham uma unidade (linha, coluna ou bloco).</li>
+<br/>
+<li>Elimine Candidatos: Se os conjuntos A e B compartilham uma unidade, você pode eliminar os candidatos Z das outras células na mesma unidade, exceto das células que contêm X.</li>
+<br/>
+<li>Exemplo:
+<br/>
+<li>Suponha que em uma coluna, você tenha o conjunto A com o candidato 4 nas células {A1, A2, A3} e o conjunto B com os candidatos {2, 3} nas células {B1, B2}. Se A1, A2 e A3 compartilham a mesma coluna com B1 e B2, você pode eliminar os candidatos 2 e 3 de outras células na mesma coluna, exceto das células que contêm o candidato 4.</li>
+<br/>
+<li>Esta técnica é útil para eliminar candidatos e simplificar o tabuleiro, especialmente em Sudokus mais difíceis quando combinada com outras estratégias avançadas. Observar atentamente as unidades e as relações entre os conjuntos é fundamental para aplicar corretamente o ALS-XZ.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=ALS-XZ+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>O "ALS-XY-Wing" é uma técnica avançada no Sudoku que envolve três conjuntos (também conhecidos como grupos de células) em uma mesma unidade (linha, coluna ou bloco) onde cada conjunto contém um candidato específico (X, Y e Z, respectivamente). Se esses três conjuntos compartilham uma unidade de uma maneira específica, então qualquer célula na unidade que contém Z pode eliminar X e Y de seus candidatos.</li>
+<br/>
+<li>Aqui está como funciona o ALS-XY-Wing:</li>
+<br/>
+<li>Identifique os Conjuntos: Encontre três conjuntos (A, B e C) em uma unidade onde A contém o candidato X, B contém o candidato Y e C contém o candidato Z.</li>
+<br/>
+<li>Verifique a Unidade Compartilhada: Verifique se os conjuntos A, B e C compartilham uma unidade (linha, coluna ou bloco). Além disso, é importante que os conjuntos A e B compartilhem a mesma unidade comum com C, formando um padrão específico.</li>
+<br/>
+<li>Elimine Candidatos: Se os conjuntos A, B e C compartilham uma unidade de forma que A e B compartilham a mesma unidade comum com C, então qualquer célula na unidade que contém Z pode eliminar X e Y de seus candidatos.</li>
+<br/>
+<li>Exemplo:
+<br/>
+<li>Suponha que em uma linha, você tenha o conjunto A com o candidato 1 nas células {A1, A2, A3}, o conjunto B com o candidato 2 nas células {B1, B2, B3} e o conjunto C com o candidato 3 na célula {C2}. Se A1, A2, A3 e B1, B2, B3 estiverem na mesma linha que C2, você pode eliminar os candidatos 1 e 2 de C2.</li>
+<br/>
+<li>Essa técnica é útil para eliminar candidatos de células específicas e simplificar o tabuleiro. No entanto, é uma estratégia avançada que requer uma compreensão profunda dos padrões formados pelos candidatos em várias células. Observar atentamente as unidades e entender as relações entre os conjuntos de candidatos é crucial para aplicar corretamente o ALS-XY-Wing.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=ALS-XY-Wing+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>O "ALS-XY-Chain" é uma técnica avançada no Sudoku que utiliza os Conjuntos Quase Bloqueados (ALS, do inglês Almost Locked Sets) para criar uma cadeia de células e candidatos interligados. Essa técnica é uma extensão das estratégias de cadeias (como as cadeias XY e cadeias simples) e envolve conjuntos de células onde um conjunto contém o candidato X e o outro contém o candidato Y. Quando esses conjuntos compartilham uma unidade (linha, coluna ou bloco) de uma maneira específica, uma cadeia de eliminações pode ser estabelecida.</li>
+<br/>
+<li>Aqui está como funciona o ALS-XY-Chain:</li>
+<br/>
+<li>Identifique os Conjuntos: Encontre dois conjuntos de células (A e B) em uma unidade onde A contém o candidato X e B contém o candidato Y.</li>
+<br/>
+<li>Verifique a Unidade Compartilhada: Verifique se os conjuntos A e B compartilham uma unidade (linha, coluna ou bloco). Além disso, os conjuntos A e B devem compartilhar uma célula comum, formando uma cadeia.</li>
+<br/>
+<li>Construa a Cadeia: Se os conjuntos A e B compartilham uma unidade e uma célula comum, você pode criar uma cadeia de células interligadas, alternando entre os conjuntos A e B.</li>
+<br/>
+<li>Elimine Candidatos: Considere a cadeia que você construiu e veja as implicações. Se uma célula na cadeia contém o candidato X ou Y, você pode eliminar os candidatos opostos (Y ou X, respectivamente) das outras células na mesma unidade da célula na cadeia.</li>
+<br/>
+<li>Exemplo:</li>
+<br/>
+<li>Suponha que em uma coluna, você tenha o conjunto A com o candidato 1 nas células {A1, A2} e o conjunto B com o candidato 2 na célula {B2}. Se A1 e A2 compartilham a mesma coluna com B2, você pode criar a cadeia A1 -> B2 -> A2. Se B2 contém o candidato 2, você pode eliminar o candidato 1 de outras células na mesma coluna onde B2 está localizado.</li>
+<br/>
+<li>Essa técnica é poderosa, mas requer uma compreensão profunda das relações entre os conjuntos de candidatos. Ao dominar o ALS-XY-Chain, você poderá resolver Sudokus de dificuldade mais elevada ao combinar essa técnica com outras estratégias avançadas.
+<br/>
+<a href="https://www.google.com.br/m?q=ALS-XY-Chain+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+<li>O "ALS-XY-Coloring" é uma técnica avançada no Sudoku que combina as estratégias de Conjuntos Quase Bloqueados (ALS, do inglês Almost Locked Sets) e a técnica de Coloração (também conhecida como Color Wing ou Coloring) para encontrar e eliminar candidatos de forma eficaz.</li>
+<br/>
+<li>Aqui está como funciona o ALS-XY-Coloring:</li>
+<br/>
+<li>Identifique os Conjuntos ALS: Encontre dois conjuntos de células (A e B) em uma unidade onde A contém o candidato X e B contém o candidato Y. Além disso, esses conjuntos devem compartilhar uma unidade comum (linha, coluna ou bloco).</li>
+<br/>
+<li>Aplique a Coloração: Considere as células nos conjuntos A e B, bem como as células na unidade comum. Marque as células que contêm X como da cor A e as células que contêm Y como da cor B. Se uma célula puder ser colorida de ambas as formas (X ou Y), ela é uma célula de bifurcação.</li>
+<br/>
+<li>Verifique as Implicações: Observe as implicações da coloração. Se você encontrar um ciclo de células coloridas (A -> B -> A) ou (B -> A -> B), você pode eliminar candidatos com base na coloração. Por exemplo, se um ciclo começa e termina com a cor A, você pode eliminar o candidato X das células de bifurcação no ciclo.</li>
+<br/>
+<li>Elimine Candidatos: Com base nas implicações da coloração, elimine os candidatos apropriados das células relevantes.</li>
+<br/>
+<li>Essa técnica é especialmente útil quando existem duas cores diferentes e você encontra um ciclo na coloração. O ciclo indica que os candidatos podem ser eliminados das células de bifurcação. O ALS-XY-Coloring é uma técnica poderosa e versátil, mas requer uma compreensão sólida das regras de coloração e das relações entre os conjuntos ALS. Ao aplicar essa técnica, observe atentamente as unidades e encontre padrões de coloração para resolver Sudokus de dificuldade mais elevada.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=ALS-XY-Coloring+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>O "ALS-Y-Wing" é uma técnica avançada no Sudoku que combina as estratégias de Conjuntos Quase Bloqueados (ALS, do inglês Almost Locked Sets) e a técnica do "Y-Wing". O Y-Wing é uma técnica onde três células estão ligadas de forma que, se uma contém o candidato X, então as outras duas contêm os candidatos Y e Z, e vice-versa. O ALS-Y-Wing é uma extensão disso, envolvendo três conjuntos ALS onde cada conjunto contém um candidato diferente (X, Y e Z).</li>
+<br/>
+<li>Aqui está como funciona o ALS-Y-Wing:</li>
+<br/>
+<li>Identifique os Conjuntos ALS: Encontre três conjuntos de células (A, B e C) em uma unidade onde A contém o candidato X, B contém o candidato Y e C contém o candidato Z. Cada conjunto deve ser um ALS.</li>
+<br/>
+<li>Verifique as Relações entre os Conjuntos: Verifique se A, B e C estão relacionados de forma específica. Se A e B compartilham uma unidade e B e C compartilham uma unidade diferente, então C pode eliminar os candidatos X e Y de outras células na unidade que B e C compartilham.</li>
+<br/>
+<li>Elimine Candidatos: Com base na relação entre os conjuntos, elimine os candidatos apropriados das outras células na unidade que B e C compartilham.</li>
+<br/>
+<li>Exemplo:</li>
+<br/>
+<li>Suponha que em uma coluna, você tenha o conjunto A com o candidato 1 nas células {A1, A2}, o conjunto B com o candidato 2 nas células {B1, B2, B3} e o conjunto C com o candidato 3 na célula {C3}. Se A1 e A2 compartilham a mesma coluna com B1, B2 e B3, e B2 e B3 compartilham a mesma coluna com C3, então C3 pode eliminar os candidatos 1 e 2 das outras células na mesma coluna.</li>
+<br/>
+<li>O ALS-Y-Wing é uma técnica avançada que requer uma compreensão sólida das relações entre os conjuntos ALS. Ao encontrar padrões ALS-Y-Wing, você pode eliminar candidatos estrategicamente para resolver Sudokus mais difíceis.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=ALS-Y-Wing+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>O "ALS-Y-Chain" é uma técnica avançada no Sudoku que utiliza os Conjuntos Quase Bloqueados (ALS, do inglês Almost Locked Sets) para criar uma cadeia de células e candidatos interligados. Esta técnica é uma extensão das estratégias de cadeias (como as cadeias XY e cadeias simples) e envolve conjuntos de células onde um conjunto contém o candidato X e o outro contém o candidato Y. Quando esses conjuntos compartilham uma unidade (linha, coluna ou bloco) de uma maneira específica, uma cadeia de eliminações pode ser estabelecida.</li>
+<br/>
+<li>Aqui está como funciona o ALS-Y-Chain:</li>
+<br/>
+<li>Identifique os Conjuntos ALS: Encontre dois conjuntos de células (A e B) em uma unidade onde A contém o candidato X e B contém o candidato Y.</li>
+<br/>
+<li>Verifique a Unidade Compartilhada: Verifique se os conjuntos A e B compartilham uma unidade (linha, coluna ou bloco). Além disso, é importante que os conjuntos A e B compartilhem uma célula comum, formando uma cadeia.</li>
+<br/>
+<li>Construa a Cadeia: Se os conjuntos A e B compartilham uma unidade e uma célula comum, você pode criar uma cadeia de células interligadas, alternando entre os conjuntos A e B.</li>
+<br/>
+<li>Elimine Candidatos: Considere a cadeia que você construiu e veja as implicações. Se uma célula na cadeia contém o candidato X ou Y, você pode eliminar os candidatos opostos (Y ou X, respectivamente) das outras células na mesma unidade da célula na cadeia.</li>
+<br/>
+<li>Exemplo:</li>
+<br/>
+<li>Suponha que em uma linha, você tenha o conjunto A com o candidato 1 nas células {A1, A2} e o conjunto B com o candidato 2 na célula {B2}. Se A1 e A2 compartilham a mesma linha com B2, você pode criar a cadeia A1 -> B2 -> A2. Se B2 contém o candidato 2, você pode eliminar o candidato 1 de outras células na mesma linha onde B2 está localizado.</li>
+<br/>
+<li>Essa técnica é poderosa, mas requer uma compreensão profunda das relações entre os conjuntos de candidatos. Ao dominar o ALS-Y-Chain, você poderá resolver Sudokus de dificuldade mais elevada ao combiná-lo com outras estratégias avançadas.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=ALS-Y-Chain+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>O "Almost ALS-XZ" é uma técnica avançada no Sudoku que combina as estratégias de Conjuntos Quase Bloqueados (ALS, do inglês Almost Locked Sets) com a técnica XZ para eliminar candidatos. Esta técnica é útil em situações onde há uma relação complexa entre os conjuntos ALS e os candidatos XZ.</li>
+<br/>
+<li>Aqui está como funciona o Almost ALS-XZ:</li>
+<br/>
+<li>Identifique os Conjuntos ALS: Encontre um conjunto de células (A) em uma unidade onde os candidatos estão quase bloqueados, o que significa que há quase um padrão de eliminação, mas um candidato ainda permanece. Este é um conjunto quase bloqueado.</li>
+<br/>
+<li>Identifique os Candidatos XZ: Encontre uma célula fora do conjunto ALS (B) que compartilha um candidato com o conjunto ALS (X) e outro candidato diferente (Z) que está quase bloqueado no conjunto ALS.</li>
+<br/>
+<li>Verifique a Relação: Verifique se o conjunto B compartilha uma unidade com o conjunto ALS e, ao mesmo tempo, se o candidato XZ no conjunto ALS está quase bloqueado.</li>
+<br/>
+<li>Elimine Candidatos: Se a relação entre o conjunto B e o conjunto ALS e o padrão de eliminação quase bloqueada estiverem presentes, você pode eliminar o candidato Z das outras células na unidade que contém o conjunto ALS.</li>
+<br/>
+<li>Exemplo:</li>
+<br/>
+<li>Suponha que em uma coluna, você tenha o conjunto ALS com os candidatos {1, 2, 3, 4, 5} nas células {A1, A2, A3, A4, A5} e uma célula B {B6} que compartilha o candidato 1 com o conjunto ALS e o candidato 6 (Z) está quase bloqueado no conjunto ALS. Se B6 compartilhar a mesma coluna com o conjunto ALS, você pode eliminar o candidato 6 das outras células na mesma coluna que contém o conjunto ALS.</li>
+<br/>
+<li>O Almost ALS-XZ é uma técnica avançada que requer uma compreensão sólida dos padrões de candidatos e das relações entre os conjuntos ALS. Ao aplicar corretamente o Almost ALS-XZ, você poderá eliminar candidatos de forma estratégica e resolver Sudokus mais complexos.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Almost+ALS-XZ+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+<li>O "Almost ALS-XY-Wing" é uma técnica avançada no Sudoku que combina as estratégias de Conjuntos Quase Bloqueados (ALS, do inglês Almost Locked Sets) com a técnica do "XY-Wing". Esta técnica é útil em situações onde há uma relação complexa entre os conjuntos ALS e os conjuntos de células XY.</li>
+<br/>
+<li>Aqui está como funciona o Almost ALS-XY-Wing:</li>
+<br/>
+<li>Identifique os Conjuntos ALS: Encontre dois conjuntos de células ALS (A e B) em uma unidade onde A contém os candidatos X e Y, e B contém os candidatos X e Z. Ambos os conjuntos devem ser conjuntos ALS.</li>
+<br/>
+<li>Verifique as Relações entre os Conjuntos: Verifique se os conjuntos A e B compartilham uma unidade (linha, coluna ou bloco). Além disso, deve haver uma célula (C) fora dos conjuntos ALS que compartilha um candidato com ambos os conjuntos (por exemplo, X), mas um candidato diferente (por exemplo, Z) está quase bloqueado no conjunto ALS B.</li>
+<br/>
+<li>Elimine Candidatos: Se as relações entre os conjuntos ALS e o padrão quase bloqueado estiverem presentes, você pode eliminar o candidato Z das outras células na unidade que contém o conjunto ALS B.</li>
+<br/>
+<li>Exemplo:</li>
+<br/>
+<li>Suponha que em uma coluna, você tenha o conjunto ALS A com os candidatos {1, 2, 3} nas células {A1, A2, A3}, o conjunto ALS B com os candidatos {1, 2, 4} nas células {B4, B5, B6}, e uma célula C {C7} que compartilha o candidato 1 com ambos os conjuntos ALS, mas o candidato 7 (Z) está quase bloqueado no conjunto ALS B. Se A1, A2, A3 e B4, B5, B6 estiverem na mesma coluna que C7, você pode eliminar o candidato 7 de C7.</li>
+<br/>
+<li>O Almost ALS-XY-Wing é uma técnica avançada que requer uma compreensão sólida dos padrões de candidatos e das relações entre os conjuntos ALS. Ao aplicar corretamente o Almost ALS-XY-Wing, você poderá eliminar candidatos de forma estratégica e resolver Sudokus mais complexos.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Almost+ALS-XY-Wing+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+<li>O "Almost ALS-XY-Chain" é uma técnica avançada no Sudoku que combina as estratégias de Conjuntos Quase Bloqueados (ALS, do inglês Almost Locked Sets) com a técnica de cadeias XY para eliminar candidatos. Esta técnica é útil em situações onde há uma relação complexa entre os conjuntos ALS e as cadeias XY.</li>
+<br/>
+<li>Aqui está como funciona o Almost ALS-XY-Chain:</li>
+<br/>
+<li>Identifique os Conjuntos ALS: Encontre dois conjuntos de células ALS (A e B) em uma unidade onde A contém os candidatos X e Y, e B contém os candidatos X e Z. Ambos os conjuntos devem ser conjuntos ALS.</li>
+<br/>
+<li>Verifique as Relações entre os Conjuntos: Verifique se os conjuntos A e B compartilham uma unidade (linha, coluna ou bloco). Além disso, deve haver uma célula (C) fora dos conjuntos ALS que compartilha um candidato com ambos os conjuntos (por exemplo, X) e outro candidato diferente (por exemplo, W) está quase bloqueado no conjunto ALS B.</li>
+<br/>
+<li>Construa a Cadeia: Construa uma cadeia de células interligadas, alternando entre os conjuntos A e B, levando em consideração as células do conjunto ALS B e a célula externa C. A cadeia deve começar ou terminar em uma célula quase bloqueada (por exemplo, a célula B onde o candidato W está quase bloqueado).</li>
+<br/>
+<li>Elimine Candidatos: Considere a cadeia que você construiu e veja as implicações. Se uma célula na cadeia contém o candidato W, você pode eliminar os candidatos X e Z das outras células na mesma unidade que contém o conjunto ALS B.</li>
+<br/>
+<li>Exemplo:</li>
+<br/>
+<li>Suponha que em uma coluna, você tenha o conjunto ALS A com os candidatos {1, 2} nas células {A1, A2}, o conjunto ALS B com os candidatos {1, 3} nas células {B3, B4}, e uma célula C {C5} que compartilha o candidato 1 com ambos os conjuntos ALS, mas o candidato 5 (W) está quase bloqueado no conjunto ALS B. Se A1, A2, B3, B4 e C5 estiverem na mesma coluna, você pode criar a cadeia A1 -> B3 -> A2 -> B4 -> C5. Se C5 contém o candidato 5, você pode eliminar os candidatos 1 e 3 das outras células na mesma coluna que contém o conjunto ALS B.</li>
+<br/>
+<li>O Almost ALS-XY-Chain é uma técnica avançada que requer uma compreensão sólida dos padrões de candidatos e das relações entre os conjuntos ALS. Ao aplicar corretamente o Almost ALS-XY-Chain, você poderá eliminar candidatos de forma estratégica e resolver Sudokus mais complexos.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Almost+ALS-XY-Chain+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>O "Almost ALS-XY-Coloring" é uma técnica avançada no Sudoku que combina as estratégias de Conjuntos Quase Bloqueados (ALS, do inglês Almost Locked Sets) com a técnica de coloração XY para eliminar candidatos. Esta técnica é útil em situações onde há uma relação complexa entre os conjuntos ALS e as cores em um padrão de coloração XY.</li>
+<br/>
+<li>Aqui está como funciona o Almost ALS-XY-Coloring:</li>
+<br/>
+<li>Identifique os Conjuntos ALS: Encontre dois conjuntos de células ALS (A e B) em uma unidade onde A contém os candidatos X e Y, e B contém os candidatos X e Z. Ambos os conjuntos devem ser conjuntos ALS.</li>
+<br/>
+<li>Verifique as Relações entre os Conjuntos: Verifique se os conjuntos A e B compartilham uma unidade (linha, coluna ou bloco). Além disso, deve haver uma célula (C) fora dos conjuntos ALS que compartilha um candidato com ambos os conjuntos (por exemplo, X) e outro candidato diferente (por exemplo, W) está quase bloqueado no conjunto ALS B.</li>
+<br/>
+<li>Atribua Cores às Células: Atribua cores (por exemplo, vermelho e azul) às células de acordo com os candidatos. Por exemplo, todas as células com candidatos X são vermelhas, e todas as células com candidatos Y e Z são azuis.</li>
+<br/>
+<li>Verifique o Padrão de Coloração XY: Verifique se há um padrão XY de duas cores (vermelho e azul) nas células fora dos conjuntos ALS, seguindo as regras de coloração XY. Se esse padrão estiver presente, você pode eliminar candidatos apropriados em outras células, dependendo da cor que a célula recebe.</li>
+<br/>
+<li>Exemplo:
+<br/>
+<li>Suponha que em uma linha, você tenha o conjunto ALS A com os candidatos {1, 2} nas células {A1, A2}, o conjunto ALS B com os candidatos {1, 3} nas células {B3, B4}, e uma célula C {C5} que compartilha o candidato 1 com ambos os conjuntos ALS, mas o candidato 5 (W) está quase bloqueado no conjunto ALS B. Se A1, A2, B3, B4 e C5 estiverem na mesma linha, você pode atribuir a cor vermelha a A1, A2 e C5, e a cor azul a B3 e B4. Se C5 for azul (contendo o candidato 5), você pode eliminar o candidato 1 de A1 e A2, pois eles são vermelhos.</li>
+<br/>
+<li>O Almost ALS-XY-Coloring é uma técnica avançada que requer uma compreensão sólida dos padrões de candidatos e das regras de coloração XY. Ao aplicar corretamente o Almost ALS-XY-Coloring, você poderá eliminar candidatos de forma estratégica e resolver Sudokus mais complexos.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Almost+ALS-XY-Coloring+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>Técnicas de Conjuntos Bloqueados são um conjunto de estratégias avançadas no Sudoku que envolvem padrões específicos de candidatos em grupos de células (linhas, colunas ou blocos) que limitam as possibilidades para outras células no mesmo grupo. Essas estratégias são úteis em Sudokus mais difíceis e exigem uma compreensão profunda dos padrões de candidatos. Aqui estão algumas das técnicas de Conjuntos Bloqueados:</li>
+<br/>
+<li>Naked Pairs (Pares Nus): Quando duas células em um grupo contêm apenas dois candidatos idênticos, esses candidatos são chamados de "naked pairs". Isso significa que os outros candidatos não podem aparecer nessas células. Você pode eliminar esses candidatos das outras células no mesmo grupo.</li>
+<br/>
+<li>Naked Triples (Triplas Nus): Similar aos naked pairs, naked triples ocorrem quando três células em um grupo contêm três candidatos idênticos. Os outros candidatos no grupo não podem ser esses números, então você pode eliminá-los das outras células.</li>
+<br/>
+<li>Naked Quads (Quads Nus): É uma extensão do naked triples. Se quatro células em um grupo contêm quatro candidatos idênticos, os outros candidatos não podem ser esses números e podem ser eliminados das outras células.</li>
+<br/>
+<li>Hidden Pairs (Pares Escondidos): Quando duas células em um grupo contêm os mesmos dois candidatos, mas há outros candidatos presentes nessas células, esses são chamados de "hidden pairs". Os candidatos que não fazem parte do par podem ser eliminados dessas células.</li>
+<br/>
+<li>Hidden Triples (Triplas Escondidas): É uma extensão dos hidden pairs. Três células em um grupo contêm três candidatos idênticos, mas também contêm outros candidatos. Os candidatos que não fazem parte do trio podem ser eliminados dessas células.</li>
+<br/>
+<li>Hidden Quads (Quads Escondidos): Similar aos hidden triples, mas envolve quatro células em um grupo contendo quatro candidatos idênticos, além de outros candidatos. Os outros candidatos podem ser eliminados dessas células.</li>
+<br/>
+<li>Pointing Pairs (Pares de Pontuação): Se um número aparece apenas em duas células de um bloco, ele não pode aparecer em outras células na mesma linha ou coluna que pertencem ao mesmo bloco. Esse número pode ser eliminado dessas células.</li>
+<br/>
+<li>Box-Line Reduction (Redução Caixa-Linha): Se um número aparece apenas em uma linha ou coluna dentro de um bloco, ele não pode aparecer em outras células na mesma linha ou coluna que não pertencem ao mesmo bloco. Esse número pode ser eliminado dessas células.</li>
+<br/>
+<li>Dominar essas técnicas de Conjuntos Bloqueados é essencial para resolver Sudokus de dificuldade mais elevada. Praticar e identificar esses padrões ajudará a melhorar suas habilidades no jogo.</li>
+
+<hr color="#000"/>
+
+
+<li>O termo "Naked Subset Claim" não é uma técnica de Sudoku padrão amplamente reconhecida até a minha última atualização em janeiro de 2022. As técnicas de Sudoku geralmente se enquadram em categorias amplas, como Conjuntos Bloqueados (Naked Pairs, Naked Triples, Naked Quads), Conjuntos Ocultos (Hidden Pairs, Hidden Triples, Hidden Quads), Cadeias (XY-Chains, Swordfish, X-Wing), entre outras.</li>
+<br/>
+<li>Se "Naked Subset Claim" refere-se a uma técnica introduzida após minha última atualização, eu não teria informações sobre ela. No entanto, se você tiver um exemplo específico ou contexto sobre o que se refere, ficarei feliz em ajudar da melhor forma possível com base nas informações disponíveis até a minha última atualização em janeiro de 2022.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Naked+Subset+Claim+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>Até a minha última atualização em janeiro de 2022, "Hidden Subset Claim" não é uma terminologia comummente reconhecida no contexto do Sudoku. No entanto, "Hidden Subset" é uma técnica conhecida que envolve encontrar grupos de células em uma unidade (linha, coluna ou bloco) que contêm um determinado número de candidatos únicos, mas estão ocultos entre outros candidatos nessas células.</li>
+<br/>
+<li>A técnica Hidden Subset pode ser de dois tipos: Hidden Pairs, Hidden Triples, Hidden Quads, etc., onde você encontra pares, trios, quádruplos etc., de candidatos ocultos nas células de uma unidade.</li>
+<br/>
+<li>Se "Hidden Subset Claim" se refere a uma técnica específica introduzida após a minha última atualização, eu não teria informações sobre ela. Se você tiver um exemplo específico ou contexto sobre o que se refere, por favor, forneça mais informações para que eu possa ajudá-lo da melhor forma possível com base nas informações disponíveis até a minha última atualização em janeiro de 2022.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Hidden+Subset+Claim+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+<li>Até minha última atualização em janeiro de 2022, "Forcing Nets" não é uma técnica de Sudoku padrão ou amplamente reconhecida. Pode ser que esta seja uma técnica introduzida ou popularizada após essa data, ou talvez seja uma terminologia específica usada por determinados jogadores ou comunidades.</li>
+<br/>
+<li>Se "Forcing Nets" se refere a uma técnica específica introduzida após minha última atualização, lamentavelmente, não tenho informações detalhadas sobre ela. Se você tem algum contexto específico sobre o que se refere ou se puder fornecer detalhes adicionais sobre como essa técnica é aplicada, ficarei feliz em ajudar da melhor maneira possível com base nas informações disponíveis até minha última atualização em janeiro de 2022.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=forcing+nets+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>Conjuntos Quase Bloqueados (ALS, do inglês Almost Locked Sets) são uma técnica avançada no Sudoku que envolve um padrão específico de candidatos em grupos de células (linhas, colunas ou blocos) que restringe as possibilidades para outras células no mesmo grupo. É uma extensão dos Conjuntos Bloqueados e é usado em Sudokus mais difíceis.</li>
+<br/>
+<li>A ideia principal por trás dos ALS é que, mesmo que um conjunto de candidatos não esteja completamente bloqueado (ou seja, não existe uma exclusão total de outros números), ele ainda pode ser poderoso para eliminar candidatos em outras células do mesmo grupo. Existem duas principais categorias de ALS: ALS-XZ e ALS-XY.</li>
+<br/>
+<li>ALS-XZ (Conjuntos Quase Bloqueados XZ): Nessa técnica, você está lidando com um conjunto de células onde um número (X) e outro número (Z) estão quase bloqueados (ou seja, eles aparecem apenas nesses dois candidatos), mas outros números também estão presentes nessas células. Apesar de não haver um bloqueio total dos outros números, você pode eliminar X e Z das outras células no mesmo grupo que contém os candidatos X e Z.</li>
+<br/>
+<li>ALS-XY (Conjuntos Quase Bloqueados XY): Nessa variação, você está lidando com um conjunto de células onde dois números (X e Y) estão quase bloqueados, mas outros números também estão presentes nessas células. Apesar de não haver um bloqueio total dos outros números, você pode eliminar X e Y das outras células no mesmo grupo que contém os candidatos X e Y.</li>
+<br/>
+<li>Essas técnicas são particularmente úteis quando você encontra conjuntos de células onde apenas dois ou três candidatos estão presentes, mas não de forma exclusiva. A aplicação eficaz de ALS exige prática e habilidade para identificar padrões específicos em um tabuleiro de Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Almost+Locked+Sets+%28ALS%29+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+
+</h4>
+
+ </body>
+ </html>
+
+ 

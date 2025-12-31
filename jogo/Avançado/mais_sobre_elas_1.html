@@ -1,0 +1,409 @@
+<html>
+ <head>
+  <title>Sudoku:</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    .h2{
+       text-align: center;
+       text-decoration:underline;
+       font-size:40px;
+     }
+
+   .h4{ 
+    font-size:30px; 
+    text-align:justify;
+    }
+   
+     .img{
+       width:540px;
+       height:443px;
+       }
+    
+
+  </style>
+ </head>
+ <body bgcolor="#d3d3d3">
+
+<h2 class="h2">Observações:</h2>
+
+<h2 class="h2">Sobre:</h2>
+
+<h4 class="h4">
+<li> Hidden Pairs, também conhecidos como "Pares Ocultos", são uma técnica avançada no Sudoku. Esta técnica é uma extensão do conceito de pares (ou candidatos duplos) e envolve a identificação de dois números que aparecem apenas em duas células em uma unidade (linha, coluna ou bloco) e não em outras células dessa unidade. Vou explicar como funciona a técnica Hidden Pairs:</li>
+<br/>
+<li>Hidden Pairs (Pares Ocultos):</li>
+<br/>
+<li>Examine uma unidade: Escolha uma unidade (linha, coluna ou bloco) e examine os candidatos em cada célula dessa unidade.</li>
+<br/>
+<li>Identifique dois candidatos que aparecem apenas em duas células: Procure por dois números que estão presentes apenas em duas células da unidade escolhida. Esses são os pares ocultos.</li>
+<br/>
+<li>Elimine outros candidatos nas células do Hidden Pair: Se você encontrou um par oculto, pode eliminar outros candidatos nessas duas células. Isso ocorre porque você sabe que essas duas células devem conter apenas esses dois números, devido à presença do Hidden Pair.</li>
+<br/>
+<li>Procure por Hidden Pairs em outras unidades: Repita o processo em outras linhas, colunas e blocos para encontrar Hidden Pairs em diferentes unidades.</li>
+<br/>
+<li>Hidden Pairs são chamados de "ocultos" porque os números não aparecem como um par evidente, mas apenas como candidatos em duas células da mesma unidade. No entanto, eles ainda seguem a mesma lógica dos pares simples: se você tem dois candidatos que só podem estar em duas células na mesma unidade, você pode eliminá-los de outras células naquela unidade.</li>
+<br/>
+<li>Essa técnica é útil para eliminar candidatos e simplificar o tabuleiro. Praticar a identificação de Hidden Pairs ajudará você a melhorar suas habilidades no Sudoku.</li>
+<br/>
+<a href="https://www.thonky.com/sudoku/" target="_blank" title="link"><li>Link:</li></a>
+<br/>
+<a href="https://www.google.com.br/m?q=Hidden+Pairs%2C+Triples%2C+and+Quads%3A+Hidden+Pairs&client=ms-opera-mobile&channel=new&espv=1"
+target="_blank" title="link"><li>Link:</li></a>
+<br/>
+<a href="https://www.learn-sudoku.com/hidden-triplets.html"   target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+<li>A técnica de "Coloring" (ou coloração) é uma estratégia avançada no Sudoku que envolve atribuir cores ou símbolos a candidatos específicos para analisar padrões no tabuleiro. A aplicação da coloração pode ajudar a encontrar soluções em Sudokus mais difíceis. Vou explicar como funciona a técnica de Coloring:</li>
+
+<br/>
+<li>Coloring (Coloração):</li>
+<br/>
+<li>Escolha duas cores ou símbolos: Primeiro, escolha duas cores (como azul e vermelho) ou símbolos (como "+" e "-") para representar dois números específicos, por exemplo, 1 e 2.</li>
+<br/>
+<li>Atribua cores ou símbolos às células: Marque as células do tabuleiro onde esses dois números podem aparecer com as cores ou símbolos escolhidos. Por exemplo, todas as células onde o número 1 pode aparecer são marcadas de azul, e as células onde o número 2 pode aparecer são marcadas de vermelho.</li>
+<br/>
+<li>Aplique a regra de coloração: Se duas células da mesma cor estão na mesma unidade (linha, coluna ou bloco), isso cria um "Conjugate Pair". Se um número 1 está em uma célula azul e outro número 1 está em uma célula azul diferente na mesma unidade, você pode eliminar outros candidatos 1 dessas duas células.</li>
+<br/>
+<li>Identifique e siga os padrões: À medida que você continua colorindo o tabuleiro e aplicando a regra de coloração, você pode identificar padrões mais complexos, como "Swordfish" ou "Jellyfish", que permitem eliminações mais amplas no tabuleiro.</li>
+<br/>
+<li>Encontre contradições: Se a aplicação da coloração levar a uma contradição (por exemplo, dois números 1 em uma mesma linha e bloco marcados com a mesma cor), você sabe que a atribuição de cores está incorreta, e você deve revisar suas escolhas.</li>
+<br/>
+<li>A técnica de Coloring é poderosa, especialmente quando combinada com outras estratégias avançadas. Ela permite a identificação de padrões complexos no Sudoku, levando a eliminações significativas de candidatos. No entanto, requer prática para identificar esses padrões e aplicar a técnica com precisão.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Coloring+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<br/>
+<a href="https://www.sudoku9x9.com/coloring.php" target="_blank" title="link"><li>Link:</li></a>
+<br/>
+<a href="https://www.sudokuwiki.org/Singles_Chains" target="_blank" title="link"><li>Link:</li></a>
+<br/>
+
+<hr color="#000"/>
+
+<li>A técnica "Forcing Chains" (Cadeias Forçadas) no Sudoku é uma estratégia avançada que envolve criar uma sequência de células conectadas onde candidatos são forçados a aparecer em uma determinada ordem, levando a uma conclusão inevitável. Aqui está como funciona:</li>
+<br/>
+<li>Forcing Chains (Cadeias Forçadas):</li>
+<br/>
+<li>Escolha um candidato:Comece escolhendo um candidato em uma célula específica no tabuleiro.</li>
+<br/>
+<li>Encontre uma cadeia de células: Identifique uma série de células conectadas onde o candidato escolhido pode aparecer. Estas células podem estar em uma linha, coluna ou bloco, e podem incluir outros candidatos além do inicial.</li>
+<br/>
+<li>Crie a Cadeia Forçada: Siga a cadeia de células, alternando entre os candidatos que podem aparecer nessas células. Comece com o candidato inicial e siga a sequência, indicando as alternâncias de candidatos.</li>
+<br/>
+<li>Encontre uma contradição ou uma conclusão: Ao seguir a cadeia, você pode encontrar uma contradição (por exemplo, dois candidatos diferentes não podem aparecer na mesma célula) ou chegar a uma conclusão inevitável (por exemplo, um candidato deve aparecer em uma célula específica).</li>
+<br/>
+<li>Realize as eliminações ou preenchimentos: Se você encontrou uma contradição, isso significa que o candidato inicial está incorreto naquela célula. Se você chegou a uma conclusão, isso significa que o candidato indicado deve estar presente na célula específica.</li>
+<br/>
+<li>As Cadeias Forçadas podem ser simples, envolvendo apenas algumas células, ou complexas, com várias ramificações.Elas são úteis para Sudokus de níveis de dificuldade avançados, onde outras técnicas mais simples podem não ser suficientes para resolver o quebra-cabeça. Praticar a identificação e aplicação das Cadeias Forçadas é essencial para dominar essa técnica no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/search?q=++++++Forcing+Chains+sudoku&client=ms-opera-mobile&sca_esv=578990385&channel=new&espv=1&sxsrf=AM9HkKlF_a07rcu3KVCh2YELfnThaGfdqA%3A1698966268928&ei=_CpEZbqlOMOO0Abj_rSwBQ&oq=++++++Forcing+Chains+sudoku&gs_lp=EhNtb2JpbGUtZ3dzLXdpei1zZXJwIhsgICAgICBGb3JjaW5nIENoYWlucyBzdWRva3UyBhAAGAcYHjIIEAAYBxgeGAoyCBAAGMsBGIAESMZIUOQUWOlAcAd4AZABAJgBzgGgAbALqgEFMC44LjG4AQPIAQD4AQH4AQLCAgoQABhHGNYEGLADwgIHECMYigUYJ8ICCxAAGIAEGLEDGIMBwgIHEAAYigUYQ8ICCBAAGIAEGLEDwgIEEAAYA-IDBBgAIEGIBgGQBgg&sclient=mobile-gws-wiz-serp" target="_blank" title="link"><li>Link:</li></a>
+<br/>
+
+<a href="https://www.sudokuwiki.org/Digit_Forcing_Chains" target="_blank" title="link"><li>Link:</li></a>
+<br/>
+
+<a href="https://www.sudokuoftheday.com/techniques/forcing-chains" target="_blank" title="link"><li>Link:</li></a>
+<br/>
+
+<a href="https://m.youtube.com/watch?v=_M_5ugvMn8g" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+<li>O "X-Cycle" é uma técnica avançada no Sudoku que envolve a identificação de um padrão específico no tabuleiro para eliminar candidatos. Esta técnica é conhecida como "Cycle" porque envolve uma cadeia de candidatos que forma um ciclo. O X-Cycle é uma variação mais complexa do "Simple Coloring". Vou explicar como funciona:</li>
+<br/>
+<li>X-Cycle (Ciclo X):</li>
+<br/>
+<li>Identifique uma cadeia de células: Encontre uma cadeia de células no tabuleiro onde um candidato específico (por exemplo, número 1) pode aparecer. Esta cadeia deve ser uma sequência de células conectadas em uma linha, coluna ou bloco.</li>
+<br/>
+<li>Forme um ciclo: O X-Cycle ocorre quando você tem duas cadeias de células interligadas que se encontram em duas células compartilhadas, formando um "X". Por exemplo, se você tem uma cadeia na linha 1 e outra na coluna 1, e ambas se encontram na célula (1,1), isso forma um X-Cycle.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou um X-Cycle, pode eliminar o candidato (neste caso, o número 1) de outras células que compartilham linha, coluna ou bloco com as duas células onde as cadeias se encontram.</li>
+<br/>
+<li>Repita o processo com outras cadeias e candidatos: Procure por outros X-Cycles com diferentes candidatos e cadeias no tabuleiro.</li>
+<br/>
+<li>O X-Cycle é uma técnica avançada e requer uma boa compreensão das regras do Sudoku e prática para ser identificado e aplicado com sucesso. Ele é especialmente útil em Sudokus difíceis, onde padrões mais complexos precisam ser analisados para progredir no jogo.</li>
+<br/>
+<a href="https://www.sudokuwiki.org/X_Cycles" target="_blank" title="link"><li>Link:</li></a>
+<br/>
+
+<a href="https://www.google.com.br/m?q=X-Cycle+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<br/>
+
+<a href="http://www.taupierbw.be/SudokuCoach/SC_XCycle.shtml" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+<li>O "Skyscraper" é uma técnica avançada no Sudoku que envolve a identificação de um padrão específico no tabuleiro para eliminar candidatos. Esta técnica é uma variação das estratégias de "Fish Patterns". Aqui está como funciona:</li>
+<br/>
+<li>Skyscraper:</li>
+<br/>
+<li>Escolha um número: Comece escolhendo um número específico (por exemplo, 1) que você deseja usar para aplicar a técnica Skyscraper.</li 
+<br/>
+<li>Identifique duas colunas ou duas linhas: Procure por duas colunas ou duas linhas onde o número escolhido (por exemplo, 1) pode aparecer como candidato em exatamente duas células em cada coluna ou linha.</li>
+<br/>
+<li>Verifique as interseções: Veja as interseções das duas colunas ou linhas escolhidas. Se houver duas células onde o número escolhido pode aparecer em ambas as colunas ou linhas e essas células estão na mesma linha (ou coluna), você encontrou um Skyscraper.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou um Skyscraper, pode eliminar o número escolhido (por exemplo, 1) de outras células na linha (ou coluna) onde as duas células interseccionam o Skyscraper.</li>
+<br/>
+<li>O Skyscraper é chamado assim porque visualmente se assemelha a um arranha-céu, com duas "torres" (as duas colunas ou linhas) e um "teto" e um "chão" (as duas células interseccionando o Skyscraper). Esta técnica é especialmente útil em Sudokus de nível avançado, onde padrões mais complexos precisam ser identificados para progredir no jogo. Prática e paciência são essenciais para aplicar o Skyscraper efetivamente.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Skyscraper+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<br/>
+
+<a href="http://www.taupierbw.be/SudokuCoach/SC_Skyscraper.shtml" target="_blank" title="link"><li>Link:</li></a>
+<br/>
+
+<a href="https://m.youtube.com/watch?v=VeEu03u9pUs" target="_blank" title="link"><li>Link:</li></a>
+<br/>
+
+<a href="https://m.youtube.com/watch?v=LhHaXWZOJwg" target="_blank" title="link"><li>Link:</li></a>
+
+
+<hr color="#000"/>
+
+<li>Naked Pairs, Triples, and Quads: Naked Pairs</li>
+<br/>
+<li>"Naked Pairs" (Pares Nus) é uma técnica básica no Sudoku que envolve a identificação de duas células em uma unidade (linha, coluna ou bloco) que contêm exatamente os mesmos dois candidatos. Esta técnica é chamada de "nua" porque os candidatos estão "despidos", ou seja, não há outros candidatos nessas células. Aqui está como funciona:</li>
+<br/>
+<li>Naked Pairs (Pares Nus):</li>
+<br/>
+<li>Examine uma unidade: Escolha uma unidade (linha, coluna ou bloco) e examine os candidatos em cada célula dessa unidade.</li>
+<br/>
+<li>Identifique um par de candidatos: Procure por duas células na unidade onde exatamente os mesmos dois candidatos estão presentes. Por exemplo, se duas células em uma linha têm candidatos 3 e 7, isso forma um par nu.</li>
+<br>
+<li>Elimine outros candidatos: Se você encontrou um par nu, pode eliminar os candidatos que fazem parte do par das outras células na mesma unidade. Neste exemplo, se as células têm candidatos 3 e 7, você pode eliminar outros candidatos 3 e 7 dessa linha.</li>
+<br/>
+<li>Os pares nus são úteis porque, se dois candidatos só podem estar em duas células em uma unidade, eles não podem aparecer em outras células da mesma unidade. Portanto, você pode eliminá-los dessas outras células.</li>
+<br/>
+<li>Essa técnica é simples, mas eficaz para eliminar candidatos e reduzir o número de possibilidades no tabuleiro.Praticar a identificação de pares nus ajudará você a melhorar suas habilidades no Sudoku, especialmente em níveis de dificuldade médio.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Naked+Pairs%2C+Triples%2C+and+Quads%3A+Naked+Pairs+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<br/>
+<a href="https://www.sudokuwiki.org/Naked_Candidates" target="_blank" title="link"><li>Link:</li></a>
+<br/>
+<a href="https://masteringsudoku.com/naked-pairs" target="_blank" title="link"><li>Link:</li></a>
+<br/>
+
+<a href="https://hodoku.sourceforge.net/en/tech_naked.php" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+
+<li>O "X-Wing" é uma técnica avançada no Sudoku que envolve a identificação de um padrão específico no tabuleiro para eliminar candidatos. Essa técnica é especialmente útil em Sudokus de nível intermediário a avançado. Aqui está como funciona o X-Wing:</li>
+<br/>
+<li>X-Wing:</li>
+<br/>
+<li>Escolha um número: Comece escolhendo um número específico (por exemplo, 1) que você deseja usar para aplicar a técnica X-Wing.</li>
+<br/>
+<li>Identifique duas linhas ou duas colunas: Procure por duas linhas ou duas colunas onde o número escolhido (por exemplo, 1) pode aparecer como candidato em exatamente duas células em cada linha ou coluna.</li>
+<br/>
+<li>Verifique as interseções: Veja as interseções das duas linhas ou colunas escolhidas. Se houver duas células onde o número escolhido pode aparecer em ambas as linhas (ou colunas) e essas células estão na mesma coluna (ou linha), você encontrou um X-Wing.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou um X-Wing, pode eliminar o número escolhido (por exemplo, 1) de outras células nas colunas (ou linhas) onde as duas células interseccionam o X-Wing.</li>
+<br/>
+<li>O X-Wing é chamado assim porque visualmente se assemelha à letra X formada pelas interseções das linhas ou colunas. Esta técnica é eficaz para eliminar candidatos e simplificar o tabuleiro, levando a progressos no jogo. Prática e paciência são essenciais para identificar e aplicar o X-Wing com sucesso.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=x-wing+sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+<li>O "Swordfish" é uma técnica avançada no Sudoku que envolve a identificação de um padrão específico no tabuleiro para eliminar candidatos. É uma extensão do conceito do X-Wing, mas envolve três linhas ou colunas em vez de duas. Aqui está como funciona o Swordfish:</li>
+<br/>
+<li>Swordfish:</li>
+<br/>
+<li>Escolha um número: Comece escolhendo um número específico (por exemplo, 1) que você deseja usar para aplicar a técnica Swordfish.</li>
+<br/>
+<li>Identifique três linhas ou colunas: Procure por três linhas ou três colunas onde o número escolhido aparece como candidato em exatamente duas ou três células em cada linha ou coluna.</li>
+<br/>
+<li>Verifique as interseções: Olhe para as interseções das linhas ou colunas escolhidas. Se houver duas ou três células onde o número escolhido é candidato nas três linhas (ou colunas) e essas células estão na mesma coluna (ou linha), você encontrou um Swordfish.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou um Swordfish, pode eliminar o número escolhido das outras células nas mesmas colunas (ou linhas) onde as células interseccionam o Swordfish. Isso ocorre porque o número deve aparecer exatamente duas ou três vezes nas linhas ou colunas escolhidas e, devido à configuração do Swordfish, ele não pode aparecer em outras células nessas linhas ou colunas.</li>
+<br/>
+<li>Realize as eliminações: Após identificar o Swordfish, remova o número escolhido das células afetadas nas outras linhas ou colunas.</li>
+<br/>
+<li>O Swordfish é uma técnica avançada e requer uma boa compreensão das regras do Sudoku, bem como prática para ser identificado e aplicado com sucesso. Ele é especialmente útil em Sudokus de nível avançado, onde padrões mais complexos precisam ser analisados para progredir no jogo. Paciência e prática são essenciais para dominar a técnica do Swordfish.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Swordfish+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+
+<hr color="#000"/>
+
+
+<li>
+O "XY-Wing" é uma técnica avançada no Sudoku que envolve três células com três candidatos diferentes. É chamado de "XY-Wing" porque os três candidatos formam um padrão semelhante a um "Y" no tabuleiro. Essa técnica é eficaz para eliminar candidatos em outras células. Aqui está como funciona o XY-Wing:</li>
+<br/>
+<li>XY-Wing:</li>
+<br/>
+<li>Identifique três células:Procure por três células onde três candidatos diferentes (por exemplo, A, B e C) estão presentes. Essas células devem estar interconectadas de uma maneira específica:</li>
+<br/>
+<li>A primeira célula (A) deve ter candidatos A e B.</li>
+<br/>
+<li>A segunda célula (B) deve ter candidatos B e C.</li>
+<br/>
+<li>A terceira célula (C) deve ter candidatos A e C.</li>
+<br/>
+<li>As três células devem estar conectadas em uma linha, coluna ou bloco.</li>
+
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou um XY-Wing, pode eliminar o candidato que é comum a todas as três células das outras células na mesma unidade (linha, coluna ou bloco) onde as três células do XY-Wing estão localizadas.</li>
+<br/>
+<li>Realize as eliminações: Após identificar o XY-Wing, remova o candidato comum às três células das outras células na mesma unidade.</li>
+<br/>
+<li>O XY-Wing é uma técnica avançada, mas poderosa, especialmente quando combinada com outras estratégias avançadas. Ele é útil para Sudokus de nível intermediário a avançado, onde padrões mais complexos precisam ser identificados para progredir no jogo. Prática e paciência são essenciais para identificar e aplicar o XY-Wing com sucesso.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XY-Wing+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+<li>O "XYZ-Wing" é uma técnica avançada no Sudoku que envolve três células com três candidatos diferentes. É chamado de "XYZ-Wing" porque os três candidatos formam um padrão semelhante a um "Z" no tabuleiro. Essa técnica é eficaz para eliminar candidatos em outras células. Aqui está como funciona o XYZ-Wing:</li>
+<br/>
+<li>XYZ-Wing:</li>
+<br/>
+<li>Identifique três células: Procure por três células onde três candidatos diferentes (por exemplo, X, Y e Z) estão presentes. Essas células devem estar interconectadas de uma maneira específica:</li>
+<br/>
+<li>A primeira célula (X) deve ter candidatos X e Y.</li>
+<br/>
+<li>A segunda célula (Y) deve ter candidatos Y e Z.</li>
+<br/>
+<li>A terceira célula (Z) deve ter candidatos Z e X.</li>
+<br/>
+<li>As três células não precisam estar em uma linha, coluna ou bloco; elas podem estar em 
+posições diferentes no tabuleiro.</li>
+
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou um XYZ-Wing, pode eliminar o candidato que é comum a todas as três células das outras células na mesma unidade (linha, coluna ou bloco) onde as três células do XYZ-Wing estão localizadas.</li>
+<br/>
+<li>Realize as eliminações: Após identificar o XYZ-Wing, remova o candidato comum às três células das outras células na mesma unidade.</li>
+<br/>
+<li>O XYZ-Wing é uma técnica avançada e pode ser um pouco mais difícil de identificar do que outras técnicas mais simples. No entanto, quando identificado corretamente, pode levar a eliminações significativas no tabuleiro, simplificando o jogo. Prática e paciência são essenciais para
+identificar e aplicar o XYZ-Wing com sucesso.</li>
+<br/>
+<a href="https://www.google.com.br/search?q=XYZ-WingSudoku&client=ms-opera-mobile&sca_esv=579179295&channel=new&espv=1&sxsrf=AM9HkKnEBq_pqZaY57PIeQCRnlgcZjUnBA%3A1699025944178&ei=GBRFZdO4Ctrc1sQPwMCIiA4&oq=XYZ-WingSudoku&gs_lp=EhNtb2JpbGUtZ3dzLXdpei1zZXJwIg5YWVotV2luZ1N1ZG9rdTIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMggQABgIGAcYHjIIEAAYCBgHGB4yCBAAGAgYBxgeMgUQABiiBEiabVCcCljcMXACeAGQAQCYAbABoAGFC6oBAzAuObgBA8gBAPgBAcICChAAGEcY1gQYsAPCAgcQIxiKBRgnwgILEAAYgAQYsQMYgwHCAgcQABiKBRhDwgIEEAAYA-IDBBgAIEGIBgGQBgg&sclient=mobile-gws-wiz-serp" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+<li>"Sudoku Chains" (Cadeias no Sudoku) é uma técnica avançada que envolve a criação de uma sequência de células interconectadas para encontrar uma solução para o quebra-cabeça. Essa técnica é uma das mais poderosas e flexíveis no Sudoku, pois pode ser adaptada para resolver Sudokus de qualquer nível de dificuldade. Existem várias variações de cadeias no Sudoku, incluindo "Alternating Inference Chains" (AIC), "Almost Locked Sets" (ALS), entre outras. Vou explicar a técnica básica usando AIC:</li>
+<br/>
+<li>Sudoku Chains (Cadeias no Sudoku) - Variação AIC:</li>
+<br/>
+<li>Escolha dois candidatos: Comece escolhendo dois candidatos em células específicas no tabuleiro. Esses candidatos serão os pontos de partida e de chegada da sua cadeia.</li>
+<br/>
+<li>Encontre uma sequência de células conectadas: Crie uma cadeia de células interconectadas, onde cada célula na sequência contém um candidato que é uma escolha alternativa ao candidato da célula anterior. Por exemplo, se você escolher os candidatos 1 e 2, a cadeia poderia ser 1 -> 2 -> 1 -> 2 e assim por diante.</li>
+<br/>
+<li>Encontre uma contradição ou uma conclusão: Siga a cadeia até encontrar uma contradição (por exemplo, dois candidatos diferentes não podem aparecer na mesma célula) ou uma conclusão (por exemplo, um candidato deve aparecer em uma célula específica). Se encontrar uma contradição, você sabe que o candidato inicial na primeira célula da cadeia está incorreto.Se encontrar uma conclusão, essa conclusão é uma dedução válida para o quebra-cabeça.</li>
+<br/>
+<li>Aplique a dedução: Se você encontrou uma conclusão, use essa dedução para eliminar ou preencher números no tabuleiro conforme apropriado.</li>
+<br/>
+<li>As cadeias no Sudoku são técnicas poderosas que podem ser adaptadas para resolver uma variedade de padrões no tabuleiro. Elas podem ser tão simples ou complexas quanto necessário, dependendo do quebra-cabeça. A prática e a familiaridade com os padrões do Sudoku são fundamentais para aplicar eficazmente as cadeias no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Sudoku+Chains+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+<li>O "Turbot Fish" é uma técnica avançada  no Sudoku que é uma variação do "Swordfish". Assim como o Swordfish, o Turbot Fish é um padrão que envolve três linhas ou três colunas, onde um determinado número aparece como candidato em exatamente duas ou três células em cada linha ou coluna. Aqui está como funciona o Turbot Fish:</li>
+<br/>
+<li>Turbot Fish:</li>
+<br/>
+<li>Escolha um número: Comece escolhendo um número específico (por exemplo, 1) que você deseja usar para aplicar a técnica Turbot Fish.</li>
+<br/>
+<li>Identifique três linhas ou três colunas: Procure por três linhas ou três colunas onde o número escolhido aparece como candidato em exatamente duas ou três células em cada linha ou coluna.</li>
+<br/>
+<li>Verifique as interseções: Olhe para as interseções das linhas ou colunas escolhidas. Se houver duas ou três células onde o número escolhido é candidato nas três linhas (ou colunas) e essas células estão na mesma coluna (ou linha), você encontrou um Turbot Fish.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou um Turbot Fish, pode eliminar o número escolhido das outras células na mesma unidade (linha, coluna ou bloco) onde as células interseccionam o Turbot Fish.</li>
+<br/>
+<li>O Turbot Fish é uma técnica mais rara, mas poderosa, que pode levar a eliminações significativas no tabuleiro. Assim como outras técnicas avançadas, a prática e a observação cuidadosa dos padrões no tabuleiro são essenciais para identificar e aplicar o Turbot Fish com sucesso. Paciência e persistência são importantes ao trabalhar com técnicas avançadas no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Turbot+Fish+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+<li>O "Jellyfish" é uma técnica avançada no Sudoku que é uma extensão do "Turbot Fish". Assim como o Turbot Fish, o Jellyfish também envolve quatro linhas ou quatro colunas, onde um número específico aparece como candidato em exatamente duas ou três células em cada linha ou coluna. Aqui está como funciona o Jellyfish:</li>
+<br/>
+<li>Jellyfish:</li>
+<br/>
+<li>Escolha um número: Comece escolhendo um número específico (por exemplo, 1) que você deseja usar para aplicar a técnica Jellyfish.</li>
+<br/>
+<li>Identifique quatro linhas ou quatro colunas: Procure por quatro linhas ou quatro colunas onde o número escolhido aparece como candidato em exatamente duas ou três células em cada linha ou coluna.</li>
+<br/>
+<li>Verifique as interseções: Olhe para as interseções das linhas ou colunas escolhidas. Se houver duas ou três células onde o número escolhido é candidato nas quatro linhas (ou colunas) e essas células estão usar para aplicar a técnica Jellyfish.</li>
+<br/>
+<li>Identifique quatro linhas ou quatro colunas: Procure por quatro linhas ou quatro colunas onde o número escolhido aparece como candidato em exatamente duas ou três células em cada linha ou coluna.</li>
+<br/>
+<li>Verifique as interseções: Olhe para as interseções das linhas ou colunas escolhidas. Se houver duas ou três células onde o número escolhido é candidato nas quatro linhas (ou colunas) e essas células estão na mesma coluna (ou linha), você encontrou um Jellyfish.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou um Jellyfish, pode eliminar o número escolhido das outras células nas mesmas colunas (ou linhas) onde as células interseccionam o Jellyfish.</li>
+<br/>
+<li>O Jellyfish é uma técnica poderosa que pode levar a eliminações significativas no tabuleiro. No entanto, assim como outras técnicas avançadas, o Jellyfish é uma ocorrência mais rara e requer prática para ser identificado com sucesso. Observar padrões cuidadosamente e praticar a aplicação dessas técnicas em diferentes quebra-cabeças são essenciais para dominar o Jellyfish no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Jellyfish+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+<li>O "Squirmbag" é uma técnica avançada no Sudoku que envolve quatro conjuntos de candidatos que se intersectam de uma maneira específica. Esta técnica é uma extensão do "Jellyfish". Aqui está como funciona o Squirmbag:</li>
+<br/>
+<li>Squirmbag:</li>
+<br/>
+<li>Escolha um número: Comece escolhendo um número específico (por exemplo, 1) que você deseja usar para aplicar a técnica Squirmbag.</li>
+<br/>
+<li>Identifique quatro linhas ou quatro colunas: Procure por quatro linhas ou quatro colunas onde o número escolhido aparece como candidato em exatamente duas ou três células em cada linha ou coluna.</li>
+<br/>
+<li>Verifique as interseções: Olhe para as interseções das linhas ou colunas escolhidas. Se houver duas ou três células onde o número escolhido é candidato nas quatro linhas (ou colunas) e essas células estão na mesma coluna (ou linha), você encontrou um Squirmbag.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou um Squirmbag, pode eliminar o número escolhido das outras células nas mesmas colunas (ou linhas) onde as células interseccionam o Squirmbag.</li>
+<br/>
+<li>O Squirmbag é uma técnica poderosa que pode levar a eliminações significativas no tabuleiro. No entanto, assim como outras técnicas avançadas, o Squirmbag é uma ocorrência mais rara e requer prática para ser identificado com sucesso. Observar padrões cuidadosamente e praticar a aplicação dessas técnicas em diferentes quebra-cabeças são essenciais para dominar o Squirmbag no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=Squirmbag+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+<li>O "XY-Chain" é uma técnica avançada no Sudoku que envolve a criação de uma cadeia de células interconectadas, onde cada célula contém dois candidatos. É também conhecido como "Chain of Pairs". O XY-Chain é uma forma de cadeia no Sudoku e é útil para eliminar candidatos no tabuleiro. Aqui está como funciona:</li>
+<br/>
+<li>XY-Chain (Cadeia XY):</li>
+<br/>
+<li>Escolha duas células iniciais: Comece escolhendo duas células onde cada uma contém exatamente dois candidatos. Vamos chamá-las de A e B.</li>
+<br/>
+<li>Encontre células interconectadas: A partir de cada célula inicial (A e B), encontre células interconectadas, onde um dos candidatos da célula anterior é o mesmo que o candidato da célula atual.</li>
+<br/>
+<li>Forme a cadeia: Continue identificando células interconectadas, criando uma sequência de células onde o mesmo candidato é compartilhado entre as células adjacentes.</li>
+<br/>
+<li>Verifique a conclusão ou contradição: Siga a cadeia até encontrar uma conclusão (um candidato deve aparecer em uma célula específica) ou uma contradição (dois candidatos diferentes não podem aparecer na mesma célula). Se encontrar uma contradição, você sabe que o candidato inicial na primeira célula da cadeia está incorreto. Se encontrar uma conclusão, essa dedução é válida para o quebra-cabeça.</li>
+<br/>
+<li>Aplique a dedução: Se você encontrar uma conclusão, use essa dedução para eliminar ou preencher números no tabuleiro conforme apropriado.</li>
+<br/>
+<li>O XY-Chain é uma técnica poderosa que pode ser usada em Sudokus de nível intermediário a avançado. Praticar a identificação e aplicação das cadeias XY ajudará você a melhorar suas habilidades no Sudoku, especialmente em níveis de dificuldade mais elevados.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=XY-Chain+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+<li>O "WXYZ-Wing" é uma técnica avançada no Sudoku que envolve quatro conjuntos de células onde um candidato específico, digamos X, aparece em exatamente duas ou três células em cada conjunto. Além disso, cada conjunto deve compartilhar pelo menos uma célula com pelo menos um dos outros conjuntos. Aqui está como funciona o WXYZ-Wing:</li>
+<br/>
+<li>WXYZ-Wing:</li>
+<br/>
+<li>Escolha um candidato: Comece escolhendo um candidato específico (por exemplo, X) que você deseja usar para aplicar a técnica WXYZ-Wing.</li>
+<br/>
+<li>Identifique quatro conjuntos de células: Procure por quatro conjuntos de células onde o candidato escolhido (X) aparece em exatamente duas ou três células em cada conjunto. Além disso, cada conjunto deve compartilhar pelo menos uma célula com pelo menos um dos outros conjuntos.</li>
+<br/>
+<li>Verifique as interseções: Olhe para as interseções dos conjuntos de células escolhidos. Se houver pelo menos um conjunto onde todas as células compartilham a mesma unidade (linha, coluna ou bloco) com um dos outros conjuntos, você encontrou um WXYZ-Wing.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou um WXYZ-Wing, pode eliminar o candidato (X) de outras células na mesma unidade onde as células do WXYZ-Wing estão localizadas.</li>
+<br/>
+<li>O WXYZ-Wing é uma técnica mais rara e complexa, mas poderosa, que pode levar a eliminações significativas no tabuleiro. Assim como outras técnicas avançadas, a prática e a observação cuidadosa dos padrões no tabuleiro são essenciais para identificar e aplicar o WXYZ-Wing com sucesso. Paciência e persistência são importantes ao trabalhar com técnicas avançadas no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=WXYZ-Wing+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+
+
+
+<li>O "W-Wing" é uma técnica avançada no Sudoku que envolve três conjuntos de células (por exemplo, três linhas, três colunas ou três blocos) onde um candidato específico aparece em exatamente duas ou três células em cada conjunto. O padrão visual do W-Wing se assemelha à letra "W". Aqui está como funciona o W-Wing:</li>
+<br/>
+<li>W-Wing:</li>
+<br/>
+<li>Escolha um candidato: Comece escolhendo um candidato específico (por exemplo, X) que você deseja usar para aplicar a técnica W-Wing.</li>
+<br/>
+<li>Identifique três conjuntos de células: Procure por três conjuntos de células onde o candidato escolhido (X) aparece em exatamente duas ou três células em cada conjunto. Além disso, cada conjunto deve compartilhar pelo menos uma célula com pelo menos um dos outros conjuntos.</li>
+<br/>
+<li>Verifique as interseções: Olhe para as interseções dos conjuntos de células escolhidos. Se houver pelo menos uma célula onde todas as três linhas, colunas ou blocos se cruzam e contêm o candidato X, você encontrou um W-Wing.</li>
+<br/>
+<li>Aplique a regra de eliminação: Se você encontrou um W-Wing, pode eliminar o candidato (X) de outras células na mesma linha, coluna ou bloco onde as células do W-Wing estão localizadas.</li>
+<br/>
+<li>O W-Wing é uma técnica avançada e pode ser um pouco mais difícil de identificar do que outras técnicas mais simples. No entanto, quando identificado corretamente, pode levar a eliminações significativas no tabuleiro, simplificando o jogo. Prática e paciência são essenciais para identificar e aplicar o W-Wing com sucesso no Sudoku.</li>
+<br/>
+<a href="https://www.google.com.br/m?q=W-Wing+Sudoku&client=ms-opera-mobile&channel=new&espv=1" target="_blank" title="link"><li>Link:</li></a>
+<hr color="#000"/>
+<li>A regra ALS-XZ (Almost Locked Sets - XZ Rule) é uma técnica avançada no Sudoku que envolve conjuntos quase bloqueados. Esta técnica é útil para eliminar candidatos quando há uma configuração específica de conjuntos quase bloqueados no tabuleiro. Aqui está como funciona a regra ALS-XZ:</li>
+<br/>
+
+
+<hr color="#000"/>
+
+</h4>
+
+ </body>
+ </html>
+
+ 

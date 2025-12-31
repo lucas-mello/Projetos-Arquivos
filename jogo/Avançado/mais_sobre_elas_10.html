@@ -1,0 +1,472 @@
+<html>
+ <head>
+  <title>Sudoku:</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    .h2{
+       text-align: center;
+       text-decoration:underline;
+       font-size:40px;
+     }
+
+   .h4{ 
+    font-size:30px; 
+    text-align:justify;
+    }
+   
+     .img{
+       width:540px;
+       height:443px;
+       }
+    
+
+  </style>
+ </head>
+ <body bgcolor="#d3d3d3">
+
+<h2 class="h2">Observações:</h2>
+
+<h2 class="h2">EXPLORANDO MAIS SOBRE OUTRAS:</h2>
+
+<h4 class="h4">
+<li>2-String Kite:</li>
+<br/>
+<li>Standard Pattern - Padrão padrão</li>
+<br/>
+<li>A Pipa de Duas Cordas é uma segunda forma especial de Peixe-Turbot, encontrada em muitos sudokus. Descrição: Concentre-se novamente em um dígito. Encontre uma linha e uma coluna que tenham apenas dois candidatos restantes (as "cordas"). Um candidato da linha e um candidato da coluna devem estar no mesmo bloco. O candidato que estiver em contato com as outras duas células pode ser eliminado.
+
+As Pipas de Duas Cordas funcionam de forma semelhante aos Arranha-Céus: uma das duas extremidades das cordas deve ser verdadeira.</li>
+<br/>
+<img src="Imagens/2sk01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/2sk02.png" alt="imagem" border="5" class="img">
+<li>Exemplo à esquerda: Candidato 5. A primeira string está na coluna 7 (candidatos r29c7), a outra está na linha 8 (candidatos r8c49). Os pontos finais r9c7 e r8c9 estão ambos na caixa 9. Se r2c7 não for verdadeiro, então r9c7 tem que ser verdadeiro, r8c9 tem que ser falso e r8c4 tem que ser verdadeiro. Se r8c4 não for verdadeiro, o mesmo argumento leva a r2c7 ser verdadeiro. De qualquer forma, r2c4, que vê tanto r2c7 quanto r8c4, não pode ser verdadeiro.
+
+Exemplo à direita: Candidato 9, strings r6c16 e r47c2, conectadas na caixa 4: r7c6 não pode ser 9.</li>
+<br/>
+<li>Dual 2-String Kite</li>
+<br/>
+<li>Às vezes, os mesmos dois candidatos conectados na caixa comum podem ser ligados por quatro cordas diferentes, formando efetivamente duas Pipas de Duas Cordas, que eliminam dois candidatos. Essas duas Pipas de Duas Cordas podem ser consideradas como um único movimento e podem ser chamadas de Pipa Dupla de Duas Cordas. O HoDoKu suporta formas duplas apenas como uma opção (elas sempre podem ser replicadas pelas duas pipas que compõem a forma dupla).</li>
+<br/>
+<img src="Imagens/d2sk01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/d2sk02.png" alt="imagem" border="5" class="img">
+<li>Exemplo à esquerda: Os candidatos comuns são r1c3 e r3c1 na caixa 1. Os dois conjuntos de elementos que podem ser construídos com eles são: r1c38/r36c1 (r6c8<>1) e r3c19/r14c3 (r4c9<>1).
+
+Exemplo à direita: Os candidatos comuns são r7c2 e r9c1 na caixa 7. Conjuntos de elementos: r29c1/r7c28 (r2c8<>4) e r17c2/r9c19 (r1c9<>4).</li>
+<br/>
+<hr color="#000"/>
+<li>Turbot Fish:</li>
+<br/>
+<li>Um Turbot Fish é, na verdade, uma cadeia e não um peixe. Para uma descrição detalhada das várias técnicas e termos relacionados a cadeias, consulte Cadeias: Introdução.
+
+Um Turbot Fish é uma X-Chain com exatamente quatro candidatos. Várias formas podem ser construídas com essa cadeia. Uma delas se assemelha a um peixe, o que deu nome à técnica (observe o exemplo à direita: trace duas linhas do candidato vermelho até os candidatos verde e azul mais próximos para ver a forma de peixe).
+
+Os Turbot Fishes caíram um pouco em desuso. Uma das razões é que a maioria dos padrões principais do Turbot foram descritos como padrões separados com seus próprios nomes: Skyscraper, 2-String Kite e Empty Rectangle (apenas dois candidatos no próprio retângulo vazio).</li>
+<br/>
+<img src="Imagens/tf01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/tf02.png" alt="imagem" border="5" class="img">
+<li>Os exemplos acima mostram duas das possibilidades: à esquerda, um retângulo vazio; à direita, uma pipa de duas linhas.</li>
+<br/>
+<img src="Imagens/tf03.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/tf04.png" alt="imagem" border="5" class="img">
+<li>Os exemplos acima: à esquerda, um arranha-céu; à direita, um retângulo vazio (o exemplo da direita contém, na verdade, um retângulo vazio duplo).</li>
+<br/>
+<hr color="#000"/>
+<li>Empty Rectangle - Retângulo vazio:</li>
+<br/>
+<li>Standard Pattern - Padrão padrão</li>
+<br/>
+<li>Retângulos vazios têm sido usados ​​de diversas formas em técnicas muito avançadas. O padrão descrito aqui é uma variante bastante básica.
+
+Vamos começar com a definição do próprio Retângulo Vazio (RV): Se um candidato estiver restrito a exatamente uma linha e uma coluna dentro de uma caixa, as células restantes formam um RV. Observe os dois exemplos abaixo: À esquerda, o candidato 9 na caixa 5 está restrito à linha 4 e à coluna 6. O RV é r5c45 e r6c45. À direita, o candidato 1 na caixa 5 está restrito à linha 4 e à coluna 5. O RV é r5c46 e r6c46.
+
+Se um RV for encontrado, ele pode ser verificado para eliminações: Encontre um par conjugado (uma linha ou coluna contendo apenas dois candidatos) onde um dos candidatos esteja na linha (coluna) que forma o RV. Se a coluna (linha) do RV contiver um candidato que possa ver o segundo candidato do par conjugado, ele pode ser eliminado. Um padrão ER que segue a descrição acima pode sempre ser visto como um X-Wing Mutante com Aletas ou como um Loop Agrupado.</li>
+<br/>
+<img src="Imagens/er01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/er02.png" alt="imagem" border="5" class="img">
+<li>À esquerda: A linha 4 e a coluna 6 formam uma relação de exponencial (RE) na caixa 5. r48c2 formam um par conjugado. Um lado do par conjugado está na linha da RE (r4c2), o outro pode ver um candidato na coluna da RE (r8c6). O valor 9 pode ser eliminado de r8c6.
+
+Para entender por que isso funciona, vamos começar com o candidato 9 em r8c2: Se r8c2 for 9, r8c6 não pode ser 9 (mesma linha). Se r8c2 não for 9, r4c2 tem que ser 9 (par conjugado/ligação forte), o que significa que nem r4c5 nem r4c6 podem ser 9. Isso deixa r6c6 como o último candidato 9 na caixa 5; ele deve ser verdadeiro e r8c6 deve ser falso novamente. Como ambas as possibilidades em r8c2 levam ao mesmo resultado (r8c6<>9), o valor 9 pode ser eliminado de r8c6. O X-Wing Mutante com Aletas equivalente: 9 c2b5 r4c6 fr8c2 => r8c6<>9.
+
+O Loop Agrupado Nice equivalente: r8c6 -9- r8c2 =9= r4c2 -9- r4c56 =9= r6c6 -9- r8c6 => r8c6<>9.
+
+No exemplo à direita, a linha 4 e a coluna 5 formam a ER, r7c59 é o par conjugado e r4c9 pode ser eliminado.</li>
+<br/>
+<li>Pronto-socorros com apenas dois candidatos</li>
+<br/>
+<li>Se o Retângulo Vazio (ER) contiver apenas dois candidatos, o Retângulo Vazio não estará claramente definido. As eliminações, obviamente, ainda são válidas. O movimento pode ser replicado como Turbot Fish ou como X-Chain. Alguns jogadores de Sudoku não consideram os Retângulos Vazios com apenas dois candidatos válidos; portanto, o HoDoKu os suporta apenas opcionalmente.
+
+Nota: Como Turbot Fish vem antes de ER na ordem de resolução padrão, os Retângulos Vazios com dois candidatos são sempre encontrados como Turbot Fishes, mesmo que estejam habilitados. Mova Turbot Fish para trás de ER (ou desabilite-o) para encontrar os Retângulos Vazios abaixo.</li>
+<br/>
+<img src="Imagens/er201.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/er202.png" alt="imagem" border="5" class="img">
+<li>Exemplo à esquerda: Retângulo vazio: 6 em b8 (r69c1) => r6c4<>6
+
+Exemplo à direita: Retângulo vazio: 5 em b3 (r8c49) => r2c4<>5</li>
+<br/>
+<li>Retângulo Duplo Vazio</li>
+<br/>
+<li>Às vezes, o candidato eliminado e a extremidade do par conjugado também formam um par conjugado. Nesse caso, ambas as ligações fortes podem desempenhar o papel de "par conjugado", levando a duas eliminações diferentes. O resultado é chamado de Retângulo Vazio Dual.
+
+Retângulos Vazios Dual são suportados como uma opção no HoDoKu.</li>
+<br/>
+<img src="Imagens/der01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/der02.png" alt="imagem" border="5" class="img">
+<li>No exemplo à esquerda, o Retângulo Vazio é formado pela linha 2 e coluna 3. r6c35 é um par conjugado, eliminando 2 de r2c5. Mas r26c5 também é um par conjugado, eliminando 2 de r6c3.
+
+À direita: Retângulo Vazio Dual: 9 em b5 (r67c8/r7c48) => r6c8,r7c4<>9</li>
+<br/>
+<hr color="#000"/>
+<li>Uniqueness in Sudoku - Singularidade no Sudoku:</li>
+<br/>
+<li>As Técnicas de Unicidade baseiam-se no fato de que praticamente todos os Sudokus publicados têm apenas uma solução. Mais do que isso: a maioria dos jogadores de Sudoku considera inválidos os Sudokus com mais de uma solução! Portanto, qualquer combinação que leve a duas ou mais soluções que não violem a regra do Sudoku deve ser evitada. O problema é que a unicidade nos Sudokus publicados não faz parte da própria regra do Sudoku ("qualquer linha, coluna e bloco deve conter os dígitos de 1 a 9"). Isso gerou uma discussão acalorada sobre a validade das Técnicas de Unicidade (veja a Controvérsia da Unicidade na Sudopedia).
+
+Usar ou não as Técnicas de Unicidade é uma questão de gosto. Se você resolve Sudokus publicados em livros ou jornais, pode ter uma boa margem de segurança de que eles têm uma solução única (para algumas exceções, veja o Hall da Vergonha). Se você usar um programa de computador como o HoDoKu, o número de soluções será verificado automaticamente e você receberá um aviso caso tente resolver um Sudoku inválido (consulte o Manual do Usuário).
+
+As Técnicas de Unicidade são fáceis de encontrar, versáteis e frequentemente permitem resolver Sudokus mais complexos que, sem elas, exigiriam técnicas muito complicadas. O HoDoKu, portanto, oferece suporte integrado a um grande número de técnicas diferentes. Se você não quiser usá-las (apesar de suas vantagens óbvias), pode desativar todas as Técnicas de Unicidade com um único clique do mouse, acessando "Editar | Preferências | Etapas" (alternando para a visualização em árvore).</li>
+<br/>
+<li>Unique Rectangle - Retângulo único</li>
+<br/>
+<li>Um "Retângulo Único" (RU) consiste em quatro células que ocupam exatamente duas linhas, duas colunas e duas casas. Todas as quatro células têm os mesmos dois candidatos restantes (em sudokus reais, nem todas as células precisam conter todos os candidatos do RU, veja abaixo).</li>
+<br/>
+<li>O exemplo à esquerda foi retirado do Retângulo Único da Sudopedia. Observe as células r2c13 e r4c13: elas satisfazem todas as restrições necessárias. Duas linhas (linhas 2 e 4), duas colunas (colunas 1 e 3), dois blocos (blocos 1 e 4) e dois candidatos (candidatos 6 e 8).
+
+Uma situação como essa é inválida, porque os candidatos nas células poderiam ser trocados, resultando em duas soluções diferentes que satisfazem a regra do Sudoku (veja abaixo). Se o Sudoku tiver apenas uma solução, qualquer situação que possa levar a um Retângulo Único deve ser evitada.
+
+As duas soluções (válidas) para o Retângulo Único acima:</li>
+<br/>
+<img src="Imagens/ur01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/ur02.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/ur03.png" alt="imagem" border="5" class="img">
+<li>Um erro comum ao procurar por URs é violar a regra dos "2 blocos" (veja o artigo da Sudopedia para um exemplo).</li>
+<br/>
+<li>Túmulo Universal Binário (BUG)</li>
+<br/>
+<li>Um Sudoku Universal Binário (BUG) é uma generalização de um Sudoku Universal Não Resolvido (UR): um BUG existe se todas as células não resolvidas tiverem apenas dois candidatos e se cada candidato aparecer exatamente duas vezes em qualquer linha, coluna e caixa. Um Sudoku desse tipo também tem duas soluções.</li>
+<br/>
+<hr color="#000"/>
+<li>Retângulo único tipo 1:</li>
+<br/>
+<li>Uma UR Tipo 1 existe se uma das quatro células de uma UR possível tiver candidatos adicionais. Se esses candidatos fossem eliminados, a UR existiria, resultando em duas soluções. Portanto, é absolutamente necessário que um dos candidatos adicionais seja verdadeiro. Isso significa que os candidatos da UR podem ser eliminados da célula com os candidatos adicionais. Se existir apenas um candidato adicional, ele pode ser colocado nessa célula imediatamente.</li>
+<br/>
+<img src="Imagens/u101.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/u102.png" alt="imagem" border="5" class="img">
+<li>No exemplo à esquerda, os candidatos 8 e 9 quase formam uma UR em r2c23 e r6c23. A UR só é impedida pelo candidato adicional 3 em r2c2. 8 e 9 podem ser eliminados de r2c2 (ou 3 pode ser colocado em r2c2).
+
+À direita: 2/3 em r2c46, r9c46 => r9c6 <> 23 (ou r9c6 = 1).</li>
+<br/>
+<hr color="#000"/>
+<li>Retângulo único tipo 2:</li>
+<br/>
+<li>Se em uma possível regra não resolvida (UR), duas células não diagonais tiverem apenas um candidato extra, e esse candidato for o mesmo em ambas as células, todos os candidatos que virem ambos os candidatos extras podem ser eliminados.
+
+A lógica é simples: para evitar a regra não resolvida, um dos candidatos extras deve ser verdadeiro; portanto, qualquer célula que vir ambos os candidatos não pode ter o mesmo valor atribuído.</li>
+<br/>
+<img src="Imagens/u201.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/u202.png" alt="imagem" border="5" class="img">
+<li>Observe o exemplo à esquerda: Temos um possível UR nos números 3 e 7 em r7c29 e r8c29. As duas células não diagonais r78c9 têm um candidato extra, o número 8. Uma dessas células deve ser o 8, ou o Sudoku teria duas soluções. Portanto, o 8 nunca pode ser colocado em r9c9.
+
+Um UR Tipo 2 pode eliminar candidatos em mais de uma casa, como pode ser visto no exemplo à direita: Os 7s adicionais em r8c56 eliminam todos os outros 7s tanto da linha 8 quanto do bloco 8.</li>
+<br/>
+<li>Retângulo único tipo 3:</li>
+<br/>
+<li>Esta é uma combinação de UR com Subconjuntos Nus/Bloqueados. Procuramos duas células não diagonais em um possível UR que tenham candidatos extras. Como um desses candidatos precisa ser configurado para evitar o UR, podemos tratar ambas as células como uma única célula virtual contendo apenas os candidatos extras e tentar construir um Subconjunto Nu (todas as células adicionais precisam ver ambas as células UR com candidatos extras). Se tal UR/Subconjunto Nu for encontrado, todos os candidatos do subconjunto podem ser eliminados de todas as células fora do subconjunto (mas na mesma casa, é claro).</li>
+<br/>
+<img src="Imagens/u301.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/u302.png" alt="imagem" border="5" class="img">
+<li>À esquerda: Possível UR em 1/5 em r4c28 e r6c28. A célula r6c8 possui os candidatos adicionais 6 e 9, e a célula r4c8 possui os candidatos adicionais 4 e 6. Se considerarmos a célula r46c8 como uma única célula contendo apenas os candidatos 4, 6 e 9, podemos construir um Naked Triple com esses três candidatos em r1c8, r2c8 e r46c8. Como esses três candidatos estão vinculados a essas quatro células, eles não podem ser colocados em r8c8 ou r9c8.
+
+O exemplo à direita mostra um UR Tipo 3 com um Locked Pair: Os candidatos adicionais 1 e 3 em r6c23 formam o Locked Pair com r6c1 (vinculado na linha 6 e bloco 4).</li>
+<br/>
+<hr color="#000"/>
+<li>Retângulo único tipo 4:</li>
+<br/>
+<li>Procuramos novamente por candidatos adicionais em duas células não diagonais, mas desta vez ignoramos esses candidatos extras e nos concentramos nos próprios candidatos UR: se um dos candidatos UR não for mais possível em nenhuma outra célula de uma casa que contenha ambas as células com os candidatos extras, o outro candidato UR pode ser eliminado dessas células UR.</li>
+<br/>
+<img src="Imagens/u401.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/u402.png" alt="imagem" border="5" class="img">
+<li>Para entender como isso funciona, vejamos o exemplo à esquerda: Possível UR em 6/7 em r3c79 e r6c79. r3c7 e r3c9 têm candidatos adicionais (ou seja, essas são as únicas células da UR que possivelmente não contêm nem um 6 nem um 7). Há duas casas que veem as células r3c7 e r3c9: Linha 3 e Bloco 3. A Linha 3 tem o candidato 6 apenas nas células da UR (o Bloco 3 também, mas isso não é necessário - uma casa é suficiente), então 6 deve estar em r3c7 ou r3c9. Mas isso significa que 7 não pode estar em r3c7 nem em r3c9, ou teríamos duas soluções. Portanto, podemos eliminar 7 de r3c79.
+
+A mesma lógica se aplica ao exemplo à direita: o candidato UR 8 não está em nenhuma célula da coluna 8 (ou do bloco 9), então 2 pode ser eliminado. Note que o candidato adicional 8 poderia estar em uma das casas (coluna 8 ou bloco 9), mas não em ambas. Essa situação é pouco provável, pois o candidato adicional 8 provavelmente já teria sido eliminado antes de se usar uma jogada de Candidatos Bloqueados.</li>
+<br/>
+<li>Retângulo único tipo 5:</li>
+<br/>
+<li>A UR Tipo 5 é uma variação da UR Tipo 2, mas agora o candidato adicional também pode estar em células diagonais. Suponha que temos uma possível UR com um candidato extra em duas células diagonais ou em três células. Todas as ocorrências desse candidato podem ser eliminadas em todas as células que veem todas as células UR que contêm o candidato adicional. A lógica por trás dessa ação é a mesma da UR Tipo 2.</li>
+<br/>
+<img src="Imagens/u501.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/u502.png" alt="imagem" border="5" class="img">
+<li>O exemplo à esquerda é o único exemplo publicado para um UR Tipo 5 com apenas dois candidatos adicionais até o momento: 1 deve estar em r7c8 ou r8c5 para evitar o UR. A célula r7c4 vê ambas as células UR e não pode ser 1.
+
+O UR Tipo 5 à direita tem três candidatos adicionais: 6 deve estar em r8c6, r8c9 ou r9c9. Pode ser eliminado de r8c7.</li>
+<br/>
+<hr color="#000"/>
+<li>Retângulo único tipo 6:</li>
+<br/>
+<li>O UR Tipo 6 é uma variação do UR Tipo 4. Não é muito comum, mas é altamente eficaz, pois sempre leva a duas colocações: Suponha que temos um possível UR com duas células diagonais contendo candidatos extras. Se um dos candidatos do UR não estiver presente em nenhum outro lugar nas duas linhas e duas colunas que compõem o UR, ele pode ser eliminado das células com os candidatos extras.</li>
+<br/>
+<img src="Imagens/u601.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/u602.png" alt="imagem" border="5" class="img">
+<li>Observe o exemplo à esquerda: nas linhas 4 e 5 e colunas 3 e 4, o candidato 5 aparece apenas dentro do Retângulo de Referência (UR): ele forma uma Asa X. Se o candidato 5 fosse colocado em uma das células r4c3/r5c4 que contêm os candidatos extras, ele também teria que ser colocado na outra célula, forçando assim o UR e resultando em duas soluções. Portanto, é seguro assumir que ele não pode estar em nenhuma dessas células.
+
+O exemplo à direita mostra um UR Tipo 6 no candidato 7. Observe que todo UR Tipo 6 é acompanhado por um par de Retângulos Ocultos, cada um deles levando aos mesmos posicionamentos.</li>
+<br/>
+<hr color="#000"/>
+<li>Retângulo Oculto</li>
+<br/>
+<li>Retângulos Ocultos são muito versáteis, pois podem ser usados ​​em possíveis Retângulos Únicos (RUs) que contenham até três células com candidatos adicionais arbitrários (o RU fica oculto sob uma série de candidatos adicionais - não confundir com Retângulos Quase Únicos).
+
+Precisamos de um possível RU com duas ou três células contendo candidatos adicionais (com apenas uma célula, deve-se usar o RU Tipo 1). Agora, pegue uma célula do RU sem candidatos adicionais e verifique a linha e a coluna que contêm o canto oposto ao RU. Se um candidato do RU não estiver presente fora do RU nessas duas células, o outro candidato do RU pode ser eliminado do canto oposto.</li>
+<br/>
+<img src="Imagens/hr01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/hr02.png" alt="imagem" border="5" class="img">
+<li>Para entender como isso funciona, vejamos o exemplo à esquerda: Temos apenas uma célula sem candidatos adicionais: r7c7, que se torna nosso ponto de partida. O canto oposto é a célula r9c5, contida na linha 9 e coluna 5. O candidato 5 não está em nenhum lugar fora do UR nessas duas casas, então 9 pode ser eliminado de r9c5. Por quê? Se observarmos a coluna 5, veremos que o candidato 5 precisa ser colocado em r7c5 ou em r9c5. Se for colocado em r9c5, essa célula não pode ser 9. Se for colocado em r7c5, não pode ser r9c5 e, portanto, também precisa ser colocado em r9c7. Isso força r7c7 a ser 9, o que significa que r9c5 também não pode ser 9, ou teríamos duas soluções. Como ambas as colocações possíveis do candidato 5 na coluna 5 levam a r9c7<>9, 9 pode ser eliminado dessa célula.
+
+O exemplo à direita possui apenas duas células com candidatos adicionais, o que significa duas possíveis células iniciais para verificar: r2c9 e r3c2. Vamos tentar r2c9 primeiro: o canto oposto está contido na linha 3 e coluna 2. Vemos que a linha 3 tem um 4 e um 5 fora do UR, então nenhum retângulo oculto é possível.
+
+Agora r3c2: as casas a serem verificadas são a linha 2 e a coluna 9. O candidato 4 não aparece em nenhuma dessas casas (exceto no UR, é claro), então 5 pode ser eliminado de r2c9.</li>
+<br/>
+<hr color="#000"/>
+<li>Retângulo evitável:</li>
+<br/>
+<li>Avoidable Rectangles differ from Unique Rectangles in that some cells of the UR have already been placed. If placing the remaining cell(s) would cause an UR, the sudoku maker would have had to supply one of the four cells as a given to avoid a possible second solution (hence the name). If therefore none of the already placed cells in the UR are givens, all UR Type x rules can be applied without change. There is one important difference though: Due to the placements sometimes only one of the UR candidates remains possible for the target cell. This can be confusing, but the logic still holds.
+
+HoDoKu currently only supports Avoidable Rectangles Type 1 and 2.</li>
+<br/>
+<li>Retângulo evitável tipo 1</li>
+<br/>
+<img src="Imagens/ar101.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/ar102.png" alt="imagem" border="5" class="img">
+<li>À esquerda: O possível UR (Retângulo Evitável) corresponde aos candidatos 7 e 9 nas células r12c19. A única célula ainda não preenchida é r2c9; todas as outras células não são dadas. Se colocássemos 9 em r2c9, poderíamos trocar os dígitos 7 e 9 nas quatro células UR, obtendo assim duas soluções. Como sabemos que isso não é possível, r2c9 não pode ser 9.
+
+Observe que a lógica só se aplica se nenhuma das células UR for dada. Se apenas uma das células fosse dada, os dígitos não poderiam ser trocados e o Sudoku ainda teria apenas uma solução.
+
+À direita: Retângulo Evitável Tipo 1: 6/3 em r57c78 => r5c7<>3</li>
+<br/>
+<hr color="#000"/>
+<li>Retângulo evitável tipo 2:</li>
+<li>Semelhante ao Retângulo Único Tipo 2. O Tipo 2 é mais fácil de identificar, pois ambos os candidatos a UR são visíveis como candidatos.</li>
+<br/>
+<img src="Imagens/ar201.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/ar202.png" alt="imagem" border="5" class="img">
+<li>À esquerda: Retângulo evitável (UR) nos candidatos 3 e 7 em r78c37; nem r7c7 nem r8c7 são garantidos. Candidato adicional 9 em r78c3; 9 pode ser eliminado de todas as células que apresentam tanto r8c3 quanto r9c3.
+
+À direita: Retângulo evitável do tipo 2: 2/8 em r45c37 => r18c7, r456c9, r56c8 <> 9</li>
+<br/>
+<hr color="#000"/>
+<li>BUG+1 - Túmulo Universal Binário + 1:</li>
+<br/>
+<li>Um BUG+1 é um possível BUG, ​​onde exatamente uma célula possui um candidato adicional. Esse candidato precisa ser posicionado para evitar o BUG.</li>
+<br/>
+<li>Lado esquerdo: O candidato adicional é o candidato 6 em r1c8 (ele aparece mais de duas vezes em pelo menos uma casa). Ele pode ser colocado (ou os candidatos 3 e 5 podem ser eliminados).
+
+Lado direito: Isso não é um BUG+1! Temos apenas células com dois candidatos restantes (exceção: r7c6), mas a condição do BUG não é satisfeita: na linha 7, o candidato 9 aparece três vezes (r7c147). O mesmo ocorre na coluna 6.</li>
+<br/>
+<img src="Imagens/bug101.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/bug102.png" alt="imagem" border="5" class="img">
+<hr color="#000"/>
+<li>Retângulos únicos com candidatos ausentes:</li>
+<br/>
+<li>Para que um retângulo único funcione, não é necessário que todas as células do retângulo único contenham todos os candidatos a retângulo único. A única condição realmente necessária é que qualquer célula do retângulo único possa ter contido todos os candidatos a retângulo único (ou seja, nenhum candidato a retângulo único em uma célula do retângulo único pode estar bloqueado por um retângulo único). Isso pode ser importante quando os candidatos a retângulo único já foram eliminados por uma etapa anterior, o que invalidaria o retângulo único.
+
+O HoDoKu permite candidatos ausentes quando a opção "Permitir candidatos ausentes em retângulos únicos" está ativada em "Preferências | Etapas" (consulte Opções do Solver no Manual do Usuário).
+
+Alguns exemplos:</li>
+<br/>
+<img src="Imagens/u101a.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/u201a.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/u601a (1).png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/h101a.png" alt="imagem" border="5" class="img">
+
+<li>Lado esquerdo: r3c4 não contém o candidato UR 2, mas 2 não está bloqueado por nenhum dado nesta célula, portanto o UR Tipo 1 ainda é válido. Lado direito: o candidato UR 5 está ausente de r3c8.</li>
+<br/>
+<img src="Imagens/u601a.png" alt="imagem" border="5" class="img">
+<li>Lado esquerdo: Tipo UR 6, o candidato UR 8 está ausente de r3c9 e r6c7; as eliminações ainda são válidas. Lado direito: Retângulo Oculto, o candidato 3 está ausente de r2c9 e r3c6.</li>
+<br/>
+<hr color="#000"/>
+<li>XY-Wing:</li>
+<br/>
+<li>Uma asa XY é, na verdade, uma pequena cadeia XY descrita como um padrão e, portanto, mais fácil de encontrar. Começamos procurando uma célula bivalorada (o pivô). Os possíveis candidatos nessa célula são chamados de X e Y. Agora, tentamos encontrar outras duas células que interagem com o pivô (as pinças). Uma dessas células contém os candidatos X e Z (Z é um candidato arbitrário diferente de X e Y) e a outra contém os candidatos Y e Z. Z pode ser eliminado de qualquer célula que interaja com ambas as pinças.</li>
+<br/>
+<img src="Imagens/xy01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/xy02.png" alt="imagem" border="5" class="img">
+<li>Exemplo à esquerda: A célula r1c3 (o pivô) contém os candidatos 5 (X) e 7 (Y). A célula r1c6 compartilha a linha 1 com o pivô e contém os candidatos 5 (X) e 2 (Z). A célula r2c1 compartilha a caixa 1 com o pivô e contém os candidatos 7 (Y) e 2 (Z). A célula r2c6 vê ambas as pinças (r1c6 e r2c1). Ela não pode conter 2 (Z).
+
+A lógica é simples: Se r1c3 for 5, r1c6 deve ser 2; se r1c3 for 7, r2c1 deve ser 2. Em ambos os casos, r2c6 não pode ser 2. A cadeia XY equivalente: 2 - r2c1 - 7 - r1c3 - 5 - r1c6 - 2 => r2c6 <> 2
+
+Exemplo à direita: X = 1, Y = 6, Z = 9; Pivô em r4c1, pinças em r4c4 e r5c2. Cinco candidatos podem ser eliminados.</li>
+<br/>
+<hr color="#000"/>
+<li>XYZ-Wing:</li>
+<br/>
+<li>A asa XYZ é uma versão aprimorada da asa XY: agora o pivô contém não apenas os candidatos X e Y, mas também Z. Consequentemente, Z só pode ser eliminado das células que enxergam não apenas as pinças, mas também o pivô.</li>
+<br/>
+<img src="Imagens/xyz01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/xyz02.png" alt="imagem" border="5" class="img">
+<li>À esquerda: Pivô r7c2, pinças r2c2 e r7c1. Se r7c2=4, r2c2=7 => r9c2<>7; se r7c2=5, r7c1=7 => r9c2<>7; se r7c2=7 => r9c2<>7.
+
+À direita: 4/7/6 em r23c4,r3c7 => r3c56<>6
+
+Asas expandidas com ainda mais candidatos foram descritas, mas são difíceis de encontrar e não são suportadas pelo HoDoKu.</li>
+<br/>
+<hr color="#000"/>
+<li>W-Wing:</li>
+<br/>
+<li>As W-Wings são fáceis de identificar e geralmente muito eficientes. Consistem em duas células bivaloradas com os mesmos candidatos, conectadas por uma ligação forte em um dos candidatos. O outro candidato pode ser eliminado de todas as células que veem ambas as células bivaloradas. Como uma W-Wing é internamente uma cadeia, provar a lógica em texto simples, como pode ser visto abaixo, é complicado. O padrão em si, no entanto, é fácil de identificar (filtros podem ser de grande ajuda nesse caso).</li>
+<br/>
+<img src="Imagens/w01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/w02.png" alt="imagem" border="5" class="img">
+<li>À esquerda: As células binárias são r4c4 e r8c9 (candidatos 5 e 9). A ligação forte é para o candidato 9 na coluna 8 (a coluna 8 tem apenas duas possibilidades para o candidato 9, o que significa que, se uma delas não estiver definida, a outra deve estar - ligação forte). Uma extremidade da ligação forte vê r4c4 e a outra vê r8c9. O candidato 5 pode ser eliminado de todas as células que veem tanto r4c4 quanto r8c9.
+
+Demonstração: Concentrando-nos na ligação forte na coluna 8: Um dos dois candidatos 9 em r4c8 deve ser colocado. Se r4c8=9, r4c4 tem que ser 5. Se r8c8=9, r8c9 tem que ser 5. Uma das células r4c4 e r8c9 tem que ser 5, portanto, cada célula que interage com ambas as células não pode ser 5.
+
+Uma Asa-W é, na verdade, uma cadeia. O exemplo acima como um Laço Descontínuo: r4c9 -5- r4c4 -9- r4c8 =9= r8c8 -9- r8c9 -5- r4c9.
+
+À direita: Asa-W: 4/1 em r1c9,r8c7 conectados por 1 em r18c3 => r123c7,r89c9<>4</li>
+<br/>
+<hr color="#000"/>	
+<li>Sue de Coq:</li>
+<br/>
+<li>Sue de Coq é uma variante da Contagem de Subconjuntos e foi introduzida inicialmente por um usuário com o apelido "Sue de Coq" sob o nome um tanto complicado de "Subconjuntos Disjuntos de Dois Setores". Outros usuários logo começaram a chamar a técnica pelo apelido do criador, "Sue de Coq" (SDC), e esse nome tem sido usado desde então. A técnica em sua forma básica é bastante simples, mas foi aprimorada diversas vezes. Essas versões aprimoradas podem ser encontradas em Tipos Estendidos neste guia.</li>
+<br/>
+<li>Variantes básicas</li>
+<br/>
+<li>A variante básica é bastante simples: procure células na interseção de uma linha e um bloco. Você precisa encontrar duas células contendo 4 candidatos ou três células contendo 5 candidatos. Agora, encontre uma célula bivalorada na linha fora da interseção cujos candidatos sejam extraídos inteiramente dos candidatos da interseção. Encontre outra célula bivalorada no bloco com candidatos também extraídos da interseção, mas diferentes dos candidatos da célula da linha.
+
+Essa configuração é um problema de Sue de Coq: você pode eliminar todos os candidatos da célula da linha do restante das células da linha, todos os candidatos da célula do bloco do restante das células do bloco e qualquer candidato da interseção que reste tanto da linha quanto do bloco. Isso pode resultar em etapas bastante complexas.
+
+O termo "linha" na definição acima pode ser substituído por "coluna".</li>
+<br/>
+<img src="Imagens/sdc01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/sdc02.png" alt="imagem" border="5" class="img">
+<li>Exemplo à esquerda: As células de interseção são r7c13. Elas contêm os candidatos {3459}. A célula da linha é r7c7, que contém {45}, e a célula do bloco é r8c3, que contém {39}. Os candidatos 4 e 5 podem ser eliminados do restante da linha, e os candidatos 3 e 9 podem ser eliminados do restante do bloco.
+
+Se considerarmos apenas a interseção, veremos que temos dois candidatos a mais (4 candidatos para apenas 2 células). Mas, como a célula da linha r7c7 precisa conter um desses candidatos, restam apenas 3 candidatos para 2 células (3, 9 e 4 ou 5). A célula do bloco r8c3 elimina outra possibilidade: as células de interseção agora podem ser 3 ou 9 e 4 ou 5 (2 candidatos em 2 células).</li>
+<br/>
+<li>O SDC produz, basicamente, dois conjuntos bloqueados sobrepostos: os candidatos 3 e 9 são bloqueados em (r7c13, r8c3). Como todas essas células estão no bloco 6, os números 3 e 9 não podem estar em outra célula desse bloco. Os candidatos 4 e 5 estão bloqueados no intervalo (r7c13, r7c7). Como todas essas células estão na mesma linha, os números 4 e 5 não podem estar em outro lugar nessa linha.
+
+O exemplo à direita mostra uma interseção com três células contendo cinco candidatos: as células r789c9 contêm os candidatos {24567}. A célula da coluna r2c9 contém os candidatos {56}, e a célula do bloco r9c7 contém os candidatos {27}. A lógica é a mesma do exemplo anterior, mas o resultado são três candidatos em três células: as células da interseção podem ser {2 ou 7, 4 e 5 ou 6}. Isso significa que o candidato 4 fica bloqueado na interseção e pode ser eliminado tanto do bloco quanto da coluna.</li>
+<br/>
+<li>Tipos estendidos</li>
+<br/>
+<li>Sue de Coq pode ser aprimorado de duas maneiras possíveis:</li>
+<br/>
+<li>As células de intersecção podem conter candidatos adicionais. Para cada candidato adicional, é necessário encontrar uma célula adicional na linha/coluna ou no bloco.</li>
+<br/>
+<li>As células das linhas (células das colunas) e as células dos blocos podem conter candidatos não extraídos do conjunto de interseção. Para cada candidato adicional, é necessária uma célula adicional.</li>
+<br/>
+<li>É importante notar que o SDC pode ter apenas duas células na interseção, sendo a terceira possível parte das células da linha ou do bloco. Da mesma forma, se candidatos adicionais forem usados, que não sejam extraídos do conjunto da interseção, o mesmo candidato pode ser usado em células de linha e de bloco.
+
+Uma definição mais formal de SDC é dada na discussão original sobre Subconjuntos Disjuntos de Dois Setores:
+
+Considere o conjunto de células não preenchidas C que se encontra na interseção da Caixa B e da Linha (ou Coluna) R. Suponha que |C|>=2. Seja V o conjunto de valores candidatos que podem ocorrer em C. Suponha que |V|>=|C|+2. O padrão exige que encontremos |V|-|C|+n células em B e R, com pelo menos uma célula em cada, com pelo menos |V|-|C| candidatos extraídos de V e com n sendo o número de candidatos não extraídos de V. Rotule os conjuntos de células como CB e CR e seus candidatos como VB e VR. Crucialmente, nenhum candidato de V pode aparecer em VB e VR. Então C deve conter V\(VB U VR) [possivelmente vazio], |VB|-|CB| elementos de VB e |VR|-|CR| elementos de VR. A construção nos permite eliminar candidatos VB U (V\VR) de B\(C U CB) e candidatos VR U (V\VB) de R\(C U CR).
+
+Alguns exemplos:</li>
+<br/>
+<img src="Imagens/sdc04.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/sdc03.png" alt="imagem" border="5" class="img">
+<li>À esquerda: células de interseção r46c8 com os candidatos {3578}, célula de coluna r8c8 {35} e células de bloco r4c7, r5c9 {789}. Este é praticamente o nosso caso padrão, exceto que as células de bloco contêm o candidato 9, que não é proveniente da interseção. É por isso que duas células de bloco são necessárias.
+
+À direita: Interseção r456c1 - {123479}. Seis candidatos em três células representam uma relação de um para muitos. Um dos conjuntos adicionais deve conter três candidatos em duas células. No exemplo, trata-se da coluna r89c1, que contém {234}. O conjunto de bloco possui um candidato adicional, o 5, que não é proveniente da interseção.</li>
+<br/>
+<img src="Imagens/sdc05.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/sdc06.png" alt="imagem" border="5" class="img">
+<li>O exemplo à esquerda foi publicado no Fórum de Jogadores: trata-se de uma variante padrão com 4 candidatos em duas células, mas ambos os conjuntos adicionais (células de coluna e células de bloco) contêm um candidato adicional, que é o mesmo em ambos os casos (candidato 1).
+
+O exemplo à direita apresenta 5 candidatos em duas células, mas demonstra uma combinação de todos os aprimoramentos:</li>
+<br/>
+<li>Embora a intersecção da coluna 4 com o bloco 2 tenha três células não resolvidas, apenas duas delas formam o conjunto de intersecção: r23c4 - {13689}. A célula r1c4 faz parte das células do bloco.	</li>
+<br/>
+<li>A célula da coluna r5c2 tem dois candidatos {39} extraídos do conjunto de interseção: Isso é padrão.</li>
+<br/>
+<li>Ainda temos dois candidatos a mais, então precisamos de duas células de bloco. Infelizmente, um conjunto adequado que cubra os candidatos {168} só pode ser encontrado incluindo um dígito adicional 7. O conjunto de blocos consiste, portanto, em três células: r1c46,r2c6 com candidatos {1678}.</li>
+<br/>
+<li>O resultado do teste Sue de Coq elimina 13 candidatos.</li>
+<br/>
+<hr color="#000"/>
+<li>A coloração é uma técnica de um único dígito que gerou diversas variantes com diferentes graus de complexidade. Duas variantes simples são explicadas aqui. O princípio é sempre o mesmo: o jogador procura casas nas quais o dígito da cor tenha apenas duas células possíveis restantes (a casa contém uma ligação forte para esse dígito). Em termos de coloração, essa ligação forte é chamada de par conjugado. Os dois candidatos do par conjugado recebem cores opostas (veja Coloração no Manual do Usuário). Após a coloração ser concluída, a grade é examinada em busca de contradições que possam levar a eliminações.
+
+Quando duas cores opostas são aplicadas a uma grade (por exemplo, cor 1 e cor 2), ou todas as células com a cor 1 são verdadeiras e todas as células com a cor 2 são falsas, ou vice-versa. É impossível que duas células com cores opostas sejam verdadeiras ao mesmo tempo. Se mais de duas cores forem usadas, o que foi dito acima é válido para todos os pares de cores.
+
+Todas as técnicas de coloração são simplesmente métodos para encontrar sequências. Usar a coloração normalmente é muito mais fácil do que procurar sequências possíveis na grade.</li>
+<br/>
+<hr color="#000"/>
+<li>Cores simples:</li>
+<br/>
+<li>O jogo Simple Colors utiliza apenas duas cores diferentes. Começando com uma célula de um par conjugado, as cores são aplicadas até que nenhuma célula colorida tenha mais uma célula conjugada correspondente. Depois disso, a grade é analisada em busca de uma das duas possíveis contradições:</li>
+<br/>
+<li>Uma célula sem cor que vê células de cores opostas (Armadilha de Cores): Como as células da mesma cor são todas verdadeiras ou todas falsas, uma das duas células coloridas tem que ser verdadeira, e a célula sem cor nunca pode ter a célula da cor candidata.</li>
+<br/>
+<li>Duas células da mesma cor se vendo (Color Wrap): As células dessa cor são todas verdadeiras ou todas falsas. Todas verdadeiras é impossível (obteríamos o mesmo dígito duas vezes na mesma casa), então elas devem ser todas falsas.</li>
+<br/>
+<img src="Imagens/sc01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/sc02.png" alt="imagem" border="5" class="img">
+<li>O exemplo à esquerda mostra uma Armadilha de Cores: a célula r1c9 vê as células r1c4 e r8c9, e essas células têm cores opostas. O candidato 3 pode ser eliminado de r1c9. O mesmo argumento vale para r3c9 e r8c1.
+
+O exemplo à direita mostra uma Mistura de Cores: filtros foram aplicados para pintar todas as células que contêm o candidato 8 com fundo verde (duas dessas células ainda estão verdes; elas não pertencem a um par conjugado). A coloração começou em r1c6 e continuou até que nenhuma outra ligação forte fosse encontrada. Agora observe a coluna 4: r2c4 e r4c4 têm a mesma cor e estão na mesma casa. O 8 pode ser eliminado de todas as células com essa cor, o que resolve o sudoku (ou seja, deixa apenas números isolados).</li>
+<br/>
+<hr color="#000"/>
+<li>Multicores:</li>
+<br/>
+<li>O algoritmo Multi Colors utiliza mais de um par de cores para colorir regiões formadas por pares conjugados que não estão conectados. Após a coloração, temos novamente duas situações que podem levar a eliminações:
+
+Duas células coloridas de pares de cores diferentes estão na mesma casa (formam uma ligação fraca). Como compartilham uma casa, ambas não podem ser verdadeiras (e o mesmo vale para todas as células com essas cores). Mas isso também significa que ou a cor oposta do primeiro par ou a cor oposta do segundo par deve ser verdadeira. A cor candidata pode ser eliminada de qualquer célula que veja pelo menos duas células com essas cores opostas.
+
+Duas células com a mesma cor (digamos, cor 1) veem células com cores opostas de outro par de cores. Uma das células do outro par de cores deve ser verdadeira (veja Cores Simples), o que significa que uma das células com a cor 1 deve ser falsa. Como todas as células com a mesma cor devem ter o mesmo estado em relação ao dígito da cor, todas as células com a cor 1 não podem conter a cor candidata.
+
+O algoritmo Multi Colors tem o mesmo poder que o X-Chains. Atualmente, o HoDoKu suporta apenas dois pares de cores em sua implementação de Multi Cores, portanto, nem todas as X-Chains produzem a etapa Multi Cores equivalente no HoDoKu.</li>
+<br/>
+<img src="Imagens/mc01.png" alt="imagem" border="5" class="img">
+<br/>
+<img src="Imagens/mc02.png" alt="imagem" border="5" class="img">
+<li>O exemplo à esquerda mostra o tipo 1 para o candidato 1: Usamos duas cores. A célula r1c5 tem a cor 1a, a célula r1c7 tem a cor 1b; a célula r2c9 tem a cor 2a e a célula r5c9 tem a cor 2b. As células r1c7 e r2c9 pertencem a dois pares de cores diferentes, mas compartilham a mesma casa (bloco 3). Como apenas uma delas pode ser verdadeira (ambas podem ser falsas!), ou todas as células com a cor 1a ou todas as células com a cor 2b devem ser verdadeiras. As células r5c23 veem ambas as cores e, portanto, não podem conter a cor candidata.
+
+O exemplo à direita mostra o tipo 2 para o candidato 3 (usamos os mesmos designadores de cor acima): A célula r6c2 (cor 1b) vê a célula r6c9 (cor 2b) e a célula r8c6 (também cor 1b) vê a célula r2c6 (cor 2a). Como todas as células com a cor 2a ou todas as células com a cor 2b devem ser verdadeiras, uma das células r6c2 ou r8c6 deve ser falsa. Mas como essas duas células têm a mesma cor, todas as células com essa cor não podem conter um 3.</li>
+<br/>
+<hr color="#000"/>
+<li>O que é uma cadeia?</li>
+<br/>
+<li>As cadeias são, ao mesmo tempo, a técnica mais básica e mais avançada para resolver Sudoku. Todos os Sudokus conhecidos podem ser resolvidos usando apenas cadeias de vários graus de complexidade e peças individuais. Como o encadeamento é uma técnica tão poderosa, muitas pessoas contribuíram para os métodos, a notação e a nomenclatura. Isso levou a técnicas muito avançadas, mas também a muita confusão. Além disso, discussões acaloradas foram (e ainda são) travadas sobre qual variante de encadeamento é melhor que todas as outras e, portanto, deve ser usada exclusivamente. Para iniciantes, a variedade (caos?) de técnicas pode ser um pouco avassaladora. Ainda assim, vale a pena tentar. Uma boa estratégia é começar com variantes fáceis, como Pares Remotos, Cadeias-X ou Cadeias-XY e avançar a partir daí.
+
+Uma cadeia é simplesmente um fluxo de implicações que levam de uma premissa (por exemplo, o candidato x na célula y não está definido) a um resultado. Se uma cadeia de probabilidades produz uma contradição (por exemplo, a premissa "x está em y" leva a "x não está em y"), então a premissa original é comprovadamente falsa (se fosse "se o candidato x está em y", x pode ser eliminado; se fosse "se o candidato x não está em y", x pode ser imediatamente colocado).</li>
+<br/>
+<li>Se uma cadeia de probabilidades não produz uma contradição, ela não prova nada. Nesse caso, é necessário combinar mais de uma cadeia para obter um resultado. Por exemplo, duas cadeias de probabilidades que começam com premissas opostas ("x está em y" e "x não está em y") podem levar ao mesmo resultado: esse resultado deve ser verdadeiro (isso às vezes é chamado de veracidade). Outra possibilidade seria que cadeias de probabilidades que começam com a mesma premissa eliminassem todos os candidatos de uma célula (ou todas as instâncias de um candidato de uma casa). Isso forma uma contradição que prova que a premissa é falsa.
+
+Um terceiro grupo de técnicas de encadeamento utiliza o fato de que muitas (mas não todas!) cadeias são reversíveis: se "x não está definido em y" leva a "x está definido em z", então "x não está definido em z" leva a "x está definido em y", usando a mesma lógica em ordem inversa. Isso elimina x de todas as células que veem ambas as extremidades da cadeia.</li>
+<br/>
+
+<hr color="#000"/>
+
+</h4>
+
+ </body>
+ </html>
+
+ 
