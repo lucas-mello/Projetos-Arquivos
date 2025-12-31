@@ -1,0 +1,81 @@
+<html>
+ <head>
+  <title>Sudoku:</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    .h2{
+       text-align: center;
+       text-decoration:underline;
+       font-size:40px;
+     }
+
+   .h4{ 
+    font-size:30px; 
+    text-align:justify;
+    }
+   
+    .img{
+       width:540px;
+       height:443px;
+       }
+
+  </style>
+ </head>
+ <body bgcolor="#d3d3d3">
+
+<h2 class="h2">Básico:</h2>
+<h4 class="h4">
+<li>Utilização técnica de coordenas (Este e Norte,x,y,z, mais possibilidades, visada (principalmente a em telecom), mapeamento de possibilidades incluindo a matemática, estatística e a probabilidade, como o teorema de fresnel...</li>
+<br/>
+<li>Criar pontos referência, ou seja, menos campos preenchidos, porém é importante criar mesmo que já tenha.</li>
+<br/>
+<li>Verificação de um campo.</li>
+<br/>
+<li>Uma linha por coluna ou linha com uma possibilidade.</li>
+<br/>
+<li>Com ponto de referência.</li>
+<br/>
+<li>Sem ponto de referência.</li>
+<br/>
+<li>Verificar de 1 a 9, considerando os números que faltam.</li>
+<br/>
+<li>O número mais utilizado
+Esta estratégia é óbvia, mas vale a pena ser mencionada. Ela consiste em analisar a tabela e encontrar o número mais utilizado. A partir disso, elimine as posições que esse número não pode ocupar e verifique se é possível posicionar ele em algum lugar.</li>
+<br/>
+<li>
+Grupos quase completos
+Esta estratégia também é bem intuitiva. Ela consiste em analisar linhas, colunas e subgrupos 3x3 que estejam quase completos. Observe os números faltantes nesses “grupos” e olhe a tabela completa para ver se ela fornece alguma pista de como posicionar um desses números faltantes.</li>
+<br/>
+<img src="Imagens/lve-a-Sudoku-Step-2-Version-2.jpg" alt="imagem" border="5" class="img">
+<br/>
+<li>
+Observe linhas e colunas. A regra fundamental do sudoku é que toda linha e toda coluna deve ser preenchida com algarismos de 1 a 9. Isso significa que um mesmo número nunca aparecerá duas vezes na mesma linha ou coluna.</li>
+<br/>
+<img src="Imagens/v4-728px-Solve-a-Sudoku-Step-3-Version-2.jpg" alt="imagem" border="5" class="img">
+<br/>
+<li>
+Preste atenção aos números dos quadrados grandes. Do mesmo modo, os quadrados grandes são preenchidos com números de 1 a 9. Como há apenas 9 compartimentos em cada um deles, aqui também cada algarismo só poderá figurar uma vez.</li><br/>
+
+<li>
+Portanto, se já existe um número 2 em um determinado quadrado grande, você não poderá usá-lo nesse quadrado outra vez.</li>
+
+<br/>
+<img src="Imagens/v4-728px-Solve-a-Sudoku2.jpg" alt="imagem" border="5" class="img">
+
+<br/>
+<li>
+Procure um quadrado grande com um único espaço vazio. Caso encontre um, será fácil preenchê-lo: basta descobrir qual número ele ainda não tem.
+</li>
+<br/>
+<li>
+Se, por exemplo, esse grande quadrado tem todos os números de 1 a 3 e de 5 a 9, o número que falta é 4.</li>
+</h4>
+<hr color="#000"/>
+
+
+
+
+ </body>
+  </html>
+
+ 

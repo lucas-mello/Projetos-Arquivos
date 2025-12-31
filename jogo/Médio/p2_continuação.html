@@ -1,0 +1,72 @@
+<html>
+ <head>
+  <title>Sudoku:</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    .h2{
+       text-align: center;
+       text-decoration:underline;
+       font-size:40px;
+     }
+
+   .h4{ 
+    font-size:30px; 
+    text-align:justify;
+    }
+   
+    .img{
+       width:540px;
+       height:443px;
+       }
+
+  </style>
+ </head>
+ <body bgcolor="#d3d3d3">
+ <h2 class="h2">
+Pares sozinhos:
+</h2>
+<h4 class="h4">
+<li>1. Se em algum momento você encontrar um mesmo par de números sozinhos nas marcações de um grupo (linha, coluna ou grade), significa que esse par deve necessariamente aparecer nessas duas células. Veja a imagem a seguir:</li>
+<br/>
+<img src="Imagens/pares-sozinhos-1.png" alt="imagem" border="5" class="img">
+<br/>
+2. Nessa imagem vemos que os números 1 e 3 aparecem sozinhos em duas células, logo eles devem ser usados nessas células. Só não sabemos qual número vai em cada célula. Entretanto, sabemos que os números 1 e 3 não podem aparecer nas outras células vazias. Assim, nos resta apenas uma possibilidade em cada uma.
+<br/>
+
+<img src="Imagens/pares-sozinhos-2.png" alt="imagem" border="5" class="img">
+<br/>
+<li>Linhas cruzadas</li>
+
+<p>A técnica das linhas cruzadas é possivelmente a primeira que as pessoas aprendem quando jogam Sudoku. Os jogadores aprendem na prática mesmo, pois ela é simples e básica.</p>
+
+<p>Nela o jogador deve escolher um número (geralmente aquele que está mais presente no jogo) e traçar retas imaginárias nas linhas e nas colunas nas quais esse número está presente.</p>
+
+<p>No exemplo a seguir, escolhemos o número 9. Encontramos todos os lugares onde ele está presente e traçamos as retas imaginárias nas linhas e colunas para indicar que o número 9 não pode ser colocado nessas posições. Feito isso, marcamos as posições livres com a cor verde.</p>
+<br/>
+<img src="Imagens/linhas-cruzadas-1.png" alt="imagem" border="5" class="img">
+<br/>
+<p>Observação: É importante notar que algumas células vazias, apesar de não terem sido eliminadas pelas retas imaginárias, não foram marcadas como livres pois apresentam o número 9 na mesma grade 3x3.</p>
+
+<p>Ao analisar as posições livres, podemos notar que na grade 3x3 central existe apenas uma posição livre para o número 9, logo podemos colocá-lo nessa posição.</p>
+
+<p>Feito isso, repetimos o processo das retas imaginárias para o número que acabamos de posicionar. Confira o resultado:</p>
+<br/>
+<img src="Imagens/linhas-cruzadas-2.png" alt="imagem" border="5" class="img">
+<br/>
+<p>Novamente devemos analisar as posições livres em busca de uma nova jogada. Como podemos notar, na grade inferior central existe apenas uma posição livre. Assim podemos colocar o número 9 e repetir o procedimento anterior.</p>
+<br/>
+<img src="Imagens/linhas-cruzadas-3.png" alt="imagem" border="5" class="img">
+<br/>
+<p>Desta vez apareceu uma única posição livre no canto inferior esquerdo, então colocamos um 9 nessa posição e damos prosseguimento com a estratégia.</p>
+<br/>
+<img src="Imagens/linhas-cruzadas-4.png" alt="imagem" border="5" class="img">
+<br/>
+<p>Agora podemos ver que temos quatro posições livres para o número 9, sendo que nenhuma delas é única na grade 3x3 em que está. Portanto não sabemos onde colocar o 9 usando apenas essa estratégia.</p>
+
+<p>Um caminho possível é escolher um novo número e repetir essa estratégia que acabamos de descrever. Provavelmente você conseguirá preencher boa parte das células usando apenas essa estratégia.</p>
+
+<p>Agora que você já está por dentro de algumas estratégias, divirta-se e exercite o cérebro jogando Sudoku.</p>
+<br/>
+</h4>
+</body>
+</html>
