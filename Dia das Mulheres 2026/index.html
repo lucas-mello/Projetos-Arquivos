@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Feliz Dia da Mulher</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+overflow:hidden;
+background-image:url("https://images.unsplash.com/photo-1525310072745-f49212b5ac6d");
+background-size:cover;
+background-position:center;
+}
+
+.overlay{
+position:fixed;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.75);
+overflow:auto;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:40px;
+text-align:center;
+color:#6b0040;
+}
+
+h1{
+font-size:40px;
+}
+
+input{
+padding:10px;
+font-size:18px;
+border-radius:8px;
+border:1px solid #aaa;
+}
+
+button{
+padding:10px 20px;
+font-size:18px;
+border:none;
+border-radius:8px;
+background:#e91e63;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#c2185b;
+}
+
+.mensagem{
+margin-top:30px;
+font-size:40px;
+line-height:1.7;
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,0.2);
+display:none;
+}
+
+.petala{
+position:fixed;
+top:-60px;
+width:85px;
+pointer-events:none;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(0) rotate(0deg);
+}
+
+100%{
+transform:translateY(110vh) rotate(360deg);
+}
+
+}
+
+.falling{
+position:fixed;
+top:-50px;
+font-size:80px;
+animation:fall linear forwards;
+line-height:1;
+}
+
+/* celular */
+@media (max-width:600px){
+
+.falling{
+font-size:80px;
+}
+
+.petala{
+width:120px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="container">
+
+<h1>🌷 Feliz Dia da Mulher 🌷</h1>
+
+<h1>Digite seu nome:</h1>
+
+<input type="text" id="nome">
+
+<br><br>
+
+<button onclick="mostrarMensagem()"><h1>Ver mensagem</h1></button>
+
+<div class="mensagem" id="mensagem"></div>
+
+</div>
+</div>
+
+<audio id="somAbertura">
+  <source src="Sons/Dia_das_Mulheres.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+function mostrarMensagem(){
+
+let nome=document.getElementById("nome").value;
+
+if(nome.trim()==""){
+alert("Digite seu nome");
+return;
+}
+
+let texto=`💖 Feliz Dia da Mulher, ${nome}! 💖 <br><br>
+
+
+Ela é uma Flor, uma mistura um doce de emoções.
+
+
+Ela tem sempre uma palavra amiga, uma generosidade nata da alma, um afago, um conselho, uma bronca, um amor curioso, que observa, que conduz, que ilumina, palavras certas nas horas necessárias.<br><br>
+
+Sua força e sua doçura caminham juntas e me encantam todos os dias. Que nunca falte luz no seu caminho, mulher incrível. Sua presença faz a vida mais leve e feliz.<br><br>
+
+Hoje celebro você, mas admiro sua grandeza todos os dias. Que sua força continue abrindo caminhos. Você é exemplo de coragem e autenticidade.<br><br>
+
+Que o mundo reconheça a mulher extraordinária que você é. Sua presença torna tudo mais leve. Feliz Dia da Mulher para quem sempre espalha alegria.<br><br>
+
+Você inspira todos ao seu redor. Que seus sonhos se realizem com a mesma intensidade da sua força. Sua amizade ilumina meus dias.<br><br>
+
+Você prova todos os dias o poder da mulher. Sua coragem merece ser celebrada. Que sua jornada seja sempre cheia de conquistas.<br><br>
+
+Feliz Dia da Mulher para uma mulher que faz a diferença. Sua determinação é admirável.
+`;
+
+let msg=document.getElementById("mensagem");
+
+msg.innerHTML=texto;
+msg.style.display="block";
+
+}
+
+
+/* pétalas realistas */
+
+function criarPetala(){
+
+let petala=document.createElement("img");
+
+petala.src="https://pngimg.com/uploads/rose_petals/rose_petals_PNG19.png";
+
+petala.classList.add("petala");
+
+petala.style.left=Math.random()*100+"vw";
+
+petala.style.animationDuration=(5+Math.random()*6)+"s";
+
+petala.style.opacity=Math.random();
+
+petala.style.transform="rotate("+Math.random()*360+"deg)";
+
+petala.style.width = (40 + Math.random()*60) + "px";
+
+document.body.appendChild(petala);
+
+setTimeout(()=>{
+petala.remove();
+},10000);
+
+}
+
+setInterval(criarPetala,400);
+
+
+/* corações e confete */
+
+function criarElemento(){
+
+const itens=["💖","🎉"];
+
+let el=document.createElement("div");
+
+el.classList.add("falling");
+
+el.innerHTML=itens[Math.floor(Math.random()*itens.length)];
+
+el.style.left=Math.random()*100+"vw";
+
+el.style.animationDuration=(4+Math.random()*5)+"s";
+
+document.body.appendChild(el);
+
+setTimeout(()=>{
+el.remove();
+},9000);
+
+}
+
+setInterval(criarElemento,600);
+
+
+/* ativar música em celular */
+
+
+  const audio = document.getElementById("somAbertura");
+
+  function tocarSom() {
+    audio.volume = 0.5;
+    audio.play().catch(() => {});
+    document.removeEventListener("click", tocarSom);
+  }
+
+  document.addEventListener("click", tocarSom);
+</script>
+
+</body>
+</html>
